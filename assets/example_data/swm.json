@@ -1,0 +1,35 @@
+{
+  "items": [
+    {
+      "id": 1,
+      "name": "Formwork",
+      "image": "./assets/images/swms/jackhammer.png",
+      "description": "Safe erection and dismantling of formwork."
+
+    },
+    {
+      "id": 2,
+      "name": "Concreting",
+      "image": "./assets/images/swms/wheelbarrow.png",
+      "description": "Pump operation and distribution. Handling practices and best practices for safely spreading and setting."
+    },
+    {
+      "id": 3,
+      "name": "Steel Fixing",
+      "image": "./assets/images/swms/excavate.png",
+      "description": "Handing and fixing methods for steel reinforcement"
+    },
+    {
+      "id": 4,
+      "name": "Operate EWP",
+      "image": "./assets/images/swms/crane.png",
+      "description": "Safe use of EWP"
+    },
+    {
+      "id": 5,
+      "name": "Cranage",
+      "image": "./assets/images/swms/safetyBarrier.png",
+      "description": "Prestarts and operation. Emergency shutdown."
+    }
+  ]
+}

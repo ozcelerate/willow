@@ -1,0 +1,276 @@
+{
+  "times": [
+    {
+      "dateString": "Tue June 18",
+      "workdate": null,
+      "workers": [
+        {
+          "worker": "Alex",
+          "location": "7 Vanbrugh Park Road West",
+          "dayString": "work",
+          "dayCode": 1,
+          "lunch": false,
+          "start": "11:00",
+          "finish": "19:00"
+        },
+        {
+          "worker": "Seth",
+          "location": "123 Fake Street",
+          "dayString": "work",
+          "dayCode": 1,
+          "lunch": true,
+          "start": "11:00",
+          "finish": "20:00"
+        },
+        {
+          "worker": "M$M",
+          "location": "Skype",
+          "dayString": "work",
+          "dayCode": 1,
+          "lunch": true,
+          "start": "07:00",
+          "finish": "14:00"
+        },
+        {
+          "worker": "Sara",
+          "location": "Ritz",
+          "dayString": "work",
+          "dayCode": 1,
+          "lunch": false,
+          "start": "08:00",
+          "finish": "15:00"
+        },
+        {
+          "worker": "LeRouge",
+          "location": "34 Soho Street",
+          "dayString": "RDO",
+          "dayCode": 4,
+          "lunch": false,
+          "start": "",
+          "finish": null
+        },
+        {
+          "worker": "Willo",
+          "location": "34 Cairns Street",
+          "dayString": "A/L",
+          "dayCode": 2,
+          "lunch": false,
+          "start": "11:00",
+          "finish": "19:00"
+        },
+        {
+          "worker": "Mighty Mick",
+          "location": "34 Soho Street",
+          "dayString": "work",
+          "dayCode": 1,
+          "lunch": false,
+          "start": "07:00",
+          "finish": "17:00"
+        }
+      ]
+    },
+
+  {"dateString": "Wed June 19",
+    "workdate": null,
+  "workers": [
+    {
+      "worker": "Alex",
+      "location": "7 Vanbrugh Park Road West",
+      "dayString": "work",
+      "dayCode": 1,
+      "lunch": false,
+      "start": "11:00",
+      "finish": "19:00"
+    },
+    {
+      "worker": "Seth",
+      "location": "123 Fake Street",
+      "dayString": "sick",
+      "dayCode": 3,
+      "lunch": false,
+      "start": "11:00",
+      "finish": "18:00"
+    },
+    {
+      "worker": "M$M",
+      "location": "Skype",
+      "dayString": "work",
+      "dayCode": 1,
+      "lunch": true,
+      "start": "07:00",
+      "finish": "16:00"
+    },
+    {
+      "worker": "Sara",
+      "location": "Ritz",
+      "dayString": "work",
+      "dayCode": 1,
+      "lunch": false,
+      "start": "08:00",
+      "finish": "20:00"
+    },
+    {
+      "worker": "LeRouge",
+      "location": "34 Soho Street",
+      "dayString": "work",
+      "dayCode": 1,
+      "lunch": false,
+      "start": "07:00",
+      "finish": "13:00"
+    },
+    {
+      "worker": "Willo",
+      "location": "34 Cairns Street",
+      "dayString": "A/L",
+      "dayCode": 2,
+      "lunch": false,
+      "start": "11:00",
+      "finish": "17:00"
+    },
+    {
+      "worker": "Mighty Mick",
+      "location": "34 Soho Street",
+      "dayString": "Absent",
+      "dayCode": 0,
+      "lunch": false,
+      "start": "07:00",
+      "finish": "17:00"
+    }
+  ]},
+  {"dateString": "Thu June 20",
+    "workdate": null,
+  "workers": [
+    {
+      "worker": "Alex",
+      "location": "7 Vanbrugh Park Road West",
+      "dayString": "work",
+      "dayCode": 1,
+      "lunch": false,
+      "start": "11:00",
+      "finish": "17:00"
+    },
+    {
+      "worker": "Seth",
+      "location": "123 Fake Street",
+      "dayString": "Absent",
+      "dayCode": 0,
+      "lunch": false,
+      "start": "11:00",
+      "finish": "17:00"
+    },
+    {
+      "worker": "M$M",
+      "location": "Skype",
+      "dayString": "rdo",
+      "dayCode": 4,
+      "lunch": true,
+      "start": "07:00",
+      "finish": "14:00"
+    },
+    {
+      "worker": "Sara",
+      "location": "Ritz",
+      "dayString": "work",
+      "dayCode": 1,
+      "lunch": false,
+      "start": "08:00",
+      "finish": "14:00"
+    },
+    {
+      "worker": "LeRouge",
+      "location": "34 Soho Street",
+      "dayString": "work",
+      "dayCode": 1,
+      "lunch": true,
+      "start": "06:00",
+      "finish": "14:00"
+    },
+    {
+      "worker": "Willo",
+      "location": "34 Cairns Street",
+      "dayString": "A/L",
+      "dayCode": 2,
+      "lunch": false,
+      "start": "11:00",
+      "finish": "17:00"
+    },
+    {
+      "worker": "Mighty Mick",
+      "location": "34 Soho Street",
+      "dayString": "work",
+      "dayCode": 1,
+      "lunch": true,
+      "start": "07:00",
+      "finish": "17:00"
+    }
+  ]},
+
+{  "dateString":  "Fri June 21",
+  "workdate": null,
+  "workers": [
+      {
+        "worker": "Alex",
+        "location": "7 Vanbrugh Park Road West",
+        "dayString": "work",
+        "dayCode": 1,
+        "lunch": false,
+        "start": "11:00",
+        "finish": "17:00"
+      },
+      {
+        "worker": "Seth",
+        "location": "123 Fake Street",
+        "dayString": "sick",
+        "dayCode": 3,
+        "lunch": false,
+        "start": "11:00",
+        "finish": "17:00"
+      },
+      {
+        "worker": "M$M",
+        "location": "Skype",
+        "dayString": "work",
+        "dayCode": 1,
+        "lunch": true,
+        "start": "07:00",
+        "finish": "14:00"
+      },
+      {
+        "worker": "Sara",
+        "location": "Ritz",
+        "dayString": "work",
+        "dayCode": 1,
+        "lunch": false,
+        "start": "08:00",
+        "finish": "15:00"
+      },
+      {
+        "worker": "LeRouge",
+        "location": "34 Soho Street",
+        "dayString": "work",
+        "dayCode": 1,
+        "lunch": false,
+        "start": "07:00",
+        "finish": "13:00"
+      },
+      {
+        "worker": "Willo",
+        "location": "34 Cairns Street",
+        "dayString": "work",
+        "dayCode": 1,
+        "lunch": false,
+        "start": "08:00",
+        "finish": "23:00"
+      },
+      {
+        "worker": "Mighty Mick",
+        "location": "34 Soho Street",
+        "dayString": "RDO",
+        "dayCode": 4,
+        "lunch": false,
+        "start": null,
+        "finish": ""
+      }
+    ]}
+  ]
+}

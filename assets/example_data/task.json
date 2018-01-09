@@ -1,0 +1,54 @@
+{
+  "items": [
+    {
+      "id": 1,
+      "name": "Place Blinding",
+      "image": "./assets/images/swms/jackhammer.png",
+      "description": "Setting up sheeting and support structures for suspended concrete slabs.",
+      "swms": [2]
+    },
+    {
+      "id": 2,
+      "name": "Concreting",
+      "image": "./assets/images/swms/wheelbarrow.png",
+      "description": "Pump operation and distribution. Handling practices and best practices for safely spreading and setting.",
+      "swms": [2],
+      "selected": true
+    },
+    {
+      "id": 3,
+      "name": "Steel Fixing",
+      "image": "./assets/images/swms/excavate.png",
+      "description": "Operating procedures and working distances and access. Enviroment considerations",
+      "swms": [3]
+    },
+    {
+      "id": 4,
+      "name": "Formwork",
+      "image": "./assets/images/swms/crane.png",
+      "description": "Foundation preparation. Assembly procedures. Maximum heights and clearances",
+      "swms": [1,4]
+    },
+    {
+      "id": 5,
+      "name": "Dogging",
+      "image": "./assets/images/swms/safetyBarrier.png",
+      "description": "Safety tag requirment. Permit to operate tagging. Emergency shutdown.",
+      "swms": [5]
+    },
+    {
+      "id": 6,
+      "name": "Operate Crane",
+      "image": "./assets/images/swms/safetyBarrier.png",
+      "description": "Driving the Crane.",
+      "swms": [5]
+    },
+    {
+      "id": 7,
+      "name": "Scaffolding",
+      "image": "./assets/images/swms/safetyBarrier.png",
+      "description": "Erecting Access Equipment.",
+      "swms": [1]
+    }
+  ]
+}
