@@ -1,245 +1,245 @@
 webpackJsonp([0],{
 
-/***/ 1018:
+/***/ 1006:
 /***/ (function(module, exports, __webpack_require__) {
 
 var map = {
-	"./af": 445,
-	"./af.js": 445,
-	"./ar": 446,
-	"./ar-dz": 447,
-	"./ar-dz.js": 447,
-	"./ar-kw": 448,
-	"./ar-kw.js": 448,
-	"./ar-ly": 449,
-	"./ar-ly.js": 449,
-	"./ar-ma": 450,
-	"./ar-ma.js": 450,
-	"./ar-sa": 451,
-	"./ar-sa.js": 451,
-	"./ar-tn": 452,
-	"./ar-tn.js": 452,
-	"./ar.js": 446,
-	"./az": 453,
-	"./az.js": 453,
-	"./be": 454,
-	"./be.js": 454,
-	"./bg": 455,
-	"./bg.js": 455,
-	"./bm": 456,
-	"./bm.js": 456,
-	"./bn": 457,
-	"./bn.js": 457,
-	"./bo": 458,
-	"./bo.js": 458,
-	"./br": 459,
-	"./br.js": 459,
-	"./bs": 460,
-	"./bs.js": 460,
-	"./ca": 461,
-	"./ca.js": 461,
-	"./cs": 462,
-	"./cs.js": 462,
-	"./cv": 463,
-	"./cv.js": 463,
-	"./cy": 464,
-	"./cy.js": 464,
-	"./da": 465,
-	"./da.js": 465,
-	"./de": 466,
-	"./de-at": 467,
-	"./de-at.js": 467,
-	"./de-ch": 468,
-	"./de-ch.js": 468,
-	"./de.js": 466,
-	"./dv": 469,
-	"./dv.js": 469,
-	"./el": 470,
-	"./el.js": 470,
-	"./en-au": 471,
-	"./en-au.js": 471,
-	"./en-ca": 472,
-	"./en-ca.js": 472,
-	"./en-gb": 473,
-	"./en-gb.js": 473,
-	"./en-ie": 474,
-	"./en-ie.js": 474,
-	"./en-nz": 475,
-	"./en-nz.js": 475,
-	"./eo": 476,
-	"./eo.js": 476,
-	"./es": 477,
-	"./es-do": 478,
-	"./es-do.js": 478,
-	"./es-us": 479,
-	"./es-us.js": 479,
-	"./es.js": 477,
-	"./et": 480,
-	"./et.js": 480,
-	"./eu": 481,
-	"./eu.js": 481,
-	"./fa": 482,
-	"./fa.js": 482,
-	"./fi": 483,
-	"./fi.js": 483,
-	"./fo": 484,
-	"./fo.js": 484,
-	"./fr": 485,
-	"./fr-ca": 486,
-	"./fr-ca.js": 486,
-	"./fr-ch": 487,
-	"./fr-ch.js": 487,
-	"./fr.js": 485,
-	"./fy": 488,
-	"./fy.js": 488,
-	"./gd": 489,
-	"./gd.js": 489,
-	"./gl": 490,
-	"./gl.js": 490,
-	"./gom-latn": 491,
-	"./gom-latn.js": 491,
-	"./gu": 492,
-	"./gu.js": 492,
-	"./he": 493,
-	"./he.js": 493,
-	"./hi": 494,
-	"./hi.js": 494,
-	"./hr": 495,
-	"./hr.js": 495,
-	"./hu": 496,
-	"./hu.js": 496,
-	"./hy-am": 497,
-	"./hy-am.js": 497,
-	"./id": 498,
-	"./id.js": 498,
-	"./is": 499,
-	"./is.js": 499,
-	"./it": 500,
-	"./it.js": 500,
-	"./ja": 501,
-	"./ja.js": 501,
-	"./jv": 502,
-	"./jv.js": 502,
-	"./ka": 503,
-	"./ka.js": 503,
-	"./kk": 504,
-	"./kk.js": 504,
-	"./km": 505,
-	"./km.js": 505,
-	"./kn": 506,
-	"./kn.js": 506,
-	"./ko": 507,
-	"./ko.js": 507,
-	"./ky": 508,
-	"./ky.js": 508,
-	"./lb": 509,
-	"./lb.js": 509,
-	"./lo": 510,
-	"./lo.js": 510,
-	"./lt": 511,
-	"./lt.js": 511,
-	"./lv": 512,
-	"./lv.js": 512,
-	"./me": 513,
-	"./me.js": 513,
-	"./mi": 514,
-	"./mi.js": 514,
-	"./mk": 515,
-	"./mk.js": 515,
-	"./ml": 516,
-	"./ml.js": 516,
-	"./mr": 517,
-	"./mr.js": 517,
-	"./ms": 518,
-	"./ms-my": 519,
-	"./ms-my.js": 519,
-	"./ms.js": 518,
-	"./my": 520,
-	"./my.js": 520,
-	"./nb": 521,
-	"./nb.js": 521,
-	"./ne": 522,
-	"./ne.js": 522,
-	"./nl": 523,
-	"./nl-be": 524,
-	"./nl-be.js": 524,
-	"./nl.js": 523,
-	"./nn": 525,
-	"./nn.js": 525,
-	"./pa-in": 526,
-	"./pa-in.js": 526,
-	"./pl": 527,
-	"./pl.js": 527,
-	"./pt": 528,
-	"./pt-br": 529,
-	"./pt-br.js": 529,
-	"./pt.js": 528,
-	"./ro": 530,
-	"./ro.js": 530,
-	"./ru": 531,
-	"./ru.js": 531,
-	"./sd": 532,
-	"./sd.js": 532,
-	"./se": 533,
-	"./se.js": 533,
-	"./si": 534,
-	"./si.js": 534,
-	"./sk": 535,
-	"./sk.js": 535,
-	"./sl": 536,
-	"./sl.js": 536,
-	"./sq": 537,
-	"./sq.js": 537,
-	"./sr": 538,
-	"./sr-cyrl": 539,
-	"./sr-cyrl.js": 539,
-	"./sr.js": 538,
-	"./ss": 540,
-	"./ss.js": 540,
-	"./sv": 541,
-	"./sv.js": 541,
-	"./sw": 542,
-	"./sw.js": 542,
-	"./ta": 543,
-	"./ta.js": 543,
-	"./te": 544,
-	"./te.js": 544,
-	"./tet": 545,
-	"./tet.js": 545,
-	"./th": 546,
-	"./th.js": 546,
-	"./tl-ph": 547,
-	"./tl-ph.js": 547,
-	"./tlh": 548,
-	"./tlh.js": 548,
-	"./tr": 549,
-	"./tr.js": 549,
-	"./tzl": 550,
-	"./tzl.js": 550,
-	"./tzm": 551,
-	"./tzm-latn": 552,
-	"./tzm-latn.js": 552,
-	"./tzm.js": 551,
-	"./uk": 553,
-	"./uk.js": 553,
-	"./ur": 554,
-	"./ur.js": 554,
-	"./uz": 555,
-	"./uz-latn": 556,
-	"./uz-latn.js": 556,
-	"./uz.js": 555,
-	"./vi": 557,
-	"./vi.js": 557,
-	"./x-pseudo": 558,
-	"./x-pseudo.js": 558,
-	"./yo": 559,
-	"./yo.js": 559,
-	"./zh-cn": 560,
-	"./zh-cn.js": 560,
-	"./zh-hk": 561,
-	"./zh-hk.js": 561,
-	"./zh-tw": 562,
-	"./zh-tw.js": 562
+	"./af": 444,
+	"./af.js": 444,
+	"./ar": 445,
+	"./ar-dz": 446,
+	"./ar-dz.js": 446,
+	"./ar-kw": 447,
+	"./ar-kw.js": 447,
+	"./ar-ly": 448,
+	"./ar-ly.js": 448,
+	"./ar-ma": 449,
+	"./ar-ma.js": 449,
+	"./ar-sa": 450,
+	"./ar-sa.js": 450,
+	"./ar-tn": 451,
+	"./ar-tn.js": 451,
+	"./ar.js": 445,
+	"./az": 452,
+	"./az.js": 452,
+	"./be": 453,
+	"./be.js": 453,
+	"./bg": 454,
+	"./bg.js": 454,
+	"./bm": 455,
+	"./bm.js": 455,
+	"./bn": 456,
+	"./bn.js": 456,
+	"./bo": 457,
+	"./bo.js": 457,
+	"./br": 458,
+	"./br.js": 458,
+	"./bs": 459,
+	"./bs.js": 459,
+	"./ca": 460,
+	"./ca.js": 460,
+	"./cs": 461,
+	"./cs.js": 461,
+	"./cv": 462,
+	"./cv.js": 462,
+	"./cy": 463,
+	"./cy.js": 463,
+	"./da": 464,
+	"./da.js": 464,
+	"./de": 465,
+	"./de-at": 466,
+	"./de-at.js": 466,
+	"./de-ch": 467,
+	"./de-ch.js": 467,
+	"./de.js": 465,
+	"./dv": 468,
+	"./dv.js": 468,
+	"./el": 469,
+	"./el.js": 469,
+	"./en-au": 470,
+	"./en-au.js": 470,
+	"./en-ca": 471,
+	"./en-ca.js": 471,
+	"./en-gb": 472,
+	"./en-gb.js": 472,
+	"./en-ie": 473,
+	"./en-ie.js": 473,
+	"./en-nz": 474,
+	"./en-nz.js": 474,
+	"./eo": 475,
+	"./eo.js": 475,
+	"./es": 476,
+	"./es-do": 477,
+	"./es-do.js": 477,
+	"./es-us": 478,
+	"./es-us.js": 478,
+	"./es.js": 476,
+	"./et": 479,
+	"./et.js": 479,
+	"./eu": 480,
+	"./eu.js": 480,
+	"./fa": 481,
+	"./fa.js": 481,
+	"./fi": 482,
+	"./fi.js": 482,
+	"./fo": 483,
+	"./fo.js": 483,
+	"./fr": 484,
+	"./fr-ca": 485,
+	"./fr-ca.js": 485,
+	"./fr-ch": 486,
+	"./fr-ch.js": 486,
+	"./fr.js": 484,
+	"./fy": 487,
+	"./fy.js": 487,
+	"./gd": 488,
+	"./gd.js": 488,
+	"./gl": 489,
+	"./gl.js": 489,
+	"./gom-latn": 490,
+	"./gom-latn.js": 490,
+	"./gu": 491,
+	"./gu.js": 491,
+	"./he": 492,
+	"./he.js": 492,
+	"./hi": 493,
+	"./hi.js": 493,
+	"./hr": 494,
+	"./hr.js": 494,
+	"./hu": 495,
+	"./hu.js": 495,
+	"./hy-am": 496,
+	"./hy-am.js": 496,
+	"./id": 497,
+	"./id.js": 497,
+	"./is": 498,
+	"./is.js": 498,
+	"./it": 499,
+	"./it.js": 499,
+	"./ja": 500,
+	"./ja.js": 500,
+	"./jv": 501,
+	"./jv.js": 501,
+	"./ka": 502,
+	"./ka.js": 502,
+	"./kk": 503,
+	"./kk.js": 503,
+	"./km": 504,
+	"./km.js": 504,
+	"./kn": 505,
+	"./kn.js": 505,
+	"./ko": 506,
+	"./ko.js": 506,
+	"./ky": 507,
+	"./ky.js": 507,
+	"./lb": 508,
+	"./lb.js": 508,
+	"./lo": 509,
+	"./lo.js": 509,
+	"./lt": 510,
+	"./lt.js": 510,
+	"./lv": 511,
+	"./lv.js": 511,
+	"./me": 512,
+	"./me.js": 512,
+	"./mi": 513,
+	"./mi.js": 513,
+	"./mk": 514,
+	"./mk.js": 514,
+	"./ml": 515,
+	"./ml.js": 515,
+	"./mr": 516,
+	"./mr.js": 516,
+	"./ms": 517,
+	"./ms-my": 518,
+	"./ms-my.js": 518,
+	"./ms.js": 517,
+	"./my": 519,
+	"./my.js": 519,
+	"./nb": 520,
+	"./nb.js": 520,
+	"./ne": 521,
+	"./ne.js": 521,
+	"./nl": 522,
+	"./nl-be": 523,
+	"./nl-be.js": 523,
+	"./nl.js": 522,
+	"./nn": 524,
+	"./nn.js": 524,
+	"./pa-in": 525,
+	"./pa-in.js": 525,
+	"./pl": 526,
+	"./pl.js": 526,
+	"./pt": 527,
+	"./pt-br": 528,
+	"./pt-br.js": 528,
+	"./pt.js": 527,
+	"./ro": 529,
+	"./ro.js": 529,
+	"./ru": 530,
+	"./ru.js": 530,
+	"./sd": 531,
+	"./sd.js": 531,
+	"./se": 532,
+	"./se.js": 532,
+	"./si": 533,
+	"./si.js": 533,
+	"./sk": 534,
+	"./sk.js": 534,
+	"./sl": 535,
+	"./sl.js": 535,
+	"./sq": 536,
+	"./sq.js": 536,
+	"./sr": 537,
+	"./sr-cyrl": 538,
+	"./sr-cyrl.js": 538,
+	"./sr.js": 537,
+	"./ss": 539,
+	"./ss.js": 539,
+	"./sv": 540,
+	"./sv.js": 540,
+	"./sw": 541,
+	"./sw.js": 541,
+	"./ta": 542,
+	"./ta.js": 542,
+	"./te": 543,
+	"./te.js": 543,
+	"./tet": 544,
+	"./tet.js": 544,
+	"./th": 545,
+	"./th.js": 545,
+	"./tl-ph": 546,
+	"./tl-ph.js": 546,
+	"./tlh": 547,
+	"./tlh.js": 547,
+	"./tr": 548,
+	"./tr.js": 548,
+	"./tzl": 549,
+	"./tzl.js": 549,
+	"./tzm": 550,
+	"./tzm-latn": 551,
+	"./tzm-latn.js": 551,
+	"./tzm.js": 550,
+	"./uk": 552,
+	"./uk.js": 552,
+	"./ur": 553,
+	"./ur.js": 553,
+	"./uz": 554,
+	"./uz-latn": 555,
+	"./uz-latn.js": 555,
+	"./uz.js": 554,
+	"./vi": 556,
+	"./vi.js": 556,
+	"./x-pseudo": 557,
+	"./x-pseudo.js": 557,
+	"./yo": 558,
+	"./yo.js": 558,
+	"./zh-cn": 559,
+	"./zh-cn.js": 559,
+	"./zh-hk": 560,
+	"./zh-hk.js": 560,
+	"./zh-tw": 561,
+	"./zh-tw.js": 561
 };
 function webpackContext(req) {
 	return __webpack_require__(webpackContextResolve(req));
@@ -255,11 +255,11 @@ webpackContext.keys = function webpackContextKeys() {
 };
 webpackContext.resolve = webpackContextResolve;
 module.exports = webpackContext;
-webpackContext.id = 1018;
+webpackContext.id = 1006;
 
 /***/ }),
 
-/***/ 1019:
+/***/ 1007:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -291,7 +291,7 @@ var ErrorNotAuthenticated = (function (_super) {
 
 /***/ }),
 
-/***/ 1020:
+/***/ 1008:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -337,7 +337,7 @@ var ColorRadio = (function () {
 
 /***/ }),
 
-/***/ 1021:
+/***/ 1009:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -373,7 +373,7 @@ var ProfileModel = (function () {
 
 /***/ }),
 
-/***/ 1022:
+/***/ 1010:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -398,117 +398,245 @@ var FeedModel = (function () {
 
 /***/ }),
 
-/***/ 1023:
+/***/ 1011:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* unused harmony export EventModel */
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ScheduleModel; });
-/* unused harmony export EventDate */
-var EventModel = (function () {
-    function EventModel() {
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return FiltersPage; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(7);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_forms__ = __webpack_require__(22);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__components_counter_input_counter_input__ = __webpack_require__(211);
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+
+
+var FiltersPage = (function () {
+    function FiltersPage(nav) {
+        this.nav = nav;
+        this.rangeForm = new __WEBPACK_IMPORTED_MODULE_2__angular_forms__["b" /* FormGroup */]({
+            single: new __WEBPACK_IMPORTED_MODULE_2__angular_forms__["a" /* FormControl */](25),
+            dual: new __WEBPACK_IMPORTED_MODULE_2__angular_forms__["a" /* FormControl */]({ lower: 33, upper: 60 })
+        });
+        this.checkboxForm = new __WEBPACK_IMPORTED_MODULE_2__angular_forms__["b" /* FormGroup */]({
+            person_1: new __WEBPACK_IMPORTED_MODULE_2__angular_forms__["a" /* FormControl */](true),
+            person_2: new __WEBPACK_IMPORTED_MODULE_2__angular_forms__["a" /* FormControl */](false),
+            person_3: new __WEBPACK_IMPORTED_MODULE_2__angular_forms__["a" /* FormControl */](false),
+            person_4: new __WEBPACK_IMPORTED_MODULE_2__angular_forms__["a" /* FormControl */](true),
+            person_5: new __WEBPACK_IMPORTED_MODULE_2__angular_forms__["a" /* FormControl */](false)
+        });
+        this.radioForm = new __WEBPACK_IMPORTED_MODULE_2__angular_forms__["b" /* FormGroup */]({
+            selected_option: new __WEBPACK_IMPORTED_MODULE_2__angular_forms__["a" /* FormControl */]('apple')
+        });
+        this.checkboxTagsForm = new __WEBPACK_IMPORTED_MODULE_2__angular_forms__["b" /* FormGroup */]({
+            tag_1: new __WEBPACK_IMPORTED_MODULE_2__angular_forms__["a" /* FormControl */](false),
+            tag_2: new __WEBPACK_IMPORTED_MODULE_2__angular_forms__["a" /* FormControl */](false),
+            tag_3: new __WEBPACK_IMPORTED_MODULE_2__angular_forms__["a" /* FormControl */](true),
+            tag_4: new __WEBPACK_IMPORTED_MODULE_2__angular_forms__["a" /* FormControl */](true),
+            tag_5: new __WEBPACK_IMPORTED_MODULE_2__angular_forms__["a" /* FormControl */](false),
+            tag_6: new __WEBPACK_IMPORTED_MODULE_2__angular_forms__["a" /* FormControl */](false),
+            tag_7: new __WEBPACK_IMPORTED_MODULE_2__angular_forms__["a" /* FormControl */](true),
+            tag_8: new __WEBPACK_IMPORTED_MODULE_2__angular_forms__["a" /* FormControl */](false)
+        });
+        this.radioTagsForm = new __WEBPACK_IMPORTED_MODULE_2__angular_forms__["b" /* FormGroup */]({
+            selected_option: new __WEBPACK_IMPORTED_MODULE_2__angular_forms__["a" /* FormControl */]('any')
+        });
+        this.switchersForm = new __WEBPACK_IMPORTED_MODULE_2__angular_forms__["b" /* FormGroup */]({
+            notifications: new __WEBPACK_IMPORTED_MODULE_2__angular_forms__["a" /* FormControl */](true),
+            email_notifications: new __WEBPACK_IMPORTED_MODULE_2__angular_forms__["a" /* FormControl */](false)
+        });
+        this.counterForm = new __WEBPACK_IMPORTED_MODULE_2__angular_forms__["b" /* FormGroup */]({
+            counter: new __WEBPACK_IMPORTED_MODULE_2__angular_forms__["a" /* FormControl */](5, Object(__WEBPACK_IMPORTED_MODULE_3__components_counter_input_counter_input__["b" /* counterRangeValidator */])(7, 1)),
+            counter2: new __WEBPACK_IMPORTED_MODULE_2__angular_forms__["a" /* FormControl */](2, Object(__WEBPACK_IMPORTED_MODULE_3__components_counter_input_counter_input__["b" /* counterRangeValidator */])(5, 1))
+        });
+        this.ratingForm = new __WEBPACK_IMPORTED_MODULE_2__angular_forms__["b" /* FormGroup */]({
+            rate: new __WEBPACK_IMPORTED_MODULE_2__angular_forms__["a" /* FormControl */](2.5),
+            rate2: new __WEBPACK_IMPORTED_MODULE_2__angular_forms__["a" /* FormControl */](1.5)
+        });
+        this.radioColorForm = new __WEBPACK_IMPORTED_MODULE_2__angular_forms__["b" /* FormGroup */]({
+            selected_color: new __WEBPACK_IMPORTED_MODULE_2__angular_forms__["a" /* FormControl */]('#fc9961')
+        });
     }
-    return EventModel;
+    FiltersPage.prototype.rangeChange = function (range) {
+        console.log("range, change, ratio: " + range.ratio + ", value: " + range.value);
+    };
+    FiltersPage = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
+            selector: 'filters-page',template:/*ion-inline-start:"/home/duane/dev/willow/knddec/src/pages/filters/filters.html"*/`<ion-header>\n  <ion-navbar>\n    <ion-title>Filters</ion-title>\n  </ion-navbar>\n</ion-header>\n\n<ion-content class="filters-content">\n  <ion-item-group class="filters-group">\n    <ion-item-divider>Range</ion-item-divider>\n    <form [formGroup]="rangeForm">\n      <ion-list class="range-list">\n        <ion-item class="range-item">\n          <ion-label>\n            <h3 class="range-value">{{rangeForm.controls.dual.value.lower}}</h3>\n            <h2 class="range-label">Quantity</h2>\n            <h3 class="range-value">{{rangeForm.controls.dual.value.upper}}</h3>\n          </ion-label>\n          <ion-range dualKnobs="true" formControlName="dual" (ionChange)="rangeChange($event)" min="21" max="72" step="3" snaps="true" pin="false"></ion-range>\n        </ion-item>\n        <ion-item class="range-item single-range">\n          <ion-label>\n            <h2 class="range-label">Amount</h2>\n            <h3 class="range-value">{{rangeForm.controls.single.value}}</h3>\n          </ion-label>\n          <ion-range formControlName="single" (ionChange)="rangeChange($event)" min="0" max="50" step="1" snaps="true" pin="false"></ion-range>\n        </ion-item>\n      </ion-list>\n    </form>\n\n    <ion-item-divider>Multiple items</ion-item-divider>\n    <form [formGroup]="checkboxForm">\n      <ion-list class="checkbox-list">\n        <ion-item class="checkbox-item">\n          <ion-label>Sophia Martin</ion-label>\n          <ion-checkbox formControlName="person_1"></ion-checkbox>\n        </ion-item>\n        <ion-item class="checkbox-item">\n          <ion-label>Mattie Abbott</ion-label>\n          <ion-checkbox formControlName="person_2"></ion-checkbox>\n        </ion-item>\n        <ion-item class="checkbox-item">\n          <ion-label>Marguerite Alvarez</ion-label>\n          <ion-checkbox formControlName="person_3"></ion-checkbox>\n        </ion-item>\n        <ion-item class="checkbox-item">\n          <ion-label>Lewis Padilla</ion-label>\n          <ion-checkbox formControlName="person_4"></ion-checkbox>\n        </ion-item>\n        <ion-item class="checkbox-item">\n          <ion-label>Nannie Willis</ion-label>\n          <ion-checkbox formControlName="person_5"></ion-checkbox>\n        </ion-item>\n      </ion-list>\n    </form>\n\n    <ion-item-divider>Pick one</ion-item-divider>\n    <form [formGroup]="radioForm">\n      <ion-list class="radio-group" radio-group formControlName="selected_option">\n        <ion-item class="radio-item">\n          <ion-label>Apple</ion-label>\n          <ion-radio item-left value="apple"></ion-radio>\n        </ion-item>\n        <ion-item class="radio-item">\n          <ion-label>Banana</ion-label>\n          <ion-radio item-left value="banana"></ion-radio>\n        </ion-item>\n        <ion-item class="radio-item">\n          <ion-label>Orange</ion-label>\n          <ion-radio item-left value="orange" disabled="true"></ion-radio>\n        </ion-item>\n        <ion-item class="radio-item">\n          <ion-label>Kiwi</ion-label>\n          <ion-radio item-left value="kiwi"></ion-radio>\n        </ion-item>\n      </ion-list>\n    </form>\n\n    <ion-item-divider>Tags (multiple)</ion-item-divider>\n    <form [formGroup]="checkboxTagsForm">\n      <ion-list class="checkbox-tags">\n        <ion-item class="checkbox-tag">\n          <ion-label>Indonesia</ion-label>\n          <ion-checkbox formControlName="tag_1"></ion-checkbox>\n        </ion-item>\n        <ion-item class="checkbox-tag">\n          <ion-label>Pitcairn Islands</ion-label>\n          <ion-checkbox formControlName="tag_2"></ion-checkbox>\n        </ion-item>\n        <ion-item class="checkbox-tag">\n          <ion-label>Malta</ion-label>\n          <ion-checkbox formControlName="tag_3"></ion-checkbox>\n        </ion-item>\n        <ion-item class="checkbox-tag">\n          <ion-label>Sierra Leone</ion-label>\n          <ion-checkbox formControlName="tag_4"></ion-checkbox>\n        </ion-item>\n        <ion-item class="checkbox-tag">\n          <ion-label>Dominican Republic</ion-label>\n          <ion-checkbox formControlName="tag_5"></ion-checkbox>\n        </ion-item>\n        <ion-item class="checkbox-tag">\n          <ion-label>Antigua and Barbuda</ion-label>\n          <ion-checkbox formControlName="tag_6"></ion-checkbox>\n        </ion-item>\n        <ion-item class="checkbox-tag">\n          <ion-label>Macedonia</ion-label>\n          <ion-checkbox formControlName="tag_7"></ion-checkbox>\n        </ion-item>\n        <ion-item class="checkbox-tag">\n          <ion-label>Vietnam</ion-label>\n          <ion-checkbox formControlName="tag_8"></ion-checkbox>\n        </ion-item>\n      </ion-list>\n    </form>\n\n    <ion-item-divider>More Tags (multiple)</ion-item-divider>\n    <form [formGroup]="checkboxTagsForm">\n      <ion-list class="checkbox-tags rounded-tags">\n        <ion-item class="checkbox-tag">\n          <ion-label>Indonesia</ion-label>\n          <ion-checkbox formControlName="tag_1"></ion-checkbox>\n        </ion-item>\n        <ion-item class="checkbox-tag">\n          <ion-label>Pitcairn Islands</ion-label>\n          <ion-checkbox formControlName="tag_2"></ion-checkbox>\n        </ion-item>\n        <ion-item class="checkbox-tag">\n          <ion-label>Malta</ion-label>\n          <ion-checkbox formControlName="tag_3"></ion-checkbox>\n        </ion-item>\n        <ion-item class="checkbox-tag">\n          <ion-label>Sierra Leone</ion-label>\n          <ion-checkbox formControlName="tag_4"></ion-checkbox>\n        </ion-item>\n        <ion-item class="checkbox-tag">\n          <ion-label>Dominican Republic</ion-label>\n          <ion-checkbox formControlName="tag_5"></ion-checkbox>\n        </ion-item>\n        <ion-item class="checkbox-tag">\n          <ion-label>Antigua and Barbuda</ion-label>\n          <ion-checkbox formControlName="tag_6"></ion-checkbox>\n        </ion-item>\n        <ion-item class="checkbox-tag">\n          <ion-label>Macedonia</ion-label>\n          <ion-checkbox formControlName="tag_7"></ion-checkbox>\n        </ion-item>\n        <ion-item class="checkbox-tag">\n          <ion-label>Vietnam</ion-label>\n          <ion-checkbox formControlName="tag_8"></ion-checkbox>\n        </ion-item>\n      </ion-list>\n    </form>\n\n    <ion-item-divider>Budget (Radio Tags)</ion-item-divider>\n    <form [formGroup]="radioTagsForm">\n      <ion-list class="radio-tags" radio-group formControlName="selected_option">\n        <ion-item class="radio-tag">\n          <ion-label>Any</ion-label>\n          <ion-radio value="any"></ion-radio>\n        </ion-item>\n        <ion-item class="radio-tag">\n          <ion-label>\n            <span>&#36;</span>\n          </ion-label>\n          <ion-radio value="1"></ion-radio>\n        </ion-item>\n        <ion-item class="radio-tag">\n          <ion-label>\n            <span>&#36;&#36;</span>\n          </ion-label>\n          <ion-radio value="2" disabled="true"></ion-radio>\n        </ion-item>\n        <ion-item class="radio-tag">\n          <ion-label>\n            <span>&#36;&#36;&#36;</span>\n          </ion-label>\n          <ion-radio value="3"></ion-radio>\n        </ion-item>\n      </ion-list>\n    </form>\n\n    <ion-item-divider>Switchers</ion-item-divider>\n    <form [formGroup]="switchersForm">\n      <ion-list class="switchers-list">\n        <ion-item class="switcher-item">\n          <ion-label>Notifications</ion-label>\n          <ion-toggle formControlName="notifications"></ion-toggle>\n        </ion-item>\n        <ion-item class="switcher-item">\n          <ion-label>Email notifications</ion-label>\n          <ion-toggle formControlName="email_notifications"></ion-toggle>\n        </ion-item>\n      </ion-list>\n    </form>\n\n    <ion-item-divider>Add & Subtract</ion-item-divider>\n    <form [formGroup]="counterForm">\n      <ion-list class="counter-list">\n        <ion-item class="counter-item">\n          <span class="counter-label">Amount</span>\n          <counter-input formControlName="counter"></counter-input>\n        </ion-item>\n        <ion-item class="counter-item">\n          <span class="counter-label">Bedrooms</span>\n          <span class="counter-value">{{counterForm.controls.counter2.value}}</span>\n          <counter-input formControlName="counter2" basic></counter-input>\n        </ion-item>\n      </ion-list>\n    </form>\n\n    <ion-item-divider>Rating</ion-item-divider>\n    <form [formGroup]="ratingForm">\n      <ion-list class="ratings-list">\n        <ion-item class="rating-item">\n          <span class="rating-label">Minimum</span>\n          <rating formControlName="rate" max="5"></rating>\n        </ion-item>\n        <ion-item class="rating-item">\n          <span class="rating-label">Read Only</span>\n          <rating formControlName="rate2" max="3" read-only="true"></rating>\n        </ion-item>\n      </ion-list>\n    </form>\n\n    <ion-item-divider>Color</ion-item-divider>\n    <form [formGroup]="radioColorForm">\n      <ion-list class="radio-tags color-tags" radio-group formControlName="selected_color">\n        <ion-item class="radio-tag" color-radio="#fc6161">\n          <ion-label>Red</ion-label>\n          <ion-radio value="#fc6161"></ion-radio>\n        </ion-item>\n        <ion-item class="radio-tag" color-radio="#fc9961">\n          <ion-radio value="#fc9961"></ion-radio>\n        </ion-item>\n        <ion-item class="radio-tag" color-radio="#fcea61">\n          <ion-label>Yellow</ion-label>\n          <ion-radio value="#fcea61" disabled="true"></ion-radio>\n        </ion-item>\n        <ion-item class="radio-tag" color-radio="#affc61">\n          <ion-label>Green</ion-label>\n          <ion-radio value="#affc61"></ion-radio>\n        </ion-item>\n        <ion-item class="radio-tag" color-radio="#61fcc5">\n          <ion-radio value="#61fcc5"></ion-radio>\n        </ion-item>\n        <ion-item class="radio-tag" color-radio="#fc61ad">\n          <ion-radio value="#fc61ad"></ion-radio>\n        </ion-item>\n        <ion-item class="radio-tag" color-radio="#b561fc">\n          <ion-radio value="#b561fc"></ion-radio>\n        </ion-item>\n        <ion-item class="radio-tag" color-radio="#6182fc">\n          <ion-radio value="#6182fc"></ion-radio>\n        </ion-item>\n        <ion-item class="radio-tag" color-radio="#61d1fc">\n          <ion-radio value="#61d1fc"></ion-radio>\n        </ion-item>\n      </ion-list>\n    </form>\n  </ion-item-group>\n</ion-content>\n`/*ion-inline-end:"/home/duane/dev/willow/knddec/src/pages/filters/filters.html"*/
+        }),
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* NavController */]])
+    ], FiltersPage);
+    return FiltersPage;
 }());
 
-var ScheduleModel = (function () {
-    function ScheduleModel() {
-        this.today = [];
-        this.upcoming = [];
-    }
-    return ScheduleModel;
-}());
-
-var EventDate = (function () {
-    function EventDate() {
-    }
-    return EventDate;
-}());
-
-//# sourceMappingURL=schedule.model.js.map
+//# sourceMappingURL=filters.js.map
 
 /***/ }),
 
-/***/ 1024:
+/***/ 1012:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* unused harmony export ListModel */
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return List1Model; });
-var ListModel = (function () {
-    function ListModel() {
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return FormLayoutPage; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_ionic_angular__ = __webpack_require__(7);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_forms__ = __webpack_require__(22);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_core__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__components_counter_input_counter_input__ = __webpack_require__(211);
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+
+
+var FormLayoutPage = (function () {
+    function FormLayoutPage(nav, alertCtrl) {
+        this.nav = nav;
+        this.alertCtrl = alertCtrl;
+        this.section = "event";
+        this.post_form = new __WEBPACK_IMPORTED_MODULE_1__angular_forms__["b" /* FormGroup */]({
+            title: new __WEBPACK_IMPORTED_MODULE_1__angular_forms__["a" /* FormControl */]('', __WEBPACK_IMPORTED_MODULE_1__angular_forms__["h" /* Validators */].required),
+            description: new __WEBPACK_IMPORTED_MODULE_1__angular_forms__["a" /* FormControl */]('', __WEBPACK_IMPORTED_MODULE_1__angular_forms__["h" /* Validators */].required),
+            servings: new __WEBPACK_IMPORTED_MODULE_1__angular_forms__["a" /* FormControl */](2, Object(__WEBPACK_IMPORTED_MODULE_3__components_counter_input_counter_input__["b" /* counterRangeValidator */])(10, 1)),
+            time: new __WEBPACK_IMPORTED_MODULE_1__angular_forms__["a" /* FormControl */]('01:30', __WEBPACK_IMPORTED_MODULE_1__angular_forms__["h" /* Validators */].required),
+            temperature: new __WEBPACK_IMPORTED_MODULE_1__angular_forms__["a" /* FormControl */](180)
+        });
+        this.event_form = new __WEBPACK_IMPORTED_MODULE_1__angular_forms__["b" /* FormGroup */]({
+            title: new __WEBPACK_IMPORTED_MODULE_1__angular_forms__["a" /* FormControl */]('', __WEBPACK_IMPORTED_MODULE_1__angular_forms__["h" /* Validators */].required),
+            location: new __WEBPACK_IMPORTED_MODULE_1__angular_forms__["a" /* FormControl */]('', __WEBPACK_IMPORTED_MODULE_1__angular_forms__["h" /* Validators */].required),
+            from_date: new __WEBPACK_IMPORTED_MODULE_1__angular_forms__["a" /* FormControl */]('2016-09-18', __WEBPACK_IMPORTED_MODULE_1__angular_forms__["h" /* Validators */].required),
+            from_time: new __WEBPACK_IMPORTED_MODULE_1__angular_forms__["a" /* FormControl */]('13:00', __WEBPACK_IMPORTED_MODULE_1__angular_forms__["h" /* Validators */].required),
+            to_date: new __WEBPACK_IMPORTED_MODULE_1__angular_forms__["a" /* FormControl */]('', __WEBPACK_IMPORTED_MODULE_1__angular_forms__["h" /* Validators */].required),
+            to_time: new __WEBPACK_IMPORTED_MODULE_1__angular_forms__["a" /* FormControl */]('', __WEBPACK_IMPORTED_MODULE_1__angular_forms__["h" /* Validators */].required)
+        });
+        this.card_form = new __WEBPACK_IMPORTED_MODULE_1__angular_forms__["b" /* FormGroup */]({
+            card_number: new __WEBPACK_IMPORTED_MODULE_1__angular_forms__["a" /* FormControl */]('', __WEBPACK_IMPORTED_MODULE_1__angular_forms__["h" /* Validators */].required),
+            card_holder: new __WEBPACK_IMPORTED_MODULE_1__angular_forms__["a" /* FormControl */]('', __WEBPACK_IMPORTED_MODULE_1__angular_forms__["h" /* Validators */].required),
+            cvc: new __WEBPACK_IMPORTED_MODULE_1__angular_forms__["a" /* FormControl */]('', __WEBPACK_IMPORTED_MODULE_1__angular_forms__["h" /* Validators */].required),
+            exp_date: new __WEBPACK_IMPORTED_MODULE_1__angular_forms__["a" /* FormControl */]('', __WEBPACK_IMPORTED_MODULE_1__angular_forms__["h" /* Validators */].required),
+            save_card: new __WEBPACK_IMPORTED_MODULE_1__angular_forms__["a" /* FormControl */](true, __WEBPACK_IMPORTED_MODULE_1__angular_forms__["h" /* Validators */].required)
+        });
     }
-    return ListModel;
+    FormLayoutPage.prototype.onSegmentChanged = function (segmentButton) {
+        // console.log('Segment changed to', segmentButton.value);
+    };
+    FormLayoutPage.prototype.onSegmentSelected = function (segmentButton) {
+        // console.log('Segment selected', segmentButton.value);
+    };
+    FormLayoutPage.prototype.createPost = function () {
+        console.log(this.post_form.value);
+    };
+    FormLayoutPage.prototype.createEvent = function () {
+        console.log(this.event_form.value);
+    };
+    FormLayoutPage.prototype.createCard = function () {
+        console.log(this.card_form.value);
+    };
+    FormLayoutPage.prototype.chooseCategory = function () {
+        var _this = this;
+        var alert = this.alertCtrl.create({
+            cssClass: 'category-prompt'
+        });
+        alert.setTitle('Category');
+        alert.addInput({
+            type: 'checkbox',
+            label: 'Alderaan',
+            value: 'Logan',
+            checked: true
+        });
+        alert.addInput({
+            type: 'checkbox',
+            label: 'Bespin',
+            value: 'Barbados'
+        });
+        alert.addButton('Cancel');
+        alert.addButton({
+            text: 'Confirm',
+            handler: function (data) {
+                console.log('Checkbox data:', data);
+                _this.categories_checkbox_open = false;
+                _this.categories_checkbox_result = data;
+            }
+        });
+        alert.present().then(function () {
+            _this.categories_checkbox_open = true;
+        });
+    };
+    FormLayoutPage = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_2__angular_core__["n" /* Component */])({
+            selector: 'form-layout-page',template:/*ion-inline-start:"/home/duane/dev/willow/knddec/src/pages/form-layout/form-layout.html"*/`<ion-header>\n  <ion-navbar>\n    <ion-title>Forms Examples</ion-title>\n  </ion-navbar>\n</ion-header>\n\n<ion-content class="forms-examples-content">\n  <ion-segment class="forms-examples-segment" [(ngModel)]="section" (ionChange)="onSegmentChanged($event)">\n    <ion-segment-button value="post" (ionSelect)="onSegmentSelected($event)">\n      Tasks\n    </ion-segment-button>\n    <ion-segment-button value="event" (ionSelect)="onSegmentSelected($event)">\n      SWMs\n    </ion-segment-button>\n    <ion-segment-button value="card" (ionSelect)="onSegmentSelected($event)">\n      Safety Focus\n    </ion-segment-button>\n  </ion-segment>\n  <div [ngSwitch]="section" class="forms-wrapper">\n    <div *ngSwitchCase="\'post\'" class="post-example-view">\n      <form class="sample-form post-form" [formGroup]="post_form" (ngSubmit)="createPost()">\n        <section class="form-section">\n          <ion-item>\n            <ion-input type="text" placeholder="Title: e.g. Krabby Patty" formControlName="title"></ion-input>\n          </ion-item>\n          <button ion-button block large class="upload-image-button">\n            <ion-icon name="camera"></ion-icon>\n            <h3 class="button-title">upload an image</h3>\n          </button>\n        </section>\n        <ion-item>\n          <ion-textarea rows="7" placeholder="Write a description or something..." formControlName="description"></ion-textarea>\n        </ion-item>\n        <section class="form-section">\n          <button ion-button block icon-right class="choose-category-button" (click)="chooseCategory()">\n            Choose category\n            <ion-icon name="add"></ion-icon>\n          </button>\n          <p *ngIf="siteSelected">{{categories_checkbox_result[0]}}</p>\n\n        </section>\n        <h2 class="section-title">Serves, times and temps</h2>\n        <ion-item class="counter-item">\n          <span class="counter-label">Servings</span>\n          <counter-input formControlName="servings"></counter-input>\n        </ion-item>\n        <ion-item class="time-item">\n          <ion-label>Time</ion-label>\n          <ion-datetime formControlName="time" displayFormat="h:mm" pickerFormat="h mm"></ion-datetime>\n        </ion-item>\n        <ion-item class="range-item">\n          <ion-label>\n            <h2 class="range-label">Temperature</h2>\n            <h3 class="range-value">{{post_form.controls.temperature.value}} &deg;C</h3>\n          </ion-label>\n          <ion-range formControlName="temperature" min="0" max="220" step="5" snaps="true" pin="false"></ion-range>\n        </ion-item>\n        <section class="form-section">\n          <button ion-button block class="form-action-button create-post-button" type="submit" [disabled]="!post_form.valid">Post!</button>\n        </section>\n      </form>\n    </div>\n    <div *ngSwitchCase="\'event\'" class="event-example-view">\n      <form class="sample-form event-form" [formGroup]="event_form" (ngSubmit)="createEvent()">\n        <section class="form-section">\n          <h2 class="section-title">Add an event</h2>\n          <ion-item>\n            <ion-input type="text" placeholder="Event title" formControlName="title"></ion-input>\n          </ion-item>\n          <ion-item icon-right>\n            <ion-input type="text" placeholder="Location" formControlName="location"></ion-input>\n            <ion-icon name="navigate" item-right></ion-icon>\n          </ion-item>\n          <ion-row no-padding class="multi-input-row">\n            <ion-col no-padding width-60>\n              <ion-item class="multi-input time-item">\n                <ion-label floating>From</ion-label>\n                <ion-datetime formControlName="from_date" displayFormat="DD/MM/YY" pickerFormat="DD-MM-YYYY"></ion-datetime>\n              </ion-item>\n            </ion-col>\n            <ion-col no-padding width-40>\n              <ion-item class="multi-input time-item">\n                <ion-datetime formControlName="from_time" displayFormat="h mm a" pickerFormat="h mm A"></ion-datetime>\n              </ion-item>\n            </ion-col>\n          </ion-row>\n          <ion-row no-padding class="multi-input-row">\n            <ion-col no-padding width-60>\n              <ion-item class="multi-input time-item">\n                <ion-label floating>To</ion-label>\n                <ion-datetime formControlName="to_date" displayFormat="DD/MM/YY" pickerFormat="DD-MM-YYYY"></ion-datetime>\n              </ion-item>\n            </ion-col>\n            <ion-col no-padding width-40>\n              <ion-item class="multi-input time-item">\n                <ion-datetime formControlName="to_time" displayFormat="h mm a" pickerFormat="h mm A"></ion-datetime>\n              </ion-item>\n            </ion-col>\n          </ion-row>\n        </section>\n        <section class="form-section">\n          <button ion-button block class="form-action-button create-event-button" type="submit" [disabled]="!event_form.valid">Done!</button>\n        </section>\n      </form>\n    </div>\n    <div *ngSwitchCase="\'card\'" class="card-example-view">\n      <form class="sample-form card-form" [formGroup]="card_form" (ngSubmit)="createCard()">\n        <section class="form-section">\n          <h2 class="section-title">Credit Card Information</h2>\n          <ion-item>\n            <ion-label floating>Card Number</ion-label>\n            <ion-input type="text" formControlName="card_number"></ion-input>\n          </ion-item>\n          <ion-item>\n            <ion-label floating>Card Holder</ion-label>\n            <ion-input type="text" formControlName="card_holder"></ion-input>\n          </ion-item>\n          <ion-row no-padding class="multi-input-row">\n            <ion-col no-padding width-50>\n              <ion-item class="multi-input">\n                <ion-label floating>CVC</ion-label>\n                <ion-input type="text" formControlName="cvc"></ion-input>\n              </ion-item>\n            </ion-col>\n            <ion-col no-padding width-50>\n              <ion-item class="multi-input time-item">\n                <ion-label floating>Exp. Date</ion-label>\n                <ion-datetime formControlName="exp_date" displayFormat="MM/YYYY" pickerFormat="MM-YYYY"></ion-datetime>\n              </ion-item>\n            </ion-col>\n          </ion-row>\n        </section>\n        <ion-list class="card-preferences">\n          <ion-item class="switcher-item">\n            <ion-label>Save this card</ion-label>\n            <ion-toggle formControlName="save_card"></ion-toggle>\n          </ion-item>\n        </ion-list>\n        <section class="form-section">\n          <button ion-button block class="form-action-button create-card-button" type="submit" [disabled]="!card_form.valid">Confirm</button>\n        </section>\n      </form>\n    </div>\n  </div>\n</ion-content>\n`/*ion-inline-end:"/home/duane/dev/willow/knddec/src/pages/form-layout/form-layout.html"*/
+        }),
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_0_ionic_angular__["i" /* NavController */], __WEBPACK_IMPORTED_MODULE_0_ionic_angular__["a" /* AlertController */]])
+    ], FormLayoutPage);
+    return FormLayoutPage;
 }());
 
-var List1Model = (function () {
-    function List1Model() {
-    }
-    return List1Model;
-}());
-
-//# sourceMappingURL=list-1.model.js.map
+//# sourceMappingURL=form-layout.js.map
 
 /***/ }),
 
-/***/ 1025:
+/***/ 1013:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* unused harmony export ListModel */
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return List2Model; });
-var ListModel = (function () {
-    function ListModel() {
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return GridPage; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(7);
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+var GridPage = (function () {
+    function GridPage(nav) {
+        this.nav = nav;
     }
-    return ListModel;
+    GridPage = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
+            selector: 'grid-page',template:/*ion-inline-start:"/home/duane/dev/willow/knddec/src/pages/grid/grid.html"*/`<ion-header>\n  <ion-navbar>\n    <ion-title>Grid</ion-title>\n  </ion-navbar>\n</ion-header>\n\n<ion-content>\n  <ion-item-group>\n    <ion-item-divider>Grid Example #1</ion-item-divider>\n    <ion-row class="grid-1 grid-example">\n      <ion-col width-100 class="grid-item">\n        <div class="grid-item-wrapper">\n          <div class="grid-item-inner multi-line">\n            <h2 class="item-title">1</h2>\n            <h2 class="item-title">1</h2>\n            <h2 class="item-title">1</h2>\n            <h2 class="item-title">1</h2>\n          </div>\n        </div>\n      </ion-col>\n      <ion-col width-50 class="grid-item" *ngFor="let item of [2, 3, 4, 5, 6]">\n        <div class="grid-item-wrapper">\n          <div class="grid-item-inner">\n            <h2 class="item-title">{{ item }}</h2>\n          </div>\n        </div>\n      </ion-col>\n    </ion-row>\n    <ion-item-divider>Grid Example #2</ion-item-divider>\n    <ion-row class="grid-2 grid-example">\n      <ion-col width-67 class="grid-item">\n        <div class="grid-item-wrapper">\n          <div class="grid-item-inner multi-line">\n            <h2 class="item-title">1</h2>\n            <h2 class="item-title">1</h2>\n            <h2 class="item-title">1</h2>\n          </div>\n        </div>\n      </ion-col>\n      <ion-col width-33 class="grid-item double-item">\n        <ion-col width-100 class="grid-item" *ngFor="let item of [2, 3]">\n          <div class="grid-item-wrapper">\n            <div class="grid-item-inner">\n              <h2 class="item-title">{{ item }}</h2>\n            </div>\n          </div>\n        </ion-col>\n      </ion-col>\n      <ion-col width-33 class="grid-item" *ngFor="let item of [4, 5, 6, 7]">\n        <div class="grid-item-wrapper">\n          <div class="grid-item-inner">\n            <h2 class="item-title">{{ item }}</h2>\n          </div>\n        </div>\n      </ion-col>\n    </ion-row>\n    <ion-item-divider>Grid Example #3</ion-item-divider>\n    <ion-row class="grid-3 grid-example">\n      <ion-col width-50 class="grid-item" *ngFor="let item of [1, 2, 3, 4, 5, 6, 7]">\n        <div class="grid-item-wrapper">\n          <div class="grid-item-inner">\n            <h2 class="item-title">{{ item }}</h2>\n          </div>\n        </div>\n      </ion-col>\n    </ion-row>\n    <ion-item-divider>Grid Example #4</ion-item-divider>\n    <ion-row class="grid-3 grid-example">\n      <ion-col width-33 class="grid-item" *ngFor="let item of [1, 2, 3, 4, 5, 6, 7]">\n        <div class="grid-item-wrapper">\n          <div class="grid-item-inner">\n            <h2 class="item-title">{{ item }}</h2>\n          </div>\n        </div>\n      </ion-col>\n    </ion-row>\n  </ion-item-group>\n</ion-content>\n`/*ion-inline-end:"/home/duane/dev/willow/knddec/src/pages/grid/grid.html"*/
+        }),
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* NavController */]])
+    ], GridPage);
+    return GridPage;
 }());
 
-var List2Model = (function () {
-    function List2Model() {
-    }
-    return List2Model;
-}());
-
-//# sourceMappingURL=list-2.model.js.map
+//# sourceMappingURL=grid.js.map
 
 /***/ }),
 
-/***/ 1026:
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* unused harmony export NotificationModel */
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return NotificationsModel; });
-var NotificationModel = (function () {
-    function NotificationModel() {
-    }
-    return NotificationModel;
-}());
-
-var NotificationsModel = (function () {
-    function NotificationsModel() {
-        this.today = [];
-        this.yesterday = [];
-    }
-    return NotificationsModel;
-}());
-
-//# sourceMappingURL=notifications.model.js.map
-
-/***/ }),
-
-/***/ 1027:
+/***/ 1014:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ListingPage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(6);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__feed_feed__ = __webpack_require__(570);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_rxjs_Rx__ = __webpack_require__(32);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(7);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__feed_feed__ = __webpack_require__(569);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_rxjs_Rx__ = __webpack_require__(41);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_rxjs_Rx___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3_rxjs_Rx__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__listing_model__ = __webpack_require__(1028);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__listing_service__ = __webpack_require__(592);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__listing_model__ = __webpack_require__(1015);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__listing_service__ = __webpack_require__(579);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -565,7 +693,7 @@ var ListingPage = (function () {
 
 /***/ }),
 
-/***/ 1028:
+/***/ 1015:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -587,24 +715,22 @@ var ListingItemModel = (function () {
 
 /***/ }),
 
-/***/ 1029:
+/***/ 1016:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return MyApp; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_ionic_angular__ = __webpack_require__(6);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_ionic_angular__ = __webpack_require__(7);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__pages_equipment_equipment__ = __webpack_require__(568);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__pages_forms_forms__ = __webpack_require__(581);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__pages_layouts_layouts__ = __webpack_require__(583);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__pages_login_login__ = __webpack_require__(213);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__pages_settings_settings__ = __webpack_require__(123);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__providers_shared__ = __webpack_require__(47);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__ionic_native_splash_screen__ = __webpack_require__(593);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__ionic_native_status_bar__ = __webpack_require__(594);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__pages_tabs_navigation_tabs_navigation__ = __webpack_require__(90);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__pages_timesheets_timesheets__ = __webpack_require__(595);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__pages_workers_workers__ = __webpack_require__(598);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__pages_equipment_equipment__ = __webpack_require__(567);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__pages_login_login__ = __webpack_require__(213);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__pages_settings_settings__ = __webpack_require__(123);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__providers_shared__ = __webpack_require__(47);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__ionic_native_splash_screen__ = __webpack_require__(580);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__ionic_native_status_bar__ = __webpack_require__(581);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__pages_tabs_navigation_tabs_navigation__ = __webpack_require__(92);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__pages_timesheets_timesheets__ = __webpack_require__(582);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__pages_workers_workers__ = __webpack_require__(585);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -614,8 +740,6 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-
-
 
 
 
@@ -638,7 +762,7 @@ var MyApp = (function () {
         // make WalkthroughPage the root (or first) page
         //rootPage: any = WalkthroughPage;
         //rootPage: any = TabsNavigationPage;
-        this.rootPage = __WEBPACK_IMPORTED_MODULE_5__pages_login_login__["a" /* LoginPage */];
+        this.rootPage = __WEBPACK_IMPORTED_MODULE_3__pages_login_login__["a" /* LoginPage */];
         platform.ready().then(function () {
             // Okay, so the platform is ready and our plugins are available.
             // Here you can do any higher level native things you might need.
@@ -646,15 +770,13 @@ var MyApp = (function () {
             _this.statusBar.styleDefault();
         });
         this.pages = [
-            { title: 'Home', icon: 'home', component: __WEBPACK_IMPORTED_MODULE_10__pages_tabs_navigation_tabs_navigation__["a" /* TabsNavigationPage */] },
-            { title: 'Forms', icon: 'create', component: __WEBPACK_IMPORTED_MODULE_3__pages_forms_forms__["a" /* FormsPage */] }
+            { title: 'Home', icon: 'home', component: __WEBPACK_IMPORTED_MODULE_8__pages_tabs_navigation_tabs_navigation__["a" /* TabsNavigationPage */] },
         ];
         this.pushPages = [
-            { title: 'Layouts', icon: 'grid', component: __WEBPACK_IMPORTED_MODULE_4__pages_layouts_layouts__["a" /* LayoutsPage */] },
-            { title: 'Timesheets', icon: 'grid', component: __WEBPACK_IMPORTED_MODULE_11__pages_timesheets_timesheets__["a" /* TimesheetsPage */], supervisor: false },
-            { title: 'Workers', icon: 'people', component: __WEBPACK_IMPORTED_MODULE_12__pages_workers_workers__["a" /* WorkersPage */], supervisor: true },
+            { title: 'Timesheets', icon: 'grid', component: __WEBPACK_IMPORTED_MODULE_9__pages_timesheets_timesheets__["a" /* TimesheetsPage */], supervisor: false },
+            { title: 'Workers', icon: 'people', component: __WEBPACK_IMPORTED_MODULE_10__pages_workers_workers__["a" /* WorkersPage */], supervisor: true },
             { title: 'Equipment', icon: 'pricetag', component: __WEBPACK_IMPORTED_MODULE_2__pages_equipment_equipment__["a" /* EquipmentPage */] },
-            { title: 'Settings', icon: 'settings', component: __WEBPACK_IMPORTED_MODULE_6__pages_settings_settings__["a" /* SettingsPage */] }
+            { title: 'Settings', icon: 'settings', component: __WEBPACK_IMPORTED_MODULE_4__pages_settings_settings__["a" /* SettingsPage */] }
         ];
         this.appGlobals = sharedService.getLenny();
     }
@@ -692,9 +814,9 @@ var MyApp = (function () {
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_0_ionic_angular__["k" /* Platform */],
             __WEBPACK_IMPORTED_MODULE_0_ionic_angular__["f" /* MenuController */],
             __WEBPACK_IMPORTED_MODULE_0_ionic_angular__["b" /* App */],
-            __WEBPACK_IMPORTED_MODULE_8__ionic_native_splash_screen__["a" /* SplashScreen */],
-            __WEBPACK_IMPORTED_MODULE_9__ionic_native_status_bar__["a" /* StatusBar */],
-            __WEBPACK_IMPORTED_MODULE_7__providers_shared__["a" /* SharedService */]])
+            __WEBPACK_IMPORTED_MODULE_6__ionic_native_splash_screen__["a" /* SplashScreen */],
+            __WEBPACK_IMPORTED_MODULE_7__ionic_native_status_bar__["a" /* StatusBar */],
+            __WEBPACK_IMPORTED_MODULE_5__providers_shared__["a" /* SharedService */]])
     ], MyApp);
     return MyApp;
 }());
@@ -703,7 +825,90 @@ var MyApp = (function () {
 
 /***/ }),
 
-/***/ 1030:
+/***/ 1017:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return NotificationsPage; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(7);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs_Rx__ = __webpack_require__(41);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs_Rx___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_rxjs_Rx__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__notifications_model__ = __webpack_require__(1018);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__notifications_service__ = __webpack_require__(586);
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+
+
+
+var NotificationsPage = (function () {
+    function NotificationsPage(nav, notificationsService, loadingCtrl) {
+        this.nav = nav;
+        this.notificationsService = notificationsService;
+        this.loadingCtrl = loadingCtrl;
+        this.notifications = new __WEBPACK_IMPORTED_MODULE_3__notifications_model__["a" /* NotificationsModel */]();
+        this.loading = this.loadingCtrl.create();
+    }
+    NotificationsPage.prototype.ionViewDidLoad = function () {
+        var _this = this;
+        this.loading.present();
+        this.notificationsService
+            .getData()
+            .then(function (data) {
+            _this.notifications.today = data.today;
+            _this.notifications.yesterday = data.yesterday;
+            _this.loading.dismiss();
+        });
+    };
+    NotificationsPage = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
+            selector: 'notifications-page',template:/*ion-inline-start:"/home/duane/dev/willow/knddec/src/pages/notifications/notifications.html"*/`<ion-header>\n  <ion-navbar>\n    <ion-title>Notifications</ion-title>\n  </ion-navbar>\n</ion-header>\n\n<ion-content class="notifications-content">\n  <ion-item-group>\n    <ion-item-divider class="notifications-divider">Today</ion-item-divider>\n    <ion-item class="notification-item" *ngFor="let notification of notifications.today">\n      <ion-avatar item-left>\n        <preload-image class="user-image" [ratio]="{w:1, h:1}" [src]="notification.image"></preload-image>\n      </ion-avatar>\n      <h2 class="item-title">{{notification.name}}</h2>\n      <p class="item-description">{{notification.message}}</p>\n      <ion-note class="item-time" item-right>{{notification.date}}</ion-note>\n    </ion-item>\n    <ion-item-divider class="notifications-divider">Yesterday</ion-item-divider>\n    <ion-item class="notification-item" *ngFor="let notification of notifications.yesterday">\n      <ion-avatar item-left>\n        <preload-image class="user-image" [ratio]="{w:1, h:1}" [src]="notification.image"></preload-image>\n      </ion-avatar>\n      <h2 class="item-title">{{notification.name}}</h2>\n      <p class="item-description">{{notification.message}}</p>\n      <ion-note class="item-time" item-right>{{notification.date}}</ion-note>\n    </ion-item>\n  </ion-item-group>\n</ion-content>\n`/*ion-inline-end:"/home/duane/dev/willow/knddec/src/pages/notifications/notifications.html"*/
+        }),
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* NavController */],
+            __WEBPACK_IMPORTED_MODULE_4__notifications_service__["a" /* NotificationsService */],
+            __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* LoadingController */]])
+    ], NotificationsPage);
+    return NotificationsPage;
+}());
+
+//# sourceMappingURL=notifications.js.map
+
+/***/ }),
+
+/***/ 1018:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* unused harmony export NotificationModel */
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return NotificationsModel; });
+var NotificationModel = (function () {
+    function NotificationModel() {
+    }
+    return NotificationModel;
+}());
+
+var NotificationsModel = (function () {
+    function NotificationsModel() {
+        this.today = [];
+        this.yesterday = [];
+    }
+    return NotificationsModel;
+}());
+
+//# sourceMappingURL=notifications.model.js.map
+
+/***/ }),
+
+/***/ 1019:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -820,7 +1025,7 @@ var PreloadImage = (function () {
 
 /***/ }),
 
-/***/ 1031:
+/***/ 1020:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -914,13 +1119,110 @@ var Rating = (function () {
 
 /***/ }),
 
-/***/ 1032:
+/***/ 1021:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return SchedulePage; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(7);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs_Rx__ = __webpack_require__(41);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs_Rx___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_rxjs_Rx__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__schedule_model__ = __webpack_require__(1022);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__schedule_service__ = __webpack_require__(587);
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+
+
+
+var SchedulePage = (function () {
+    function SchedulePage(nav, scheduleService, loadingCtrl) {
+        this.nav = nav;
+        this.scheduleService = scheduleService;
+        this.loadingCtrl = loadingCtrl;
+        this.schedule = new __WEBPACK_IMPORTED_MODULE_3__schedule_model__["a" /* ScheduleModel */]();
+        this.segment = "today";
+        this.loading = this.loadingCtrl.create();
+    }
+    SchedulePage.prototype.ionViewDidLoad = function () {
+        var _this = this;
+        this.loading.present();
+        this.scheduleService
+            .getData()
+            .then(function (data) {
+            _this.schedule.today = data.today;
+            _this.schedule.upcoming = data.upcoming;
+            _this.loading.dismiss();
+        });
+    };
+    SchedulePage.prototype.onSegmentChanged = function (segmentButton) {
+        // console.log('Segment changed to', segmentButton.value);
+    };
+    SchedulePage.prototype.onSegmentSelected = function (segmentButton) {
+        // console.log('Segment selected', segmentButton.value);
+    };
+    SchedulePage = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
+            selector: 'schedule-page',template:/*ion-inline-start:"/home/duane/dev/willow/knddec/src/pages/schedule/schedule.html"*/`<ion-header>\n  <ion-navbar>\n    <ion-title>Schedule</ion-title>\n  </ion-navbar>\n</ion-header>\n\n<ion-content class="schedule-content">\n  <ion-segment class="schedule-segment" [(ngModel)]="segment" (ionChange)="onSegmentChanged($event)">\n    <ion-segment-button value="today" (ionSelect)="onSegmentSelected($event)">\n      Today\n    </ion-segment-button>\n    <ion-segment-button value="upcoming" (ionSelect)="onSegmentSelected($event)">\n      Upcoming\n    </ion-segment-button>\n  </ion-segment>\n\n  <div [ngSwitch]="segment">\n    <div *ngSwitchCase="\'today\'">\n      <ion-list class="schedule-list">\n        <ion-item class="schedule-item" *ngFor="let item of schedule.today">\n          <ion-row>\n            <ion-col width-20 class="schedule-date">\n              <h2 class="schedule-day">{{item.date.day}}</h2>\n              <h3 class="schedule-month">{{item.date.month_name}}</h3>\n              <h4 class="schedule-time">{{item.date.time}}</h4>\n            </ion-col>\n            <ion-col width-80 class="schedule-data">\n              <div class="data-item">\n                <div class="item-content">\n                  <h2 class="item-title one-line">{{item.subject}}</h2>\n                  <div class="item-description">\n                    <ion-icon class="description-icon" name="clock"></ion-icon>\n                    <p class="description-text">{{item.date.full}}</p>\n                  </div>\n                  <div class="item-description">\n                    <ion-icon class="description-icon" name="navigate"></ion-icon>\n                    <p class="description-text one-line">{{item.location}}</p>\n                  </div>\n                </div>\n                <ion-icon class="item-icon" name="arrow-forward"></ion-icon>\n              </div>\n            </ion-col>\n          </ion-row>\n        </ion-item>\n      </ion-list>\n    </div>\n    <div *ngSwitchCase="\'upcoming\'">\n      <ion-list class="schedule-list">\n        <ion-item class="schedule-item" *ngFor="let item of schedule.upcoming">\n          <ion-row>\n            <ion-col width-20 class="schedule-date">\n              <h2 class="schedule-day">{{item.date.day}}</h2>\n              <h3 class="schedule-month">{{item.date.month_name}}</h3>\n              <h4 class="schedule-time">{{item.date.time}}</h4>\n            </ion-col>\n            <ion-col width-80 class="schedule-data">\n              <div class="data-item">\n                <div class="item-content">\n                  <h2 class="item-title one-line">{{item.subject}}</h2>\n                  <div class="item-description">\n                    <ion-icon class="description-icon" name="clock"></ion-icon>\n                    <p class="description-text">{{item.date.full}}</p>\n                  </div>\n                  <div class="item-description">\n                    <ion-icon class="description-icon" name="navigate"></ion-icon>\n                    <p class="description-text one-line">{{item.location}}</p>\n                  </div>\n                </div>\n                <ion-icon class="item-icon" name="arrow-forward"></ion-icon>\n              </div>\n            </ion-col>\n          </ion-row>\n        </ion-item>\n      </ion-list>\n    </div>\n  </div>\n</ion-content>\n`/*ion-inline-end:"/home/duane/dev/willow/knddec/src/pages/schedule/schedule.html"*/
+        }),
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* NavController */],
+            __WEBPACK_IMPORTED_MODULE_4__schedule_service__["a" /* ScheduleService */],
+            __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* LoadingController */]])
+    ], SchedulePage);
+    return SchedulePage;
+}());
+
+//# sourceMappingURL=schedule.js.map
+
+/***/ }),
+
+/***/ 1022:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* unused harmony export EventModel */
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ScheduleModel; });
+/* unused harmony export EventDate */
+var EventModel = (function () {
+    function EventModel() {
+    }
+    return EventModel;
+}());
+
+var ScheduleModel = (function () {
+    function ScheduleModel() {
+        this.today = [];
+        this.upcoming = [];
+    }
+    return ScheduleModel;
+}());
+
+var EventDate = (function () {
+    function EventDate() {
+    }
+    return EventDate;
+}());
+
+//# sourceMappingURL=schedule.model.js.map
+
+/***/ }),
+
+/***/ 1023:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ShowHideContainer; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__show_hide_input__ = __webpack_require__(600);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__show_hide_input__ = __webpack_require__(588);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -965,178 +1267,21 @@ var ShowHideContainer = (function () {
 
 /***/ }),
 
-/***/ 112:
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return CheckInOutService; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__api__ = __webpack_require__(41);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs__ = __webpack_require__(32);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_rxjs__);
-var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
-    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-    return c > 3 && r && Object.defineProperty(target, key, r), r;
-};
-var __metadata = (this && this.__metadata) || function (k, v) {
-    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
-};
-
-
-
-var CheckInOutService = (function () {
-    function CheckInOutService(api) {
-        this.api = api;
-    }
-    CheckInOutService.prototype.checkIn = function (jobId, latitude, longitude, userId) {
-        if (!this.api.checkAuth()) {
-            return __WEBPACK_IMPORTED_MODULE_2_rxjs__["Observable"].of();
-        }
-        var data = {
-            jobId: jobId, latitude: latitude, longitude: longitude
-        };
-        if (userId) {
-            data['userId'] = userId;
-        }
-        return this.api.post('/v/1/0/checkin', data)
-            .map(function (res) {
-            var _a = res.json(), success = _a.success, message = _a.message;
-            return {
-                success: success,
-                message: message,
-                in_location: message === 'success:inl'
-            };
-        });
-    };
-    CheckInOutService.prototype.checkOut = function (jobId, took_lunch, latitude, longitude, userId) {
-        if (!this.api.checkAuth()) {
-            return __WEBPACK_IMPORTED_MODULE_2_rxjs__["Observable"].of();
-        }
-        var data = { jobId: jobId, latitude: latitude, longitude: longitude, took_lunch: took_lunch };
-        if (userId) {
-            data['userId'] = userId;
-        }
-        return this.api.post('/v/1/0/checkout', data)
-            .map(function (res) {
-            var _a = res.json(), success = _a.success, message = _a.message;
-            return {
-                success: success,
-                message: message
-            };
-        });
-    };
-    CheckInOutService = __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_1__angular_core__["B" /* Injectable */])(),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_0__api__["a" /* ApiService */]])
-    ], CheckInOutService);
-    return CheckInOutService;
-}());
-
-//# sourceMappingURL=check-in.js.map
-
-/***/ }),
-
-/***/ 122:
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return PrestartConfigurationService; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_rxjs_add_operator_toPromise__ = __webpack_require__(33);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_rxjs_add_operator_toPromise___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_rxjs_add_operator_toPromise__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__api__ = __webpack_require__(41);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__classes_prestart_configuration_model__ = __webpack_require__(564);
-var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
-    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-    return c > 3 && r && Object.defineProperty(target, key, r), r;
-};
-var __metadata = (this && this.__metadata) || function (k, v) {
-    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
-};
-
-
-
-
-var PrestartConfigurationService = (function () {
-    function PrestartConfigurationService(api) {
-        this.api = api;
-        this._prestarts = [];
-    }
-    Object.defineProperty(PrestartConfigurationService.prototype, "prestarts", {
-        get: function () {
-            return this._prestarts;
-        },
-        enumerable: true,
-        configurable: true
-    });
-    PrestartConfigurationService.prototype.getData = function () {
-        var _this = this;
-        console.log("getData prestart");
-        var mapPrestart = function (_a) {
-            var site_id = _a.site_id, tasks = _a.tasks, swms = _a.swms, reminders = _a.reminders, issues = _a.issues;
-            return new __WEBPACK_IMPORTED_MODULE_3__classes_prestart_configuration_model__["a" /* PrestartConfiguration */](site_id, tasks, swms, reminders, issues);
-        };
-        return this.api.get('/v/1/0/prestart')
-            .toPromise()
-            .then(function (response) { return response.json().preStarts.map(mapPrestart) || []; })
-            .then(function (prestarts) { return _this._prestarts = prestarts; })
-            .catch(this.handleError);
-    };
-    PrestartConfigurationService.prototype.post = function (configuration) {
-        var _this = this;
-        return this.api
-            .post("/v/1/0/prestart/" + configuration.siteId, configuration)
-            .toPromise()
-            .then(function () {
-            // save updated record locally
-            var existingPrestartIndex = _this._prestarts.findIndex(function (i) { return i.siteId === configuration.siteId; });
-            if (existingPrestartIndex >= 0) {
-                _this._prestarts[existingPrestartIndex] = configuration;
-            }
-            else {
-                _this._prestarts.push(configuration);
-            }
-        })
-            .catch(this.handleError);
-    };
-    PrestartConfigurationService.prototype.getBySiteId = function (siteId) {
-        return this._prestarts.find(function (i) { return i.siteId === siteId; });
-    };
-    PrestartConfigurationService.prototype.handleError = function (error) {
-        console.error('An error occurred', error); // for demo purposes only
-        this._prestarts = [];
-        return Promise.reject(error.message || error);
-    };
-    PrestartConfigurationService = __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_2__angular_core__["B" /* Injectable */])(),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1__api__["a" /* ApiService */]])
-    ], PrestartConfigurationService);
-    return PrestartConfigurationService;
-}());
-
-//# sourceMappingURL=prestart-configuration.js.map
-
-/***/ }),
-
 /***/ 123:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return SettingsPage; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_rxjs_Rx__ = __webpack_require__(32);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_rxjs_Rx__ = __webpack_require__(41);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_rxjs_Rx___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_rxjs_Rx__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_forms__ = __webpack_require__(22);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_ionic_angular__ = __webpack_require__(6);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_ionic_angular__ = __webpack_require__(7);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__providers_auth__ = __webpack_require__(45);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__login_login__ = __webpack_require__(213);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__privacy_policy_privacy_policy__ = __webpack_require__(217);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__privacy_policy_privacy_policy__ = __webpack_require__(216);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__profile_profile_model__ = __webpack_require__(571);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__terms_of_service_terms_of_service__ = __webpack_require__(216);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__terms_of_service_terms_of_service__ = __webpack_require__(215);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -1215,18 +1360,95 @@ var SettingsPage = (function () {
 
 /***/ }),
 
-/***/ 204:
+/***/ 124:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return SiteService; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_rxjs_add_operator_toPromise__ = __webpack_require__(42);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_rxjs_add_operator_toPromise___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_rxjs_add_operator_toPromise__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__api__ = __webpack_require__(39);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_core__ = __webpack_require__(0);
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+
+var SiteService = (function () {
+    function SiteService(api) {
+        this.api = api;
+        this._sites = [];
+    }
+    Object.defineProperty(SiteService.prototype, "sites", {
+        get: function () {
+            return this._sites;
+        },
+        enumerable: true,
+        configurable: true
+    });
+    SiteService.prototype.byId = function (id) {
+        return this._sites.find(function (v) { return v.id === id; });
+    };
+    SiteService.prototype.getData = function () {
+        var _this = this;
+        console.log("getData sites");
+        return this.api.get('/v/1/0/sites')
+            .toPromise()
+            .then(function (response) { return response.json(); })
+            .then(function (_a) {
+            var sites = _a.sites;
+            return (sites.map(function (_a) {
+                var id = _a.id, label = _a.label, created_at = _a.created_at, updated_at = _a.updated_at, open = _a.open, open_at = _a.open_at;
+                return ({
+                    id: id,
+                    label: label,
+                    open: open,
+                    openAt: open_at ? new Date(open_at) : null
+                });
+            }));
+        })
+            .then(function (sites) {
+            // store locally
+            _this._sites = sites;
+            return sites;
+        })
+            .catch(this.handleError);
+    };
+    SiteService.prototype.handleError = function (error) {
+        console.error('An error occurred', error); // for demo purposes only
+        this._sites = [];
+        return Promise.reject(error.message || error);
+    };
+    SiteService = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_2__angular_core__["B" /* Injectable */])(),
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1__api__["a" /* ApiService */]])
+    ], SiteService);
+    return SiteService;
+}());
+
+//# sourceMappingURL=sites.js.map
+
+/***/ }),
+
+/***/ 205:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return SwmPage; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_ionic_angular__ = __webpack_require__(6);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_ionic_angular__ = __webpack_require__(7);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__safety_reminder_safety_reminder__ = __webpack_require__(565);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__swm_detail_swm_detail__ = __webpack_require__(209);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__providers_swm__ = __webpack_require__(67);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__classes_swm_model__ = __webpack_require__(89);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__providers_worker__ = __webpack_require__(61);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__safety_reminder_safety_reminder__ = __webpack_require__(564);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__swm_detail_swm_detail__ = __webpack_require__(210);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__providers_swm__ = __webpack_require__(66);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__classes_swm_model__ = __webpack_require__(91);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__providers_worker__ = __webpack_require__(62);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -1376,16 +1598,16 @@ var SwmPage = (function () {
 
 /***/ }),
 
-/***/ 205:
+/***/ 206:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return IssueService; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_rxjs_add_operator_toPromise__ = __webpack_require__(33);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_rxjs_add_operator_toPromise__ = __webpack_require__(42);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_rxjs_add_operator_toPromise___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_rxjs_add_operator_toPromise__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_moment__ = __webpack_require__(2);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_moment___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_moment__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__api__ = __webpack_require__(41);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__api__ = __webpack_require__(39);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__angular_core__ = __webpack_require__(0);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -1448,14 +1670,14 @@ var IssueService = (function () {
 
 /***/ }),
 
-/***/ 206:
+/***/ 207:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return SafetyReminderDetailPage; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_ionic_angular__ = __webpack_require__(6);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_ionic_angular__ = __webpack_require__(7);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__classes_safety_reminder_model__ = __webpack_require__(207);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__classes_safety_reminder_model__ = __webpack_require__(208);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -1497,7 +1719,7 @@ var SafetyReminderDetailPage = (function () {
 
 /***/ }),
 
-/***/ 207:
+/***/ 208:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -1520,16 +1742,16 @@ var SafetyRemindersModel = (function () {
 
 /***/ }),
 
-/***/ 208:
+/***/ 209:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return SafetyReminderService; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_rxjs_add_operator_toPromise__ = __webpack_require__(33);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_rxjs_add_operator_toPromise__ = __webpack_require__(42);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_rxjs_add_operator_toPromise___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_rxjs_add_operator_toPromise__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_moment__ = __webpack_require__(2);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_moment___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_moment__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__api__ = __webpack_require__(41);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__api__ = __webpack_require__(39);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__angular_core__ = __webpack_require__(0);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -1592,13 +1814,13 @@ var SafetyReminderService = (function () {
 
 /***/ }),
 
-/***/ 209:
+/***/ 210:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return SwmDetailPage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(6);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(7);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -1642,7 +1864,7 @@ var SwmDetailPage = (function () {
 
 /***/ }),
 
-/***/ 210:
+/***/ 211:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -1747,101 +1969,13 @@ var CounterInput = (function () {
 
 /***/ }),
 
-/***/ 211:
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ProfilePage; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_rxjs_Rx__ = __webpack_require__(32);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_rxjs_Rx___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_rxjs_Rx__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(6);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__providers_auth__ = __webpack_require__(45);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__followers_followers__ = __webpack_require__(212);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__profile_model__ = __webpack_require__(571);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__settings_settings__ = __webpack_require__(123);
-var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
-    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-    return c > 3 && r && Object.defineProperty(target, key, r), r;
-};
-var __metadata = (this && this.__metadata) || function (k, v) {
-    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
-};
-
-
-
-
-
-
-
-var ProfilePage = (function () {
-    function ProfilePage(menu, app, navParams, loadingCtrl, auth) {
-        this.menu = menu;
-        this.app = app;
-        this.navParams = navParams;
-        this.loadingCtrl = loadingCtrl;
-        this.auth = auth;
-        this.profile = new __WEBPACK_IMPORTED_MODULE_5__profile_model__["a" /* ProfileModel */]();
-        this.display = "list";
-        this.loading = this.loadingCtrl.create();
-    }
-    ProfilePage.prototype.ionViewDidLoad = function () {
-        this.profile.user = this.auth.user;
-        this.profile.following = [];
-        this.profile.followers = [];
-        this.profile.posts = [];
-    };
-    ProfilePage.prototype.goToFollowersList = function () {
-        // close the menu when clicking a link from the menu
-        this.menu.close();
-        this.app.getRootNav().push(__WEBPACK_IMPORTED_MODULE_4__followers_followers__["a" /* FollowersPage */], {
-            list: this.profile.followers
-        });
-    };
-    ProfilePage.prototype.goToFollowingList = function () {
-        // close the menu when clicking a link from the menu
-        this.menu.close();
-        this.app.getRootNav().push(__WEBPACK_IMPORTED_MODULE_4__followers_followers__["a" /* FollowersPage */], {
-            list: this.profile.following
-        });
-    };
-    ProfilePage.prototype.goToSettings = function () {
-        // close the menu when clicking a link from the menu
-        this.menu.close();
-        this.app.getRootNav().push(__WEBPACK_IMPORTED_MODULE_6__settings_settings__["a" /* SettingsPage */]);
-    };
-    ProfilePage.prototype.onSegmentChanged = function (segmentButton) {
-        // console.log('Segment changed to', segmentButton.value);
-    };
-    ProfilePage.prototype.onSegmentSelected = function (segmentButton) {
-        // console.log('Segment selected', segmentButton.value);
-    };
-    ProfilePage = __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_3__angular_core__["n" /* Component */])({
-            selector: 'profile-page',template:/*ion-inline-start:"/home/duane/dev/willow/knddec/src/pages/profile/profile.html"*/`<ion-header>\n  <ion-navbar>\n    <ion-title>Profile</ion-title>\n  </ion-navbar>\n</ion-header>\n\n<ion-content class="profile-content">\n  <div class="user-details">\n    <ion-row class="user-main-data-row">\n      <ion-col no-padding width-33>\n        <preload-image class="user-image" [ratio]="{w:1, h:1}" [src]="profile.user.image" alt="profile.user.name" title="profile.user.name"></preload-image>\n      </ion-col>\n      <ion-col no-padding>\n        <ion-row class="social-presence-row">\n          <ion-col width-50 class="social-presence-item">\n            <a (click)="goToFollowersList()">\n              <h2 class="social-presence-value">{{profile.followers.length}}</h2>\n              <h4 class="social-presence-title">Followers</h4>\n            </a>\n          </ion-col>\n          <ion-col width-50 class="social-presence-item">\n            <a (click)="goToFollowingList()">\n              <h2 class="social-presence-value">{{profile.following.length}}</h2>\n              <h4 class="social-presence-title">Following</h4>\n            </a>\n          </ion-col>\n        </ion-row>\n        <ion-row class="profile-action-row">\n          <ion-col no-padding>\n            <button ion-button block small (click)="goToSettings()">\n              Edit profile\n            </button>\n          </ion-col>\n        </ion-row>\n      </ion-col>\n    </ion-row>\n    <ion-row wrap class="user-bio-row">\n      <ion-col no-padding width-50>\n        <h2 class="user-name">{{profile.user.name}}</h2>\n      </ion-col>\n      <ion-col no-padding width-50>\n        <span class="user-location">{{profile.user.location}}</span>\n      </ion-col>\n      <ion-col no-padding width-100>\n        <p class="user-description">\n          {{profile.user.about}}\n        </p>\n      </ion-col>\n    </ion-row>\n    <ion-segment class="user-content-segment" [(ngModel)]="display" (ionChange)="onSegmentChanged($event)">\n      <ion-segment-button value="grid" (ionSelect)="onSegmentSelected($event)">\n        Grid\n      </ion-segment-button>\n      <ion-segment-button value="list" (ionSelect)="onSegmentSelected($event)">\n        List\n      </ion-segment-button>\n    </ion-segment>\n  </div>\n  <div [ngSwitch]="display" class="user-content">\n    <div *ngSwitchCase="\'list\'" class="list-view">\n      <div class="list-item" *ngFor="let post of profile.posts">\n        <span class="item-date">{{post.date}}</span>\n        <ion-card>\n          <preload-image [ratio]="{w:1, h:1}" [src]="post.image" title=""></preload-image>\n          <ion-card-content>\n            <p class="item-text">\n              {{post.description}}\n            </p>\n          </ion-card-content>\n          <ion-row no-padding class="actions-row">\n            <ion-col no-padding width-30 text-left>\n              <button class="action-button" ion-button clear small color="danger" icon-left>\n                <ion-icon isActive="{{post.liked}}" name=\'heart\'></ion-icon>\n                  {{post.likes}} Likes\n              </button>\n            </ion-col>\n            <ion-col no-padding width-45 text-center>\n              <button class="action-button" ion-button clear small color="danger" icon-left>\n                <ion-icon name=\'chatbubbles\'></ion-icon>\n                  {{post.comments}} Comments\n              </button>\n            </ion-col>\n            <ion-col no-padding width-25 text-right>\n              <button class="action-button" ion-button clear small color="danger" icon-left>\n                <ion-icon name=\'share-alt\'></ion-icon>\n                Share\n              </button>\n            </ion-col>\n          </ion-row>\n        </ion-card>\n      </div>\n    </div>\n    <div *ngSwitchCase="\'grid\'" class="grid-view">\n      <ion-row wrap class="grid-row">\n        <ion-col width-33 class="grid-item" *ngFor="let post of profile.posts">\n          <preload-image [ratio]="{w:1, h:1}" [src]="post.image" title="ion2FullApp"></preload-image>\n        </ion-col>\n      </ion-row>\n    </div>\n  </div>\n</ion-content>\n`/*ion-inline-end:"/home/duane/dev/willow/knddec/src/pages/profile/profile.html"*/
-        }),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* MenuController */],
-            __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["b" /* App */],
-            __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["j" /* NavParams */],
-            __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* LoadingController */],
-            __WEBPACK_IMPORTED_MODULE_2__providers_auth__["a" /* AuthService */]])
-    ], ProfilePage);
-    return ProfilePage;
-}());
-
-//# sourceMappingURL=profile.js.map
-
-/***/ }),
-
 /***/ 212:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return FollowersPage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(6);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(7);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -1888,16 +2022,16 @@ var FollowersPage = (function () {
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return LoginPage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__providers_auth__ = __webpack_require__(45);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_forms__ = __webpack_require__(22);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_ionic_angular__ = __webpack_require__(6);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__classes_worker_model__ = __webpack_require__(66);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__providers_api__ = __webpack_require__(41);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_ionic_angular__ = __webpack_require__(7);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__classes_worker_model__ = __webpack_require__(89);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__providers_api__ = __webpack_require__(39);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__forgot_password_forgot_password__ = __webpack_require__(572);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__providers_shared__ = __webpack_require__(47);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__signup_signup__ = __webpack_require__(576);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__tabs_navigation_tabs_navigation__ = __webpack_require__(90);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__tabs_navigation_tabs_navigation__ = __webpack_require__(92);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__worker_clockon_worker_clockon__ = __webpack_require__(577);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__providers_worker__ = __webpack_require__(61);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__providers_worker__ = __webpack_require__(62);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -2026,85 +2160,8 @@ var LoginPage = (function () {
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return SiteService; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_rxjs_add_operator_toPromise__ = __webpack_require__(33);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_rxjs_add_operator_toPromise___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_rxjs_add_operator_toPromise__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__api__ = __webpack_require__(41);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_core__ = __webpack_require__(0);
-var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
-    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-    return c > 3 && r && Object.defineProperty(target, key, r), r;
-};
-var __metadata = (this && this.__metadata) || function (k, v) {
-    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
-};
-
-
-
-var SiteService = (function () {
-    function SiteService(api) {
-        this.api = api;
-        this._sites = [];
-    }
-    Object.defineProperty(SiteService.prototype, "sites", {
-        get: function () {
-            return this._sites;
-        },
-        enumerable: true,
-        configurable: true
-    });
-    SiteService.prototype.byId = function (id) {
-        return this._sites.find(function (v) { return v.id === id; });
-    };
-    SiteService.prototype.getData = function () {
-        var _this = this;
-        console.log("getData sites");
-        return this.api.get('/v/1/0/sites')
-            .toPromise()
-            .then(function (response) { return response.json(); })
-            .then(function (_a) {
-            var sites = _a.sites;
-            return (sites.map(function (_a) {
-                var id = _a.id, label = _a.label, created_at = _a.created_at, updated_at = _a.updated_at, open = _a.open, open_at = _a.open_at;
-                return ({
-                    id: id,
-                    label: label,
-                    open: open,
-                    openAt: open_at ? new Date(open_at) : null
-                });
-            }));
-        })
-            .then(function (sites) {
-            // store locally
-            _this._sites = sites;
-            return sites;
-        })
-            .catch(this.handleError);
-    };
-    SiteService.prototype.handleError = function (error) {
-        console.error('An error occurred', error); // for demo purposes only
-        this._sites = [];
-        return Promise.reject(error.message || error);
-    };
-    SiteService = __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_2__angular_core__["B" /* Injectable */])(),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1__api__["a" /* ApiService */]])
-    ], SiteService);
-    return SiteService;
-}());
-
-//# sourceMappingURL=sites.js.map
-
-/***/ }),
-
-/***/ 215:
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return TaskService; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__api__ = __webpack_require__(41);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__api__ = __webpack_require__(39);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_core__ = __webpack_require__(0);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -2161,13 +2218,13 @@ var TaskService = (function () {
 
 /***/ }),
 
-/***/ 216:
+/***/ 215:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return TermsOfServicePage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(6);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(7);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -2199,13 +2256,13 @@ var TermsOfServicePage = (function () {
 
 /***/ }),
 
-/***/ 217:
+/***/ 216:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return PrivacyPolicyPage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(6);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(7);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -2237,7 +2294,7 @@ var PrivacyPolicyPage = (function () {
 
 /***/ }),
 
-/***/ 218:
+/***/ 217:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -2268,16 +2325,16 @@ var TimesheetsModel = (function () {
 
 /***/ }),
 
-/***/ 219:
+/***/ 218:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return TimesService; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_rxjs_add_operator_map__ = __webpack_require__(120);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_rxjs_add_operator_map__ = __webpack_require__(121);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_rxjs_add_operator_map___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_rxjs_add_operator_map__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_http__ = __webpack_require__(30);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_http__ = __webpack_require__(38);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__classes_timesheet_model__ = __webpack_require__(218);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__classes_timesheet_model__ = __webpack_require__(217);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -2325,7 +2382,7 @@ var TimesService = (function () {
 
 /***/ }),
 
-/***/ 232:
+/***/ 231:
 /***/ (function(module, exports) {
 
 function webpackEmptyAsyncContext(req) {
@@ -2338,11 +2395,11 @@ function webpackEmptyAsyncContext(req) {
 webpackEmptyAsyncContext.keys = function() { return []; };
 webpackEmptyAsyncContext.resolve = webpackEmptyAsyncContext;
 module.exports = webpackEmptyAsyncContext;
-webpackEmptyAsyncContext.id = 232;
+webpackEmptyAsyncContext.id = 231;
 
 /***/ }),
 
-/***/ 277:
+/***/ 276:
 /***/ (function(module, exports) {
 
 function webpackEmptyAsyncContext(req) {
@@ -2355,18 +2412,18 @@ function webpackEmptyAsyncContext(req) {
 webpackEmptyAsyncContext.keys = function() { return []; };
 webpackEmptyAsyncContext.resolve = webpackEmptyAsyncContext;
 module.exports = webpackEmptyAsyncContext;
-webpackEmptyAsyncContext.id = 277;
+webpackEmptyAsyncContext.id = 276;
 
 /***/ }),
 
-/***/ 319:
+/***/ 318:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return MaWeatherDetailsPage; });
 /* unused harmony export DetailsItem */
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(6);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(7);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -2468,7 +2525,7 @@ var DetailsItem = (function () {
 
 /***/ }),
 
-/***/ 320:
+/***/ 319:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -2478,18 +2535,18 @@ var API_URL = 'http://api.willow.kndtesting.com.au';
 
 /***/ }),
 
-/***/ 41:
+/***/ 39:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ApiService; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_http__ = __webpack_require__(30);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__environment_env__ = __webpack_require__(320);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_http__ = __webpack_require__(38);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__environment_env__ = __webpack_require__(319);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__auth__ = __webpack_require__(45);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_rxjs_Observable__ = __webpack_require__(1);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_rxjs_Observable___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_4_rxjs_Observable__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_ionic_angular__ = __webpack_require__(6);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_ionic_angular__ = __webpack_require__(7);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -2575,20 +2632,20 @@ var ApiService = (function () {
 
 /***/ }),
 
-/***/ 444:
+/***/ 443:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ClockOffPage; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_rxjs_Rx__ = __webpack_require__(32);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_rxjs_Rx__ = __webpack_require__(41);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_rxjs_Rx___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_rxjs_Rx__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(6);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__providers_worker__ = __webpack_require__(61);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__providers_check_in__ = __webpack_require__(112);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(7);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__providers_worker__ = __webpack_require__(62);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__providers_check_in__ = __webpack_require__(82);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__ionic_native_geolocation__ = __webpack_require__(63);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__ionic_native_geolocation__ = __webpack_require__(60);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__providers_shared__ = __webpack_require__(47);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__classes_worker_model__ = __webpack_require__(66);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__classes_worker_model__ = __webpack_require__(89);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -2765,10 +2822,10 @@ var ClockOffPage = (function () {
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "b", function() { return UserRole; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AuthService; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_bcryptjs__ = __webpack_require__(654);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_bcryptjs__ = __webpack_require__(642);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_bcryptjs___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_bcryptjs__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_http__ = __webpack_require__(30);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__environment_env__ = __webpack_require__(320);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_http__ = __webpack_require__(38);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__environment_env__ = __webpack_require__(319);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_rxjs_Observable__ = __webpack_require__(1);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_rxjs_Observable___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_4_rxjs_Observable__);
@@ -2833,7 +2890,9 @@ var AuthService = (function () {
             ackIssues: false,
             siteSelected: 0,
             inLocation: false,
-            siteVisits: []
+            siteVisits: [],
+            sitesAllowed: [],
+            supervisor: false
         };
     }
     Object.defineProperty(AuthService.prototype, "loggedIn", {
@@ -2920,6 +2979,7 @@ var AuthService = (function () {
             // Fill worker model
             _this._worker.name = _this._name;
             _this._worker.image = _this._image;
+            _this._worker.supervisor = _this._role === UserRole.Supervisor;
             return true;
         })
             .catch(function (error) {
@@ -2953,7 +3013,7 @@ var AuthService = (function () {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return SharedService; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_rxjs_add_operator_map__ = __webpack_require__(120);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_rxjs_add_operator_map__ = __webpack_require__(121);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_rxjs_add_operator_map___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_rxjs_add_operator_map__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__auth__ = __webpack_require__(45);
@@ -3017,20 +3077,20 @@ var SharedService = (function () {
 
 /***/ }),
 
-/***/ 563:
+/***/ 562:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ClockOnPage; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__providers_worker__ = __webpack_require__(61);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(6);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__providers_worker__ = __webpack_require__(62);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(7);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__ionic_native_geolocation__ = __webpack_require__(63);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__providers_prestart_configuration__ = __webpack_require__(122);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__ionic_native_geolocation__ = __webpack_require__(60);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__providers_prestart_configuration__ = __webpack_require__(90);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__providers_shared__ = __webpack_require__(47);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__swm_swm__ = __webpack_require__(204);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__providers_swm__ = __webpack_require__(67);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__classes_worker_model__ = __webpack_require__(66);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__swm_swm__ = __webpack_require__(205);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__providers_swm__ = __webpack_require__(66);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__classes_worker_model__ = __webpack_require__(89);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -3067,7 +3127,8 @@ var ClockOnPage = (function () {
         this.defaultPersonImage = __WEBPACK_IMPORTED_MODULE_0__providers_worker__["a" /* DEFAULT_PERSON */];
         this.prestart = null;
         this.workerlist = new __WEBPACK_IMPORTED_MODULE_8__classes_worker_model__["b" /* WorkersModel */]();
-        this.workersNotStarted = new __WEBPACK_IMPORTED_MODULE_8__classes_worker_model__["b" /* WorkersModel */]();
+        this.workersNotStartedThisSite = new __WEBPACK_IMPORTED_MODULE_8__classes_worker_model__["b" /* WorkersModel */]();
+        this.workersNotStartedOtherSites = new __WEBPACK_IMPORTED_MODULE_8__classes_worker_model__["b" /* WorkersModel */]();
         this.workersStarted = new __WEBPACK_IMPORTED_MODULE_8__classes_worker_model__["b" /* WorkersModel */]();
         this.location = {
             lat: null,
@@ -3096,7 +3157,8 @@ var ClockOnPage = (function () {
         console.log("list of required swms are ");
         console.log(rqswms);
         this.workersStarted.items = [];
-        this.workersNotStarted.items = [];
+        this.workersNotStartedThisSite.items = [];
+        this.workersNotStartedOtherSites.items = [];
         this.workerlist.items.map(function (worker) {
             // do swm compliance
             console.log("print out worker");
@@ -3104,13 +3166,13 @@ var ClockOnPage = (function () {
             worker.swmCompliant = rqswms.every(function (rs) { return worker.validSwms.indexOf(rs) >= 0 || worker.claimedSwms.indexOf(rs) >= 0; });
             // split workers into started and not started arrays - exclude
             // workers that are finished for the day
-            if (worker.clockedOn === true) {
-                console.log("clocked on detected ");
-                console.log(worker);
+            if (worker.clockedOn) {
+                console.log("clocked on detected " + worker.name);
                 if (!worker.clockedOff) {
                     console.log(worker.name + " has started work");
-                    if (worker.siteSelected === _this.sharedService.siteId)
+                    if (worker.siteSelected === _this.sharedService.siteId) {
                         _this.workersStarted.items.push(worker);
+                    }
                 }
                 else {
                     console.log(worker.name + " has finished work so not included");
@@ -3119,7 +3181,12 @@ var ClockOnPage = (function () {
             else {
                 console.log("worker not started " + worker.name);
                 // only add if worker is on this site
-                _this.workersNotStarted.items.push(worker);
+                if (worker.sitesAllowed.indexOf(_this.sharedService.siteId) >= 0) {
+                    _this.workersNotStartedThisSite.items.push(worker);
+                }
+                else {
+                    _this.workersNotStartedOtherSites.items.push(worker);
+                }
             }
         });
         console.log("worker clocking");
@@ -3162,7 +3229,7 @@ var ClockOnPage = (function () {
     };
     ClockOnPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_2__angular_core__["n" /* Component */])({
-            selector: 'page-clock-on',template:/*ion-inline-start:"/home/duane/dev/willow/knddec/src/pages/clock-on/clock-on.html"*/`<ion-header>\n  <ion-navbar>\n    <ion-title>Daily Attendance Record (Clock on)</ion-title>\n  </ion-navbar>\n</ion-header>\n\n\n<ion-content class="notifications-content">\n  <ion-item-group>\n    <ion-item-divider class="notifications-divider">Yet to arrive</ion-item-divider>\n    <ion-item class="notification-item"\n      *ngFor="let worker of workersNotStarted.items"\n      (click)="startSignIn(worker)"\n      [ngClass]="{\'non-compliant\': !worker.swmCompliant}">\n      <ion-avatar item-left>\n        <preload-image class="user-image"\n          [ratio]="{w:1, h:1}"\n          [src]="worker.image || defaultPersonImage"></preload-image>\n      </ion-avatar>\n      <h2 class="item-title">{{worker.name}}</h2>\n      <p class="item-description">{{worker.message}}</p>\n      <!--<ion-note class="item-time" item-right>{{worker.date}}</ion-note>-->\n    </ion-item>\n    <ion-item-divider class="notifications-divider">Signed In</ion-item-divider>\n    <ion-item class="notification-item"\n      *ngFor="let worker of workersStarted.items"\n      [ngClass]="{\'non-compliant\': !worker.swmCompliant}">\n      <ion-avatar item-left>\n        <preload-image class="user-image"\n          [ratio]="{w:1, h:1}"\n          [src]="worker.image || defaultPersonImage"></preload-image>\n      </ion-avatar>\n      <h2 class="item-title">{{worker.name}}</h2>\n      <p class="item-description">{{worker.message}}</p>\n      <ion-note class="item-time"\n        item-right>{{worker.clockOn}}</ion-note>\n    </ion-item>\n  </ion-item-group>\n</ion-content>\n`/*ion-inline-end:"/home/duane/dev/willow/knddec/src/pages/clock-on/clock-on.html"*/
+            selector: 'page-clock-on',template:/*ion-inline-start:"/home/duane/dev/willow/knddec/src/pages/clock-on/clock-on.html"*/`<ion-header>\n  <ion-navbar>\n    <ion-title>Daily Attendance Record (Clock on)</ion-title>\n  </ion-navbar>\n</ion-header>\n\n\n<ion-content class="notifications-content">\n  <ion-item-group>\n    <ion-item-divider class="notifications-divider">Yet to arrive (assigned for this site)</ion-item-divider>\n    <ion-item class="notification-item"\n      *ngFor="let worker of workersNotStartedThisSite.items"\n      (click)="startSignIn(worker)"\n      [ngClass]="{\'non-compliant\': !worker.swmCompliant}">\n      <ion-avatar item-left>\n        <preload-image class="user-image"\n          [ratio]="{w:1, h:1}"\n          [src]="worker.image || defaultPersonImage"></preload-image>\n      </ion-avatar>\n      <h2 class="item-title">{{worker.name}}</h2>\n      <p class="item-description">{{worker.message}}</p>\n      <!--<ion-note class="item-time" item-right>{{worker.date}}</ion-note>-->\n    </ion-item>\n    <ion-item-divider class="notifications-divider">Yet to arrive (other sites)</ion-item-divider>\n    <ion-item class="notification-item"\n      *ngFor="let worker of workersNotStartedOtherSites.items"\n      (click)="startSignIn(worker)"\n      [ngClass]="{\'non-compliant\': !worker.swmCompliant}">\n      <ion-avatar item-left>\n        <preload-image class="user-image"\n          [ratio]="{w:1, h:1}"\n          [src]="worker.image || defaultPersonImage"></preload-image>\n      </ion-avatar>\n      <h2 class="item-title">{{worker.name}}</h2>\n      <p class="item-description">{{worker.message}}</p>\n      <!--<ion-note class="item-time" item-right>{{worker.date}}</ion-note>-->\n    </ion-item>\n    <ion-item-divider class="notifications-divider">Signed In</ion-item-divider>\n    <ion-item class="notification-item"\n      *ngFor="let worker of workersStarted.items"\n      [ngClass]="{\'non-compliant\': !worker.swmCompliant}">\n      <ion-avatar item-left>\n        <preload-image class="user-image"\n          [ratio]="{w:1, h:1}"\n          [src]="worker.image || defaultPersonImage"></preload-image>\n      </ion-avatar>\n      <h2 class="item-title">{{worker.name}}</h2>\n      <p class="item-description">{{worker.message}}</p>\n      <ion-note class="item-time"\n        item-right>{{worker.clockOn}}</ion-note>\n    </ion-item>\n  </ion-item-group>\n</ion-content>\n`/*ion-inline-end:"/home/duane/dev/willow/knddec/src/pages/clock-on/clock-on.html"*/
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* NavController */],
             __WEBPACK_IMPORTED_MODULE_0__providers_worker__["b" /* WorkerService */],
@@ -3179,7 +3246,7 @@ var ClockOnPage = (function () {
 
 /***/ }),
 
-/***/ 564:
+/***/ 563:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -3203,17 +3270,17 @@ var PrestartConfiguration = (function () {
 
 /***/ }),
 
-/***/ 565:
+/***/ 564:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return SafetyReminderPage; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_ionic_angular__ = __webpack_require__(6);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_ionic_angular__ = __webpack_require__(7);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__safety_issues_safety_issues__ = __webpack_require__(566);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__safety_reminder_detail_safety_reminder_detail__ = __webpack_require__(206);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__providers_safety_reminder__ = __webpack_require__(208);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__classes_safety_reminder_model__ = __webpack_require__(207);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__safety_issues_safety_issues__ = __webpack_require__(565);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__safety_reminder_detail_safety_reminder_detail__ = __webpack_require__(207);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__providers_safety_reminder__ = __webpack_require__(209);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__classes_safety_reminder_model__ = __webpack_require__(208);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -3293,19 +3360,19 @@ var SafetyReminderPage = (function () {
 
 /***/ }),
 
-/***/ 566:
+/***/ 565:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return SafetyIssuesPage; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_ionic_angular__ = __webpack_require__(6);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__classes_worker_model__ = __webpack_require__(66);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__providers_check_in__ = __webpack_require__(112);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_ionic_angular__ = __webpack_require__(7);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__classes_worker_model__ = __webpack_require__(89);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__providers_check_in__ = __webpack_require__(82);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__ionic_native_geolocation__ = __webpack_require__(63);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__angular_http__ = __webpack_require__(30);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__providers_issue__ = __webpack_require__(205);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__classes_issue_model__ = __webpack_require__(567);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__ionic_native_geolocation__ = __webpack_require__(60);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__angular_http__ = __webpack_require__(38);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__providers_issue__ = __webpack_require__(206);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__classes_issue_model__ = __webpack_require__(566);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -3513,7 +3580,7 @@ var SafetyIssuesPage = (function () {
 
 /***/ }),
 
-/***/ 567:
+/***/ 566:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -3536,14 +3603,14 @@ var IssuesModel = (function () {
 
 /***/ }),
 
-/***/ 568:
+/***/ 567:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return EquipmentPage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(6);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__equipment_prestart_equipment_prestart__ = __webpack_require__(569);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(7);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__equipment_prestart_equipment_prestart__ = __webpack_require__(568);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -3589,13 +3656,13 @@ var EquipmentPage = (function () {
 
 /***/ }),
 
-/***/ 569:
+/***/ 568:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return EquipmentPrestartPage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(6);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(7);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -3638,17 +3705,17 @@ var EquipmentPrestartPage = (function () {
 
 /***/ }),
 
-/***/ 570:
+/***/ 569:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return FeedPage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(6);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__profile_profile__ = __webpack_require__(211);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_rxjs_Rx__ = __webpack_require__(32);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(7);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__profile_profile__ = __webpack_require__(570);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_rxjs_Rx__ = __webpack_require__(41);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_rxjs_Rx___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3_rxjs_Rx__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__feed_model__ = __webpack_require__(1022);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__feed_model__ = __webpack_require__(1010);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__feed_service__ = __webpack_require__(578);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -3709,6 +3776,94 @@ var FeedPage = (function () {
 
 /***/ }),
 
+/***/ 570:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ProfilePage; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_rxjs_Rx__ = __webpack_require__(41);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_rxjs_Rx___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_rxjs_Rx__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(7);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__providers_auth__ = __webpack_require__(45);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__angular_core__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__followers_followers__ = __webpack_require__(212);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__profile_model__ = __webpack_require__(571);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__settings_settings__ = __webpack_require__(123);
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+
+
+
+
+
+var ProfilePage = (function () {
+    function ProfilePage(menu, app, navParams, loadingCtrl, auth) {
+        this.menu = menu;
+        this.app = app;
+        this.navParams = navParams;
+        this.loadingCtrl = loadingCtrl;
+        this.auth = auth;
+        this.profile = new __WEBPACK_IMPORTED_MODULE_5__profile_model__["a" /* ProfileModel */]();
+        this.display = "list";
+        this.loading = this.loadingCtrl.create();
+    }
+    ProfilePage.prototype.ionViewDidLoad = function () {
+        this.profile.user = this.auth.user;
+        this.profile.following = [];
+        this.profile.followers = [];
+        this.profile.posts = [];
+    };
+    ProfilePage.prototype.goToFollowersList = function () {
+        // close the menu when clicking a link from the menu
+        this.menu.close();
+        this.app.getRootNav().push(__WEBPACK_IMPORTED_MODULE_4__followers_followers__["a" /* FollowersPage */], {
+            list: this.profile.followers
+        });
+    };
+    ProfilePage.prototype.goToFollowingList = function () {
+        // close the menu when clicking a link from the menu
+        this.menu.close();
+        this.app.getRootNav().push(__WEBPACK_IMPORTED_MODULE_4__followers_followers__["a" /* FollowersPage */], {
+            list: this.profile.following
+        });
+    };
+    ProfilePage.prototype.goToSettings = function () {
+        // close the menu when clicking a link from the menu
+        this.menu.close();
+        this.app.getRootNav().push(__WEBPACK_IMPORTED_MODULE_6__settings_settings__["a" /* SettingsPage */]);
+    };
+    ProfilePage.prototype.onSegmentChanged = function (segmentButton) {
+        // console.log('Segment changed to', segmentButton.value);
+    };
+    ProfilePage.prototype.onSegmentSelected = function (segmentButton) {
+        // console.log('Segment selected', segmentButton.value);
+    };
+    ProfilePage = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_3__angular_core__["n" /* Component */])({
+            selector: 'profile-page',template:/*ion-inline-start:"/home/duane/dev/willow/knddec/src/pages/profile/profile.html"*/`<ion-header>\n  <ion-navbar>\n    <ion-title>Profile</ion-title>\n  </ion-navbar>\n</ion-header>\n\n<ion-content class="profile-content">\n  <div class="user-details">\n    <ion-row class="user-main-data-row">\n      <ion-col no-padding width-33>\n        <preload-image class="user-image" [ratio]="{w:1, h:1}" [src]="profile.user.image" alt="profile.user.name" title="profile.user.name"></preload-image>\n      </ion-col>\n      <ion-col no-padding>\n        <ion-row class="social-presence-row">\n          <ion-col width-50 class="social-presence-item">\n            <a (click)="goToFollowersList()">\n              <h2 class="social-presence-value">{{profile.followers.length}}</h2>\n              <h4 class="social-presence-title">Followers</h4>\n            </a>\n          </ion-col>\n          <ion-col width-50 class="social-presence-item">\n            <a (click)="goToFollowingList()">\n              <h2 class="social-presence-value">{{profile.following.length}}</h2>\n              <h4 class="social-presence-title">Following</h4>\n            </a>\n          </ion-col>\n        </ion-row>\n        <ion-row class="profile-action-row">\n          <ion-col no-padding>\n            <button ion-button block small (click)="goToSettings()">\n              Edit profile\n            </button>\n          </ion-col>\n        </ion-row>\n      </ion-col>\n    </ion-row>\n    <ion-row wrap class="user-bio-row">\n      <ion-col no-padding width-50>\n        <h2 class="user-name">{{profile.user.name}}</h2>\n      </ion-col>\n      <ion-col no-padding width-50>\n        <span class="user-location">{{profile.user.location}}</span>\n      </ion-col>\n      <ion-col no-padding width-100>\n        <p class="user-description">\n          {{profile.user.about}}\n        </p>\n      </ion-col>\n    </ion-row>\n    <ion-segment class="user-content-segment" [(ngModel)]="display" (ionChange)="onSegmentChanged($event)">\n      <ion-segment-button value="grid" (ionSelect)="onSegmentSelected($event)">\n        Grid\n      </ion-segment-button>\n      <ion-segment-button value="list" (ionSelect)="onSegmentSelected($event)">\n        List\n      </ion-segment-button>\n    </ion-segment>\n  </div>\n  <div [ngSwitch]="display" class="user-content">\n    <div *ngSwitchCase="\'list\'" class="list-view">\n      <div class="list-item" *ngFor="let post of profile.posts">\n        <span class="item-date">{{post.date}}</span>\n        <ion-card>\n          <preload-image [ratio]="{w:1, h:1}" [src]="post.image" title=""></preload-image>\n          <ion-card-content>\n            <p class="item-text">\n              {{post.description}}\n            </p>\n          </ion-card-content>\n          <ion-row no-padding class="actions-row">\n            <ion-col no-padding width-30 text-left>\n              <button class="action-button" ion-button clear small color="danger" icon-left>\n                <ion-icon isActive="{{post.liked}}" name=\'heart\'></ion-icon>\n                  {{post.likes}} Likes\n              </button>\n            </ion-col>\n            <ion-col no-padding width-45 text-center>\n              <button class="action-button" ion-button clear small color="danger" icon-left>\n                <ion-icon name=\'chatbubbles\'></ion-icon>\n                  {{post.comments}} Comments\n              </button>\n            </ion-col>\n            <ion-col no-padding width-25 text-right>\n              <button class="action-button" ion-button clear small color="danger" icon-left>\n                <ion-icon name=\'share-alt\'></ion-icon>\n                Share\n              </button>\n            </ion-col>\n          </ion-row>\n        </ion-card>\n      </div>\n    </div>\n    <div *ngSwitchCase="\'grid\'" class="grid-view">\n      <ion-row wrap class="grid-row">\n        <ion-col width-33 class="grid-item" *ngFor="let post of profile.posts">\n          <preload-image [ratio]="{w:1, h:1}" [src]="post.image" title="ion2FullApp"></preload-image>\n        </ion-col>\n      </ion-row>\n    </div>\n  </div>\n</ion-content>\n`/*ion-inline-end:"/home/duane/dev/willow/knddec/src/pages/profile/profile.html"*/
+        }),
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* MenuController */],
+            __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["b" /* App */],
+            __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["j" /* NavParams */],
+            __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* LoadingController */],
+            __WEBPACK_IMPORTED_MODULE_2__providers_auth__["a" /* AuthService */]])
+    ], ProfilePage);
+    return ProfilePage;
+}());
+
+//# sourceMappingURL=profile.js.map
+
+/***/ }),
+
 /***/ 571:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -3751,9 +3906,9 @@ var ProfileModel = (function () {
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ForgotPasswordPage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(6);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(7);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_forms__ = __webpack_require__(22);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__tabs_navigation_tabs_navigation__ = __webpack_require__(90);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__tabs_navigation_tabs_navigation__ = __webpack_require__(92);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -3797,25 +3952,25 @@ var ForgotPasswordPage = (function () {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return PrestartPage; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_rxjs_Rx__ = __webpack_require__(32);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_rxjs_Rx__ = __webpack_require__(41);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_rxjs_Rx___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_rxjs_Rx__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(6);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(7);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__providers_auth__ = __webpack_require__(45);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__providers_issue__ = __webpack_require__(205);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__classes_issue_model__ = __webpack_require__(567);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__classes_prestart_configuration_model__ = __webpack_require__(564);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__providers_prestart_configuration__ = __webpack_require__(122);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__safety_reminder_detail_safety_reminder_detail__ = __webpack_require__(206);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__providers_safety_reminder__ = __webpack_require__(208);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__classes_safety_reminder_model__ = __webpack_require__(207);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__providers_issue__ = __webpack_require__(206);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__classes_issue_model__ = __webpack_require__(566);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__classes_prestart_configuration_model__ = __webpack_require__(563);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__providers_prestart_configuration__ = __webpack_require__(90);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__safety_reminder_detail_safety_reminder_detail__ = __webpack_require__(207);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__providers_safety_reminder__ = __webpack_require__(209);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__classes_safety_reminder_model__ = __webpack_require__(208);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__providers_shared__ = __webpack_require__(47);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__providers_sites__ = __webpack_require__(214);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__swm_detail_swm_detail__ = __webpack_require__(209);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__providers_sites__ = __webpack_require__(124);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__swm_detail_swm_detail__ = __webpack_require__(210);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_14__swm_list_edit_swm_list_edit__ = __webpack_require__(574);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_15__providers_swm__ = __webpack_require__(67);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_16__classes_swm_model__ = __webpack_require__(89);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_17__providers_task__ = __webpack_require__(215);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_15__providers_swm__ = __webpack_require__(66);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_16__classes_swm_model__ = __webpack_require__(91);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_17__providers_task__ = __webpack_require__(214);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_18__classes_task_model__ = __webpack_require__(575);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -4103,7 +4258,7 @@ var PrestartPage = (function () {
     };
     PrestartPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_3__angular_core__["n" /* Component */])({
-            selector: 'prestart-page',template:/*ion-inline-start:"/home/duane/dev/willow/knddec/src/pages/prestart/prestart.html"*/`<ion-header>\n  <ion-navbar>\n    <button ion-button\n      menuToggle>\n      <ion-icon name="menu"></ion-icon>\n    </button>\n    <ion-title>Prestarts</ion-title>\n  </ion-navbar>\n</ion-header>\n\n<ion-content class="forms-examples-content">\n  <ion-segment class="forms-examples-segment"\n    [(ngModel)]="section"\n    (ionChange)="onSegmentChanged($event)">\n    <ion-segment-button value="task"\n      (ionSelect)="onSegmentSelected($event)">\n      Tasks\n    </ion-segment-button>\n    <ion-segment-button value="swm"\n      [disabled]="!swmsGenerated"\n      (ionSelect)="onSegmentSelected($event)">\n      SWMs\n    </ion-segment-button>\n    <ion-segment-button value="issues"\n      (ionSelect)="onSegmentSelected($event)">\n      Issues\n    </ion-segment-button>\n    <ion-segment-button value="reminders"\n      (ionSelect)="onSegmentSelected($event)">\n      Reminders\n    </ion-segment-button>\n  </ion-segment>\n  <div [ngSwitch]="section"\n    class="forms-wrapper">\n    <div *ngSwitchCase="\'task\'"\n      class="post-example-view">\n      <div class="sample-form post-form">\n        <ma-weather maColor="primary"\n          detailsType="page"></ma-weather>\n        <section class="form-section">\n          <ion-item>\n            <ion-icon name="md-build"\n              item-left></ion-icon>\n            {{ auth.name }}\n            <p item-right>supervisor</p>\n          </ion-item>\n        </section>\n        <section class="form-section">\n          <ion-row>\n            <ion-col>\n              <button ion-button\n                block\n                icon-right\n                class="choose-category-button"\n                (click)="chooseCategory()"\n                *ngIf="this.sitesService.sites.length">\n                Choose Site: {{ getSiteName() }}\n                <ion-icon name="arrow-dropdown"></ion-icon>\n              </button>\n              <h4 padding\n                *ngIf="!this.sitesService.sites.length && !loading">\n                No sites assigned for you. Please refer to your site\'s admin\n              </h4>\n            </ion-col>\n            <ion-col col-auto>\n              <button ion-button\n                icon-only\n                [disabled]="loading"\n                (click)="refreshSites()">\n                <ion-icon name="refresh"></ion-icon>\n              </button>\n            </ion-col>\n          </ion-row>\n        </section>\n        <section *ngIf="getSiteId()">\n          <ion-item-divider>Tasks</ion-item-divider>\n          <div class="sample-form">\n            <ion-list class="sample-form checkbox-tags">\n              <ion-item class="checkbox-tag"\n                *ngFor="let task of siteTaskList.items">\n                <ion-label>{{task.name}}</ion-label>\n                <ion-checkbox [(ngModel)]="task.selected"></ion-checkbox>\n              </ion-item>\n            </ion-list>\n          </div>\n        </section>\n        <section class="form-section"\n          *ngIf="getSiteId()">\n          <button ion-button\n            block\n            class="form-action-button create-post-button"\n            (click)="generateSwms()">Generate SWMs!</button>\n        </section>\n      </div>\n    </div>\n    <div *ngSwitchCase="\'swm\'"\n      class="event-example-view">\n      <div class="sample-form event-form">\n        <section class="form-section">\n          <h2 class="section-title">SWMs Generated from Task List</h2>\n          <div class="list-mini-content">\n            <div class="list-mini">\n              <ion-list>\n                <button class="list-item"\n                  ion-item\n                  *ngFor="let item of activeSWMs.items"\n                  (click)="swmdetails(item.id, item)"\n                  type="button">\n                  <ion-row no-padding\n                    class="content-row one-line">\n                    <!-- You can limit the rows of the description by using the class one-line. If you remove it, all the content from the row will be shown -->\n                    <ion-col no-padding\n                      width-18\n                      class="item-avatar">\n                      <preload-image class="avatar-image"\n                        [ratio]="{w:1, h:1}"\n                        [src]="item.image"></preload-image>\n                    </ion-col>\n                    <ion-col no-padding\n                      width-72\n                      class="item-content">\n                      <h3 class="item-title">{{item.name}}</h3>\n                      <p class="item-description">{{item.abstract}}</p>\n                    </ion-col>\n                    <ion-col no-padding\n                      width-10\n                      class="item-icon">\n                      <ion-icon name="arrow-forward"></ion-icon>\n                    </ion-col>\n                  </ion-row>\n                </button>\n              </ion-list>\n            </div>\n          </div>\n        </section>\n        <section class="form-section">\n          <button ion-button\n            block\n            class="form-action-button create-event-button"\n            (click)="editActiveSwms()">Edit SWM List!</button>\n        </section>\n      </div>\n    </div>\n    <!-- Safety issues -->\n    <div *ngSwitchCase="\'issues\'"\n      class="card-example-view">\n\n      <div class="list-mini-content">\n        <div class="list-mini">\n          <ion-list>\n            <ion-item class="list-item"\n              ion-item\n              *ngFor="let item of safetyIssues.items"\n              (click)="onSelectItem(item)">\n              <ion-row no-padding\n                class="content-row">\n                <ion-col col-1\n                  class="item-icon item-icon--center">\n                  <!-- <ion-icon name="arrow-forward"></ion-icon> -->\n                  <ion-icon name="checkmark"\n                    [hidden]="!item.selected"></ion-icon>\n                </ion-col>\n                <ion-col no-padding\n                  col-2\n                  class="item-avatar">\n                  <preload-image class="avatar-image"\n                    [ratio]="{w:1, h:1}"\n                    [src]="item.image"></preload-image>\n                </ion-col>\n                <ion-col no-padding\n                  col-8\n                  class="item-content">\n                  <h3 class="item-title">{{item.name}}</h3>\n                  <p class="item-description"\n                    rows="3">{{item.description}}</p>\n                  <!-- You can change the rows quantity by using rows="X", where X can be any number for example: rows="4" -->\n                </ion-col>\n                <ion-col no-padding\n                  col-1\n                  class="item-icon  item-icon--center"\n                  (click)="gotoSafetyIssueDetail(item)">\n                  <ion-icon name="arrow-forward"></ion-icon>\n                </ion-col>\n              </ion-row>\n            </ion-item>\n          </ion-list>\n        </div>\n      </div>\n    </div>\n    <!-- Safety reminders -->\n    <div *ngSwitchCase="\'reminders\'"\n      class="card-example-view">\n      <div class="list-mini-content">\n        <ion-item-divider>Read and check off reminders</ion-item-divider>\n        <div class="list-mini">\n          <ion-list>\n            <ion-item class="list-item"\n              tappable\n              *ngFor="let item of safetyReminders.items"\n              (click)="onSelectItem(item)">\n              <ion-row no-padding\n                class="content-row">\n                <!-- You can limit the rows of the description by using the class one-line. If you remove it, all the content from the row will be shown -->\n                <!--<ion-col no-padding width-18 class="item-avatar">\n                <preload-image class="avatar-image" [ratio]="{w:1, h:1}" [src]="item.image"></preload-image>\n              </ion-col>-->\n                <ion-col no-padding\n                  col-10\n                  col-sm-11\n                  class="item-content">\n                  <h3 class="item-title">{{item.name}}</h3>\n                  <p class="item-description">{{item.description}}</p>\n                </ion-col>\n                <ion-col no-padding\n                  col-2\n                  col-sm-1\n                  class="item-icon">\n                  <!-- <ion-icon name="arrow-forward"></ion-icon> -->\n                  <ion-icon name="checkmark"\n                    [hidden]="!item.selected"></ion-icon>\n                </ion-col>\n              </ion-row>\n            </ion-item>\n          </ion-list>\n        </div>\n        <section class="form-section">\n          <button ion-button\n            block\n            class="main-action-button create-event-button"\n            [disabled]="!isReadyForPrestart()"\n            (click)="prestartsComplete()">Prestarts Complete</button>\n        </section>\n        <ul *ngIf="!isReadyForPrestart()"\n          class="prestart-hints-list">\n          <li *ngIf="!swmsGenerated">SWMs should be generated</li>\n        </ul>\n      </div>\n\n    </div>\n  </div>\n</ion-content>\n`/*ion-inline-end:"/home/duane/dev/willow/knddec/src/pages/prestart/prestart.html"*/
+            selector: 'prestart-page',template:/*ion-inline-start:"/home/duane/dev/willow/knddec/src/pages/prestart/prestart.html"*/`<ion-header>\n  <ion-navbar>\n    <button ion-button\n      menuToggle>\n      <ion-icon name="menu"></ion-icon>\n    </button>\n    <ion-title>Prestarts</ion-title>\n  </ion-navbar>\n</ion-header>\n\n<ion-content class="forms-examples-content">\n  <ion-segment class="forms-examples-segment"\n    [(ngModel)]="section"\n    (ionChange)="onSegmentChanged($event)">\n    <ion-segment-button value="task"\n      (ionSelect)="onSegmentSelected($event)">\n      Tasks\n    </ion-segment-button>\n    <ion-segment-button value="swm"\n      [disabled]="!swmsGenerated"\n      (ionSelect)="onSegmentSelected($event)">\n      SWMs\n    </ion-segment-button>\n    <ion-segment-button value="reminders"\n      (ionSelect)="onSegmentSelected($event)">\n      Reminders\n    </ion-segment-button>\n    <ion-segment-button value="issues"\n      (ionSelect)="onSegmentSelected($event)">\n      Issues\n    </ion-segment-button>\n  </ion-segment>\n  <div [ngSwitch]="section"\n    class="forms-wrapper">\n    <div *ngSwitchCase="\'task\'"\n      class="post-example-view">\n      <div class="sample-form post-form">\n        <ma-weather maColor="primary"\n          detailsType="page"></ma-weather>\n        <section class="form-section">\n          <ion-item>\n            <ion-icon name="md-build"\n              item-left></ion-icon>\n            {{ auth.name }}\n            <p item-right>supervisor</p>\n          </ion-item>\n        </section>\n        <section class="form-section">\n          <ion-row>\n            <ion-col>\n              <button ion-button\n                block\n                icon-right\n                class="choose-category-button"\n                (click)="chooseCategory()"\n                *ngIf="this.sitesService.sites.length">\n                Choose Site: {{ getSiteName() }}\n                <ion-icon name="arrow-dropdown"></ion-icon>\n              </button>\n              <h4 padding\n                *ngIf="!this.sitesService.sites.length && !loading">\n                No sites assigned for you. Please refer to your site\'s admin\n              </h4>\n            </ion-col>\n            <ion-col col-auto>\n              <button ion-button\n                icon-only\n                [disabled]="loading"\n                (click)="refreshSites()">\n                <ion-icon name="refresh"></ion-icon>\n              </button>\n            </ion-col>\n          </ion-row>\n        </section>\n        <section *ngIf="getSiteId()">\n          <ion-item-divider>Tasks</ion-item-divider>\n          <div class="sample-form">\n            <ion-list class="sample-form checkbox-tags">\n              <ion-item class="checkbox-tag"\n                *ngFor="let task of siteTaskList.items">\n                <ion-label>{{task.name}}</ion-label>\n                <ion-checkbox [(ngModel)]="task.selected"></ion-checkbox>\n              </ion-item>\n            </ion-list>\n          </div>\n        </section>\n        <section class="form-section"\n          *ngIf="getSiteId()">\n          <button ion-button\n            block\n            class="form-action-button create-post-button"\n            (click)="generateSwms()">Generate SWMs!</button>\n        </section>\n      </div>\n    </div>\n    <div *ngSwitchCase="\'swm\'"\n      class="event-example-view">\n      <div class="sample-form event-form">\n        <section class="form-section">\n          <h2 class="section-title">SWMs Generated from Task List</h2>\n          <div class="list-mini-content">\n            <div class="list-mini">\n              <ion-list>\n                <button class="list-item"\n                  ion-item\n                  *ngFor="let item of activeSWMs.items"\n                  (click)="swmdetails(item.id, item)"\n                  type="button">\n                  <ion-row no-padding\n                    class="content-row one-line">\n                    <!-- You can limit the rows of the description by using the class one-line. If you remove it, all the content from the row will be shown -->\n                    <ion-col no-padding\n                      width-18\n                      class="item-avatar">\n                      <preload-image class="avatar-image"\n                        [ratio]="{w:1, h:1}"\n                        [src]="item.image"></preload-image>\n                    </ion-col>\n                    <ion-col no-padding\n                      width-72\n                      class="item-content">\n                      <h3 class="item-title">{{item.name}}</h3>\n                      <p class="item-description">{{item.abstract}}</p>\n                    </ion-col>\n                    <ion-col no-padding\n                      width-10\n                      class="item-icon">\n                      <ion-icon name="arrow-forward"></ion-icon>\n                    </ion-col>\n                  </ion-row>\n                </button>\n              </ion-list>\n            </div>\n          </div>\n        </section>\n        <section class="form-section">\n          <button ion-button\n            block\n            class="form-action-button create-event-button"\n            (click)="editActiveSwms()">Edit SWM List!</button>\n        </section>\n      </div>\n    </div>\n    <!-- Safety issues -->\n    <div *ngSwitchCase="\'issues\'"\n      class="card-example-view">\n\n      <div class="list-mini-content">\n        <div class="list-mini">\n          <ion-list>\n            <ion-item class="list-item"\n              ion-item\n              *ngFor="let item of safetyIssues.items"\n              (click)="onSelectItem(item)">\n              <ion-row no-padding\n                class="content-row">\n                <ion-col col-1\n                  class="item-icon item-icon--center">\n                  <!-- <ion-icon name="arrow-forward"></ion-icon> -->\n                  <ion-icon name="checkmark"\n                    [hidden]="!item.selected"></ion-icon>\n                </ion-col>\n                <ion-col no-padding\n                  col-2\n                  class="item-avatar">\n                  <preload-image class="avatar-image"\n                    [ratio]="{w:1, h:1}"\n                    [src]="item.image"></preload-image>\n                </ion-col>\n                <ion-col no-padding\n                  col-8\n                  class="item-content">\n                  <h3 class="item-title">{{item.name}}</h3>\n                  <p class="item-description"\n                    rows="3">{{item.description}}</p>\n                  <!-- You can change the rows quantity by using rows="X", where X can be any number for example: rows="4" -->\n                </ion-col>\n                <ion-col no-padding\n                  col-1\n                  class="item-icon  item-icon--center"\n                  (click)="gotoSafetyIssueDetail(item)">\n                  <ion-icon name="arrow-forward"></ion-icon>\n                </ion-col>\n              </ion-row>\n            </ion-item>\n          </ion-list>\n        </div>\n      </div>\n    </div>\n    <!-- Safety reminders -->\n    <div *ngSwitchCase="\'reminders\'"\n      class="card-example-view">\n      <div class="list-mini-content">\n        <ion-item-divider>Read and check off reminders</ion-item-divider>\n        <div class="list-mini">\n          <ion-list>\n            <ion-item class="list-item"\n              tappable\n              *ngFor="let item of safetyReminders.items"\n              (click)="onSelectItem(item)">\n              <ion-row no-padding\n                class="content-row">\n                <!-- You can limit the rows of the description by using the class one-line. If you remove it, all the content from the row will be shown -->\n                <!--<ion-col no-padding width-18 class="item-avatar">\n                <preload-image class="avatar-image" [ratio]="{w:1, h:1}" [src]="item.image"></preload-image>\n              </ion-col>-->\n                <ion-col no-padding\n                  col-10\n                  col-sm-11\n                  class="item-content">\n                  <h3 class="item-title">{{item.name}}</h3>\n                  <p class="item-description">{{item.description}}</p>\n                </ion-col>\n                <ion-col no-padding\n                  col-2\n                  col-sm-1\n                  class="item-icon">\n                  <!-- <ion-icon name="arrow-forward"></ion-icon> -->\n                  <ion-icon name="checkmark"\n                    [hidden]="!item.selected"></ion-icon>\n                </ion-col>\n              </ion-row>\n            </ion-item>\n          </ion-list>\n        </div>\n        <section class="form-section">\n          <button ion-button\n            block\n            class="main-action-button create-event-button"\n            [disabled]="!isReadyForPrestart()"\n            (click)="prestartsComplete()">Prestarts Complete</button>\n        </section>\n        <ul *ngIf="!isReadyForPrestart()"\n          class="prestart-hints-list">\n          <li *ngIf="!swmsGenerated">SWMs should be generated</li>\n        </ul>\n      </div>\n\n    </div>\n  </div>\n</ion-content>\n`/*ion-inline-end:"/home/duane/dev/willow/knddec/src/pages/prestart/prestart.html"*/
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* NavController */],
             __WEBPACK_IMPORTED_MODULE_2__providers_auth__["a" /* AuthService */],
@@ -4130,10 +4285,10 @@ var PrestartPage = (function () {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return SwmListEditPage; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_ionic_angular__ = __webpack_require__(6);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_ionic_angular__ = __webpack_require__(7);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__providers_swm__ = __webpack_require__(67);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__classes_swm_model__ = __webpack_require__(89);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__providers_swm__ = __webpack_require__(66);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__classes_swm_model__ = __webpack_require__(91);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -4236,11 +4391,11 @@ var TasksModel = (function () {
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return SignupPage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(6);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(7);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_forms__ = __webpack_require__(22);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__terms_of_service_terms_of_service__ = __webpack_require__(216);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__privacy_policy_privacy_policy__ = __webpack_require__(217);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__tabs_navigation_tabs_navigation__ = __webpack_require__(90);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__terms_of_service_terms_of_service__ = __webpack_require__(215);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__privacy_policy_privacy_policy__ = __webpack_require__(216);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__tabs_navigation_tabs_navigation__ = __webpack_require__(92);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -4303,28 +4458,28 @@ var SignupPage = (function () {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return WorkerClockonPage; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_rxjs_Rx__ = __webpack_require__(32);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_rxjs_Rx__ = __webpack_require__(41);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_rxjs_Rx___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_rxjs_Rx__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_moment__ = __webpack_require__(2);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_moment___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_moment__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_ionic_angular__ = __webpack_require__(6);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__classes_worker_model__ = __webpack_require__(66);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_ionic_angular__ = __webpack_require__(7);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__classes_worker_model__ = __webpack_require__(89);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__providers_auth__ = __webpack_require__(45);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__providers_check_in__ = __webpack_require__(112);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__providers_check_in__ = __webpack_require__(82);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__providers_worker__ = __webpack_require__(61);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__providers_worker__ = __webpack_require__(62);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__followers_followers__ = __webpack_require__(212);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__ionic_native_geolocation__ = __webpack_require__(63);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__providers_prestart_configuration__ = __webpack_require__(122);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__worker_clockon_model__ = __webpack_require__(1021);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__ionic_native_geolocation__ = __webpack_require__(60);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__providers_prestart_configuration__ = __webpack_require__(90);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__worker_clockon_model__ = __webpack_require__(1009);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__settings_settings__ = __webpack_require__(123);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__providers_sites__ = __webpack_require__(214);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_14__swm_swm__ = __webpack_require__(204);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_15__providers_swm__ = __webpack_require__(67);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_16__classes_swm_model__ = __webpack_require__(89);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_17__providers_task__ = __webpack_require__(215);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__providers_sites__ = __webpack_require__(124);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_14__swm_swm__ = __webpack_require__(205);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_15__providers_swm__ = __webpack_require__(66);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_16__classes_swm_model__ = __webpack_require__(91);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_17__providers_task__ = __webpack_require__(214);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_18__classes_task_model__ = __webpack_require__(575);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_19_ionic_angular_components_toast_toast_controller__ = __webpack_require__(170);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_19_ionic_angular_components_toast_toast_controller__ = __webpack_require__(171);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -4466,7 +4621,7 @@ var WorkerClockonPage = (function () {
             var label = _a.label, id = _a.id, open = _a.open;
             alert.addInput({
                 type: 'radio',
-                label: label + (open ? '' : ' [CLOSED]'),
+                label: label + (open ? '' : ' [NOT OPENED]'),
                 value: '' + id,
                 checked: id === _this.siteId
             });
@@ -4692,7 +4847,7 @@ var WorkerClockonPage = (function () {
     };
     WorkerClockonPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_6__angular_core__["n" /* Component */])({
-            selector: 'worker-clockon-page',template:/*ion-inline-start:"/home/duane/dev/willow/knddec/src/pages/worker-clockon/worker-clockon.html"*/`<ion-header>\n  <ion-navbar>\n    <button ion-button\n      menuToggle>\n      <ion-icon name="menu"></ion-icon>\n    </button>\n    <ion-title>Clock On</ion-title>\n  </ion-navbar>\n</ion-header>\n\n<ion-content class="profile-content">\n  <div class="user-details">\n    <ion-row class="user-main-data-row">\n      <ion-col no-padding\n        width-33>\n        <preload-image class="user-image"\n          [ratio]="{w:1, h:1}"\n          [src]="profile.user.image || defaultPersonImage"\n          [alt]="profile.user.name"\n          [title]="profile.user.name"></preload-image>\n      </ion-col>\n      <ion-col no-padding>\n        <ion-row class="social-presence-row">\n          <ion-col width-50\n            class="social-presence-item">\n            <a (click)="goToFollowersList()">\n              <h2 class="social-presence-value">{{profile.followers.length}}</h2>\n              <h4 class="social-presence-title">Followers</h4>\n            </a>\n          </ion-col>\n          <ion-col width-50\n            class="social-presence-item">\n            <a (click)="goToFollowingList()">\n              <h2 class="social-presence-value">{{profile.following.length}}</h2>\n              <h4 class="social-presence-title">Following</h4>\n            </a>\n          </ion-col>\n        </ion-row>\n        <ion-row class="profile-action-row">\n          <ion-col no-padding>\n            <button ion-button\n              block\n              small\n              (click)="goToSettings()">\n              Edit profile\n            </button>\n          </ion-col>\n        </ion-row>\n      </ion-col>\n    </ion-row>\n    <ion-row wrap\n      class="user-bio-row">\n      <ion-col no-padding\n        width-50>\n        <h2 class="user-name">{{profile.user.name}}</h2>\n      </ion-col>\n      <ion-col no-padding\n        width-50>\n        <span class="user-location">{{profile.user.location}}</span>\n      </ion-col>\n      <ion-col no-padding\n        width-100>\n        <p class="user-description">\n          {{profile.user.about}}\n        </p>\n      </ion-col>\n    </ion-row>\n    <section class="form-section choose-category-section"\n      align-items-center>\n      <ion-row>\n        <ion-col>\n          <button ion-button\n            block\n            icon-right\n            class="choose-category-button"\n            (click)="chooseCategory()"\n            *ngIf="this.siteService.sites.length">\n            {{ getSiteName() }}\n            <ion-icon name="arrow-dropdown"></ion-icon>\n          </button>\n          <h4 padding\n            *ngIf="!this.siteService.sites.length && !loading">\n            No sites assigned for you. Please refer to your site\'s admin\n          </h4>\n        </ion-col>\n        <ion-col col-auto>\n          <button ion-button\n            icon-only\n            [disabled]="loading"\n            (click)="refreshSites()">\n            <ion-icon name="refresh"></ion-icon>\n          </button>\n        </ion-col>\n      </ion-row>\n    </section>\n    <section *ngIf="getSite() && getSite().open && !!prestartConfiguration">\n      <ion-item-divider>Tasks</ion-item-divider>\n      <div class="sample-form">\n        <ion-list class="sample-form checkbox-tags">\n          <ion-item class="checkbox-tag"\n            *ngFor="let task of siteTaskList.items">\n            <ion-label>{{task.name}}</ion-label>\n          </ion-item>\n        </ion-list>\n        <section class="form-section"\n          *ngIf="!worker.clockedOn && !worker.clockedOff">\n          <button ion-button\n            block\n            class="form-action-button create-post-button"\n            [disabled]="!siteId"\n            (click)="startSignIn()">Clock On</button>\n        </section>\n        <section class="form-section"\n          *ngIf="worker.clockedOn && !worker.clockedOff">\n          <ion-item>\n            <span item-left>Clocked On</span>\n            <span item-right>{{worker.clockOn}}</span>\n          </ion-item>\n          <ion-item>\n            <ion-label>Lunch</ion-label>\n            <ion-checkbox [(ngModel)]="lunch"></ion-checkbox>\n          </ion-item>\n          <button ion-button\n            block\n            class="form-action-button create-post-button"\n            (click)="startSignOff()">Clock Off</button>\n        </section>\n        <section class="form-section"\n          *ngIf="worker.clockedOn && worker.clockedOff">\n          <ion-item>\n            <span item-left>Clocked On</span>\n            <span item-right>{{worker.clockOn}}</span>\n          </ion-item>\n          <ion-item>\n            <span item-left>Clocked Off</span>\n            <span item-right>{{worker.clockOff}}</span>\n          </ion-item>\n          <h3>You have clocked off for the day</h3>\n          <button ion-button\n            block\n            class="form-action-button create-post-button">Request Change</button>\n        </section>\n      </div>\n\n    </section>\n    <section *ngIf="getSite() && !getSite().open"\n      padding>\n      <h4>The site is closed</h4>\n      <p>Contact your site\'s supervisor, and press "refresh" button</p>\n    </section>\n  </div>\n</ion-content>\n`/*ion-inline-end:"/home/duane/dev/willow/knddec/src/pages/worker-clockon/worker-clockon.html"*/
+            selector: 'worker-clockon-page',template:/*ion-inline-start:"/home/duane/dev/willow/knddec/src/pages/worker-clockon/worker-clockon.html"*/`<ion-header>\n  <ion-navbar>\n    <button ion-button\n      menuToggle>\n      <ion-icon name="menu"></ion-icon>\n    </button>\n    <ion-title>Clock On</ion-title>\n  </ion-navbar>\n</ion-header>\n\n<ion-content class="profile-content">\n  <div class="user-details">\n    <ion-row class="user-main-data-row">\n      <ion-col no-padding\n        width-33>\n        <preload-image class="user-image"\n          [ratio]="{w:1, h:1}"\n          [src]="profile.user.image || defaultPersonImage"\n          [alt]="profile.user.name"\n          [title]="profile.user.name"></preload-image>\n      </ion-col>\n      <ion-col no-padding>\n        <ion-row class="social-presence-row">\n          <ion-col width-50\n            class="social-presence-item">\n            <a (click)="goToFollowersList()">\n              <h2 class="social-presence-value">{{profile.followers.length}}</h2>\n              <h4 class="social-presence-title">Followers</h4>\n            </a>\n          </ion-col>\n          <ion-col width-50\n            class="social-presence-item">\n            <a (click)="goToFollowingList()">\n              <h2 class="social-presence-value">{{profile.following.length}}</h2>\n              <h4 class="social-presence-title">Following</h4>\n            </a>\n          </ion-col>\n        </ion-row>\n        <ion-row class="profile-action-row">\n          <ion-col no-padding>\n            <button ion-button\n              block\n              small\n              (click)="goToSettings()">\n              Edit profile\n            </button>\n          </ion-col>\n        </ion-row>\n      </ion-col>\n    </ion-row>\n    <ion-row wrap\n      class="user-bio-row">\n      <ion-col no-padding\n        width-50>\n        <h2 class="user-name">{{profile.user.name}}</h2>\n      </ion-col>\n      <ion-col no-padding\n        width-50>\n        <span class="user-location">{{profile.user.location}}</span>\n      </ion-col>\n      <ion-col no-padding\n        width-100>\n        <p class="user-description">\n          {{profile.user.about}}\n        </p>\n      </ion-col>\n    </ion-row>\n    <section class="form-section choose-category-section"\n      align-items-center>\n      <ion-row>\n        <ion-col>\n          <button ion-button\n            block\n            icon-right\n            class="choose-category-button"\n            (click)="chooseCategory()"\n            *ngIf="this.siteService.sites.length">\n            {{ getSiteName() }}\n            <ion-icon name="arrow-dropdown"></ion-icon>\n          </button>\n          <h4 padding\n            *ngIf="!this.siteService.sites.length && !loading">\n            No sites assigned for you. Please refer to your site\'s admin\n          </h4>\n        </ion-col>\n        <ion-col col-auto>\n          <button ion-button\n            icon-only\n            [disabled]="loading"\n            (click)="refreshSites()">\n            <ion-icon name="refresh"></ion-icon>\n          </button>\n        </ion-col>\n      </ion-row>\n    </section>\n    <section *ngIf="getSite() && getSite().open && !!prestartConfiguration">\n      <ion-item-divider>Tasks</ion-item-divider>\n      <div class="sample-form">\n        <ion-list class="sample-form checkbox-tags">\n          <ion-item class="checkbox-tag"\n            *ngFor="let task of siteTaskList.items">\n            <ion-label>{{task.name}}</ion-label>\n          </ion-item>\n        </ion-list>\n        <section class="form-section"\n          *ngIf="!worker.clockedOn && !worker.clockedOff">\n          <button ion-button\n            block\n            class="form-action-button create-post-button"\n            [disabled]="!siteId"\n            (click)="startSignIn()">Clock On</button>\n        </section>\n        <section class="form-section"\n          *ngIf="worker.clockedOn && !worker.clockedOff">\n          <ion-item>\n            <span item-left>Clocked On</span>\n            <span item-right>{{worker.clockOn}}</span>\n          </ion-item>\n          <ion-item>\n            <ion-label>Lunch</ion-label>\n            <ion-checkbox [(ngModel)]="lunch"></ion-checkbox>\n          </ion-item>\n          <button ion-button\n            block\n            class="form-action-button create-post-button"\n            (click)="startSignOff()">Clock Off</button>\n        </section>\n        <section class="form-section"\n          *ngIf="worker.clockedOn && worker.clockedOff">\n          <ion-item>\n            <span item-left>Clocked On</span>\n            <span item-right>{{worker.clockOn}}</span>\n          </ion-item>\n          <ion-item>\n            <span item-left>Clocked Off</span>\n            <span item-right>{{worker.clockOff}}</span>\n          </ion-item>\n          <h3>You have clocked off for the day</h3>\n          <button ion-button\n            block\n            class="form-action-button create-post-button">Request Change</button>\n        </section>\n      </div>\n\n    </section>\n    <section *ngIf="getSite() && !getSite().open"\n      padding>\n      <h4>The prestart has not been completed yet</h4>\n      <p>Contact your site\'s supervisor, and press "refresh" button</p>\n    </section>\n  </div>\n</ion-content>\n`/*ion-inline-end:"/home/duane/dev/willow/knddec/src/pages/worker-clockon/worker-clockon.html"*/
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_2_ionic_angular__["f" /* MenuController */],
             __WEBPACK_IMPORTED_MODULE_2_ionic_angular__["b" /* App */],
@@ -4722,8 +4877,8 @@ var WorkerClockonPage = (function () {
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return FeedService; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_http__ = __webpack_require__(30);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs_add_operator_toPromise__ = __webpack_require__(33);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_http__ = __webpack_require__(38);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs_add_operator_toPromise__ = __webpack_require__(42);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs_add_operator_toPromise___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_rxjs_add_operator_toPromise__);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -4766,767 +4921,10 @@ var FeedService = (function () {
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return FiltersPage; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(6);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_forms__ = __webpack_require__(22);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__components_counter_input_counter_input__ = __webpack_require__(210);
-var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
-    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-    return c > 3 && r && Object.defineProperty(target, key, r), r;
-};
-var __metadata = (this && this.__metadata) || function (k, v) {
-    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
-};
-
-
-
-
-var FiltersPage = (function () {
-    function FiltersPage(nav) {
-        this.nav = nav;
-        this.rangeForm = new __WEBPACK_IMPORTED_MODULE_2__angular_forms__["b" /* FormGroup */]({
-            single: new __WEBPACK_IMPORTED_MODULE_2__angular_forms__["a" /* FormControl */](25),
-            dual: new __WEBPACK_IMPORTED_MODULE_2__angular_forms__["a" /* FormControl */]({ lower: 33, upper: 60 })
-        });
-        this.checkboxForm = new __WEBPACK_IMPORTED_MODULE_2__angular_forms__["b" /* FormGroup */]({
-            person_1: new __WEBPACK_IMPORTED_MODULE_2__angular_forms__["a" /* FormControl */](true),
-            person_2: new __WEBPACK_IMPORTED_MODULE_2__angular_forms__["a" /* FormControl */](false),
-            person_3: new __WEBPACK_IMPORTED_MODULE_2__angular_forms__["a" /* FormControl */](false),
-            person_4: new __WEBPACK_IMPORTED_MODULE_2__angular_forms__["a" /* FormControl */](true),
-            person_5: new __WEBPACK_IMPORTED_MODULE_2__angular_forms__["a" /* FormControl */](false)
-        });
-        this.radioForm = new __WEBPACK_IMPORTED_MODULE_2__angular_forms__["b" /* FormGroup */]({
-            selected_option: new __WEBPACK_IMPORTED_MODULE_2__angular_forms__["a" /* FormControl */]('apple')
-        });
-        this.checkboxTagsForm = new __WEBPACK_IMPORTED_MODULE_2__angular_forms__["b" /* FormGroup */]({
-            tag_1: new __WEBPACK_IMPORTED_MODULE_2__angular_forms__["a" /* FormControl */](false),
-            tag_2: new __WEBPACK_IMPORTED_MODULE_2__angular_forms__["a" /* FormControl */](false),
-            tag_3: new __WEBPACK_IMPORTED_MODULE_2__angular_forms__["a" /* FormControl */](true),
-            tag_4: new __WEBPACK_IMPORTED_MODULE_2__angular_forms__["a" /* FormControl */](true),
-            tag_5: new __WEBPACK_IMPORTED_MODULE_2__angular_forms__["a" /* FormControl */](false),
-            tag_6: new __WEBPACK_IMPORTED_MODULE_2__angular_forms__["a" /* FormControl */](false),
-            tag_7: new __WEBPACK_IMPORTED_MODULE_2__angular_forms__["a" /* FormControl */](true),
-            tag_8: new __WEBPACK_IMPORTED_MODULE_2__angular_forms__["a" /* FormControl */](false)
-        });
-        this.radioTagsForm = new __WEBPACK_IMPORTED_MODULE_2__angular_forms__["b" /* FormGroup */]({
-            selected_option: new __WEBPACK_IMPORTED_MODULE_2__angular_forms__["a" /* FormControl */]('any')
-        });
-        this.switchersForm = new __WEBPACK_IMPORTED_MODULE_2__angular_forms__["b" /* FormGroup */]({
-            notifications: new __WEBPACK_IMPORTED_MODULE_2__angular_forms__["a" /* FormControl */](true),
-            email_notifications: new __WEBPACK_IMPORTED_MODULE_2__angular_forms__["a" /* FormControl */](false)
-        });
-        this.counterForm = new __WEBPACK_IMPORTED_MODULE_2__angular_forms__["b" /* FormGroup */]({
-            counter: new __WEBPACK_IMPORTED_MODULE_2__angular_forms__["a" /* FormControl */](5, Object(__WEBPACK_IMPORTED_MODULE_3__components_counter_input_counter_input__["b" /* counterRangeValidator */])(7, 1)),
-            counter2: new __WEBPACK_IMPORTED_MODULE_2__angular_forms__["a" /* FormControl */](2, Object(__WEBPACK_IMPORTED_MODULE_3__components_counter_input_counter_input__["b" /* counterRangeValidator */])(5, 1))
-        });
-        this.ratingForm = new __WEBPACK_IMPORTED_MODULE_2__angular_forms__["b" /* FormGroup */]({
-            rate: new __WEBPACK_IMPORTED_MODULE_2__angular_forms__["a" /* FormControl */](2.5),
-            rate2: new __WEBPACK_IMPORTED_MODULE_2__angular_forms__["a" /* FormControl */](1.5)
-        });
-        this.radioColorForm = new __WEBPACK_IMPORTED_MODULE_2__angular_forms__["b" /* FormGroup */]({
-            selected_color: new __WEBPACK_IMPORTED_MODULE_2__angular_forms__["a" /* FormControl */]('#fc9961')
-        });
-    }
-    FiltersPage.prototype.rangeChange = function (range) {
-        console.log("range, change, ratio: " + range.ratio + ", value: " + range.value);
-    };
-    FiltersPage = __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
-            selector: 'filters-page',template:/*ion-inline-start:"/home/duane/dev/willow/knddec/src/pages/filters/filters.html"*/`<ion-header>\n  <ion-navbar>\n    <ion-title>Filters</ion-title>\n  </ion-navbar>\n</ion-header>\n\n<ion-content class="filters-content">\n  <ion-item-group class="filters-group">\n    <ion-item-divider>Range</ion-item-divider>\n    <form [formGroup]="rangeForm">\n      <ion-list class="range-list">\n        <ion-item class="range-item">\n          <ion-label>\n            <h3 class="range-value">{{rangeForm.controls.dual.value.lower}}</h3>\n            <h2 class="range-label">Quantity</h2>\n            <h3 class="range-value">{{rangeForm.controls.dual.value.upper}}</h3>\n          </ion-label>\n          <ion-range dualKnobs="true" formControlName="dual" (ionChange)="rangeChange($event)" min="21" max="72" step="3" snaps="true" pin="false"></ion-range>\n        </ion-item>\n        <ion-item class="range-item single-range">\n          <ion-label>\n            <h2 class="range-label">Amount</h2>\n            <h3 class="range-value">{{rangeForm.controls.single.value}}</h3>\n          </ion-label>\n          <ion-range formControlName="single" (ionChange)="rangeChange($event)" min="0" max="50" step="1" snaps="true" pin="false"></ion-range>\n        </ion-item>\n      </ion-list>\n    </form>\n\n    <ion-item-divider>Multiple items</ion-item-divider>\n    <form [formGroup]="checkboxForm">\n      <ion-list class="checkbox-list">\n        <ion-item class="checkbox-item">\n          <ion-label>Sophia Martin</ion-label>\n          <ion-checkbox formControlName="person_1"></ion-checkbox>\n        </ion-item>\n        <ion-item class="checkbox-item">\n          <ion-label>Mattie Abbott</ion-label>\n          <ion-checkbox formControlName="person_2"></ion-checkbox>\n        </ion-item>\n        <ion-item class="checkbox-item">\n          <ion-label>Marguerite Alvarez</ion-label>\n          <ion-checkbox formControlName="person_3"></ion-checkbox>\n        </ion-item>\n        <ion-item class="checkbox-item">\n          <ion-label>Lewis Padilla</ion-label>\n          <ion-checkbox formControlName="person_4"></ion-checkbox>\n        </ion-item>\n        <ion-item class="checkbox-item">\n          <ion-label>Nannie Willis</ion-label>\n          <ion-checkbox formControlName="person_5"></ion-checkbox>\n        </ion-item>\n      </ion-list>\n    </form>\n\n    <ion-item-divider>Pick one</ion-item-divider>\n    <form [formGroup]="radioForm">\n      <ion-list class="radio-group" radio-group formControlName="selected_option">\n        <ion-item class="radio-item">\n          <ion-label>Apple</ion-label>\n          <ion-radio item-left value="apple"></ion-radio>\n        </ion-item>\n        <ion-item class="radio-item">\n          <ion-label>Banana</ion-label>\n          <ion-radio item-left value="banana"></ion-radio>\n        </ion-item>\n        <ion-item class="radio-item">\n          <ion-label>Orange</ion-label>\n          <ion-radio item-left value="orange" disabled="true"></ion-radio>\n        </ion-item>\n        <ion-item class="radio-item">\n          <ion-label>Kiwi</ion-label>\n          <ion-radio item-left value="kiwi"></ion-radio>\n        </ion-item>\n      </ion-list>\n    </form>\n\n    <ion-item-divider>Tags (multiple)</ion-item-divider>\n    <form [formGroup]="checkboxTagsForm">\n      <ion-list class="checkbox-tags">\n        <ion-item class="checkbox-tag">\n          <ion-label>Indonesia</ion-label>\n          <ion-checkbox formControlName="tag_1"></ion-checkbox>\n        </ion-item>\n        <ion-item class="checkbox-tag">\n          <ion-label>Pitcairn Islands</ion-label>\n          <ion-checkbox formControlName="tag_2"></ion-checkbox>\n        </ion-item>\n        <ion-item class="checkbox-tag">\n          <ion-label>Malta</ion-label>\n          <ion-checkbox formControlName="tag_3"></ion-checkbox>\n        </ion-item>\n        <ion-item class="checkbox-tag">\n          <ion-label>Sierra Leone</ion-label>\n          <ion-checkbox formControlName="tag_4"></ion-checkbox>\n        </ion-item>\n        <ion-item class="checkbox-tag">\n          <ion-label>Dominican Republic</ion-label>\n          <ion-checkbox formControlName="tag_5"></ion-checkbox>\n        </ion-item>\n        <ion-item class="checkbox-tag">\n          <ion-label>Antigua and Barbuda</ion-label>\n          <ion-checkbox formControlName="tag_6"></ion-checkbox>\n        </ion-item>\n        <ion-item class="checkbox-tag">\n          <ion-label>Macedonia</ion-label>\n          <ion-checkbox formControlName="tag_7"></ion-checkbox>\n        </ion-item>\n        <ion-item class="checkbox-tag">\n          <ion-label>Vietnam</ion-label>\n          <ion-checkbox formControlName="tag_8"></ion-checkbox>\n        </ion-item>\n      </ion-list>\n    </form>\n\n    <ion-item-divider>More Tags (multiple)</ion-item-divider>\n    <form [formGroup]="checkboxTagsForm">\n      <ion-list class="checkbox-tags rounded-tags">\n        <ion-item class="checkbox-tag">\n          <ion-label>Indonesia</ion-label>\n          <ion-checkbox formControlName="tag_1"></ion-checkbox>\n        </ion-item>\n        <ion-item class="checkbox-tag">\n          <ion-label>Pitcairn Islands</ion-label>\n          <ion-checkbox formControlName="tag_2"></ion-checkbox>\n        </ion-item>\n        <ion-item class="checkbox-tag">\n          <ion-label>Malta</ion-label>\n          <ion-checkbox formControlName="tag_3"></ion-checkbox>\n        </ion-item>\n        <ion-item class="checkbox-tag">\n          <ion-label>Sierra Leone</ion-label>\n          <ion-checkbox formControlName="tag_4"></ion-checkbox>\n        </ion-item>\n        <ion-item class="checkbox-tag">\n          <ion-label>Dominican Republic</ion-label>\n          <ion-checkbox formControlName="tag_5"></ion-checkbox>\n        </ion-item>\n        <ion-item class="checkbox-tag">\n          <ion-label>Antigua and Barbuda</ion-label>\n          <ion-checkbox formControlName="tag_6"></ion-checkbox>\n        </ion-item>\n        <ion-item class="checkbox-tag">\n          <ion-label>Macedonia</ion-label>\n          <ion-checkbox formControlName="tag_7"></ion-checkbox>\n        </ion-item>\n        <ion-item class="checkbox-tag">\n          <ion-label>Vietnam</ion-label>\n          <ion-checkbox formControlName="tag_8"></ion-checkbox>\n        </ion-item>\n      </ion-list>\n    </form>\n\n    <ion-item-divider>Budget (Radio Tags)</ion-item-divider>\n    <form [formGroup]="radioTagsForm">\n      <ion-list class="radio-tags" radio-group formControlName="selected_option">\n        <ion-item class="radio-tag">\n          <ion-label>Any</ion-label>\n          <ion-radio value="any"></ion-radio>\n        </ion-item>\n        <ion-item class="radio-tag">\n          <ion-label>\n            <span>&#36;</span>\n          </ion-label>\n          <ion-radio value="1"></ion-radio>\n        </ion-item>\n        <ion-item class="radio-tag">\n          <ion-label>\n            <span>&#36;&#36;</span>\n          </ion-label>\n          <ion-radio value="2" disabled="true"></ion-radio>\n        </ion-item>\n        <ion-item class="radio-tag">\n          <ion-label>\n            <span>&#36;&#36;&#36;</span>\n          </ion-label>\n          <ion-radio value="3"></ion-radio>\n        </ion-item>\n      </ion-list>\n    </form>\n\n    <ion-item-divider>Switchers</ion-item-divider>\n    <form [formGroup]="switchersForm">\n      <ion-list class="switchers-list">\n        <ion-item class="switcher-item">\n          <ion-label>Notifications</ion-label>\n          <ion-toggle formControlName="notifications"></ion-toggle>\n        </ion-item>\n        <ion-item class="switcher-item">\n          <ion-label>Email notifications</ion-label>\n          <ion-toggle formControlName="email_notifications"></ion-toggle>\n        </ion-item>\n      </ion-list>\n    </form>\n\n    <ion-item-divider>Add & Subtract</ion-item-divider>\n    <form [formGroup]="counterForm">\n      <ion-list class="counter-list">\n        <ion-item class="counter-item">\n          <span class="counter-label">Amount</span>\n          <counter-input formControlName="counter"></counter-input>\n        </ion-item>\n        <ion-item class="counter-item">\n          <span class="counter-label">Bedrooms</span>\n          <span class="counter-value">{{counterForm.controls.counter2.value}}</span>\n          <counter-input formControlName="counter2" basic></counter-input>\n        </ion-item>\n      </ion-list>\n    </form>\n\n    <ion-item-divider>Rating</ion-item-divider>\n    <form [formGroup]="ratingForm">\n      <ion-list class="ratings-list">\n        <ion-item class="rating-item">\n          <span class="rating-label">Minimum</span>\n          <rating formControlName="rate" max="5"></rating>\n        </ion-item>\n        <ion-item class="rating-item">\n          <span class="rating-label">Read Only</span>\n          <rating formControlName="rate2" max="3" read-only="true"></rating>\n        </ion-item>\n      </ion-list>\n    </form>\n\n    <ion-item-divider>Color</ion-item-divider>\n    <form [formGroup]="radioColorForm">\n      <ion-list class="radio-tags color-tags" radio-group formControlName="selected_color">\n        <ion-item class="radio-tag" color-radio="#fc6161">\n          <ion-label>Red</ion-label>\n          <ion-radio value="#fc6161"></ion-radio>\n        </ion-item>\n        <ion-item class="radio-tag" color-radio="#fc9961">\n          <ion-radio value="#fc9961"></ion-radio>\n        </ion-item>\n        <ion-item class="radio-tag" color-radio="#fcea61">\n          <ion-label>Yellow</ion-label>\n          <ion-radio value="#fcea61" disabled="true"></ion-radio>\n        </ion-item>\n        <ion-item class="radio-tag" color-radio="#affc61">\n          <ion-label>Green</ion-label>\n          <ion-radio value="#affc61"></ion-radio>\n        </ion-item>\n        <ion-item class="radio-tag" color-radio="#61fcc5">\n          <ion-radio value="#61fcc5"></ion-radio>\n        </ion-item>\n        <ion-item class="radio-tag" color-radio="#fc61ad">\n          <ion-radio value="#fc61ad"></ion-radio>\n        </ion-item>\n        <ion-item class="radio-tag" color-radio="#b561fc">\n          <ion-radio value="#b561fc"></ion-radio>\n        </ion-item>\n        <ion-item class="radio-tag" color-radio="#6182fc">\n          <ion-radio value="#6182fc"></ion-radio>\n        </ion-item>\n        <ion-item class="radio-tag" color-radio="#61d1fc">\n          <ion-radio value="#61d1fc"></ion-radio>\n        </ion-item>\n      </ion-list>\n    </form>\n  </ion-item-group>\n</ion-content>\n`/*ion-inline-end:"/home/duane/dev/willow/knddec/src/pages/filters/filters.html"*/
-        }),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* NavController */]])
-    ], FiltersPage);
-    return FiltersPage;
-}());
-
-//# sourceMappingURL=filters.js.map
-
-/***/ }),
-
-/***/ 580:
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return FormLayoutPage; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_ionic_angular__ = __webpack_require__(6);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_forms__ = __webpack_require__(22);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__components_counter_input_counter_input__ = __webpack_require__(210);
-var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
-    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-    return c > 3 && r && Object.defineProperty(target, key, r), r;
-};
-var __metadata = (this && this.__metadata) || function (k, v) {
-    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
-};
-
-
-
-
-var FormLayoutPage = (function () {
-    function FormLayoutPage(nav, alertCtrl) {
-        this.nav = nav;
-        this.alertCtrl = alertCtrl;
-        this.section = "event";
-        this.post_form = new __WEBPACK_IMPORTED_MODULE_1__angular_forms__["b" /* FormGroup */]({
-            title: new __WEBPACK_IMPORTED_MODULE_1__angular_forms__["a" /* FormControl */]('', __WEBPACK_IMPORTED_MODULE_1__angular_forms__["h" /* Validators */].required),
-            description: new __WEBPACK_IMPORTED_MODULE_1__angular_forms__["a" /* FormControl */]('', __WEBPACK_IMPORTED_MODULE_1__angular_forms__["h" /* Validators */].required),
-            servings: new __WEBPACK_IMPORTED_MODULE_1__angular_forms__["a" /* FormControl */](2, Object(__WEBPACK_IMPORTED_MODULE_3__components_counter_input_counter_input__["b" /* counterRangeValidator */])(10, 1)),
-            time: new __WEBPACK_IMPORTED_MODULE_1__angular_forms__["a" /* FormControl */]('01:30', __WEBPACK_IMPORTED_MODULE_1__angular_forms__["h" /* Validators */].required),
-            temperature: new __WEBPACK_IMPORTED_MODULE_1__angular_forms__["a" /* FormControl */](180)
-        });
-        this.event_form = new __WEBPACK_IMPORTED_MODULE_1__angular_forms__["b" /* FormGroup */]({
-            title: new __WEBPACK_IMPORTED_MODULE_1__angular_forms__["a" /* FormControl */]('', __WEBPACK_IMPORTED_MODULE_1__angular_forms__["h" /* Validators */].required),
-            location: new __WEBPACK_IMPORTED_MODULE_1__angular_forms__["a" /* FormControl */]('', __WEBPACK_IMPORTED_MODULE_1__angular_forms__["h" /* Validators */].required),
-            from_date: new __WEBPACK_IMPORTED_MODULE_1__angular_forms__["a" /* FormControl */]('2016-09-18', __WEBPACK_IMPORTED_MODULE_1__angular_forms__["h" /* Validators */].required),
-            from_time: new __WEBPACK_IMPORTED_MODULE_1__angular_forms__["a" /* FormControl */]('13:00', __WEBPACK_IMPORTED_MODULE_1__angular_forms__["h" /* Validators */].required),
-            to_date: new __WEBPACK_IMPORTED_MODULE_1__angular_forms__["a" /* FormControl */]('', __WEBPACK_IMPORTED_MODULE_1__angular_forms__["h" /* Validators */].required),
-            to_time: new __WEBPACK_IMPORTED_MODULE_1__angular_forms__["a" /* FormControl */]('', __WEBPACK_IMPORTED_MODULE_1__angular_forms__["h" /* Validators */].required)
-        });
-        this.card_form = new __WEBPACK_IMPORTED_MODULE_1__angular_forms__["b" /* FormGroup */]({
-            card_number: new __WEBPACK_IMPORTED_MODULE_1__angular_forms__["a" /* FormControl */]('', __WEBPACK_IMPORTED_MODULE_1__angular_forms__["h" /* Validators */].required),
-            card_holder: new __WEBPACK_IMPORTED_MODULE_1__angular_forms__["a" /* FormControl */]('', __WEBPACK_IMPORTED_MODULE_1__angular_forms__["h" /* Validators */].required),
-            cvc: new __WEBPACK_IMPORTED_MODULE_1__angular_forms__["a" /* FormControl */]('', __WEBPACK_IMPORTED_MODULE_1__angular_forms__["h" /* Validators */].required),
-            exp_date: new __WEBPACK_IMPORTED_MODULE_1__angular_forms__["a" /* FormControl */]('', __WEBPACK_IMPORTED_MODULE_1__angular_forms__["h" /* Validators */].required),
-            save_card: new __WEBPACK_IMPORTED_MODULE_1__angular_forms__["a" /* FormControl */](true, __WEBPACK_IMPORTED_MODULE_1__angular_forms__["h" /* Validators */].required)
-        });
-    }
-    FormLayoutPage.prototype.onSegmentChanged = function (segmentButton) {
-        // console.log('Segment changed to', segmentButton.value);
-    };
-    FormLayoutPage.prototype.onSegmentSelected = function (segmentButton) {
-        // console.log('Segment selected', segmentButton.value);
-    };
-    FormLayoutPage.prototype.createPost = function () {
-        console.log(this.post_form.value);
-    };
-    FormLayoutPage.prototype.createEvent = function () {
-        console.log(this.event_form.value);
-    };
-    FormLayoutPage.prototype.createCard = function () {
-        console.log(this.card_form.value);
-    };
-    FormLayoutPage.prototype.chooseCategory = function () {
-        var _this = this;
-        var alert = this.alertCtrl.create({
-            cssClass: 'category-prompt'
-        });
-        alert.setTitle('Category');
-        alert.addInput({
-            type: 'checkbox',
-            label: 'Alderaan',
-            value: 'Logan',
-            checked: true
-        });
-        alert.addInput({
-            type: 'checkbox',
-            label: 'Bespin',
-            value: 'Barbados'
-        });
-        alert.addButton('Cancel');
-        alert.addButton({
-            text: 'Confirm',
-            handler: function (data) {
-                console.log('Checkbox data:', data);
-                _this.categories_checkbox_open = false;
-                _this.categories_checkbox_result = data;
-            }
-        });
-        alert.present().then(function () {
-            _this.categories_checkbox_open = true;
-        });
-    };
-    FormLayoutPage = __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_2__angular_core__["n" /* Component */])({
-            selector: 'form-layout-page',template:/*ion-inline-start:"/home/duane/dev/willow/knddec/src/pages/form-layout/form-layout.html"*/`<ion-header>\n  <ion-navbar>\n    <ion-title>Forms Examples</ion-title>\n  </ion-navbar>\n</ion-header>\n\n<ion-content class="forms-examples-content">\n  <ion-segment class="forms-examples-segment" [(ngModel)]="section" (ionChange)="onSegmentChanged($event)">\n    <ion-segment-button value="post" (ionSelect)="onSegmentSelected($event)">\n      Tasks\n    </ion-segment-button>\n    <ion-segment-button value="event" (ionSelect)="onSegmentSelected($event)">\n      SWMs\n    </ion-segment-button>\n    <ion-segment-button value="card" (ionSelect)="onSegmentSelected($event)">\n      Safety Focus\n    </ion-segment-button>\n  </ion-segment>\n  <div [ngSwitch]="section" class="forms-wrapper">\n    <div *ngSwitchCase="\'post\'" class="post-example-view">\n      <form class="sample-form post-form" [formGroup]="post_form" (ngSubmit)="createPost()">\n        <section class="form-section">\n          <ion-item>\n            <ion-input type="text" placeholder="Title: e.g. Krabby Patty" formControlName="title"></ion-input>\n          </ion-item>\n          <button ion-button block large class="upload-image-button">\n            <ion-icon name="camera"></ion-icon>\n            <h3 class="button-title">upload an image</h3>\n          </button>\n        </section>\n        <ion-item>\n          <ion-textarea rows="7" placeholder="Write a description or something..." formControlName="description"></ion-textarea>\n        </ion-item>\n        <section class="form-section">\n          <button ion-button block icon-right class="choose-category-button" (click)="chooseCategory()">\n            Choose category\n            <ion-icon name="add"></ion-icon>\n          </button>\n          <p *ngIf="siteSelected">{{categories_checkbox_result[0]}}</p>\n\n        </section>\n        <h2 class="section-title">Serves, times and temps</h2>\n        <ion-item class="counter-item">\n          <span class="counter-label">Servings</span>\n          <counter-input formControlName="servings"></counter-input>\n        </ion-item>\n        <ion-item class="time-item">\n          <ion-label>Time</ion-label>\n          <ion-datetime formControlName="time" displayFormat="h:mm" pickerFormat="h mm"></ion-datetime>\n        </ion-item>\n        <ion-item class="range-item">\n          <ion-label>\n            <h2 class="range-label">Temperature</h2>\n            <h3 class="range-value">{{post_form.controls.temperature.value}} &deg;C</h3>\n          </ion-label>\n          <ion-range formControlName="temperature" min="0" max="220" step="5" snaps="true" pin="false"></ion-range>\n        </ion-item>\n        <section class="form-section">\n          <button ion-button block class="form-action-button create-post-button" type="submit" [disabled]="!post_form.valid">Post!</button>\n        </section>\n      </form>\n    </div>\n    <div *ngSwitchCase="\'event\'" class="event-example-view">\n      <form class="sample-form event-form" [formGroup]="event_form" (ngSubmit)="createEvent()">\n        <section class="form-section">\n          <h2 class="section-title">Add an event</h2>\n          <ion-item>\n            <ion-input type="text" placeholder="Event title" formControlName="title"></ion-input>\n          </ion-item>\n          <ion-item icon-right>\n            <ion-input type="text" placeholder="Location" formControlName="location"></ion-input>\n            <ion-icon name="navigate" item-right></ion-icon>\n          </ion-item>\n          <ion-row no-padding class="multi-input-row">\n            <ion-col no-padding width-60>\n              <ion-item class="multi-input time-item">\n                <ion-label floating>From</ion-label>\n                <ion-datetime formControlName="from_date" displayFormat="DD/MM/YY" pickerFormat="DD-MM-YYYY"></ion-datetime>\n              </ion-item>\n            </ion-col>\n            <ion-col no-padding width-40>\n              <ion-item class="multi-input time-item">\n                <ion-datetime formControlName="from_time" displayFormat="h mm a" pickerFormat="h mm A"></ion-datetime>\n              </ion-item>\n            </ion-col>\n          </ion-row>\n          <ion-row no-padding class="multi-input-row">\n            <ion-col no-padding width-60>\n              <ion-item class="multi-input time-item">\n                <ion-label floating>To</ion-label>\n                <ion-datetime formControlName="to_date" displayFormat="DD/MM/YY" pickerFormat="DD-MM-YYYY"></ion-datetime>\n              </ion-item>\n            </ion-col>\n            <ion-col no-padding width-40>\n              <ion-item class="multi-input time-item">\n                <ion-datetime formControlName="to_time" displayFormat="h mm a" pickerFormat="h mm A"></ion-datetime>\n              </ion-item>\n            </ion-col>\n          </ion-row>\n        </section>\n        <section class="form-section">\n          <button ion-button block class="form-action-button create-event-button" type="submit" [disabled]="!event_form.valid">Done!</button>\n        </section>\n      </form>\n    </div>\n    <div *ngSwitchCase="\'card\'" class="card-example-view">\n      <form class="sample-form card-form" [formGroup]="card_form" (ngSubmit)="createCard()">\n        <section class="form-section">\n          <h2 class="section-title">Credit Card Information</h2>\n          <ion-item>\n            <ion-label floating>Card Number</ion-label>\n            <ion-input type="text" formControlName="card_number"></ion-input>\n          </ion-item>\n          <ion-item>\n            <ion-label floating>Card Holder</ion-label>\n            <ion-input type="text" formControlName="card_holder"></ion-input>\n          </ion-item>\n          <ion-row no-padding class="multi-input-row">\n            <ion-col no-padding width-50>\n              <ion-item class="multi-input">\n                <ion-label floating>CVC</ion-label>\n                <ion-input type="text" formControlName="cvc"></ion-input>\n              </ion-item>\n            </ion-col>\n            <ion-col no-padding width-50>\n              <ion-item class="multi-input time-item">\n                <ion-label floating>Exp. Date</ion-label>\n                <ion-datetime formControlName="exp_date" displayFormat="MM/YYYY" pickerFormat="MM-YYYY"></ion-datetime>\n              </ion-item>\n            </ion-col>\n          </ion-row>\n        </section>\n        <ion-list class="card-preferences">\n          <ion-item class="switcher-item">\n            <ion-label>Save this card</ion-label>\n            <ion-toggle formControlName="save_card"></ion-toggle>\n          </ion-item>\n        </ion-list>\n        <section class="form-section">\n          <button ion-button block class="form-action-button create-card-button" type="submit" [disabled]="!card_form.valid">Confirm</button>\n        </section>\n      </form>\n    </div>\n  </div>\n</ion-content>\n`/*ion-inline-end:"/home/duane/dev/willow/knddec/src/pages/form-layout/form-layout.html"*/
-        }),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_0_ionic_angular__["i" /* NavController */], __WEBPACK_IMPORTED_MODULE_0_ionic_angular__["a" /* AlertController */]])
-    ], FormLayoutPage);
-    return FormLayoutPage;
-}());
-
-//# sourceMappingURL=form-layout.js.map
-
-/***/ }),
-
-/***/ 581:
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return FormsPage; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(6);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__form_layout_form_layout__ = __webpack_require__(580);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__filters_filters__ = __webpack_require__(579);
-var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
-    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-    return c > 3 && r && Object.defineProperty(target, key, r), r;
-};
-var __metadata = (this && this.__metadata) || function (k, v) {
-    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
-};
-
-
-
-
-var FormsPage = (function () {
-    function FormsPage(nav) {
-        this.nav = nav;
-        this.items = [
-            { title: 'Forms Examples', component: __WEBPACK_IMPORTED_MODULE_2__form_layout_form_layout__["a" /* FormLayoutPage */] },
-            { title: 'Filters', component: __WEBPACK_IMPORTED_MODULE_3__filters_filters__["a" /* FiltersPage */] }
-        ];
-    }
-    FormsPage.prototype.itemTapped = function (event, item) {
-        this.nav.push(item.component);
-    };
-    FormsPage = __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
-            selector: 'forms-page',template:/*ion-inline-start:"/home/duane/dev/willow/knddec/src/pages/forms/forms.html"*/`<ion-header>\n  <ion-navbar>\n    <button ion-button menuToggle>\n      <ion-icon name="menu"></ion-icon>\n    </button>\n    <ion-title>Forms</ion-title>\n  </ion-navbar>\n</ion-header>\n\n<ion-content class="forms-content">\n  <ion-list class="forms-list">\n    <button class="list-item" ion-item *ngFor="let item of items" (click)="itemTapped($event, item)">\n      <ion-row no-padding>\n        <ion-col no-padding class="item-content">\n          <h3 class="item-title">{{item.title}}</h3>\n          <span class="item-note" *ngIf="item.note">{{item.note}}</span>\n        </ion-col>\n        <ion-col no-padding width-10 class="item-icon">\n          <ion-icon name="arrow-forward"></ion-icon>\n        </ion-col>\n      </ion-row>\n    </button>\n  </ion-list>\n</ion-content>\n`/*ion-inline-end:"/home/duane/dev/willow/knddec/src/pages/forms/forms.html"*/
-        }),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* NavController */]])
-    ], FormsPage);
-    return FormsPage;
-}());
-
-//# sourceMappingURL=forms.js.map
-
-/***/ }),
-
-/***/ 582:
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return GridPage; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(6);
-var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
-    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-    return c > 3 && r && Object.defineProperty(target, key, r), r;
-};
-var __metadata = (this && this.__metadata) || function (k, v) {
-    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
-};
-
-
-var GridPage = (function () {
-    function GridPage(nav) {
-        this.nav = nav;
-    }
-    GridPage = __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
-            selector: 'grid-page',template:/*ion-inline-start:"/home/duane/dev/willow/knddec/src/pages/grid/grid.html"*/`<ion-header>\n  <ion-navbar>\n    <ion-title>Grid</ion-title>\n  </ion-navbar>\n</ion-header>\n\n<ion-content>\n  <ion-item-group>\n    <ion-item-divider>Grid Example #1</ion-item-divider>\n    <ion-row class="grid-1 grid-example">\n      <ion-col width-100 class="grid-item">\n        <div class="grid-item-wrapper">\n          <div class="grid-item-inner multi-line">\n            <h2 class="item-title">1</h2>\n            <h2 class="item-title">1</h2>\n            <h2 class="item-title">1</h2>\n            <h2 class="item-title">1</h2>\n          </div>\n        </div>\n      </ion-col>\n      <ion-col width-50 class="grid-item" *ngFor="let item of [2, 3, 4, 5, 6]">\n        <div class="grid-item-wrapper">\n          <div class="grid-item-inner">\n            <h2 class="item-title">{{ item }}</h2>\n          </div>\n        </div>\n      </ion-col>\n    </ion-row>\n    <ion-item-divider>Grid Example #2</ion-item-divider>\n    <ion-row class="grid-2 grid-example">\n      <ion-col width-67 class="grid-item">\n        <div class="grid-item-wrapper">\n          <div class="grid-item-inner multi-line">\n            <h2 class="item-title">1</h2>\n            <h2 class="item-title">1</h2>\n            <h2 class="item-title">1</h2>\n          </div>\n        </div>\n      </ion-col>\n      <ion-col width-33 class="grid-item double-item">\n        <ion-col width-100 class="grid-item" *ngFor="let item of [2, 3]">\n          <div class="grid-item-wrapper">\n            <div class="grid-item-inner">\n              <h2 class="item-title">{{ item }}</h2>\n            </div>\n          </div>\n        </ion-col>\n      </ion-col>\n      <ion-col width-33 class="grid-item" *ngFor="let item of [4, 5, 6, 7]">\n        <div class="grid-item-wrapper">\n          <div class="grid-item-inner">\n            <h2 class="item-title">{{ item }}</h2>\n          </div>\n        </div>\n      </ion-col>\n    </ion-row>\n    <ion-item-divider>Grid Example #3</ion-item-divider>\n    <ion-row class="grid-3 grid-example">\n      <ion-col width-50 class="grid-item" *ngFor="let item of [1, 2, 3, 4, 5, 6, 7]">\n        <div class="grid-item-wrapper">\n          <div class="grid-item-inner">\n            <h2 class="item-title">{{ item }}</h2>\n          </div>\n        </div>\n      </ion-col>\n    </ion-row>\n    <ion-item-divider>Grid Example #4</ion-item-divider>\n    <ion-row class="grid-3 grid-example">\n      <ion-col width-33 class="grid-item" *ngFor="let item of [1, 2, 3, 4, 5, 6, 7]">\n        <div class="grid-item-wrapper">\n          <div class="grid-item-inner">\n            <h2 class="item-title">{{ item }}</h2>\n          </div>\n        </div>\n      </ion-col>\n    </ion-row>\n  </ion-item-group>\n</ion-content>\n`/*ion-inline-end:"/home/duane/dev/willow/knddec/src/pages/grid/grid.html"*/
-        }),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* NavController */]])
-    ], GridPage);
-    return GridPage;
-}());
-
-//# sourceMappingURL=grid.js.map
-
-/***/ }),
-
-/***/ 583:
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return LayoutsPage; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(6);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__schedule_schedule__ = __webpack_require__(584);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__list_1_list_1__ = __webpack_require__(586);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__list_2_list_2__ = __webpack_require__(588);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__grid_grid__ = __webpack_require__(582);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__notifications_notifications__ = __webpack_require__(590);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__profile_profile__ = __webpack_require__(211);
-var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
-    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-    return c > 3 && r && Object.defineProperty(target, key, r), r;
-};
-var __metadata = (this && this.__metadata) || function (k, v) {
-    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
-};
-
-
-
-
-
-
-
-
-var LayoutsPage = (function () {
-    function LayoutsPage(nav) {
-        this.nav = nav;
-        this.items = [
-            { title: 'Schedule', component: __WEBPACK_IMPORTED_MODULE_2__schedule_schedule__["a" /* SchedulePage */] },
-            { title: 'Lists', note: '(Big)', component: __WEBPACK_IMPORTED_MODULE_3__list_1_list_1__["a" /* List1Page */] },
-            { title: 'Lists', note: '(Mini)', component: __WEBPACK_IMPORTED_MODULE_4__list_2_list_2__["a" /* List2Page */] },
-            { title: 'Grid', component: __WEBPACK_IMPORTED_MODULE_5__grid_grid__["a" /* GridPage */] },
-            { title: 'Notifications', component: __WEBPACK_IMPORTED_MODULE_6__notifications_notifications__["a" /* NotificationsPage */] },
-            { title: 'Profile', component: __WEBPACK_IMPORTED_MODULE_7__profile_profile__["a" /* ProfilePage */] }
-        ];
-    }
-    LayoutsPage.prototype.itemTapped = function (event, item) {
-        this.nav.push(item.component);
-    };
-    LayoutsPage = __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
-            selector: 'layouts-page',template:/*ion-inline-start:"/home/duane/dev/willow/knddec/src/pages/layouts/layouts.html"*/`<ion-header>\n  <ion-navbar>\n    <ion-title>Layouts</ion-title>\n  </ion-navbar>\n</ion-header>\n\n<ion-content class="layouts-content">\n  <ion-list class="layouts-list">\n    <button class="list-item" ion-item *ngFor="let item of items" (click)="itemTapped($event, item)">\n      <ion-row no-padding>\n        <ion-col no-padding class="item-content">\n          <h3 class="item-title">{{item.title}}</h3>\n          <span class="item-note" *ngIf="item.note">{{item.note}}</span>\n        </ion-col>\n        <ion-col no-padding width-10 class="item-icon">\n          <ion-icon name="arrow-forward"></ion-icon>\n        </ion-col>\n      </ion-row>\n    </button>\n  </ion-list>\n</ion-content>\n`/*ion-inline-end:"/home/duane/dev/willow/knddec/src/pages/layouts/layouts.html"*/
-        }),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* NavController */]])
-    ], LayoutsPage);
-    return LayoutsPage;
-}());
-
-//# sourceMappingURL=layouts.js.map
-
-/***/ }),
-
-/***/ 584:
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return SchedulePage; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(6);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs_Rx__ = __webpack_require__(32);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs_Rx___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_rxjs_Rx__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__schedule_model__ = __webpack_require__(1023);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__schedule_service__ = __webpack_require__(585);
-var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
-    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-    return c > 3 && r && Object.defineProperty(target, key, r), r;
-};
-var __metadata = (this && this.__metadata) || function (k, v) {
-    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
-};
-
-
-
-
-
-var SchedulePage = (function () {
-    function SchedulePage(nav, scheduleService, loadingCtrl) {
-        this.nav = nav;
-        this.scheduleService = scheduleService;
-        this.loadingCtrl = loadingCtrl;
-        this.schedule = new __WEBPACK_IMPORTED_MODULE_3__schedule_model__["a" /* ScheduleModel */]();
-        this.segment = "today";
-        this.loading = this.loadingCtrl.create();
-    }
-    SchedulePage.prototype.ionViewDidLoad = function () {
-        var _this = this;
-        this.loading.present();
-        this.scheduleService
-            .getData()
-            .then(function (data) {
-            _this.schedule.today = data.today;
-            _this.schedule.upcoming = data.upcoming;
-            _this.loading.dismiss();
-        });
-    };
-    SchedulePage.prototype.onSegmentChanged = function (segmentButton) {
-        // console.log('Segment changed to', segmentButton.value);
-    };
-    SchedulePage.prototype.onSegmentSelected = function (segmentButton) {
-        // console.log('Segment selected', segmentButton.value);
-    };
-    SchedulePage = __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
-            selector: 'schedule-page',template:/*ion-inline-start:"/home/duane/dev/willow/knddec/src/pages/schedule/schedule.html"*/`<ion-header>\n  <ion-navbar>\n    <ion-title>Schedule</ion-title>\n  </ion-navbar>\n</ion-header>\n\n<ion-content class="schedule-content">\n  <ion-segment class="schedule-segment" [(ngModel)]="segment" (ionChange)="onSegmentChanged($event)">\n    <ion-segment-button value="today" (ionSelect)="onSegmentSelected($event)">\n      Today\n    </ion-segment-button>\n    <ion-segment-button value="upcoming" (ionSelect)="onSegmentSelected($event)">\n      Upcoming\n    </ion-segment-button>\n  </ion-segment>\n\n  <div [ngSwitch]="segment">\n    <div *ngSwitchCase="\'today\'">\n      <ion-list class="schedule-list">\n        <ion-item class="schedule-item" *ngFor="let item of schedule.today">\n          <ion-row>\n            <ion-col width-20 class="schedule-date">\n              <h2 class="schedule-day">{{item.date.day}}</h2>\n              <h3 class="schedule-month">{{item.date.month_name}}</h3>\n              <h4 class="schedule-time">{{item.date.time}}</h4>\n            </ion-col>\n            <ion-col width-80 class="schedule-data">\n              <div class="data-item">\n                <div class="item-content">\n                  <h2 class="item-title one-line">{{item.subject}}</h2>\n                  <div class="item-description">\n                    <ion-icon class="description-icon" name="clock"></ion-icon>\n                    <p class="description-text">{{item.date.full}}</p>\n                  </div>\n                  <div class="item-description">\n                    <ion-icon class="description-icon" name="navigate"></ion-icon>\n                    <p class="description-text one-line">{{item.location}}</p>\n                  </div>\n                </div>\n                <ion-icon class="item-icon" name="arrow-forward"></ion-icon>\n              </div>\n            </ion-col>\n          </ion-row>\n        </ion-item>\n      </ion-list>\n    </div>\n    <div *ngSwitchCase="\'upcoming\'">\n      <ion-list class="schedule-list">\n        <ion-item class="schedule-item" *ngFor="let item of schedule.upcoming">\n          <ion-row>\n            <ion-col width-20 class="schedule-date">\n              <h2 class="schedule-day">{{item.date.day}}</h2>\n              <h3 class="schedule-month">{{item.date.month_name}}</h3>\n              <h4 class="schedule-time">{{item.date.time}}</h4>\n            </ion-col>\n            <ion-col width-80 class="schedule-data">\n              <div class="data-item">\n                <div class="item-content">\n                  <h2 class="item-title one-line">{{item.subject}}</h2>\n                  <div class="item-description">\n                    <ion-icon class="description-icon" name="clock"></ion-icon>\n                    <p class="description-text">{{item.date.full}}</p>\n                  </div>\n                  <div class="item-description">\n                    <ion-icon class="description-icon" name="navigate"></ion-icon>\n                    <p class="description-text one-line">{{item.location}}</p>\n                  </div>\n                </div>\n                <ion-icon class="item-icon" name="arrow-forward"></ion-icon>\n              </div>\n            </ion-col>\n          </ion-row>\n        </ion-item>\n      </ion-list>\n    </div>\n  </div>\n</ion-content>\n`/*ion-inline-end:"/home/duane/dev/willow/knddec/src/pages/schedule/schedule.html"*/
-        }),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* NavController */],
-            __WEBPACK_IMPORTED_MODULE_4__schedule_service__["a" /* ScheduleService */],
-            __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* LoadingController */]])
-    ], SchedulePage);
-    return SchedulePage;
-}());
-
-//# sourceMappingURL=schedule.js.map
-
-/***/ }),
-
-/***/ 585:
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ScheduleService; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_http__ = __webpack_require__(30);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs_add_operator_toPromise__ = __webpack_require__(33);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs_add_operator_toPromise___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_rxjs_add_operator_toPromise__);
-var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
-    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-    return c > 3 && r && Object.defineProperty(target, key, r), r;
-};
-var __metadata = (this && this.__metadata) || function (k, v) {
-    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
-};
-
-
-
-var ScheduleService = (function () {
-    function ScheduleService(http) {
-        this.http = http;
-    }
-    ScheduleService.prototype.getData = function () {
-        return this.http.get('./assets/example_data/schedule.json')
-            .toPromise()
-            .then(function (response) { return response.json(); })
-            .catch(this.handleError);
-    };
-    ScheduleService.prototype.handleError = function (error) {
-        console.error('An error occurred', error); // for demo purposes only
-        return Promise.reject(error.message || error);
-    };
-    ScheduleService = __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["B" /* Injectable */])(),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1__angular_http__["b" /* Http */]])
-    ], ScheduleService);
-    return ScheduleService;
-}());
-
-//# sourceMappingURL=schedule.service.js.map
-
-/***/ }),
-
-/***/ 586:
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return List1Page; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_rxjs_Rx__ = __webpack_require__(32);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_rxjs_Rx___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_rxjs_Rx__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(6);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__list_1_model__ = __webpack_require__(1024);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__list_1_service__ = __webpack_require__(587);
-var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
-    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-    return c > 3 && r && Object.defineProperty(target, key, r), r;
-};
-var __metadata = (this && this.__metadata) || function (k, v) {
-    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
-};
-
-
-
-
-
-var List1Page = (function () {
-    function List1Page(nav, list1Service, loadingCtrl) {
-        this.nav = nav;
-        this.list1Service = list1Service;
-        this.loadingCtrl = loadingCtrl;
-        this.list1 = new __WEBPACK_IMPORTED_MODULE_3__list_1_model__["a" /* List1Model */]();
-        this.loading = this.loadingCtrl.create();
-    }
-    List1Page.prototype.ionViewDidLoad = function () {
-        var _this = this;
-        this.loading.present();
-        this.list1Service
-            .getData()
-            .then(function (data) {
-            _this.list1.items = data.items;
-            _this.loading.dismiss();
-        });
-    };
-    List1Page = __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_2__angular_core__["n" /* Component */])({
-            selector: 'list-1-page',template:/*ion-inline-start:"/home/duane/dev/willow/knddec/src/pages/list-1/list-1.html"*/`<ion-header>\n  <ion-navbar>\n    <ion-title>List Big</ion-title>\n  </ion-navbar>\n</ion-header>\n\n<ion-content class="list-big-content">\n  <div class="list-big">\n    <ion-list>\n      <button class="list-item" ion-item *ngFor="let item of list1.items">\n        <ion-row no-padding class="content-row">\n          <ion-col no-padding width-33 class="item-avatar">\n            <preload-image class="avatar-image" [ratio]="{w:1, h:1}" [src]="item.image"></preload-image>\n          </ion-col>\n          <ion-col no-padding width-57 class="item-content">\n            <h3 class="item-title">{{item.name}}</h3>\n            <p class="item-description" rows="3">{{item.description}}</p>\n            <!-- You can change the rows quantity by using rows="X", where X can be any number for example: rows="4" -->\n          </ion-col>\n          <ion-col no-padding width-10 class="item-icon">\n            <ion-icon name="arrow-forward"></ion-icon>\n          </ion-col>\n        </ion-row>\n      </button>\n    </ion-list>\n  </div>\n</ion-content>\n`/*ion-inline-end:"/home/duane/dev/willow/knddec/src/pages/list-1/list-1.html"*/
-        }),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* NavController */],
-            __WEBPACK_IMPORTED_MODULE_4__list_1_service__["a" /* List1Service */],
-            __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* LoadingController */]])
-    ], List1Page);
-    return List1Page;
-}());
-
-//# sourceMappingURL=list-1.js.map
-
-/***/ }),
-
-/***/ 587:
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return List1Service; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_http__ = __webpack_require__(30);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs_add_operator_toPromise__ = __webpack_require__(33);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs_add_operator_toPromise___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_rxjs_add_operator_toPromise__);
-var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
-    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-    return c > 3 && r && Object.defineProperty(target, key, r), r;
-};
-var __metadata = (this && this.__metadata) || function (k, v) {
-    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
-};
-
-
-
-var List1Service = (function () {
-    function List1Service(http) {
-        this.http = http;
-    }
-    List1Service.prototype.getData = function () {
-        return this.http.get('./assets/example_data/lists.json')
-            .toPromise()
-            .then(function (response) { return response.json(); })
-            .catch(this.handleError);
-    };
-    List1Service.prototype.handleError = function (error) {
-        console.error('An error occurred', error); // for demo purposes only
-        return Promise.reject(error.message || error);
-    };
-    List1Service = __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["B" /* Injectable */])(),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1__angular_http__["b" /* Http */]])
-    ], List1Service);
-    return List1Service;
-}());
-
-//# sourceMappingURL=list-1.service.js.map
-
-/***/ }),
-
-/***/ 588:
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return List2Page; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(6);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs_Rx__ = __webpack_require__(32);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs_Rx___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_rxjs_Rx__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__list_2_model__ = __webpack_require__(1025);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__list_2_service__ = __webpack_require__(589);
-var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
-    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-    return c > 3 && r && Object.defineProperty(target, key, r), r;
-};
-var __metadata = (this && this.__metadata) || function (k, v) {
-    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
-};
-
-
-
-
-
-var List2Page = (function () {
-    function List2Page(nav, list2Service, loadingCtrl) {
-        this.nav = nav;
-        this.list2Service = list2Service;
-        this.loadingCtrl = loadingCtrl;
-        this.list2 = new __WEBPACK_IMPORTED_MODULE_3__list_2_model__["a" /* List2Model */]();
-        this.loading = this.loadingCtrl.create();
-    }
-    List2Page.prototype.ionViewDidLoad = function () {
-        var _this = this;
-        this.loading.present();
-        this.list2Service
-            .getData()
-            .then(function (data) {
-            _this.list2.items = data.items;
-            _this.loading.dismiss();
-        });
-    };
-    List2Page = __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
-            selector: 'list-2-page',template:/*ion-inline-start:"/home/duane/dev/willow/knddec/src/pages/list-2/list-2.html"*/`<ion-header>\n  <ion-navbar>\n    <ion-title>List Mini</ion-title>\n  </ion-navbar>\n</ion-header>\n\n<ion-content class="list-mini-content">\n  <div class="list-mini">\n    <ion-list>\n      <button class="list-item" ion-item *ngFor="let item of list2.items">\n        <ion-row no-padding class="content-row one-line">\n          <!-- You can limit the rows of the description by using the class one-line. If you remove it, all the content from the row will be shown -->\n          <ion-col no-padding width-18 class="item-avatar">\n            <preload-image class="avatar-image" [ratio]="{w:1, h:1}" [src]="item.image"></preload-image>\n          </ion-col>\n          <ion-col no-padding width-72 class="item-content">\n            <h3 class="item-title">{{item.name}}</h3>\n            <p class="item-description">{{item.description}}</p>\n          </ion-col>\n          <ion-col no-padding width-10 class="item-icon">\n            <ion-icon name="arrow-forward"></ion-icon>\n          </ion-col>\n        </ion-row>\n      </button>\n    </ion-list>\n  </div>\n</ion-content>\n`/*ion-inline-end:"/home/duane/dev/willow/knddec/src/pages/list-2/list-2.html"*/
-        }),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* NavController */],
-            __WEBPACK_IMPORTED_MODULE_4__list_2_service__["a" /* List2Service */],
-            __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* LoadingController */]])
-    ], List2Page);
-    return List2Page;
-}());
-
-//# sourceMappingURL=list-2.js.map
-
-/***/ }),
-
-/***/ 589:
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return List2Service; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_http__ = __webpack_require__(30);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs_add_operator_toPromise__ = __webpack_require__(33);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs_add_operator_toPromise___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_rxjs_add_operator_toPromise__);
-var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
-    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-    return c > 3 && r && Object.defineProperty(target, key, r), r;
-};
-var __metadata = (this && this.__metadata) || function (k, v) {
-    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
-};
-
-
-
-var List2Service = (function () {
-    function List2Service(http) {
-        this.http = http;
-    }
-    List2Service.prototype.getData = function () {
-        console.log("getData list2S");
-        return this.http.get('./assets/example_data/lists.json')
-            .toPromise()
-            .then(function (response) { return response.json(); })
-            .catch(this.handleError);
-    };
-    List2Service.prototype.handleError = function (error) {
-        console.error('An error occurred', error); // for demo purposes only
-        return Promise.reject(error.message || error);
-    };
-    List2Service = __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["B" /* Injectable */])(),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1__angular_http__["b" /* Http */]])
-    ], List2Service);
-    return List2Service;
-}());
-
-//# sourceMappingURL=list-2.service.js.map
-
-/***/ }),
-
-/***/ 590:
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return NotificationsPage; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(6);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs_Rx__ = __webpack_require__(32);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs_Rx___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_rxjs_Rx__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__notifications_model__ = __webpack_require__(1026);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__notifications_service__ = __webpack_require__(591);
-var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
-    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-    return c > 3 && r && Object.defineProperty(target, key, r), r;
-};
-var __metadata = (this && this.__metadata) || function (k, v) {
-    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
-};
-
-
-
-
-
-var NotificationsPage = (function () {
-    function NotificationsPage(nav, notificationsService, loadingCtrl) {
-        this.nav = nav;
-        this.notificationsService = notificationsService;
-        this.loadingCtrl = loadingCtrl;
-        this.notifications = new __WEBPACK_IMPORTED_MODULE_3__notifications_model__["a" /* NotificationsModel */]();
-        this.loading = this.loadingCtrl.create();
-    }
-    NotificationsPage.prototype.ionViewDidLoad = function () {
-        var _this = this;
-        this.loading.present();
-        this.notificationsService
-            .getData()
-            .then(function (data) {
-            _this.notifications.today = data.today;
-            _this.notifications.yesterday = data.yesterday;
-            _this.loading.dismiss();
-        });
-    };
-    NotificationsPage = __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
-            selector: 'notifications-page',template:/*ion-inline-start:"/home/duane/dev/willow/knddec/src/pages/notifications/notifications.html"*/`<ion-header>\n  <ion-navbar>\n    <ion-title>Notifications</ion-title>\n  </ion-navbar>\n</ion-header>\n\n<ion-content class="notifications-content">\n  <ion-item-group>\n    <ion-item-divider class="notifications-divider">Today</ion-item-divider>\n    <ion-item class="notification-item" *ngFor="let notification of notifications.today">\n      <ion-avatar item-left>\n        <preload-image class="user-image" [ratio]="{w:1, h:1}" [src]="notification.image"></preload-image>\n      </ion-avatar>\n      <h2 class="item-title">{{notification.name}}</h2>\n      <p class="item-description">{{notification.message}}</p>\n      <ion-note class="item-time" item-right>{{notification.date}}</ion-note>\n    </ion-item>\n    <ion-item-divider class="notifications-divider">Yesterday</ion-item-divider>\n    <ion-item class="notification-item" *ngFor="let notification of notifications.yesterday">\n      <ion-avatar item-left>\n        <preload-image class="user-image" [ratio]="{w:1, h:1}" [src]="notification.image"></preload-image>\n      </ion-avatar>\n      <h2 class="item-title">{{notification.name}}</h2>\n      <p class="item-description">{{notification.message}}</p>\n      <ion-note class="item-time" item-right>{{notification.date}}</ion-note>\n    </ion-item>\n  </ion-item-group>\n</ion-content>\n`/*ion-inline-end:"/home/duane/dev/willow/knddec/src/pages/notifications/notifications.html"*/
-        }),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* NavController */],
-            __WEBPACK_IMPORTED_MODULE_4__notifications_service__["a" /* NotificationsService */],
-            __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* LoadingController */]])
-    ], NotificationsPage);
-    return NotificationsPage;
-}());
-
-//# sourceMappingURL=notifications.js.map
-
-/***/ }),
-
-/***/ 591:
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return NotificationsService; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_http__ = __webpack_require__(30);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs_add_operator_toPromise__ = __webpack_require__(33);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs_add_operator_toPromise___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_rxjs_add_operator_toPromise__);
-var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
-    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-    return c > 3 && r && Object.defineProperty(target, key, r), r;
-};
-var __metadata = (this && this.__metadata) || function (k, v) {
-    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
-};
-
-
-
-var NotificationsService = (function () {
-    function NotificationsService(http) {
-        this.http = http;
-    }
-    NotificationsService.prototype.getData = function () {
-        return this.http.get('./assets/example_data/notifications.json')
-            .toPromise()
-            .then(function (response) { return response.json(); })
-            .catch(this.handleError);
-    };
-    NotificationsService.prototype.handleError = function (error) {
-        console.error('An error occurred', error); // for demo purposes only
-        return Promise.reject(error.message || error);
-    };
-    NotificationsService = __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["B" /* Injectable */])(),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1__angular_http__["b" /* Http */]])
-    ], NotificationsService);
-    return NotificationsService;
-}());
-
-//# sourceMappingURL=notifications.service.js.map
-
-/***/ }),
-
-/***/ 592:
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ListingService; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_http__ = __webpack_require__(30);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs_add_operator_toPromise__ = __webpack_require__(33);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_http__ = __webpack_require__(38);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs_add_operator_toPromise__ = __webpack_require__(42);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs_add_operator_toPromise___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_rxjs_add_operator_toPromise__);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -5565,16 +4963,16 @@ var ListingService = (function () {
 
 /***/ }),
 
-/***/ 595:
+/***/ 582:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return TimesheetsPage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(6);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(7);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__providers_shared__ = __webpack_require__(47);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__timesheet_history_timesheet_history__ = __webpack_require__(596);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__timesheet_verify_timesheet_verify__ = __webpack_require__(597);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__timesheet_history_timesheet_history__ = __webpack_require__(583);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__timesheet_verify_timesheet_verify__ = __webpack_require__(584);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -5627,18 +5025,18 @@ var TimesheetsPage = (function () {
 
 /***/ }),
 
-/***/ 596:
+/***/ 583:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return TimesheetHistoryPage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_moment__ = __webpack_require__(2);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_moment___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_moment__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(6);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__classes_timesheet_model__ = __webpack_require__(218);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(7);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__classes_timesheet_model__ = __webpack_require__(217);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__providers_shared__ = __webpack_require__(47);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__providers_times__ = __webpack_require__(219);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__providers_times__ = __webpack_require__(218);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -5746,17 +5144,17 @@ var TimesheetHistoryPage = (function () {
 
 /***/ }),
 
-/***/ 597:
+/***/ 584:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return TimesheetVerifyPage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_moment__ = __webpack_require__(2);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_moment___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_moment__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(6);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(7);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__providers_times__ = __webpack_require__(219);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__classes_timesheet_model__ = __webpack_require__(218);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__providers_times__ = __webpack_require__(218);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__classes_timesheet_model__ = __webpack_require__(217);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -5973,14 +5371,18 @@ var TimesheetVerifyPage = (function () {
 
 /***/ }),
 
-/***/ 598:
+/***/ 585:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return WorkersPage; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(6);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__workers_onsite_workers_onsite__ = __webpack_require__(599);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_ionic_angular__ = __webpack_require__(7);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__providers_check_in__ = __webpack_require__(82);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_core__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__ionic_native_geolocation__ = __webpack_require__(60);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__providers_prestart_configuration__ = __webpack_require__(90);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__providers_sites__ = __webpack_require__(124);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__providers_worker__ = __webpack_require__(62);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -5993,31 +5395,234 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 
-/**
- * Generated class for the Workers page.
- *
- * See http://ionicframework.com/docs/components/#navigation for more info
- * on Ionic pages and navigation.
- */
+
+
+
+
 var WorkersPage = (function () {
-    function WorkersPage(navCtrl, navParams) {
+    function WorkersPage(navCtrl, navParams, alertCtrl, loadingCtrl, geolocation, workerService, sitesService, checkInOutService, prestartConfigurationService, toast) {
         this.navCtrl = navCtrl;
         this.navParams = navParams;
-        this.items = [
-            { title: 'Onsite', component: __WEBPACK_IMPORTED_MODULE_2__workers_onsite_workers_onsite__["a" /* WorkersOnsitePage */] },
-        ];
+        this.alertCtrl = alertCtrl;
+        this.loadingCtrl = loadingCtrl;
+        this.geolocation = geolocation;
+        this.workerService = workerService;
+        this.sitesService = sitesService;
+        this.checkInOutService = checkInOutService;
+        this.prestartConfigurationService = prestartConfigurationService;
+        this.toast = toast;
+        this.siteSelected = null;
+        this.sites = [];
+        this.allWorkers = [];
+        this.filteredWorkers = [];
+        this.prestarts = [];
+        this.nameFilter = '';
+        this.location = {
+            lat: null,
+            lon: null
+        };
     }
-    // ionViewDidLoad() {
-    //   console.log('ionViewDidLoad Workers');
-    // }
-    WorkersPage.prototype.itemTapped = function (event, item) {
-        this.navCtrl.push(item.component);
+    WorkersPage.prototype.ionViewDidLoad = function () {
+        this.refresh();
+    };
+    WorkersPage.prototype.selectSite = function (site) {
+        this.siteSelected = site;
+    };
+    WorkersPage.prototype.trackWorker = function (worker) {
+        return worker.id + '-' + worker.siteSelected + '-' + worker.clockOn + '-' + worker.clockOff;
+    };
+    WorkersPage.prototype.filterWorkersList = function () {
+        var _this = this;
+        this.filteredWorkers = this.allWorkers.slice();
+        if (this.siteSelected && this.siteSelected.id) {
+            this.filteredWorkers = this.filteredWorkers.filter(function (w) { return w.sitesAllowed.indexOf(_this.siteSelected.id) >= 0; });
+        }
+        if (this.nameFilter) {
+            var lcNameFilter_1 = this.nameFilter.toLowerCase();
+            this.filteredWorkers = this.filteredWorkers.filter(function (w) {
+                return (w.name || '').toLowerCase().indexOf(lcNameFilter_1) >= 0;
+            });
+        }
+        var sortByName = function (a, b) { return (a.name || '').localeCompare(b.name); };
+        this.filteredWorkers.sort(sortByName);
+        return this.filteredWorkers;
+    };
+    WorkersPage.prototype.refresh = function () {
+        var loader = this.loadingCtrl.create();
+        loader.present();
+        var op1 = this.updateSitesList();
+        var op2 = this.fetchWorkersList();
+        var op3 = this.fetchPrestartConfiguration();
+        var loaded = function () { loader.dismiss(); };
+        Promise.all([op1, op2, op3]).then(loaded, loaded);
+    };
+    WorkersPage.prototype.isWorkerOnSite = function (worker) {
+        return worker.clockedOn && !worker.clockedOff;
+    };
+    WorkersPage.prototype.isWorkerLeftSite = function (worker) {
+        return worker.clockedOn && worker.clockedOff;
+    };
+    WorkersPage.prototype.workerTapped = function ($event, worker) {
+        if (worker.clockedOn) {
+            if (worker.clockedOff) {
+                // Clock on
+                this.workerClockOn(worker);
+            }
+            else {
+                // Clock off
+                this.workerClockOff(worker);
+            }
+        }
+        else {
+            // Clock on
+            this.workerClockOn(worker);
+        }
+    };
+    WorkersPage.prototype.updateSitesList = function () {
+        var _this = this;
+        return this.sitesService
+            .getData()
+            .then(function (sites) { return _this.sites = sites; }, function (error) {
+            console.error(error);
+            _this.notify('Server error');
+        });
+    };
+    WorkersPage.prototype.fetchWorkersList = function () {
+        var _this = this;
+        return this.workerService
+            .getData()
+            .then(function (workers) { return _this.allWorkers = workers; }, function (error) {
+            console.error(error);
+            _this.notify('Server error');
+        })
+            .then(function () { return _this.filterWorkersList(); });
+    };
+    WorkersPage.prototype.fetchPrestartConfiguration = function () {
+        var _this = this;
+        return this.prestartConfigurationService
+            .getData()
+            .then(function (data) { return _this.prestarts = data; }, function (error) {
+            console.error(error);
+            _this.notify('Server error');
+        });
+    };
+    WorkersPage.prototype.getGeoLocation = function () {
+        var _this = this;
+        return this.geolocation.getCurrentPosition().then(function (resp) {
+            console.log("Location: lat = " + resp.coords.latitude + " long " + resp.coords.longitude);
+            _this.location.lat = resp.coords.latitude;
+            _this.location.lon = resp.coords.longitude;
+        }).catch(function (error) {
+            console.log('Error getting location', error);
+        });
+    };
+    WorkersPage.prototype.siteForWorker = function (worker) {
+        if (worker.siteSelected) {
+            return this.sitesService.byId(worker.siteSelected);
+        }
+        else {
+            return null;
+        }
+    };
+    WorkersPage.prototype.notify = function (text, duration) {
+        if (duration === void 0) { duration = 3000; }
+        var toast = this.toast.create({
+            message: text,
+            duration: duration,
+            position: 'top'
+        });
+        toast.present();
+    };
+    WorkersPage.prototype.workerClockOn = function (worker) {
+        var _this = this;
+        var loader = this.loadingCtrl.create();
+        loader.present();
+        var loaded = function () { loader.dismiss(); };
+        var locationPromise = this.getGeoLocation();
+        var alert = this.alertCtrl.create({
+            cssClass: 'category-prompt'
+        });
+        alert.setTitle('Clock-on for site');
+        this.sitesService.sites.forEach(function (_a, index) {
+            var id = _a.id, label = _a.label;
+            alert.addInput({
+                type: 'radio',
+                value: '' + id,
+                label: label,
+                checked: false
+            });
+        });
+        alert.addButton({
+            text: 'Cancel',
+            handler: loaded
+        });
+        alert.addButton({
+            text: 'Confirm',
+            handler: function (data) {
+                locationPromise.then(function () { return _this.checkInOutService
+                    .checkIn(+data, _this.location.lat, _this.location.lon, worker.id)
+                    .subscribe(function () {
+                    _this.refresh();
+                    loaded();
+                }, function (error) {
+                    _this.notify('Server error');
+                    loaded();
+                }); });
+            }
+        });
+        alert.present();
+    };
+    WorkersPage.prototype.workerClockOff = function (worker) {
+        var _this = this;
+        var loader = this.loadingCtrl.create();
+        loader.present();
+        var loaded = function () { loader.dismiss(); };
+        var locationPromise = this.getGeoLocation();
+        var alert = this.alertCtrl.create({
+            cssClass: 'category-prompt'
+        });
+        alert.setTitle('Clock-off for site');
+        alert.setMessage('Confirm clock off');
+        alert.addInput({
+            name: 'lunch',
+            type: 'checkbox',
+            label: 'lunch',
+            value: 'yes'
+        });
+        alert.addButton({
+            text: 'Cancel',
+            handler: loaded
+        });
+        alert.addButton({
+            text: 'Confirm',
+            handler: function (data) {
+                locationPromise.then(function () { return _this.checkInOutService
+                    .checkOut(worker.siteSelected, data.lunch === 'yes', _this.location.lat, _this.location.lon, worker.id)
+                    .subscribe(function () {
+                    _this.refresh();
+                    loaded();
+                }, function (error) {
+                    _this.notify('Server error');
+                    loaded();
+                }); });
+            }
+        });
+        alert.present();
     };
     WorkersPage = __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
-            selector: 'page-workers',template:/*ion-inline-start:"/home/duane/dev/willow/knddec/src/pages/workers/workers.html"*/`<!--\n  Generated template for the Workers page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n<ion-header>\n\n  <ion-navbar>\n    <ion-title>Workers</ion-title>\n  </ion-navbar>\n\n</ion-header>\n\n\n<ion-content class="workers-content">\n  <ion-list class="workers-list">\n    <button class="list-item" ion-item *ngFor="let item of items" (click)="itemTapped($event, item)">\n      <ion-row no-padding>\n        <ion-col no-padding class="item-content">\n          <h3 class="item-title">{{item.title}}</h3>\n          <span class="item-note" *ngIf="item.note">{{item.note}}</span>\n        </ion-col>\n        <ion-col no-padding width-10 class="item-icon">\n          <ion-icon name="arrow-forward"></ion-icon>\n        </ion-col>\n      </ion-row>\n    </button>\n  </ion-list>\n</ion-content>\n`/*ion-inline-end:"/home/duane/dev/willow/knddec/src/pages/workers/workers.html"*/
+        Object(__WEBPACK_IMPORTED_MODULE_2__angular_core__["n" /* Component */])({
+            selector: 'page-workers',template:/*ion-inline-start:"/home/duane/dev/willow/knddec/src/pages/workers/workers.html"*/`<ion-header>\n  <ion-navbar>\n    <ion-title>Workers</ion-title>\n  </ion-navbar>\n</ion-header>\n\n\n<ion-content class="workers-content">\n  <ion-grid>\n    <ion-row>\n      <ion-col col-6>\n        <ion-item>\n          <ion-label color="primary"\n            stacked>Filter by Name</ion-label>\n          <ion-input type="text"\n            placeholder="Name"\n            [ngModel]="nameFilter"\n            (ngModelChange)="nameFilter = $event; filterWorkersList();"></ion-input>\n        </ion-item>\n      </ion-col>\n      <ion-col col-4>\n        <ion-item>\n          <ion-label color="primary"\n            stacked>Filter by Site</ion-label>\n          <ion-select [ngModel]="siteSelected"\n            (ngModelChange)="siteSelected = $event; filterWorkersList();">\n            <ion-option [value]="{}">Don\'t filter</ion-option>\n            <ion-option *ngFor="let site of sites"\n              [value]="site">{{ site.label }}</ion-option>\n          </ion-select>\n        </ion-item>\n      </ion-col>\n      <ion-col col-2>\n        <button ion-button\n          icon-only\n          [disabled]="loading"\n          (click)="refresh()">\n          <ion-icon name="refresh"></ion-icon>\n        </button>\n      </ion-col>\n    </ion-row>\n  </ion-grid>\n  <ion-list class="workers-list">\n    <button class="list-item"\n      [class.list-item--on-site]="isWorkerOnSite(worker)"\n      [class.list-item--left-site]="isWorkerLeftSite(worker)"\n      ion-item\n      *ngFor="let worker of filteredWorkers; trackBy: trackWorker"\n      (click)="workerTapped($event, worker)">\n      <ion-row no-padding>\n        <ion-col no-padding\n          class="item-content">\n          <h3 class="item-title">{{ worker.name }}\n            <ion-icon *ngIf="worker.supervisor"\n              name="star"></ion-icon>\n          </h3>\n          <div class="worker-clock-on"\n            *ngIf="isWorkerOnSite(worker)">\n            {{ siteForWorker(worker).label }}: started {{ worker.clockOn }}\n          </div>\n          <div class="worker-clock-off"\n            *ngIf="isWorkerLeftSite(worker)">\n            {{ siteForWorker(worker).label }}: {{ worker.clockOn }} - {{ worker.clockOff }}\n          </div>\n        </ion-col>\n        <ion-col no-padding\n          width-10\n          class="item-icon">\n          <ion-icon name="arrow-forward"></ion-icon>\n        </ion-col>\n      </ion-row>\n    </button>\n  </ion-list>\n</ion-content>\n`/*ion-inline-end:"/home/duane/dev/willow/knddec/src/pages/workers/workers.html"*/
         }),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["j" /* NavParams */]])
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_0_ionic_angular__["i" /* NavController */],
+            __WEBPACK_IMPORTED_MODULE_0_ionic_angular__["j" /* NavParams */],
+            __WEBPACK_IMPORTED_MODULE_0_ionic_angular__["a" /* AlertController */],
+            __WEBPACK_IMPORTED_MODULE_0_ionic_angular__["e" /* LoadingController */],
+            __WEBPACK_IMPORTED_MODULE_3__ionic_native_geolocation__["a" /* Geolocation */],
+            __WEBPACK_IMPORTED_MODULE_6__providers_worker__["b" /* WorkerService */],
+            __WEBPACK_IMPORTED_MODULE_5__providers_sites__["a" /* SiteService */],
+            __WEBPACK_IMPORTED_MODULE_1__providers_check_in__["a" /* CheckInOutService */],
+            __WEBPACK_IMPORTED_MODULE_4__providers_prestart_configuration__["a" /* PrestartConfigurationService */],
+            __WEBPACK_IMPORTED_MODULE_0_ionic_angular__["m" /* ToastController */]])
     ], WorkersPage);
     return WorkersPage;
 }());
@@ -6026,15 +5631,15 @@ var WorkersPage = (function () {
 
 /***/ }),
 
-/***/ 599:
+/***/ 586:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return WorkersOnsitePage; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_ionic_angular__ = __webpack_require__(6);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__providers_worker__ = __webpack_require__(61);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__classes_worker_model__ = __webpack_require__(66);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return NotificationsService; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_http__ = __webpack_require__(38);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs_add_operator_toPromise__ = __webpack_require__(42);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs_add_operator_toPromise___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_rxjs_add_operator_toPromise__);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -6047,36 +5652,78 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 
-
-/**
- * Generated class for the WorkersOnsite page.
- *
- * See http://ionicframework.com/docs/components/#navigation for more info
- * on Ionic pages and navigation.
- */
-var WorkersOnsitePage = (function () {
-    function WorkersOnsitePage(navCtrl, navParams, workerService) {
-        this.navCtrl = navCtrl;
-        this.navParams = navParams;
-        this.workerService = workerService;
-        this.workers = new __WEBPACK_IMPORTED_MODULE_3__classes_worker_model__["b" /* WorkersModel */]();
-        this.workers.items = this.workerService.getWorkersStatus();
+var NotificationsService = (function () {
+    function NotificationsService(http) {
+        this.http = http;
     }
-    WorkersOnsitePage = __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_1__angular_core__["n" /* Component */])({
-            selector: 'page-workers-onsite',template:/*ion-inline-start:"/home/duane/dev/willow/knddec/src/pages/workers-onsite/workers-onsite.html"*/`<!--\n  Generated template for the WorkersOnsite page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n<ion-header>\n\n  <ion-navbar>\n    <ion-title>Workers Onsite</ion-title>\n  </ion-navbar>\n\n</ion-header>\n\n\n<ion-content padding>\n<ion-item-divider>Add / Remove from this site</ion-item-divider>\n\n  <ion-list class="checkbox-list">\n    <ion-item class="checkbox-item" *ngFor="let w of workers.items">\n      <ion-label>{{w.name}}</ion-label>\n      <ion-checkbox  [(ngModel)]="w.siteSelected"></ion-checkbox>\n    </ion-item>\n  </ion-list>\n</ion-content>\n`/*ion-inline-end:"/home/duane/dev/willow/knddec/src/pages/workers-onsite/workers-onsite.html"*/,
-        }),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_0_ionic_angular__["i" /* NavController */], __WEBPACK_IMPORTED_MODULE_0_ionic_angular__["j" /* NavParams */],
-            __WEBPACK_IMPORTED_MODULE_2__providers_worker__["b" /* WorkerService */]])
-    ], WorkersOnsitePage);
-    return WorkersOnsitePage;
+    NotificationsService.prototype.getData = function () {
+        return this.http.get('./assets/example_data/notifications.json')
+            .toPromise()
+            .then(function (response) { return response.json(); })
+            .catch(this.handleError);
+    };
+    NotificationsService.prototype.handleError = function (error) {
+        console.error('An error occurred', error); // for demo purposes only
+        return Promise.reject(error.message || error);
+    };
+    NotificationsService = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["B" /* Injectable */])(),
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1__angular_http__["b" /* Http */]])
+    ], NotificationsService);
+    return NotificationsService;
 }());
 
-//# sourceMappingURL=workers-onsite.js.map
+//# sourceMappingURL=notifications.service.js.map
 
 /***/ }),
 
-/***/ 600:
+/***/ 587:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ScheduleService; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_http__ = __webpack_require__(38);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs_add_operator_toPromise__ = __webpack_require__(42);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs_add_operator_toPromise___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_rxjs_add_operator_toPromise__);
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+
+var ScheduleService = (function () {
+    function ScheduleService(http) {
+        this.http = http;
+    }
+    ScheduleService.prototype.getData = function () {
+        return this.http.get('./assets/example_data/schedule.json')
+            .toPromise()
+            .then(function (response) { return response.json(); })
+            .catch(this.handleError);
+    };
+    ScheduleService.prototype.handleError = function (error) {
+        console.error('An error occurred', error); // for demo purposes only
+        return Promise.reject(error.message || error);
+    };
+    ScheduleService = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["B" /* Injectable */])(),
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1__angular_http__["b" /* Http */]])
+    ], ScheduleService);
+    return ScheduleService;
+}());
+
+//# sourceMappingURL=schedule.service.js.map
+
+/***/ }),
+
+/***/ 588:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -6118,13 +5765,13 @@ var ShowHideInput = (function () {
 
 /***/ }),
 
-/***/ 601:
+/***/ 589:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser_dynamic__ = __webpack_require__(602);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__app_module__ = __webpack_require__(606);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser_dynamic__ = __webpack_require__(590);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__app_module__ = __webpack_require__(594);
 
 
 Object(__WEBPACK_IMPORTED_MODULE_0__angular_platform_browser_dynamic__["a" /* platformBrowserDynamic */])().bootstrapModule(__WEBPACK_IMPORTED_MODULE_1__app_module__["a" /* AppModule */]);
@@ -6132,95 +5779,81 @@ Object(__WEBPACK_IMPORTED_MODULE_0__angular_platform_browser_dynamic__["a" /* pl
 
 /***/ }),
 
-/***/ 606:
+/***/ 594:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AppModule; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(6);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__components_ma_weather__ = __webpack_require__(643);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__providers_api__ = __webpack_require__(41);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(7);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__components_ma_weather__ = __webpack_require__(631);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__providers_api__ = __webpack_require__(39);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__providers_auth__ = __webpack_require__(45);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__components_background_image_background_image__ = __webpack_require__(741);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__components_background_image_background_image__ = __webpack_require__(729);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__angular_platform_browser__ = __webpack_require__(57);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__providers_check_in__ = __webpack_require__(112);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__pages_clock_off_clock_off__ = __webpack_require__(444);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__pages_clock_on_clock_on__ = __webpack_require__(563);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__components_color_radio_color_radio__ = __webpack_require__(1020);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__components_counter_input_counter_input__ = __webpack_require__(210);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__pages_equipment_equipment__ = __webpack_require__(568);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__pages_equipment_prestart_equipment_prestart__ = __webpack_require__(569);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_14__pages_feed_feed__ = __webpack_require__(570);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__providers_check_in__ = __webpack_require__(82);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__pages_clock_off_clock_off__ = __webpack_require__(443);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__pages_clock_on_clock_on__ = __webpack_require__(562);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__components_color_radio_color_radio__ = __webpack_require__(1008);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__components_counter_input_counter_input__ = __webpack_require__(211);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__pages_equipment_equipment__ = __webpack_require__(567);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__pages_equipment_prestart_equipment_prestart__ = __webpack_require__(568);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_14__pages_feed_feed__ = __webpack_require__(569);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_15__pages_feed_feed_service__ = __webpack_require__(578);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_16__pages_filters_filters__ = __webpack_require__(579);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_16__pages_filters_filters__ = __webpack_require__(1011);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_17__pages_followers_followers__ = __webpack_require__(212);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_18__pages_forgot_password_forgot_password__ = __webpack_require__(572);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_19__pages_form_layout_form_layout__ = __webpack_require__(580);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_20__pages_forms_forms__ = __webpack_require__(581);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_21__ionic_native_geolocation__ = __webpack_require__(63);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_22__pages_grid_grid__ = __webpack_require__(582);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_23__angular_http__ = __webpack_require__(30);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_24__providers_issue__ = __webpack_require__(205);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_25__pages_layouts_layouts__ = __webpack_require__(583);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_26__pages_list_1_list_1__ = __webpack_require__(586);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_27__pages_list_1_list_1_service__ = __webpack_require__(587);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_28__pages_list_2_list_2__ = __webpack_require__(588);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_29__pages_list_2_list_2_service__ = __webpack_require__(589);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_30__pages_listing_listing__ = __webpack_require__(1027);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_31__pages_listing_listing_service__ = __webpack_require__(592);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_32__pages_login_login__ = __webpack_require__(213);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_33__app_component__ = __webpack_require__(1029);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_34__pages_notifications_notifications__ = __webpack_require__(590);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_35__pages_notifications_notifications_service__ = __webpack_require__(591);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_36__components_preload_image_preload_image__ = __webpack_require__(1030);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_37__providers_prestart_configuration__ = __webpack_require__(122);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_38__pages_prestart_prestart__ = __webpack_require__(573);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_39__pages_privacy_policy_privacy_policy__ = __webpack_require__(217);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_40__pages_profile_profile__ = __webpack_require__(211);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_41__components_rating_rating__ = __webpack_require__(1031);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_42__pages_safety_issues_safety_issues__ = __webpack_require__(566);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_43__pages_safety_reminder_detail_safety_reminder_detail__ = __webpack_require__(206);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_44__pages_safety_reminder_safety_reminder__ = __webpack_require__(565);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_45__providers_safety_reminder__ = __webpack_require__(208);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_46__pages_schedule_schedule__ = __webpack_require__(584);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_47__pages_schedule_schedule_service__ = __webpack_require__(585);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_48__pages_settings_settings__ = __webpack_require__(123);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_49__providers_shared__ = __webpack_require__(47);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_50__components_show_hide_password_show_hide_container__ = __webpack_require__(1032);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_51__components_show_hide_password_show_hide_input__ = __webpack_require__(600);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_52__pages_signup_signup__ = __webpack_require__(576);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_53__providers_sites__ = __webpack_require__(214);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_54__ionic_native_splash_screen__ = __webpack_require__(593);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_55__ionic_native_status_bar__ = __webpack_require__(594);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_56__pages_swm_detail_swm_detail__ = __webpack_require__(209);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_57__pages_swm_list_edit_swm_list_edit__ = __webpack_require__(574);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_58__pages_swm_swm__ = __webpack_require__(204);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_59__providers_swm__ = __webpack_require__(67);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_60__pages_tabs_navigation_tabs_navigation__ = __webpack_require__(90);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_61__providers_task__ = __webpack_require__(215);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_62__pages_terms_of_service_terms_of_service__ = __webpack_require__(216);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_63__providers_times__ = __webpack_require__(219);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_64__pages_timesheet_history_timesheet_history__ = __webpack_require__(596);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_65__pages_timesheet_verify_timesheet_verify__ = __webpack_require__(597);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_66__pages_timesheets_timesheets__ = __webpack_require__(595);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_67__pages_worker_clockon_worker_clockon__ = __webpack_require__(577);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_68__providers_worker__ = __webpack_require__(61);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_69__pages_workers_onsite_workers_onsite__ = __webpack_require__(599);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_70__pages_workers_workers__ = __webpack_require__(598);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_19__pages_form_layout_form_layout__ = __webpack_require__(1012);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_20__ionic_native_geolocation__ = __webpack_require__(60);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_21__pages_grid_grid__ = __webpack_require__(1013);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_22__angular_http__ = __webpack_require__(38);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_23__providers_issue__ = __webpack_require__(206);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_24__pages_listing_listing__ = __webpack_require__(1014);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_25__pages_listing_listing_service__ = __webpack_require__(579);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_26__pages_login_login__ = __webpack_require__(213);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_27__app_component__ = __webpack_require__(1016);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_28__pages_notifications_notifications__ = __webpack_require__(1017);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_29__pages_notifications_notifications_service__ = __webpack_require__(586);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_30__components_preload_image_preload_image__ = __webpack_require__(1019);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_31__providers_prestart_configuration__ = __webpack_require__(90);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_32__pages_prestart_prestart__ = __webpack_require__(573);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_33__pages_privacy_policy_privacy_policy__ = __webpack_require__(216);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_34__pages_profile_profile__ = __webpack_require__(570);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_35__components_rating_rating__ = __webpack_require__(1020);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_36__pages_safety_issues_safety_issues__ = __webpack_require__(565);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_37__pages_safety_reminder_detail_safety_reminder_detail__ = __webpack_require__(207);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_38__pages_safety_reminder_safety_reminder__ = __webpack_require__(564);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_39__providers_safety_reminder__ = __webpack_require__(209);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_40__pages_schedule_schedule__ = __webpack_require__(1021);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_41__pages_schedule_schedule_service__ = __webpack_require__(587);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_42__pages_settings_settings__ = __webpack_require__(123);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_43__providers_shared__ = __webpack_require__(47);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_44__components_show_hide_password_show_hide_container__ = __webpack_require__(1023);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_45__components_show_hide_password_show_hide_input__ = __webpack_require__(588);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_46__pages_signup_signup__ = __webpack_require__(576);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_47__providers_sites__ = __webpack_require__(124);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_48__ionic_native_splash_screen__ = __webpack_require__(580);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_49__ionic_native_status_bar__ = __webpack_require__(581);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_50__pages_swm_detail_swm_detail__ = __webpack_require__(210);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_51__pages_swm_list_edit_swm_list_edit__ = __webpack_require__(574);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_52__pages_swm_swm__ = __webpack_require__(205);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_53__providers_swm__ = __webpack_require__(66);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_54__pages_tabs_navigation_tabs_navigation__ = __webpack_require__(92);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_55__providers_task__ = __webpack_require__(214);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_56__pages_terms_of_service_terms_of_service__ = __webpack_require__(215);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_57__providers_times__ = __webpack_require__(218);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_58__pages_timesheet_history_timesheet_history__ = __webpack_require__(583);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_59__pages_timesheet_verify_timesheet_verify__ = __webpack_require__(584);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_60__pages_timesheets_timesheets__ = __webpack_require__(582);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_61__pages_worker_clockon_worker_clockon__ = __webpack_require__(577);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_62__providers_worker__ = __webpack_require__(62);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_63__pages_workers_workers__ = __webpack_require__(585);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
-
-
-
-
-
-
-
 
 
 
@@ -6291,113 +5924,103 @@ var AppModule = (function () {
     AppModule = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["J" /* NgModule */])({
             declarations: [
-                __WEBPACK_IMPORTED_MODULE_33__app_component__["a" /* MyApp */],
-                __WEBPACK_IMPORTED_MODULE_30__pages_listing_listing__["a" /* ListingPage */],
+                __WEBPACK_IMPORTED_MODULE_27__app_component__["a" /* MyApp */],
+                __WEBPACK_IMPORTED_MODULE_24__pages_listing_listing__["a" /* ListingPage */],
                 __WEBPACK_IMPORTED_MODULE_14__pages_feed_feed__["a" /* FeedPage */],
                 __WEBPACK_IMPORTED_MODULE_17__pages_followers_followers__["a" /* FollowersPage */],
-                __WEBPACK_IMPORTED_MODULE_25__pages_layouts_layouts__["a" /* LayoutsPage */],
-                __WEBPACK_IMPORTED_MODULE_66__pages_timesheets_timesheets__["a" /* TimesheetsPage */],
-                __WEBPACK_IMPORTED_MODULE_65__pages_timesheet_verify_timesheet_verify__["a" /* TimesheetVerifyPage */],
-                __WEBPACK_IMPORTED_MODULE_64__pages_timesheet_history_timesheet_history__["a" /* TimesheetHistoryPage */],
-                __WEBPACK_IMPORTED_MODULE_20__pages_forms_forms__["a" /* FormsPage */],
-                __WEBPACK_IMPORTED_MODULE_32__pages_login_login__["a" /* LoginPage */],
-                __WEBPACK_IMPORTED_MODULE_34__pages_notifications_notifications__["a" /* NotificationsPage */],
-                __WEBPACK_IMPORTED_MODULE_40__pages_profile_profile__["a" /* ProfilePage */],
-                __WEBPACK_IMPORTED_MODULE_60__pages_tabs_navigation_tabs_navigation__["a" /* TabsNavigationPage */],
-                __WEBPACK_IMPORTED_MODULE_48__pages_settings_settings__["a" /* SettingsPage */],
-                __WEBPACK_IMPORTED_MODULE_52__pages_signup_signup__["a" /* SignupPage */],
+                __WEBPACK_IMPORTED_MODULE_60__pages_timesheets_timesheets__["a" /* TimesheetsPage */],
+                __WEBPACK_IMPORTED_MODULE_59__pages_timesheet_verify_timesheet_verify__["a" /* TimesheetVerifyPage */],
+                __WEBPACK_IMPORTED_MODULE_58__pages_timesheet_history_timesheet_history__["a" /* TimesheetHistoryPage */],
+                __WEBPACK_IMPORTED_MODULE_26__pages_login_login__["a" /* LoginPage */],
+                __WEBPACK_IMPORTED_MODULE_28__pages_notifications_notifications__["a" /* NotificationsPage */],
+                __WEBPACK_IMPORTED_MODULE_34__pages_profile_profile__["a" /* ProfilePage */],
+                __WEBPACK_IMPORTED_MODULE_54__pages_tabs_navigation_tabs_navigation__["a" /* TabsNavigationPage */],
+                __WEBPACK_IMPORTED_MODULE_42__pages_settings_settings__["a" /* SettingsPage */],
+                __WEBPACK_IMPORTED_MODULE_46__pages_signup_signup__["a" /* SignupPage */],
                 __WEBPACK_IMPORTED_MODULE_18__pages_forgot_password_forgot_password__["a" /* ForgotPasswordPage */],
-                __WEBPACK_IMPORTED_MODULE_46__pages_schedule_schedule__["a" /* SchedulePage */],
-                __WEBPACK_IMPORTED_MODULE_26__pages_list_1_list_1__["a" /* List1Page */],
-                __WEBPACK_IMPORTED_MODULE_28__pages_list_2_list_2__["a" /* List2Page */],
-                __WEBPACK_IMPORTED_MODULE_22__pages_grid_grid__["a" /* GridPage */],
+                __WEBPACK_IMPORTED_MODULE_40__pages_schedule_schedule__["a" /* SchedulePage */],
+                __WEBPACK_IMPORTED_MODULE_21__pages_grid_grid__["a" /* GridPage */],
                 __WEBPACK_IMPORTED_MODULE_19__pages_form_layout_form_layout__["a" /* FormLayoutPage */],
                 __WEBPACK_IMPORTED_MODULE_16__pages_filters_filters__["a" /* FiltersPage */],
-                __WEBPACK_IMPORTED_MODULE_62__pages_terms_of_service_terms_of_service__["a" /* TermsOfServicePage */],
-                __WEBPACK_IMPORTED_MODULE_39__pages_privacy_policy_privacy_policy__["a" /* PrivacyPolicyPage */],
-                __WEBPACK_IMPORTED_MODULE_38__pages_prestart_prestart__["a" /* PrestartPage */],
-                __WEBPACK_IMPORTED_MODULE_56__pages_swm_detail_swm_detail__["a" /* SwmDetailPage */],
-                __WEBPACK_IMPORTED_MODULE_57__pages_swm_list_edit_swm_list_edit__["a" /* SwmListEditPage */],
+                __WEBPACK_IMPORTED_MODULE_56__pages_terms_of_service_terms_of_service__["a" /* TermsOfServicePage */],
+                __WEBPACK_IMPORTED_MODULE_33__pages_privacy_policy_privacy_policy__["a" /* PrivacyPolicyPage */],
+                __WEBPACK_IMPORTED_MODULE_32__pages_prestart_prestart__["a" /* PrestartPage */],
+                __WEBPACK_IMPORTED_MODULE_50__pages_swm_detail_swm_detail__["a" /* SwmDetailPage */],
+                __WEBPACK_IMPORTED_MODULE_51__pages_swm_list_edit_swm_list_edit__["a" /* SwmListEditPage */],
                 __WEBPACK_IMPORTED_MODULE_9__pages_clock_on_clock_on__["a" /* ClockOnPage */],
                 __WEBPACK_IMPORTED_MODULE_8__pages_clock_off_clock_off__["a" /* ClockOffPage */],
-                __WEBPACK_IMPORTED_MODULE_58__pages_swm_swm__["a" /* SwmPage */],
-                __WEBPACK_IMPORTED_MODULE_44__pages_safety_reminder_safety_reminder__["a" /* SafetyReminderPage */],
-                __WEBPACK_IMPORTED_MODULE_43__pages_safety_reminder_detail_safety_reminder_detail__["a" /* SafetyReminderDetailPage */],
-                __WEBPACK_IMPORTED_MODULE_42__pages_safety_issues_safety_issues__["a" /* SafetyIssuesPage */],
-                __WEBPACK_IMPORTED_MODULE_70__pages_workers_workers__["a" /* WorkersPage */],
-                __WEBPACK_IMPORTED_MODULE_69__pages_workers_onsite_workers_onsite__["a" /* WorkersOnsitePage */],
-                __WEBPACK_IMPORTED_MODULE_67__pages_worker_clockon_worker_clockon__["a" /* WorkerClockonPage */],
+                __WEBPACK_IMPORTED_MODULE_52__pages_swm_swm__["a" /* SwmPage */],
+                __WEBPACK_IMPORTED_MODULE_38__pages_safety_reminder_safety_reminder__["a" /* SafetyReminderPage */],
+                __WEBPACK_IMPORTED_MODULE_37__pages_safety_reminder_detail_safety_reminder_detail__["a" /* SafetyReminderDetailPage */],
+                __WEBPACK_IMPORTED_MODULE_36__pages_safety_issues_safety_issues__["a" /* SafetyIssuesPage */],
+                __WEBPACK_IMPORTED_MODULE_63__pages_workers_workers__["a" /* WorkersPage */],
+                __WEBPACK_IMPORTED_MODULE_61__pages_worker_clockon_worker_clockon__["a" /* WorkerClockonPage */],
                 __WEBPACK_IMPORTED_MODULE_12__pages_equipment_equipment__["a" /* EquipmentPage */],
                 __WEBPACK_IMPORTED_MODULE_13__pages_equipment_prestart_equipment_prestart__["a" /* EquipmentPrestartPage */],
-                __WEBPACK_IMPORTED_MODULE_36__components_preload_image_preload_image__["a" /* PreloadImage */],
+                __WEBPACK_IMPORTED_MODULE_30__components_preload_image_preload_image__["a" /* PreloadImage */],
                 __WEBPACK_IMPORTED_MODULE_5__components_background_image_background_image__["a" /* BackgroundImage */],
-                __WEBPACK_IMPORTED_MODULE_50__components_show_hide_password_show_hide_container__["a" /* ShowHideContainer */],
-                __WEBPACK_IMPORTED_MODULE_51__components_show_hide_password_show_hide_input__["a" /* ShowHideInput */],
+                __WEBPACK_IMPORTED_MODULE_44__components_show_hide_password_show_hide_container__["a" /* ShowHideContainer */],
+                __WEBPACK_IMPORTED_MODULE_45__components_show_hide_password_show_hide_input__["a" /* ShowHideInput */],
                 __WEBPACK_IMPORTED_MODULE_10__components_color_radio_color_radio__["a" /* ColorRadio */],
                 __WEBPACK_IMPORTED_MODULE_11__components_counter_input_counter_input__["a" /* CounterInput */],
-                __WEBPACK_IMPORTED_MODULE_41__components_rating_rating__["a" /* Rating */],
+                __WEBPACK_IMPORTED_MODULE_35__components_rating_rating__["a" /* Rating */],
                 __WEBPACK_IMPORTED_MODULE_2__components_ma_weather__["a" /* MaWeatherContentController */],
                 __WEBPACK_IMPORTED_MODULE_2__components_ma_weather__["b" /* MaWeatherController */],
                 __WEBPACK_IMPORTED_MODULE_2__components_ma_weather__["c" /* MaWeatherDetailsPage */]
             ],
             imports: [
                 __WEBPACK_IMPORTED_MODULE_6__angular_platform_browser__["a" /* BrowserModule */],
-                __WEBPACK_IMPORTED_MODULE_23__angular_http__["c" /* HttpModule */],
-                __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["d" /* IonicModule */].forRoot(__WEBPACK_IMPORTED_MODULE_33__app_component__["a" /* MyApp */], {}, {
+                __WEBPACK_IMPORTED_MODULE_22__angular_http__["c" /* HttpModule */],
+                __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["d" /* IonicModule */].forRoot(__WEBPACK_IMPORTED_MODULE_27__app_component__["a" /* MyApp */], {}, {
                     links: []
                 })
             ],
             bootstrap: [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["c" /* IonicApp */]],
             entryComponents: [
-                __WEBPACK_IMPORTED_MODULE_33__app_component__["a" /* MyApp */],
-                __WEBPACK_IMPORTED_MODULE_30__pages_listing_listing__["a" /* ListingPage */],
+                __WEBPACK_IMPORTED_MODULE_27__app_component__["a" /* MyApp */],
+                __WEBPACK_IMPORTED_MODULE_24__pages_listing_listing__["a" /* ListingPage */],
                 __WEBPACK_IMPORTED_MODULE_14__pages_feed_feed__["a" /* FeedPage */],
                 __WEBPACK_IMPORTED_MODULE_17__pages_followers_followers__["a" /* FollowersPage */],
-                __WEBPACK_IMPORTED_MODULE_25__pages_layouts_layouts__["a" /* LayoutsPage */],
-                __WEBPACK_IMPORTED_MODULE_66__pages_timesheets_timesheets__["a" /* TimesheetsPage */],
-                __WEBPACK_IMPORTED_MODULE_65__pages_timesheet_verify_timesheet_verify__["a" /* TimesheetVerifyPage */],
-                __WEBPACK_IMPORTED_MODULE_64__pages_timesheet_history_timesheet_history__["a" /* TimesheetHistoryPage */],
-                __WEBPACK_IMPORTED_MODULE_20__pages_forms_forms__["a" /* FormsPage */],
-                __WEBPACK_IMPORTED_MODULE_32__pages_login_login__["a" /* LoginPage */],
-                __WEBPACK_IMPORTED_MODULE_34__pages_notifications_notifications__["a" /* NotificationsPage */],
-                __WEBPACK_IMPORTED_MODULE_40__pages_profile_profile__["a" /* ProfilePage */],
-                __WEBPACK_IMPORTED_MODULE_60__pages_tabs_navigation_tabs_navigation__["a" /* TabsNavigationPage */],
-                __WEBPACK_IMPORTED_MODULE_48__pages_settings_settings__["a" /* SettingsPage */],
+                __WEBPACK_IMPORTED_MODULE_60__pages_timesheets_timesheets__["a" /* TimesheetsPage */],
+                __WEBPACK_IMPORTED_MODULE_59__pages_timesheet_verify_timesheet_verify__["a" /* TimesheetVerifyPage */],
+                __WEBPACK_IMPORTED_MODULE_58__pages_timesheet_history_timesheet_history__["a" /* TimesheetHistoryPage */],
+                __WEBPACK_IMPORTED_MODULE_26__pages_login_login__["a" /* LoginPage */],
+                __WEBPACK_IMPORTED_MODULE_28__pages_notifications_notifications__["a" /* NotificationsPage */],
+                __WEBPACK_IMPORTED_MODULE_34__pages_profile_profile__["a" /* ProfilePage */],
+                __WEBPACK_IMPORTED_MODULE_54__pages_tabs_navigation_tabs_navigation__["a" /* TabsNavigationPage */],
+                __WEBPACK_IMPORTED_MODULE_42__pages_settings_settings__["a" /* SettingsPage */],
                 __WEBPACK_IMPORTED_MODULE_18__pages_forgot_password_forgot_password__["a" /* ForgotPasswordPage */],
-                __WEBPACK_IMPORTED_MODULE_52__pages_signup_signup__["a" /* SignupPage */],
-                __WEBPACK_IMPORTED_MODULE_46__pages_schedule_schedule__["a" /* SchedulePage */],
-                __WEBPACK_IMPORTED_MODULE_26__pages_list_1_list_1__["a" /* List1Page */],
-                __WEBPACK_IMPORTED_MODULE_28__pages_list_2_list_2__["a" /* List2Page */],
-                __WEBPACK_IMPORTED_MODULE_22__pages_grid_grid__["a" /* GridPage */],
+                __WEBPACK_IMPORTED_MODULE_46__pages_signup_signup__["a" /* SignupPage */],
+                __WEBPACK_IMPORTED_MODULE_40__pages_schedule_schedule__["a" /* SchedulePage */],
+                __WEBPACK_IMPORTED_MODULE_21__pages_grid_grid__["a" /* GridPage */],
                 __WEBPACK_IMPORTED_MODULE_19__pages_form_layout_form_layout__["a" /* FormLayoutPage */],
                 __WEBPACK_IMPORTED_MODULE_16__pages_filters_filters__["a" /* FiltersPage */],
-                __WEBPACK_IMPORTED_MODULE_62__pages_terms_of_service_terms_of_service__["a" /* TermsOfServicePage */],
-                __WEBPACK_IMPORTED_MODULE_39__pages_privacy_policy_privacy_policy__["a" /* PrivacyPolicyPage */],
-                __WEBPACK_IMPORTED_MODULE_38__pages_prestart_prestart__["a" /* PrestartPage */],
-                __WEBPACK_IMPORTED_MODULE_56__pages_swm_detail_swm_detail__["a" /* SwmDetailPage */],
-                __WEBPACK_IMPORTED_MODULE_57__pages_swm_list_edit_swm_list_edit__["a" /* SwmListEditPage */],
+                __WEBPACK_IMPORTED_MODULE_56__pages_terms_of_service_terms_of_service__["a" /* TermsOfServicePage */],
+                __WEBPACK_IMPORTED_MODULE_33__pages_privacy_policy_privacy_policy__["a" /* PrivacyPolicyPage */],
+                __WEBPACK_IMPORTED_MODULE_32__pages_prestart_prestart__["a" /* PrestartPage */],
+                __WEBPACK_IMPORTED_MODULE_50__pages_swm_detail_swm_detail__["a" /* SwmDetailPage */],
+                __WEBPACK_IMPORTED_MODULE_51__pages_swm_list_edit_swm_list_edit__["a" /* SwmListEditPage */],
                 __WEBPACK_IMPORTED_MODULE_9__pages_clock_on_clock_on__["a" /* ClockOnPage */],
                 __WEBPACK_IMPORTED_MODULE_8__pages_clock_off_clock_off__["a" /* ClockOffPage */],
-                __WEBPACK_IMPORTED_MODULE_58__pages_swm_swm__["a" /* SwmPage */],
-                __WEBPACK_IMPORTED_MODULE_44__pages_safety_reminder_safety_reminder__["a" /* SafetyReminderPage */],
-                __WEBPACK_IMPORTED_MODULE_43__pages_safety_reminder_detail_safety_reminder_detail__["a" /* SafetyReminderDetailPage */],
-                __WEBPACK_IMPORTED_MODULE_42__pages_safety_issues_safety_issues__["a" /* SafetyIssuesPage */],
-                __WEBPACK_IMPORTED_MODULE_70__pages_workers_workers__["a" /* WorkersPage */],
-                __WEBPACK_IMPORTED_MODULE_69__pages_workers_onsite_workers_onsite__["a" /* WorkersOnsitePage */],
+                __WEBPACK_IMPORTED_MODULE_52__pages_swm_swm__["a" /* SwmPage */],
+                __WEBPACK_IMPORTED_MODULE_38__pages_safety_reminder_safety_reminder__["a" /* SafetyReminderPage */],
+                __WEBPACK_IMPORTED_MODULE_37__pages_safety_reminder_detail_safety_reminder_detail__["a" /* SafetyReminderDetailPage */],
+                __WEBPACK_IMPORTED_MODULE_36__pages_safety_issues_safety_issues__["a" /* SafetyIssuesPage */],
+                __WEBPACK_IMPORTED_MODULE_63__pages_workers_workers__["a" /* WorkersPage */],
                 __WEBPACK_IMPORTED_MODULE_12__pages_equipment_equipment__["a" /* EquipmentPage */],
                 __WEBPACK_IMPORTED_MODULE_13__pages_equipment_prestart_equipment_prestart__["a" /* EquipmentPrestartPage */],
-                __WEBPACK_IMPORTED_MODULE_67__pages_worker_clockon_worker_clockon__["a" /* WorkerClockonPage */],
+                __WEBPACK_IMPORTED_MODULE_61__pages_worker_clockon_worker_clockon__["a" /* WorkerClockonPage */],
                 __WEBPACK_IMPORTED_MODULE_2__components_ma_weather__["a" /* MaWeatherContentController */],
                 __WEBPACK_IMPORTED_MODULE_2__components_ma_weather__["b" /* MaWeatherController */],
                 __WEBPACK_IMPORTED_MODULE_2__components_ma_weather__["c" /* MaWeatherDetailsPage */]
             ],
-            providers: [__WEBPACK_IMPORTED_MODULE_3__providers_api__["a" /* ApiService */], __WEBPACK_IMPORTED_MODULE_4__providers_auth__["a" /* AuthService */], __WEBPACK_IMPORTED_MODULE_7__providers_check_in__["a" /* CheckInOutService */], __WEBPACK_IMPORTED_MODULE_15__pages_feed_feed_service__["a" /* FeedService */], __WEBPACK_IMPORTED_MODULE_31__pages_listing_listing_service__["a" /* ListingService */],
-                __WEBPACK_IMPORTED_MODULE_27__pages_list_1_list_1_service__["a" /* List1Service */], __WEBPACK_IMPORTED_MODULE_29__pages_list_2_list_2_service__["a" /* List2Service */], __WEBPACK_IMPORTED_MODULE_35__pages_notifications_notifications_service__["a" /* NotificationsService */],
-                __WEBPACK_IMPORTED_MODULE_37__providers_prestart_configuration__["a" /* PrestartConfigurationService */],
-                __WEBPACK_IMPORTED_MODULE_47__pages_schedule_schedule_service__["a" /* ScheduleService */], __WEBPACK_IMPORTED_MODULE_53__providers_sites__["a" /* SiteService */], __WEBPACK_IMPORTED_MODULE_59__providers_swm__["a" /* SwmService */],
-                __WEBPACK_IMPORTED_MODULE_61__providers_task__["a" /* TaskService */], __WEBPACK_IMPORTED_MODULE_68__providers_worker__["b" /* WorkerService */], __WEBPACK_IMPORTED_MODULE_45__providers_safety_reminder__["a" /* SafetyReminderService */],
-                __WEBPACK_IMPORTED_MODULE_24__providers_issue__["a" /* IssueService */], __WEBPACK_IMPORTED_MODULE_54__ionic_native_splash_screen__["a" /* SplashScreen */], __WEBPACK_IMPORTED_MODULE_55__ionic_native_status_bar__["a" /* StatusBar */], __WEBPACK_IMPORTED_MODULE_49__providers_shared__["a" /* SharedService */],
-                __WEBPACK_IMPORTED_MODULE_63__providers_times__["a" /* TimesService */], __WEBPACK_IMPORTED_MODULE_21__ionic_native_geolocation__["a" /* Geolocation */]],
+            providers: [__WEBPACK_IMPORTED_MODULE_3__providers_api__["a" /* ApiService */], __WEBPACK_IMPORTED_MODULE_4__providers_auth__["a" /* AuthService */], __WEBPACK_IMPORTED_MODULE_7__providers_check_in__["a" /* CheckInOutService */], __WEBPACK_IMPORTED_MODULE_15__pages_feed_feed_service__["a" /* FeedService */], __WEBPACK_IMPORTED_MODULE_25__pages_listing_listing_service__["a" /* ListingService */],
+                __WEBPACK_IMPORTED_MODULE_29__pages_notifications_notifications_service__["a" /* NotificationsService */],
+                __WEBPACK_IMPORTED_MODULE_31__providers_prestart_configuration__["a" /* PrestartConfigurationService */],
+                __WEBPACK_IMPORTED_MODULE_41__pages_schedule_schedule_service__["a" /* ScheduleService */], __WEBPACK_IMPORTED_MODULE_47__providers_sites__["a" /* SiteService */], __WEBPACK_IMPORTED_MODULE_53__providers_swm__["a" /* SwmService */],
+                __WEBPACK_IMPORTED_MODULE_55__providers_task__["a" /* TaskService */], __WEBPACK_IMPORTED_MODULE_62__providers_worker__["b" /* WorkerService */], __WEBPACK_IMPORTED_MODULE_39__providers_safety_reminder__["a" /* SafetyReminderService */],
+                __WEBPACK_IMPORTED_MODULE_23__providers_issue__["a" /* IssueService */], __WEBPACK_IMPORTED_MODULE_48__ionic_native_splash_screen__["a" /* SplashScreen */], __WEBPACK_IMPORTED_MODULE_49__ionic_native_status_bar__["a" /* StatusBar */], __WEBPACK_IMPORTED_MODULE_43__providers_shared__["a" /* SharedService */],
+                __WEBPACK_IMPORTED_MODULE_57__providers_times__["a" /* TimesService */], __WEBPACK_IMPORTED_MODULE_20__ionic_native_geolocation__["a" /* Geolocation */]],
             schemas: [__WEBPACK_IMPORTED_MODULE_0__angular_core__["i" /* CUSTOM_ELEMENTS_SCHEMA */]]
         })
     ], AppModule);
@@ -6408,18 +6031,18 @@ var AppModule = (function () {
 
 /***/ }),
 
-/***/ 61:
+/***/ 62:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return DEFAULT_PERSON; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "b", function() { return WorkerService; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_rxjs_add_operator_map__ = __webpack_require__(120);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_rxjs_add_operator_map__ = __webpack_require__(121);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_rxjs_add_operator_map___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_rxjs_add_operator_map__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_moment__ = __webpack_require__(2);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_moment___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_moment__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__api__ = __webpack_require__(41);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__classes_exceptions_not_authenticated_error__ = __webpack_require__(1019);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__api__ = __webpack_require__(39);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__classes_exceptions_not_authenticated_error__ = __webpack_require__(1007);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__angular_core__ = __webpack_require__(0);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -6459,7 +6082,7 @@ var WorkerService = (function () {
             .then(function (_a) {
             var staff = _a.staff;
             return (staff.map(function (_a) {
-                var id = _a.id, name = _a.name, image = _a.image, message = _a.message, validSwms = _a.validSwms, passcode = _a.passcode, siteSelected = _a.siteSelected, clockedOn = _a.clockedOn, clockedOff = _a.clockedOff, siteVisits = _a.siteVisits, created_at = _a.created_at, updated_at = _a.updated_at;
+                var id = _a.id, name = _a.name, image = _a.image, message = _a.message, validSwms = _a.validSwms, passcode = _a.passcode, siteSelected = _a.siteSelected, clockedOn = _a.clockedOn, clockedOff = _a.clockedOff, supervisor = _a.supervisor, allowedSites = _a.allowedSites, siteVisits = _a.siteVisits, created_at = _a.created_at, updated_at = _a.updated_at;
                 return ({
                     id: id,
                     name: name,
@@ -6473,6 +6096,8 @@ var WorkerService = (function () {
                     clockedOff: clockedOff !== null,
                     startedWork: clockedOn !== null,
                     finishedWork: clockedOff !== null,
+                    supervisor: !!supervisor,
+                    sitesAllowed: allowedSites,
                     siteSelected: siteSelected !== null ? siteSelected : 0,
                     siteVisits: siteVisits,
                     // not returned from server
@@ -6526,14 +6151,14 @@ var WorkerService = (function () {
 
 /***/ }),
 
-/***/ 643:
+/***/ 631:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__ma_weather__ = __webpack_require__(644);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__ma_weather_content__ = __webpack_require__(652);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__ma_weather_details__ = __webpack_require__(319);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__dark_sky_response_model__ = __webpack_require__(653);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__ma_weather__ = __webpack_require__(632);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__ma_weather_content__ = __webpack_require__(640);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__ma_weather_details__ = __webpack_require__(318);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__dark_sky_response_model__ = __webpack_require__(641);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__dark_sky_response_model___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3__dark_sky_response_model__);
 /* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return __WEBPACK_IMPORTED_MODULE_1__ma_weather_content__["a"]; });
 /* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "b", function() { return __WEBPACK_IMPORTED_MODULE_0__ma_weather__["a"]; });
@@ -6548,17 +6173,17 @@ var WorkerService = (function () {
 
 /***/ }),
 
-/***/ 644:
+/***/ 632:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return MaWeatherController; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_http__ = __webpack_require__(30);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_ionic_angular__ = __webpack_require__(6);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__ionic_native_geolocation__ = __webpack_require__(63);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__ma_weather_details__ = __webpack_require__(319);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__ma_weather_config__ = __webpack_require__(651);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_http__ = __webpack_require__(38);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_ionic_angular__ = __webpack_require__(7);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__ionic_native_geolocation__ = __webpack_require__(60);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__ma_weather_details__ = __webpack_require__(318);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__ma_weather_config__ = __webpack_require__(639);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -6765,7 +6390,7 @@ var MaWeatherController = (function () {
 
 /***/ }),
 
-/***/ 651:
+/***/ 639:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -6861,7 +6486,7 @@ var MaWeatherConfig = (function () {
 
 /***/ }),
 
-/***/ 652:
+/***/ 640:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -6915,10 +6540,17 @@ var MaWeatherContentController = (function () {
 
 /***/ }),
 
-/***/ 653:
+/***/ 641:
 /***/ (function(module, exports) {
 
 //# sourceMappingURL=dark-sky-response.model.js.map
+
+/***/ }),
+
+/***/ 648:
+/***/ (function(module, exports) {
+
+/* (ignored) */
 
 /***/ }),
 
@@ -6926,54 +6558,12 @@ var MaWeatherContentController = (function () {
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* unused harmony export WorkerModel */
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "b", function() { return WorkersModel; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return SiteVisit; });
-var WorkerModel = (function () {
-    function WorkerModel() {
-        this.validSwms = []; // passed certification
-        this.claimedSwms = []; // claimed for certification
-    }
-    return WorkerModel;
-}());
-
-var WorkersModel = (function () {
-    function WorkersModel() {
-        this.items = [];
-    }
-    return WorkersModel;
-}());
-
-var SiteVisit = (function () {
-    function SiteVisit(id, checkInDate, checkOutDate) {
-        this.id = id;
-        this.checkInDate = checkInDate;
-        this.checkOutDate = checkOutDate;
-    }
-    return SiteVisit;
-}());
-
-//# sourceMappingURL=worker.model.js.map
-
-/***/ }),
-
-/***/ 660:
-/***/ (function(module, exports) {
-
-/* (ignored) */
-
-/***/ }),
-
-/***/ 67:
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return SwmService; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_rxjs_add_operator_toPromise__ = __webpack_require__(33);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_rxjs_add_operator_toPromise__ = __webpack_require__(42);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_rxjs_add_operator_toPromise___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_rxjs_add_operator_toPromise__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__api__ = __webpack_require__(41);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__api__ = __webpack_require__(39);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__classes_swm_model__ = __webpack_require__(89);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__classes_swm_model__ = __webpack_require__(91);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -7052,21 +6642,21 @@ var SwmService = (function () {
 
 /***/ }),
 
-/***/ 694:
+/***/ 682:
 /***/ (function(module, exports) {
 
 /* (ignored) */
 
 /***/ }),
 
-/***/ 695:
+/***/ 683:
 /***/ (function(module, exports) {
 
 /* (ignored) */
 
 /***/ }),
 
-/***/ 741:
+/***/ 729:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -7137,7 +6727,199 @@ var BackgroundImage = (function () {
 
 /***/ }),
 
+/***/ 82:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return CheckInOutService; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__api__ = __webpack_require__(39);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_core__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs__ = __webpack_require__(41);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_rxjs__);
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+
+var CheckInOutService = (function () {
+    function CheckInOutService(api) {
+        this.api = api;
+    }
+    CheckInOutService.prototype.checkIn = function (jobId, latitude, longitude, userId) {
+        if (!this.api.checkAuth()) {
+            return __WEBPACK_IMPORTED_MODULE_2_rxjs__["Observable"].of();
+        }
+        var data = {
+            jobId: jobId, latitude: latitude, longitude: longitude
+        };
+        if (userId) {
+            data['userId'] = userId;
+        }
+        return this.api.post('/v/1/0/checkin', data)
+            .map(function (res) {
+            var _a = res.json(), success = _a.success, message = _a.message;
+            return {
+                success: success,
+                message: message,
+                in_location: message === 'success:inl'
+            };
+        });
+    };
+    CheckInOutService.prototype.checkOut = function (jobId, took_lunch, latitude, longitude, userId) {
+        if (!this.api.checkAuth()) {
+            return __WEBPACK_IMPORTED_MODULE_2_rxjs__["Observable"].of();
+        }
+        var data = { jobId: jobId, latitude: latitude, longitude: longitude, took_lunch: took_lunch };
+        if (userId) {
+            data['userId'] = userId;
+        }
+        return this.api.post('/v/1/0/checkout', data)
+            .map(function (res) {
+            var _a = res.json(), success = _a.success, message = _a.message;
+            return {
+                success: success,
+                message: message
+            };
+        });
+    };
+    CheckInOutService = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_1__angular_core__["B" /* Injectable */])(),
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_0__api__["a" /* ApiService */]])
+    ], CheckInOutService);
+    return CheckInOutService;
+}());
+
+//# sourceMappingURL=check-in.js.map
+
+/***/ }),
+
 /***/ 89:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* unused harmony export WorkerModel */
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "b", function() { return WorkersModel; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return SiteVisit; });
+var WorkerModel = (function () {
+    function WorkerModel() {
+        this.validSwms = []; // passed certification
+        this.claimedSwms = []; // claimed for certification
+    }
+    return WorkerModel;
+}());
+
+var WorkersModel = (function () {
+    function WorkersModel() {
+        this.items = [];
+    }
+    return WorkersModel;
+}());
+
+var SiteVisit = (function () {
+    function SiteVisit(id, checkInDate, checkOutDate) {
+        this.id = id;
+        this.checkInDate = checkInDate;
+        this.checkOutDate = checkOutDate;
+    }
+    return SiteVisit;
+}());
+
+//# sourceMappingURL=worker.model.js.map
+
+/***/ }),
+
+/***/ 90:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return PrestartConfigurationService; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_rxjs_add_operator_toPromise__ = __webpack_require__(42);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_rxjs_add_operator_toPromise___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_rxjs_add_operator_toPromise__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__api__ = __webpack_require__(39);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_core__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__classes_prestart_configuration_model__ = __webpack_require__(563);
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+
+
+var PrestartConfigurationService = (function () {
+    function PrestartConfigurationService(api) {
+        this.api = api;
+        this._prestarts = [];
+    }
+    Object.defineProperty(PrestartConfigurationService.prototype, "prestarts", {
+        get: function () {
+            return this._prestarts;
+        },
+        enumerable: true,
+        configurable: true
+    });
+    PrestartConfigurationService.prototype.getData = function () {
+        var _this = this;
+        console.log("getData prestart");
+        var mapPrestart = function (_a) {
+            var site_id = _a.site_id, tasks = _a.tasks, swms = _a.swms, reminders = _a.reminders, issues = _a.issues;
+            return new __WEBPACK_IMPORTED_MODULE_3__classes_prestart_configuration_model__["a" /* PrestartConfiguration */](site_id, tasks, swms, reminders, issues);
+        };
+        return this.api.get('/v/1/0/prestart')
+            .toPromise()
+            .then(function (response) { return response.json().preStarts.map(mapPrestart) || []; })
+            .then(function (prestarts) { return _this._prestarts = prestarts; })
+            .catch(this.handleError);
+    };
+    PrestartConfigurationService.prototype.post = function (configuration) {
+        var _this = this;
+        return this.api
+            .post("/v/1/0/prestart/" + configuration.siteId, configuration)
+            .toPromise()
+            .then(function () {
+            // save updated record locally
+            var existingPrestartIndex = _this._prestarts.findIndex(function (i) { return i.siteId === configuration.siteId; });
+            if (existingPrestartIndex >= 0) {
+                _this._prestarts[existingPrestartIndex] = configuration;
+            }
+            else {
+                _this._prestarts.push(configuration);
+            }
+        })
+            .catch(this.handleError);
+    };
+    PrestartConfigurationService.prototype.getBySiteId = function (siteId) {
+        return this._prestarts.find(function (i) { return i.siteId === siteId; });
+    };
+    PrestartConfigurationService.prototype.handleError = function (error) {
+        console.error('An error occurred', error); // for demo purposes only
+        this._prestarts = [];
+        return Promise.reject(error.message || error);
+    };
+    PrestartConfigurationService = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_2__angular_core__["B" /* Injectable */])(),
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1__api__["a" /* ApiService */]])
+    ], PrestartConfigurationService);
+    return PrestartConfigurationService;
+}());
+
+//# sourceMappingURL=prestart-configuration.js.map
+
+/***/ }),
+
+/***/ 91:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -7160,16 +6942,16 @@ var SwmsModel = (function () {
 
 /***/ }),
 
-/***/ 90:
+/***/ 92:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return TabsNavigationPage; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_ionic_angular__ = __webpack_require__(6);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_ionic_angular__ = __webpack_require__(7);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__providers_auth__ = __webpack_require__(45);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__clock_off_clock_off__ = __webpack_require__(444);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__clock_on_clock_on__ = __webpack_require__(563);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__clock_off_clock_off__ = __webpack_require__(443);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__clock_on_clock_on__ = __webpack_require__(562);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__prestart_prestart__ = __webpack_require__(573);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__providers_shared__ = __webpack_require__(47);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
@@ -7265,5 +7047,5 @@ var TabsNavigationPage = (function () {
 
 /***/ })
 
-},[601]);
+},[589]);
 //# sourceMappingURL=main.js.map
