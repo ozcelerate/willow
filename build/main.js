@@ -3437,7 +3437,7 @@ var SafetyIssuesPage = (function () {
         }
         this.getGeoLocation();
         if (this.worker.passcode) {
-            var alert_1 = this.alertCtrl.create({
+            var alert = this.alertCtrl.create({
                 title: this.worker.name,
                 inputs: [
                     {
@@ -3467,7 +3467,7 @@ var SafetyIssuesPage = (function () {
                     }
                 ]
             });
-            alert_1.present();
+            alert.present();
         }
         else {
             // Logged in as a worker or doesnt have a passcode
@@ -3490,7 +3490,7 @@ var SafetyIssuesPage = (function () {
     SafetyIssuesPage.prototype.getGeoCode = function (lat, lon) {
         var _this = this;
         // now do rev geo lookup
-        var url = "http://maps.googleapis.com/maps/api/geocode/json?sensor=true&api=AIzaSyB1TJcPU4zM-ALaLk7XDG05EHiXYT58MPM&latlng=";
+        var url = "https://maps.googleapis.com/maps/api/geocode/json?sensor=true&api=AIzaSyB1TJcPU4zM-ALaLk7XDG05EHiXYT58MPM&latlng=";
         var location = lat + ',' + lon;
         url += location;
         console.log(url);
@@ -3557,17 +3557,10 @@ var SafetyIssuesPage = (function () {
         Object(__WEBPACK_IMPORTED_MODULE_3__angular_core__["n" /* Component */])({
             selector: 'page-safety-issues',template:/*ion-inline-start:"/home/duane/dev/willow/knddec/src/pages/safety-issues/safety-issues.html"*/`<ion-header>\n  <ion-navbar>\n    <ion-title>Safety Issues</ion-title>\n  </ion-navbar>\n</ion-header>\n\n<ion-content class="list-mini-content">\n  <div class="list-mini">\n    <ion-item-divider>Read and check off issues</ion-item-divider>\n    <ion-list>\n      <ion-item class="list-item" tappable *ngFor="let item of safetyIssues.items" (click)="onSelectItem(item)">\n        <ion-row no-padding class="content-row">\n          <!-- You can limit the rows of the description by using the class one-line. If you remove it, all the content from the row will be shown -->\n          <!--<ion-col no-padding width-18 class="item-avatar">\n            <preload-image class="avatar-image" [ratio]="{w:1, h:1}" [src]="item.image"></preload-image>\n          </ion-col>-->\n          <ion-col no-padding col-10 col-sm-11 class="item-content">\n            <h3 class="item-title">{{item.name}}</h3>\n            <p class="item-description">{{item.description}}</p>\n          </ion-col>\n          <ion-col no-padding col-2 col-sm-1 class="item-icon">\n            <ion-icon name="checkmark" [hidden]="!item.selected"></ion-icon>\n          </ion-col>\n        </ion-row>\n      </ion-item>\n    </ion-list>\n  </div>\n\n  <section class="form-section">\n    <button ion-button block class="form-action-button create-post-button" (click)="clockOn()" [disabled]="!allChecked">Clock On</button>\n  </section>\n\n</ion-content>\n`/*ion-inline-end:"/home/duane/dev/willow/knddec/src/pages/safety-issues/safety-issues.html"*/
         }),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_0_ionic_angular__["i" /* NavController */],
-            __WEBPACK_IMPORTED_MODULE_0_ionic_angular__["j" /* NavParams */],
-            __WEBPACK_IMPORTED_MODULE_0_ionic_angular__["e" /* LoadingController */],
-            __WEBPACK_IMPORTED_MODULE_6__providers_issue__["a" /* IssueService */],
-            __WEBPACK_IMPORTED_MODULE_0_ionic_angular__["a" /* AlertController */],
-            __WEBPACK_IMPORTED_MODULE_4__ionic_native_geolocation__["a" /* Geolocation */],
-            __WEBPACK_IMPORTED_MODULE_5__angular_http__["b" /* Http */],
-            __WEBPACK_IMPORTED_MODULE_2__providers_check_in__["a" /* CheckInOutService */],
-            __WEBPACK_IMPORTED_MODULE_0_ionic_angular__["m" /* ToastController */]])
+        __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_0_ionic_angular__["i" /* NavController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_0_ionic_angular__["i" /* NavController */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_0_ionic_angular__["j" /* NavParams */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_0_ionic_angular__["j" /* NavParams */]) === "function" && _b || Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_0_ionic_angular__["e" /* LoadingController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_0_ionic_angular__["e" /* LoadingController */]) === "function" && _c || Object, typeof (_d = typeof __WEBPACK_IMPORTED_MODULE_6__providers_issue__["a" /* IssueService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_6__providers_issue__["a" /* IssueService */]) === "function" && _d || Object, typeof (_e = typeof __WEBPACK_IMPORTED_MODULE_0_ionic_angular__["a" /* AlertController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_0_ionic_angular__["a" /* AlertController */]) === "function" && _e || Object, typeof (_f = typeof __WEBPACK_IMPORTED_MODULE_4__ionic_native_geolocation__["a" /* Geolocation */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_4__ionic_native_geolocation__["a" /* Geolocation */]) === "function" && _f || Object, typeof (_g = typeof __WEBPACK_IMPORTED_MODULE_5__angular_http__["b" /* Http */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_5__angular_http__["b" /* Http */]) === "function" && _g || Object, typeof (_h = typeof __WEBPACK_IMPORTED_MODULE_2__providers_check_in__["a" /* CheckInOutService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__providers_check_in__["a" /* CheckInOutService */]) === "function" && _h || Object, typeof (_j = typeof __WEBPACK_IMPORTED_MODULE_0_ionic_angular__["m" /* ToastController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_0_ionic_angular__["m" /* ToastController */]) === "function" && _j || Object])
     ], SafetyIssuesPage);
     return SafetyIssuesPage;
+    var _a, _b, _c, _d, _e, _f, _g, _h, _j;
 }());
 
 //# sourceMappingURL=safety-issues.js.map
@@ -6400,7 +6393,7 @@ var MaWeatherConfig = (function () {
     function MaWeatherConfig(options) {
         this.monthsName = ['Jan', 'Feb', 'Mar', 'April', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
         this._darkSkyUrl = 'https://api.darksky.net/forecast/';
-        this._googleUrl = 'http://maps.googleapis.com/maps/api/geocode/json?sensor=true';
+        this._googleUrl = 'https://maps.googleapis.com/maps/api/geocode/json?sensor=true';
         this._readableMessages = {
             getAddress: 'Could not get address of given coordinates',
             loadWeather: 'Could not get weather details for given coordinates',
