@@ -2096,7 +2096,7 @@ var LoginPage = (function () {
                     console.log('Login: Worker');
                     // TODO: Replace with a real data, when backend service will be ready
                     var worker = _this.auth.worker;
-                    worker.siteVisits = _this.getSiteVisitsFromLogin();
+                    console.log('Worker is', Object.assign({}, worker));
                     _this.nav.setRoot(_this.worker_login.component, { 'worker': worker });
                 }
             }
@@ -2121,21 +2121,6 @@ var LoginPage = (function () {
             position: 'top'
         });
         toast.present();
-    };
-    LoginPage.prototype.getSiteVisitsFromLogin = function () {
-        if (this.auth.siteVisits) {
-            return this.auth.siteVisits.map(function (_a) {
-                var id = _a.id, checkInDate = _a.checkInDate, checkOutDate = _a.checkOutDate;
-                return ({
-                    id: id,
-                    checkInDate: checkInDate ? new Date(checkInDate) : null,
-                    checkOutDate: checkOutDate ? new Date(checkOutDate) : null,
-                });
-            });
-        }
-        else {
-            return [];
-        }
     };
     LoginPage = LoginPage_1 = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_5__angular_core__["n" /* Component */])({
@@ -2530,7 +2515,7 @@ var DetailsItem = (function () {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return API_URL; });
-var API_URL = 'http://api.willow.kndtesting.com.au';
+var API_URL = 'https://api.willow.kndtesting.com.au';
 //# sourceMappingURL=env.js.map
 
 /***/ }),
@@ -2970,7 +2955,7 @@ var AuthService = (function () {
             _this._apiKey = res['API Key'];
             _this._role = res.profile.role === 'supervisor' ? UserRole.Supervisor : UserRole.Staff;
             _this._hashedPassword = res.profile.password_hash;
-            _this._siteVisits = res.sites;
+            _this._siteVisits = res.profile.sites;
             _this._name = res.profile.name;
             _this._image = res.profile.image;
             // Fill user model
@@ -2980,6 +2965,15 @@ var AuthService = (function () {
             _this._worker.name = _this._name;
             _this._worker.image = _this._image;
             _this._worker.supervisor = _this._role === UserRole.Supervisor;
+            _this._worker.siteVisits = (_this._siteVisits || [])
+                .map(function (_a) {
+                var id = _a.id, checkInDate = _a.checkInDate, checkOutDate = _a.checkOutDate;
+                return ({
+                    id: id,
+                    checkInDate: checkInDate ? new Date(checkInDate) : null,
+                    checkOutDate: checkOutDate ? new Date(checkOutDate) : null,
+                });
+            });
             return true;
         })
             .catch(function (error) {
@@ -2987,7 +2981,7 @@ var AuthService = (function () {
             _this._loggedIn = false;
             _this._apiKey = null;
             _this._role = null;
-            _this._siteVisits = null;
+            _this._siteVisits = [];
             return __WEBPACK_IMPORTED_MODULE_4_rxjs_Observable__["Observable"].of(false);
         });
     };
@@ -4258,7 +4252,7 @@ var PrestartPage = (function () {
     };
     PrestartPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_3__angular_core__["n" /* Component */])({
-            selector: 'prestart-page',template:/*ion-inline-start:"/home/duane/dev/willow/knddec/src/pages/prestart/prestart.html"*/`<ion-header>\n  <ion-navbar>\n    <button ion-button\n      menuToggle>\n      <ion-icon name="menu"></ion-icon>\n    </button>\n    <ion-title>Prestarts</ion-title>\n  </ion-navbar>\n</ion-header>\n\n<ion-content class="forms-examples-content">\n  <ion-segment class="forms-examples-segment"\n    [(ngModel)]="section"\n    (ionChange)="onSegmentChanged($event)">\n    <ion-segment-button value="task"\n      (ionSelect)="onSegmentSelected($event)">\n      Tasks\n    </ion-segment-button>\n    <ion-segment-button value="swm"\n      [disabled]="!swmsGenerated"\n      (ionSelect)="onSegmentSelected($event)">\n      SWMs\n    </ion-segment-button>\n    <ion-segment-button value="reminders"\n      (ionSelect)="onSegmentSelected($event)">\n      Reminders\n    </ion-segment-button>\n    <ion-segment-button value="issues"\n      (ionSelect)="onSegmentSelected($event)">\n      Issues\n    </ion-segment-button>\n  </ion-segment>\n  <div [ngSwitch]="section"\n    class="forms-wrapper">\n    <div *ngSwitchCase="\'task\'"\n      class="post-example-view">\n      <div class="sample-form post-form">\n        <ma-weather maColor="primary"\n          detailsType="page"></ma-weather>\n        <section class="form-section">\n          <ion-item>\n            <ion-icon name="md-build"\n              item-left></ion-icon>\n            {{ auth.name }}\n            <p item-right>supervisor</p>\n          </ion-item>\n        </section>\n        <section class="form-section">\n          <ion-row>\n            <ion-col>\n              <button ion-button\n                block\n                icon-right\n                class="choose-category-button"\n                (click)="chooseCategory()"\n                *ngIf="this.sitesService.sites.length">\n                Choose Site: {{ getSiteName() }}\n                <ion-icon name="arrow-dropdown"></ion-icon>\n              </button>\n              <h4 padding\n                *ngIf="!this.sitesService.sites.length && !loading">\n                No sites assigned for you. Please refer to your site\'s admin\n              </h4>\n            </ion-col>\n            <ion-col col-auto>\n              <button ion-button\n                icon-only\n                [disabled]="loading"\n                (click)="refreshSites()">\n                <ion-icon name="refresh"></ion-icon>\n              </button>\n            </ion-col>\n          </ion-row>\n        </section>\n        <section *ngIf="getSiteId()">\n          <ion-item-divider>Tasks</ion-item-divider>\n          <div class="sample-form">\n            <ion-list class="sample-form checkbox-tags">\n              <ion-item class="checkbox-tag"\n                *ngFor="let task of siteTaskList.items">\n                <ion-label>{{task.name}}</ion-label>\n                <ion-checkbox [(ngModel)]="task.selected"></ion-checkbox>\n              </ion-item>\n            </ion-list>\n          </div>\n        </section>\n        <section class="form-section"\n          *ngIf="getSiteId()">\n          <button ion-button\n            block\n            class="form-action-button create-post-button"\n            (click)="generateSwms()">Generate SWMs!</button>\n        </section>\n      </div>\n    </div>\n    <div *ngSwitchCase="\'swm\'"\n      class="event-example-view">\n      <div class="sample-form event-form">\n        <section class="form-section">\n          <h2 class="section-title">SWMs Generated from Task List</h2>\n          <div class="list-mini-content">\n            <div class="list-mini">\n              <ion-list>\n                <button class="list-item"\n                  ion-item\n                  *ngFor="let item of activeSWMs.items"\n                  (click)="swmdetails(item.id, item)"\n                  type="button">\n                  <ion-row no-padding\n                    class="content-row one-line">\n                    <!-- You can limit the rows of the description by using the class one-line. If you remove it, all the content from the row will be shown -->\n                    <ion-col no-padding\n                      width-18\n                      class="item-avatar">\n                      <preload-image class="avatar-image"\n                        [ratio]="{w:1, h:1}"\n                        [src]="item.image"></preload-image>\n                    </ion-col>\n                    <ion-col no-padding\n                      width-72\n                      class="item-content">\n                      <h3 class="item-title">{{item.name}}</h3>\n                      <p class="item-description">{{item.abstract}}</p>\n                    </ion-col>\n                    <ion-col no-padding\n                      width-10\n                      class="item-icon">\n                      <ion-icon name="arrow-forward"></ion-icon>\n                    </ion-col>\n                  </ion-row>\n                </button>\n              </ion-list>\n            </div>\n          </div>\n        </section>\n        <section class="form-section">\n          <button ion-button\n            block\n            class="form-action-button create-event-button"\n            (click)="editActiveSwms()">Edit SWM List!</button>\n        </section>\n      </div>\n    </div>\n    <!-- Safety issues -->\n    <div *ngSwitchCase="\'issues\'"\n      class="card-example-view">\n\n      <div class="list-mini-content">\n        <div class="list-mini">\n          <ion-list>\n            <ion-item class="list-item"\n              ion-item\n              *ngFor="let item of safetyIssues.items"\n              (click)="onSelectItem(item)">\n              <ion-row no-padding\n                class="content-row">\n                <ion-col col-1\n                  class="item-icon item-icon--center">\n                  <!-- <ion-icon name="arrow-forward"></ion-icon> -->\n                  <ion-icon name="checkmark"\n                    [hidden]="!item.selected"></ion-icon>\n                </ion-col>\n                <ion-col no-padding\n                  col-2\n                  class="item-avatar">\n                  <preload-image class="avatar-image"\n                    [ratio]="{w:1, h:1}"\n                    [src]="item.image"></preload-image>\n                </ion-col>\n                <ion-col no-padding\n                  col-8\n                  class="item-content">\n                  <h3 class="item-title">{{item.name}}</h3>\n                  <p class="item-description"\n                    rows="3">{{item.description}}</p>\n                  <!-- You can change the rows quantity by using rows="X", where X can be any number for example: rows="4" -->\n                </ion-col>\n                <ion-col no-padding\n                  col-1\n                  class="item-icon  item-icon--center"\n                  (click)="gotoSafetyIssueDetail(item)">\n                  <ion-icon name="arrow-forward"></ion-icon>\n                </ion-col>\n              </ion-row>\n            </ion-item>\n          </ion-list>\n        </div>\n      </div>\n    </div>\n    <!-- Safety reminders -->\n    <div *ngSwitchCase="\'reminders\'"\n      class="card-example-view">\n      <div class="list-mini-content">\n        <ion-item-divider>Read and check off reminders</ion-item-divider>\n        <div class="list-mini">\n          <ion-list>\n            <ion-item class="list-item"\n              tappable\n              *ngFor="let item of safetyReminders.items"\n              (click)="onSelectItem(item)">\n              <ion-row no-padding\n                class="content-row">\n                <!-- You can limit the rows of the description by using the class one-line. If you remove it, all the content from the row will be shown -->\n                <!--<ion-col no-padding width-18 class="item-avatar">\n                <preload-image class="avatar-image" [ratio]="{w:1, h:1}" [src]="item.image"></preload-image>\n              </ion-col>-->\n                <ion-col no-padding\n                  col-10\n                  col-sm-11\n                  class="item-content">\n                  <h3 class="item-title">{{item.name}}</h3>\n                  <p class="item-description">{{item.description}}</p>\n                </ion-col>\n                <ion-col no-padding\n                  col-2\n                  col-sm-1\n                  class="item-icon">\n                  <!-- <ion-icon name="arrow-forward"></ion-icon> -->\n                  <ion-icon name="checkmark"\n                    [hidden]="!item.selected"></ion-icon>\n                </ion-col>\n              </ion-row>\n            </ion-item>\n          </ion-list>\n        </div>\n        <section class="form-section">\n          <button ion-button\n            block\n            class="main-action-button create-event-button"\n            [disabled]="!isReadyForPrestart()"\n            (click)="prestartsComplete()">Prestarts Complete</button>\n        </section>\n        <ul *ngIf="!isReadyForPrestart()"\n          class="prestart-hints-list">\n          <li *ngIf="!swmsGenerated">SWMs should be generated</li>\n        </ul>\n      </div>\n\n    </div>\n  </div>\n</ion-content>\n`/*ion-inline-end:"/home/duane/dev/willow/knddec/src/pages/prestart/prestart.html"*/
+            selector: 'prestart-page',template:/*ion-inline-start:"/home/duane/dev/willow/knddec/src/pages/prestart/prestart.html"*/`<ion-header>\n  <ion-navbar>\n    <button ion-button\n      menuToggle>\n      <ion-icon name="menu"></ion-icon>\n    </button>\n    <ion-title>Prestarts</ion-title>\n  </ion-navbar>\n</ion-header>\n\n<ion-content class="forms-examples-content">\n  <ion-segment class="forms-examples-segment"\n    [(ngModel)]="section"\n    (ionChange)="onSegmentChanged($event)">\n    <ion-segment-button value="task"\n      (ionSelect)="onSegmentSelected($event)">\n      Tasks\n    </ion-segment-button>\n    <ion-segment-button value="swm"\n      [disabled]="!swmsGenerated"\n      (ionSelect)="onSegmentSelected($event)">\n      SWMs\n    </ion-segment-button>\n    <ion-segment-button value="reminders"\n      (ionSelect)="onSegmentSelected($event)">\n      Reminders\n    </ion-segment-button>\n    <ion-segment-button value="issues"\n      (ionSelect)="onSegmentSelected($event)">\n      Issues\n    </ion-segment-button>\n  </ion-segment>\n  <div [ngSwitch]="section"\n    class="forms-wrapper">\n    <div *ngSwitchCase="\'task\'"\n      class="post-example-view">\n      <div class="sample-form post-form">\n        <ma-weather maColor="primary"\n          detailsType="page"></ma-weather>\n        <section class="form-section">\n          <ion-item>\n            <ion-icon name="md-build"\n              item-left></ion-icon>\n            {{ auth.name }}\n            <p item-right>supervisor</p>\n          </ion-item>\n        </section>\n        <section class="form-section">\n          <ion-row>\n            <ion-col>\n              <button ion-button\n                block\n                icon-right\n                class="choose-category-button"\n                (click)="chooseCategory()"\n                *ngIf="this.sitesService.sites.length">\n                Choose Site: {{ getSiteName() }}\n                <ion-icon name="arrow-dropdown"></ion-icon>\n              </button>\n              <h4 padding\n                *ngIf="!this.sitesService.sites.length && !loading">\n                No sites assigned for you. Please refer to your site\'s admin\n              </h4>\n            </ion-col>\n            <ion-col col-auto>\n              <button ion-button\n                icon-only\n                [disabled]="loading"\n                (click)="refreshSites()">\n                <ion-icon name="refresh"></ion-icon>\n              </button>\n            </ion-col>\n          </ion-row>\n        </section>\n        <section *ngIf="getSiteId()">\n          <ion-item-divider>Tasks</ion-item-divider>\n          <div class="sample-form">\n            <ion-list class="sample-form checkbox-tags">\n              <ion-item class="checkbox-tag"\n                *ngFor="let task of siteTaskList.items">\n                <ion-label>{{task.name}}</ion-label>\n                <ion-checkbox [(ngModel)]="task.selected"></ion-checkbox>\n              </ion-item>\n            </ion-list>\n          </div>\n        </section>\n        <section class="form-section"\n          *ngIf="getSiteId()">\n          <button ion-button\n            block\n            class="form-action-button create-post-button"\n            (click)="generateSwms()">Generate SWMs!</button>\n        </section>\n      </div>\n    </div>\n    <div *ngSwitchCase="\'swm\'"\n      class="event-example-view">\n      <div class="sample-form event-form">\n        <section class="form-section">\n          <h2 class="section-title">SWMs Generated from Task List</h2>\n          <div class="list-mini-content">\n            <div class="list-mini">\n              <ion-list>\n                <button class="list-item"\n                  ion-item\n                  *ngFor="let item of activeSWMs.items"\n                  (click)="swmdetails(item.id, item)"\n                  type="button">\n                  <ion-row no-padding\n                    class="content-row one-line">\n                    <!-- You can limit the rows of the description by using the class one-line. If you remove it, all the content from the row will be shown -->\n                    <ion-col no-padding\n                      width-18\n                      class="item-avatar">\n                      <preload-image class="avatar-image"\n                        [ratio]="{w:1, h:1}"\n                        [src]="item.image"></preload-image>\n                    </ion-col>\n                    <ion-col no-padding\n                      width-72\n                      class="item-content">\n                      <h3 class="item-title">{{item.name}}</h3>\n                      <p class="item-description">{{item.abstract}}</p>\n                    </ion-col>\n                    <ion-col no-padding\n                      width-10\n                      class="item-icon">\n                      <ion-icon name="arrow-forward"></ion-icon>\n                    </ion-col>\n                  </ion-row>\n                </button>\n              </ion-list>\n            </div>\n          </div>\n        </section>\n        <section class="form-section">\n          <button ion-button\n            block\n            class="form-action-button create-event-button"\n            (click)="editActiveSwms()">Edit SWM List!</button>\n        </section>\n      </div>\n    </div>\n    <!-- Safety issues -->\n    <div *ngSwitchCase="\'issues\'"\n      class="card-example-view">\n\n      <div class="list-mini-content">\n        <div class="list-mini">\n          <ion-list>\n            <ion-item class="list-item"\n              ion-item\n              *ngFor="let item of safetyIssues.items"\n              (click)="onSelectItem(item)">\n              <ion-row no-padding\n                class="content-row">\n                <ion-col col-1\n                  class="item-icon item-icon--center">\n                  <!-- <ion-icon name="arrow-forward"></ion-icon> -->\n                  <ion-icon name="checkmark"\n                    [hidden]="!item.selected"></ion-icon>\n                </ion-col>\n                <ion-col no-padding\n                  col-2\n                  class="item-avatar">\n                  <preload-image class="avatar-image"\n                    [ratio]="{w:1, h:1}"\n                    [src]="item.image"></preload-image>\n                </ion-col>\n                <ion-col no-padding\n                  col-8\n                  class="item-content">\n                  <h3 class="item-title">{{item.name}}</h3>\n                  <p class="item-description"\n                    rows="3">{{item.description}}</p>\n                  <!-- You can change the rows quantity by using rows="X", where X can be any number for example: rows="4" -->\n                </ion-col>\n                <ion-col no-padding\n                  col-1\n                  class="item-icon  item-icon--center"\n                  (click)="gotoSafetyIssueDetail(item)">\n                  <ion-icon name="arrow-forward"></ion-icon>\n                </ion-col>\n              </ion-row>\n            </ion-item>\n          </ion-list>\n        </div>\n        <section class="form-section">\n          <button ion-button\n            block\n            class="main-action-button create-event-button"\n            [disabled]="!isReadyForPrestart()"\n            (click)="prestartsComplete()">Prestarts Complete</button>\n        </section>\n        <ul *ngIf="!isReadyForPrestart()"\n          class="prestart-hints-list">\n          <li *ngIf="!swmsGenerated">SWMs should be generated</li>\n        </ul>\n      </div>\n    </div>\n    <!-- Safety reminders -->\n    <div *ngSwitchCase="\'reminders\'"\n      class="card-example-view">\n      <div class="list-mini-content">\n        <ion-item-divider>Read and check off reminders</ion-item-divider>\n        <div class="list-mini">\n          <ion-list>\n            <ion-item class="list-item"\n              tappable\n              *ngFor="let item of safetyReminders.items"\n              (click)="onSelectItem(item)">\n              <ion-row no-padding\n                class="content-row">\n                <!-- You can limit the rows of the description by using the class one-line. If you remove it, all the content from the row will be shown -->\n                <!--<ion-col no-padding width-18 class="item-avatar">\n                <preload-image class="avatar-image" [ratio]="{w:1, h:1}" [src]="item.image"></preload-image>\n              </ion-col>-->\n                <ion-col no-padding\n                  col-10\n                  col-sm-11\n                  class="item-content">\n                  <h3 class="item-title">{{item.name}}</h3>\n                  <p class="item-description">{{item.description}}</p>\n                </ion-col>\n                <ion-col no-padding\n                  col-2\n                  col-sm-1\n                  class="item-icon">\n                  <!-- <ion-icon name="arrow-forward"></ion-icon> -->\n                  <ion-icon name="checkmark"\n                    [hidden]="!item.selected"></ion-icon>\n                </ion-col>\n              </ion-row>\n            </ion-item>\n          </ion-list>\n        </div>\n      </div>\n\n    </div>\n  </div>\n</ion-content>\n`/*ion-inline-end:"/home/duane/dev/willow/knddec/src/pages/prestart/prestart.html"*/
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* NavController */],
             __WEBPACK_IMPORTED_MODULE_2__providers_auth__["a" /* AuthService */],
@@ -4804,9 +4798,9 @@ var WorkerClockonPage = (function () {
         this.siteId = id;
         var siteIsOpen = this.getSite().open;
         if (siteIsOpen) {
-            this.updateClokOnOffBySiteVisits(this.worker.siteVisits);
             this.updatePrestartConfiguration()
-                .then(function () { return _this.updateSiteTasksList(); });
+                .then(function () { return _this.updateSiteTasksList(); })
+                .then(function () { return _this.updateClokOnOffBySiteVisits(_this.worker.siteVisits); });
         }
     };
     // If we have only one site, it should be default
@@ -6179,11 +6173,11 @@ var WorkerService = (function () {
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return MaWeatherController; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_http__ = __webpack_require__(38);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_ionic_angular__ = __webpack_require__(7);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__ionic_native_geolocation__ = __webpack_require__(60);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__ma_weather_details__ = __webpack_require__(318);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__ma_weather_config__ = __webpack_require__(639);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(7);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__ionic_native_geolocation__ = __webpack_require__(60);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__angular_http__ = __webpack_require__(38);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__ma_weather_config__ = __webpack_require__(639);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__ma_weather_details__ = __webpack_require__(318);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -6213,7 +6207,7 @@ var MaWeatherController = (function () {
         this.detailsType = 'page'; // 'page' or 'modal'
         this.openDetailsOnClick = true;
         // You can set the params, api keys, urls by passing MaConfigOptions to constructor
-        this.config = new __WEBPACK_IMPORTED_MODULE_5__ma_weather_config__["a" /* MaWeatherConfig */]();
+        this.config = new __WEBPACK_IMPORTED_MODULE_4__ma_weather_config__["a" /* MaWeatherConfig */]();
     }
     Object.defineProperty(MaWeatherController.prototype, "maColor", {
         set: function (val) {
@@ -6260,11 +6254,11 @@ var MaWeatherController = (function () {
         if (this.weatherLoaded && this.locationLoaded && this.openDetailsOnClick) {
             var options = { forecast: this.forecast, type: this.detailsType, currentWeather: this.contentOptions, color: this._color };
             if (this.detailsType === 'modal') {
-                var modal = this.modalCtrl.create(__WEBPACK_IMPORTED_MODULE_4__ma_weather_details__["a" /* MaWeatherDetailsPage */], options);
+                var modal = this.modalCtrl.create(__WEBPACK_IMPORTED_MODULE_5__ma_weather_details__["a" /* MaWeatherDetailsPage */], options);
                 modal.present();
             }
             else if (this.detailsType === 'page') {
-                this.navCtrl.push(__WEBPACK_IMPORTED_MODULE_4__ma_weather_details__["a" /* MaWeatherDetailsPage */], options);
+                this.navCtrl.push(__WEBPACK_IMPORTED_MODULE_5__ma_weather_details__["a" /* MaWeatherDetailsPage */], options);
             }
         }
     };
@@ -6318,7 +6312,7 @@ var MaWeatherController = (function () {
      */
     MaWeatherController.prototype.getAddress = function (latitude, longitude) {
         var _this = this;
-        return new Promise(function (resolve) {
+        return new Promise(function (resolve, reject) {
             if (_this.config.googleUrl !== '') {
                 var url = _this.config.googleUrl + latitude + ',' + longitude;
                 _this.http.get(url).map(function (res) { return res.json(); }).subscribe(function (res) {
@@ -6326,15 +6320,22 @@ var MaWeatherController = (function () {
                     console.log("google location");
                     console.log(res);
                     //let address  = res.results[0].formatted_address;
-                    var address = res.results[0].address_components[2].long_name;
-                    resolve(address);
+                    if (res && res.results && res.results.length) {
+                        var address = res.results[0].address_components[2].long_name;
+                        resolve(address);
+                    }
+                    else {
+                        _this.handleError('getAddress', res);
+                        reject(res);
+                    }
                 }, function (err) {
                     _this.handleError('getAddress', err);
                 });
             }
             else {
                 _this.config.loadGoogleKey().then(function () {
-                    _this.getAddress(latitude, longitude).then(function (address) {
+                    _this.getAddress(latitude, longitude)
+                        .then(function (address) {
                         resolve(address);
                     });
                 });
@@ -6350,7 +6351,7 @@ var MaWeatherController = (function () {
     MaWeatherController.prototype.handleError = function (type, err) {
         this.error.status = true;
         this.error.message = this.config.readableMessages(type);
-        console.log(err);
+        console.error(err);
     };
     MaWeatherController.prototype.getReadableDate = function () {
         var d = new Date();
@@ -6379,9 +6380,9 @@ var MaWeatherController = (function () {
             host: {
                 'class': 'ma-weather-container'
             },
-            providers: [__WEBPACK_IMPORTED_MODULE_3__ionic_native_geolocation__["a" /* Geolocation */]]
+            providers: [__WEBPACK_IMPORTED_MODULE_2__ionic_native_geolocation__["a" /* Geolocation */]]
         }),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1__angular_http__["b" /* Http */], __WEBPACK_IMPORTED_MODULE_3__ionic_native_geolocation__["a" /* Geolocation */], __WEBPACK_IMPORTED_MODULE_2_ionic_angular__["g" /* ModalController */], __WEBPACK_IMPORTED_MODULE_2_ionic_angular__["i" /* NavController */]])
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_3__angular_http__["b" /* Http */], __WEBPACK_IMPORTED_MODULE_2__ionic_native_geolocation__["a" /* Geolocation */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* ModalController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* NavController */]])
     ], MaWeatherController);
     return MaWeatherController;
 }());
