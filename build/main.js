@@ -633,7 +633,7 @@ var GridPage = (function () {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(7);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__feed_feed__ = __webpack_require__(569);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_rxjs_Rx__ = __webpack_require__(41);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_rxjs_Rx__ = __webpack_require__(43);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_rxjs_Rx___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3_rxjs_Rx__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__listing_model__ = __webpack_require__(1015);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__listing_service__ = __webpack_require__(579);
@@ -725,12 +725,13 @@ var ListingItemModel = (function () {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__pages_equipment_equipment__ = __webpack_require__(567);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__pages_login_login__ = __webpack_require__(213);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__pages_settings_settings__ = __webpack_require__(123);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__providers_shared__ = __webpack_require__(47);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__providers_shared__ = __webpack_require__(31);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__ionic_native_splash_screen__ = __webpack_require__(580);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__ionic_native_status_bar__ = __webpack_require__(581);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__pages_tabs_navigation_tabs_navigation__ = __webpack_require__(92);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__pages_timesheets_timesheets__ = __webpack_require__(582);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__pages_workers_workers__ = __webpack_require__(585);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__providers_auth__ = __webpack_require__(41);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -751,14 +752,17 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 
-//import { WalkthroughPage } from '../pages/walkthrough/walkthrough';
+
 var MyApp = (function () {
-    function MyApp(platform, menu, app, splashScreen, statusBar, sharedService) {
+    function MyApp(platform, menu, app, splashScreen, statusBar, sharedService, auth) {
         var _this = this;
+        this.platform = platform;
         this.menu = menu;
         this.app = app;
         this.splashScreen = splashScreen;
         this.statusBar = statusBar;
+        this.sharedService = sharedService;
+        this.auth = auth;
         // make WalkthroughPage the root (or first) page
         //rootPage: any = WalkthroughPage;
         //rootPage: any = TabsNavigationPage;
@@ -803,20 +807,26 @@ var MyApp = (function () {
         // then anyone can see it.
         return true;
     };
+    MyApp.prototype.logout = function () {
+        this.auth.reset();
+        this.menu.close();
+        this.nav.setRoot(__WEBPACK_IMPORTED_MODULE_3__pages_login_login__["a" /* LoginPage */]);
+    };
     __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_1__angular_core__["_9" /* ViewChild */])(__WEBPACK_IMPORTED_MODULE_0_ionic_angular__["h" /* Nav */]),
         __metadata("design:type", __WEBPACK_IMPORTED_MODULE_0_ionic_angular__["h" /* Nav */])
     ], MyApp.prototype, "nav", void 0);
     MyApp = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_1__angular_core__["n" /* Component */])({
-            selector: 'app-root',template:/*ion-inline-start:"/home/duane/dev/willow/knddec/src/app/app.html"*/`<ion-menu [content]="content" [swipeEnabled]="false">\n  <ion-content class="menu-content">\n    <ion-list class="menu-list">\n      <ng-container *ngFor="let page of pages">\n        <button ion-item detail-none *ngIf="showPage(page)" (click)="openPage(page)">\n          <ion-icon *ngIf="page.icon" name="{{page.icon}}" item-left></ion-icon>\n          {{page.title}}\n        </button>\n      </ng-container>\n      <!-- <button ion-item detail-none *ngFor="let page of pushPages" (click)="pushPage(page)">\n        <ion-icon *ngIf="page.icon" name="{{page.icon}}" item-left></ion-icon>\n        {{page.title}}\n      </button> -->\n\n      <ng-container *ngFor="let page of pushPages">\n        <button ion-item detail-none *ngIf="showPage(page)" (click)="pushPage(page)">\n          <ion-icon *ngIf="page.icon" name="{{page.icon}}" item-left></ion-icon>\n          {{page.title}}\n        </button>\n      </ng-container>\n    </ion-list>\n  </ion-content>\n</ion-menu>\n\n<ion-nav [root]="rootPage" #content swipe-back-enabled="false"></ion-nav>\n`/*ion-inline-end:"/home/duane/dev/willow/knddec/src/app/app.html"*/
+            selector: 'app-root',template:/*ion-inline-start:"/home/duane/dev/willow/knddec/src/app/app.html"*/`<ion-menu [content]="content"\n  [swipeEnabled]="false">\n  <ion-content class="menu-content">\n    <ion-list class="menu-list">\n      <ng-container *ngFor="let page of pages">\n        <button ion-item\n          detail-none\n          *ngIf="showPage(page)"\n          (click)="openPage(page)">\n          <ion-icon *ngIf="page.icon"\n            name="{{page.icon}}"\n            item-left></ion-icon>\n          {{page.title}}\n        </button>\n      </ng-container>\n      <!-- <button ion-item detail-none *ngFor="let page of pushPages" (click)="pushPage(page)">\n        <ion-icon *ngIf="page.icon" name="{{page.icon}}" item-left></ion-icon>\n        {{page.title}}\n      </button> -->\n\n      <ng-container *ngFor="let page of pushPages">\n        <button ion-item\n          detail-none\n          *ngIf="showPage(page)"\n          (click)="pushPage(page)">\n          <ion-icon *ngIf="page.icon"\n            name="{{page.icon}}"\n            item-left></ion-icon>\n          {{page.title}}\n        </button>\n      </ng-container>\n      <button ion-item\n        detail-none\n        (click)="logout()">\n        <ion-icon name="log-out"\n          item-left></ion-icon>\n        Log out\n      </button>\n    </ion-list>\n  </ion-content>\n</ion-menu>\n\n<ion-nav [root]="rootPage"\n  #content\n  swipe-back-enabled="false"></ion-nav>\n`/*ion-inline-end:"/home/duane/dev/willow/knddec/src/app/app.html"*/
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_0_ionic_angular__["k" /* Platform */],
             __WEBPACK_IMPORTED_MODULE_0_ionic_angular__["f" /* MenuController */],
             __WEBPACK_IMPORTED_MODULE_0_ionic_angular__["b" /* App */],
             __WEBPACK_IMPORTED_MODULE_6__ionic_native_splash_screen__["a" /* SplashScreen */],
             __WEBPACK_IMPORTED_MODULE_7__ionic_native_status_bar__["a" /* StatusBar */],
-            __WEBPACK_IMPORTED_MODULE_5__providers_shared__["a" /* SharedService */]])
+            __WEBPACK_IMPORTED_MODULE_5__providers_shared__["a" /* SharedService */],
+            __WEBPACK_IMPORTED_MODULE_11__providers_auth__["a" /* AuthService */]])
     ], MyApp);
     return MyApp;
 }());
@@ -832,7 +842,7 @@ var MyApp = (function () {
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return NotificationsPage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(7);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs_Rx__ = __webpack_require__(41);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs_Rx__ = __webpack_require__(43);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs_Rx___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_rxjs_Rx__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__notifications_model__ = __webpack_require__(1018);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__notifications_service__ = __webpack_require__(586);
@@ -1126,7 +1136,7 @@ var Rating = (function () {
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return SchedulePage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(7);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs_Rx__ = __webpack_require__(41);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs_Rx__ = __webpack_require__(43);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs_Rx___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_rxjs_Rx__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__schedule_model__ = __webpack_require__(1022);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__schedule_service__ = __webpack_require__(587);
@@ -1272,16 +1282,17 @@ var ShowHideContainer = (function () {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return SettingsPage; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_rxjs_Rx__ = __webpack_require__(41);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_rxjs_Rx__ = __webpack_require__(43);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_rxjs_Rx___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_rxjs_Rx__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_forms__ = __webpack_require__(22);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_ionic_angular__ = __webpack_require__(7);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__providers_auth__ = __webpack_require__(45);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__providers_auth__ = __webpack_require__(41);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__login_login__ = __webpack_require__(213);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__privacy_policy_privacy_policy__ = __webpack_require__(216);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__profile_profile_model__ = __webpack_require__(571);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__terms_of_service_terms_of_service__ = __webpack_require__(215);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__providers_shared__ = __webpack_require__(31);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -1300,12 +1311,14 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 
+
 var SettingsPage = (function () {
-    function SettingsPage(nav, modal, loadingCtrl, auth) {
+    function SettingsPage(nav, modal, loadingCtrl, auth, sharedService) {
         this.nav = nav;
         this.modal = modal;
         this.loadingCtrl = loadingCtrl;
         this.auth = auth;
+        this.sharedService = sharedService;
         this.rootPage = __WEBPACK_IMPORTED_MODULE_5__login_login__["a" /* LoginPage */];
         this.profile = new __WEBPACK_IMPORTED_MODULE_7__profile_profile_model__["a" /* ProfileModel */]();
         this.loading = this.loadingCtrl.create();
@@ -1323,6 +1336,8 @@ var SettingsPage = (function () {
         this.profile.following = [];
         this.profile.followers = [];
         this.profile.posts = [];
+        console.log('user helper mode is ' + this.sharedService.userHelperMode);
+        this.userHelperMode = this.sharedService.userHelperMode;
         this.settingsForm.setValue({
             name: this.profile.user.name,
             location: this.profile.user.location,
@@ -1332,8 +1347,12 @@ var SettingsPage = (function () {
             notifications: true
         });
     };
+    SettingsPage.prototype.ionViewWillLeave = function () {
+        this.sharedService.userHelperMode = this.userHelperMode;
+    };
     SettingsPage.prototype.logout = function () {
         // navigate to the new page if it is not the current page
+        this.auth.reset();
         this.nav.setRoot(this.rootPage);
     };
     SettingsPage.prototype.showTermsModal = function () {
@@ -1346,12 +1365,13 @@ var SettingsPage = (function () {
     };
     SettingsPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_4__angular_core__["n" /* Component */])({
-            selector: 'settings-page',template:/*ion-inline-start:"/home/duane/dev/willow/knddec/src/pages/settings/settings.html"*/`<ion-header>\n  <ion-navbar>\n    <ion-title>Settings</ion-title>\n    <ion-buttons end [hidden]="!settingsForm.dirty">\n      <button ion-button>\n        Save\n      </button>\n    </ion-buttons>\n  </ion-navbar>\n</ion-header>\n\n<ion-content class="settings-content">\n  <div class="user-image-content">\n    <ion-row no-padding class="user-image-row">\n      <ion-col no-padding width-40>\n        <preload-image class="user-image" [ratio]="{w:1, h:1}" [src]="profile.user.image" alt="aca va la img" title="IMAGE!"></preload-image>\n      </ion-col>\n    </ion-row>\n    <h3 class="image-action">Change profile picture</h3>\n  </div>\n\n  <form [formGroup]="settingsForm" class="settings-form">\n    <ion-list class="user-data-content">\n      <ion-item>\n        <ion-label stacked>Name</ion-label>\n        <ion-input type="text" formControlName="name"></ion-input>\n      </ion-item>\n      <ion-item>\n        <ion-label stacked>Location</ion-label>\n        <ion-input type="text" formControlName="location"></ion-input>\n      </ion-item>\n      <ion-item>\n        <ion-label stacked>Description</ion-label>\n        <ion-textarea formControlName="description" rows="5" placeholder="Your description here..."></ion-textarea>\n      </ion-item>\n    </ion-list>\n\n    <ion-row class="user-preferences-row">\n      <span class="radio-tags-label">Currency</span>\n      <ion-list class="radio-tags" radio-group formControlName="currency">\n        <ion-item class="radio-tag">\n          <ion-label>&#36;</ion-label>\n          <ion-radio value="dollar"></ion-radio>\n        </ion-item>\n        <ion-item class="radio-tag">\n          <ion-label>\n            <span>&euro;</span>\n          </ion-label>\n          <ion-radio value="euro"></ion-radio>\n        </ion-item>\n        <ion-item class="radio-tag">\n          <ion-label>\n            <span>&pound;</span>\n          </ion-label>\n          <ion-radio value="pound"></ion-radio>\n        </ion-item>\n      </ion-list>\n    </ion-row>\n\n    <ion-row class="user-preferences-row">\n      <span class="radio-tags-label">Weather</span>\n      <ion-list class="radio-tags" radio-group formControlName="weather">\n        <ion-item class="radio-tag">\n          <ion-label>&deg;C</ion-label>\n          <ion-radio value="celsius"></ion-radio>\n        </ion-item>\n        <ion-item class="radio-tag">\n          <ion-label>\n            <span>&deg;F</span>\n          </ion-label>\n          <ion-radio value="fahrenheit"></ion-radio>\n        </ion-item>\n      </ion-list>\n    </ion-row>\n\n    <ion-list class="switchers-list">\n      <ion-item class="switcher-item">\n        <ion-label>Notifications</ion-label>\n        <ion-toggle formControlName="notifications"></ion-toggle>\n      </ion-item>\n    </ion-list>\n  </form>\n\n  <button class="alt-button" ion-button full (click)="showPrivacyModal()">Privacy policy</button>\n\n  <button class="alt-button" ion-button full (click)="showTermsModal()">Terms of use</button>\n\n  <button class="alt-button logout-button" ion-button full icon-left (click)="logout()">\n    <ion-icon name="log-out"></ion-icon>\n    Log out\n  </button>\n</ion-content>\n`/*ion-inline-end:"/home/duane/dev/willow/knddec/src/pages/settings/settings.html"*/
+            selector: 'settings-page',template:/*ion-inline-start:"/home/duane/dev/willow/knddec/src/pages/settings/settings.html"*/`<ion-header>\n  <ion-navbar>\n    <ion-title>Settings</ion-title>\n    <ion-buttons end [hidden]="!settingsForm.dirty">\n      <button ion-button>\n        Save\n      </button>\n    </ion-buttons>\n  </ion-navbar>\n</ion-header>\n\n<ion-content class="settings-content">\n  <div class="user-image-content">\n    <ion-row no-padding class="user-image-row">\n      <ion-col no-padding width-40>\n        <preload-image class="user-image" [ratio]="{w:1, h:1}" [src]="profile.user.image" alt="aca va la img" title="IMAGE!"></preload-image>\n      </ion-col>\n    </ion-row>\n    <h3 class="image-action">Change profile picture</h3>\n  </div>\n\n  <form [formGroup]="settingsForm" class="settings-form">\n    <ion-list class="user-data-content">\n      <ion-item>\n        <ion-label stacked>Name</ion-label>\n        <ion-input type="text" formControlName="name"></ion-input>\n      </ion-item>\n      <ion-item>\n        <ion-label stacked>Location</ion-label>\n        <ion-input type="text" formControlName="location"></ion-input>\n      </ion-item>\n      <ion-item>\n        <ion-label stacked>Description</ion-label>\n        <ion-textarea formControlName="description" rows="5" placeholder="Your description here..."></ion-textarea>\n      </ion-item>\n    </ion-list>\n\n    <ion-row class="user-preferences-row">\n      <span class="radio-tags-label">Currency</span>\n      <ion-list class="radio-tags" radio-group formControlName="currency">\n        <ion-item class="radio-tag">\n          <ion-label>&#36;</ion-label>\n          <ion-radio value="dollar"></ion-radio>\n        </ion-item>\n        <ion-item class="radio-tag">\n          <ion-label>\n            <span>&euro;</span>\n          </ion-label>\n          <ion-radio value="euro"></ion-radio>\n        </ion-item>\n        <ion-item class="radio-tag">\n          <ion-label>\n            <span>&pound;</span>\n          </ion-label>\n          <ion-radio value="pound"></ion-radio>\n        </ion-item>\n      </ion-list>\n    </ion-row>\n\n    <ion-row class="user-preferences-row">\n      <span class="radio-tags-label">Weather</span>\n      <ion-list class="radio-tags" radio-group formControlName="weather">\n        <ion-item class="radio-tag">\n          <ion-label>&deg;C</ion-label>\n          <ion-radio value="celsius"></ion-radio>\n        </ion-item>\n        <ion-item class="radio-tag">\n          <ion-label>\n            <span>&deg;F</span>\n          </ion-label>\n          <ion-radio value="fahrenheit"></ion-radio>\n        </ion-item>\n      </ion-list>\n    </ion-row>\n\n    <ion-list class="switchers-list">\n      <ion-item class="switcher-item">\n        <ion-label>Notifications</ion-label>\n        <ion-toggle formControlName="notifications"></ion-toggle>\n      </ion-item>\n    </ion-list>\n\n  </form>\n  <ion-list class="switchers-list">\n    <ion-item class="switcher-item">\n      <ion-label>User Information Mode</ion-label>\n      <ion-toggle [(ngModel)]="userHelperMode"></ion-toggle>\n    </ion-item>\n  </ion-list>\n  user helper mode = {{ userHelperMode}}\n  <button class="alt-button" ion-button full (click)="showPrivacyModal()">Privacy policy</button>\n\n  <button class="alt-button" ion-button full (click)="showTermsModal()">Terms of use</button>\n\n  <button class="alt-button logout-button" ion-button full icon-left (click)="logout()">\n    <ion-icon name="log-out"></ion-icon>\n    Log out\n  </button>\n</ion-content>\n`/*ion-inline-end:"/home/duane/dev/willow/knddec/src/pages/settings/settings.html"*/
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_2_ionic_angular__["i" /* NavController */],
             __WEBPACK_IMPORTED_MODULE_2_ionic_angular__["g" /* ModalController */],
             __WEBPACK_IMPORTED_MODULE_2_ionic_angular__["e" /* LoadingController */],
-            __WEBPACK_IMPORTED_MODULE_3__providers_auth__["a" /* AuthService */]])
+            __WEBPACK_IMPORTED_MODULE_3__providers_auth__["a" /* AuthService */],
+            __WEBPACK_IMPORTED_MODULE_9__providers_shared__["a" /* SharedService */]])
     ], SettingsPage);
     return SettingsPage;
 }());
@@ -1365,9 +1385,9 @@ var SettingsPage = (function () {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return SiteService; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_rxjs_add_operator_toPromise__ = __webpack_require__(42);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_rxjs_add_operator_toPromise__ = __webpack_require__(44);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_rxjs_add_operator_toPromise___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_rxjs_add_operator_toPromise__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__api__ = __webpack_require__(39);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__api__ = __webpack_require__(40);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_core__ = __webpack_require__(0);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -1449,6 +1469,7 @@ var SiteService = (function () {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__providers_swm__ = __webpack_require__(66);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__classes_swm_model__ = __webpack_require__(91);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__providers_worker__ = __webpack_require__(62);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__providers_shared__ = __webpack_require__(31);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -1465,8 +1486,9 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 
+
 var SwmPage = (function () {
-    function SwmPage(navCtrl, navParams, swmService, loadingCtrl, workerService, alertCtrl, toast) {
+    function SwmPage(navCtrl, navParams, swmService, loadingCtrl, workerService, alertCtrl, toast, sharedService) {
         this.navCtrl = navCtrl;
         this.navParams = navParams;
         this.swmService = swmService;
@@ -1474,6 +1496,7 @@ var SwmPage = (function () {
         this.workerService = workerService;
         this.alertCtrl = alertCtrl;
         this.toast = toast;
+        this.sharedService = sharedService;
         this.activeSWMs = new __WEBPACK_IMPORTED_MODULE_5__classes_swm_model__["a" /* SwmsModel */](); // these are determined from the tasks
         this.loading = this.loadingCtrl.create();
     }
@@ -1486,6 +1509,7 @@ var SwmPage = (function () {
         this.updateActiveSwms();
         console.log("got active swm list");
         console.log(this.activeSWMs.items);
+        this.userHelperMode = this.sharedService.userHelperMode;
     };
     SwmPage.prototype.smwOverride = function (swm) {
         this.presentConfirm(swm);
@@ -1581,7 +1605,7 @@ var SwmPage = (function () {
     };
     SwmPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_1__angular_core__["n" /* Component */])({
-            selector: 'page-swm',template:/*ion-inline-start:"/home/duane/dev/willow/knddec/src/pages/swm/swm.html"*/`<ion-header>\n  <ion-navbar>\n    <ion-title>SWMs</ion-title>\n  </ion-navbar>\n</ion-header>\n\n\n<ion-content class="schedule-content">\n  <ion-list class="schedule-list">\n    <ion-item class="schedule-item"\n      *ngFor="let item of activeSWMs.items">\n      <ion-row>\n        <ion-col col-2\n          class="schedule-date"\n          (click)="smwOverride(item)">\n          <!--<h2 class="schedule-day">{{item.id}}</h2>\n            <h3 class="schedule-month">{{item.inuse}}</h3>\n            <h4 class="schedule-time">{{item.name}}</h4>-->\n          <!-- inspiredby http://fiddle.jshell.net/chrisupjohn/u9yD4/ -->\n          <div id="light">\n            <span [class.active]="item.red"\n              id="red"></span>\n            <span [class.active]="item.yellow"\n              id="orange"></span>\n            <span [class.active]="item.green"\n              id="green"></span>\n          </div>\n        </ion-col>\n        <ion-col col-10\n          class="schedule-data">\n          <div class="data-item"\n            (click)="swmdetails(item.id, item)">\n            <div class="item-content">\n              <h2 class="item-title one-line">{{item.name}}</h2>\n              <!--\n              <div class="item-description">\n                <ion-icon class="description-icon"\n                  name="clock"></ion-icon>\n                <p class="description-text">{{item.inuse ? \'In use\' : \'Not in use\'}}</p>\n              </div>\n              -->\n              <div class="item-description">\n                <ion-icon class="description-icon"\n                  name="navigate"></ion-icon>\n                <p class="description-text one-line">{{item.abstract}}</p>\n              </div>\n            </div>\n            <ion-icon class="item-icon"\n              name="arrow-forward"></ion-icon>\n          </div>\n        </ion-col>\n      </ion-row>\n    </ion-item>\n  </ion-list>\n  <section class="form-section">\n    <button ion-button\n      block\n      class="form-action-button create-post-button"\n      [disabled]="!worker?.swmCompliant"\n      (click)="gotoReminders()">Next -> Safety Reminders</button>\n  </section>\n\n</ion-content>\n`/*ion-inline-end:"/home/duane/dev/willow/knddec/src/pages/swm/swm.html"*/
+            selector: 'page-swm',template:/*ion-inline-start:"/home/duane/dev/willow/knddec/src/pages/swm/swm.html"*/`<ion-header>\n  <ion-navbar>\n    <ion-title>SWMs</ion-title>\n  </ion-navbar>\n</ion-header>\n\n\n<ion-content class="schedule-content">\n  <ion-list class="schedule-list">\n    <ion-item class="schedule-item"\n      *ngFor="let item of activeSWMs.items">\n      <ion-row>\n        <ion-col col-2\n          class="schedule-date"\n          (click)="smwOverride(item)">\n          <!--<h2 class="schedule-day">{{item.id}}</h2>\n            <h3 class="schedule-month">{{item.inuse}}</h3>\n            <h4 class="schedule-time">{{item.name}}</h4>-->\n          <!-- inspiredby http://fiddle.jshell.net/chrisupjohn/u9yD4/ -->\n          <div id="light">\n            <span [class.active]="item.red"\n              id="red"></span>\n            <span [class.active]="item.yellow"\n              id="orange"></span>\n            <span [class.active]="item.green"\n              id="green"></span>\n          </div>\n        </ion-col>\n        <ion-col col-10\n          class="schedule-data">\n          <div class="data-item"\n            (click)="swmdetails(item.id, item)">\n            <div class="item-content">\n              <h2 class="item-title one-line">{{item.name}}</h2>\n              <!--\n              <div class="item-description">\n                <ion-icon class="description-icon"\n                  name="clock"></ion-icon>\n                <p class="description-text">{{item.inuse ? \'In use\' : \'Not in use\'}}</p>\n              </div>\n              -->\n              <div class="item-description">\n                <ion-icon class="description-icon"\n                  name="navigate"></ion-icon>\n                <p class="description-text one-line">{{item.abstract}}</p>\n              </div>\n            </div>\n            <ion-icon class="item-icon"\n              name="arrow-forward"></ion-icon>\n          </div>\n        </ion-col>\n      </ion-row>\n    </ion-item>\n  </ion-list>\n  <ion-card *ngIf="worker?.swmCompliant === false && userHelperMode">\n    <ion-card-content>\n      <ion-card-title class="item-title">\n        SWMs Incomplete - {{ worker?.swmCompliant }}\n      </ion-card-title>\n      <p>All SWMs must be <span style=\'color: aquamarine\'>complete</span> or <span style=\'color: orange\'>user overridden</span> to continue</p>\n      <p class="item-text">\n        System records show that you haven\'t completed all the neccessary SWMs.\n      </p>\n      <p class="item-text">\n        If you have completed the SWM then click on the traffic light and a yellow\n        indication will allow you to proceed and notify the supervisor to verify the SWM.\n      </p>\n      <p>Please contact the supervisor if you haven\'t completed the SWM</p>\n    </ion-card-content>\n  </ion-card>\n  <section class="form-section">\n    <button ion-button\n      block\n      class="form-action-button create-post-button"\n      [disabled]="!worker?.swmCompliant"\n      (click)="gotoReminders()">Next -> Safety Reminders</button>\n  </section>\n\n</ion-content>\n`/*ion-inline-end:"/home/duane/dev/willow/knddec/src/pages/swm/swm.html"*/
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_0_ionic_angular__["i" /* NavController */],
             __WEBPACK_IMPORTED_MODULE_0_ionic_angular__["j" /* NavParams */],
@@ -1589,7 +1613,8 @@ var SwmPage = (function () {
             __WEBPACK_IMPORTED_MODULE_0_ionic_angular__["e" /* LoadingController */],
             __WEBPACK_IMPORTED_MODULE_6__providers_worker__["b" /* WorkerService */],
             __WEBPACK_IMPORTED_MODULE_0_ionic_angular__["a" /* AlertController */],
-            __WEBPACK_IMPORTED_MODULE_0_ionic_angular__["m" /* ToastController */]])
+            __WEBPACK_IMPORTED_MODULE_0_ionic_angular__["m" /* ToastController */],
+            __WEBPACK_IMPORTED_MODULE_7__providers_shared__["a" /* SharedService */]])
     ], SwmPage);
     return SwmPage;
 }());
@@ -1603,11 +1628,11 @@ var SwmPage = (function () {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return IssueService; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_rxjs_add_operator_toPromise__ = __webpack_require__(42);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_rxjs_add_operator_toPromise__ = __webpack_require__(44);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_rxjs_add_operator_toPromise___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_rxjs_add_operator_toPromise__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_moment__ = __webpack_require__(2);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_moment___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_moment__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__api__ = __webpack_require__(39);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__api__ = __webpack_require__(40);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__angular_core__ = __webpack_require__(0);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -1747,11 +1772,11 @@ var SafetyRemindersModel = (function () {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return SafetyReminderService; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_rxjs_add_operator_toPromise__ = __webpack_require__(42);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_rxjs_add_operator_toPromise__ = __webpack_require__(44);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_rxjs_add_operator_toPromise___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_rxjs_add_operator_toPromise__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_moment__ = __webpack_require__(2);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_moment___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_moment__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__api__ = __webpack_require__(39);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__api__ = __webpack_require__(40);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__angular_core__ = __webpack_require__(0);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -2020,14 +2045,14 @@ var FollowersPage = (function () {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return LoginPage; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__providers_auth__ = __webpack_require__(45);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__providers_auth__ = __webpack_require__(41);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_forms__ = __webpack_require__(22);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_ionic_angular__ = __webpack_require__(7);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__classes_worker_model__ = __webpack_require__(89);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__providers_api__ = __webpack_require__(39);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__providers_api__ = __webpack_require__(40);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__forgot_password_forgot_password__ = __webpack_require__(572);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__providers_shared__ = __webpack_require__(47);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__providers_shared__ = __webpack_require__(31);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__signup_signup__ = __webpack_require__(576);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__tabs_navigation_tabs_navigation__ = __webpack_require__(92);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__worker_clockon_worker_clockon__ = __webpack_require__(577);
@@ -2146,7 +2171,7 @@ var LoginPage = (function () {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return TaskService; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__api__ = __webpack_require__(39);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__api__ = __webpack_require__(40);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_core__ = __webpack_require__(0);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -2317,7 +2342,7 @@ var TimesheetsModel = (function () {
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return TimesService; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_rxjs_add_operator_map__ = __webpack_require__(121);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_rxjs_add_operator_map___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_rxjs_add_operator_map__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_http__ = __webpack_require__(38);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_http__ = __webpack_require__(39);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__classes_timesheet_model__ = __webpack_require__(217);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
@@ -2398,6 +2423,76 @@ webpackEmptyAsyncContext.keys = function() { return []; };
 webpackEmptyAsyncContext.resolve = webpackEmptyAsyncContext;
 module.exports = webpackEmptyAsyncContext;
 webpackEmptyAsyncContext.id = 276;
+
+/***/ }),
+
+/***/ 31:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return SharedService; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_rxjs_add_operator_map__ = __webpack_require__(121);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_rxjs_add_operator_map___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_rxjs_add_operator_map__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_core__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__auth__ = __webpack_require__(41);
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+
+
+
+/*
+  Generated class for the Tudomundo provider.
+
+  See https://angular.io/docs/ts/latest/guide/dependency-injection.html
+  for more info on providers and Angular 2 DI.
+*/
+var SharedService = (function () {
+    function SharedService() {
+        this.siteId = null;
+        // For prestart
+        this.siteOpened = false;
+        this.supervisorRole = false;
+        this.userHelperMode = true;
+        this.dvtGlobals = {
+            supervisor: false,
+            role: __WEBPACK_IMPORTED_MODULE_2__auth__["b" /* UserRole */].Staff,
+            lvtDebug: "lenny1",
+            username: "freddy"
+        };
+        this._singlePass = false;
+    }
+    SharedService.prototype.setUserRole = function (isSupervisor) {
+        this.supervisorRole = isSupervisor;
+    };
+    SharedService.prototype.getLenny = function () {
+        return this.dvtGlobals;
+    };
+    SharedService.prototype.setLenny = function (isSupervisor, role, dbgStr) {
+        this.dvtGlobals.role = role;
+        this.dvtGlobals.supervisor = isSupervisor;
+        this.dvtGlobals.lvtDebug = dbgStr;
+    };
+    // Single pass semaphore
+    // You can trigger it to allow user a single pass to prestart page after succesful login
+    SharedService.prototype.getSinglePass = function () {
+        var ret = this._singlePass;
+        this._singlePass = false;
+        return ret;
+    };
+    SharedService.prototype.triggerSinglePass = function () {
+        this._singlePass = true;
+    };
+    SharedService = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_1__angular_core__["B" /* Injectable */])()
+    ], SharedService);
+    return SharedService;
+}());
+
+//# sourceMappingURL=shared.js.map
 
 /***/ }),
 
@@ -2520,14 +2615,14 @@ var API_URL = 'https://api.willow.kndtesting.com.au';
 
 /***/ }),
 
-/***/ 39:
+/***/ 40:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ApiService; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_http__ = __webpack_require__(38);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_http__ = __webpack_require__(39);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__environment_env__ = __webpack_require__(319);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__auth__ = __webpack_require__(45);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__auth__ = __webpack_require__(41);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_rxjs_Observable__ = __webpack_require__(1);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_rxjs_Observable___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_4_rxjs_Observable__);
@@ -2617,19 +2712,233 @@ var ApiService = (function () {
 
 /***/ }),
 
+/***/ 41:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "b", function() { return UserRole; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AuthService; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_bcryptjs__ = __webpack_require__(642);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_bcryptjs___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_bcryptjs__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_http__ = __webpack_require__(39);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__environment_env__ = __webpack_require__(319);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__angular_core__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_rxjs_Observable__ = __webpack_require__(1);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_rxjs_Observable___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_4_rxjs_Observable__);
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+
+
+
+var UserRole;
+(function (UserRole) {
+    UserRole[UserRole["Supervisor"] = 0] = "Supervisor";
+    UserRole[UserRole["Staff"] = 1] = "Staff";
+})(UserRole || (UserRole = {}));
+var EMPTY_WORKER = {
+    id: 0,
+    name: '',
+    passcode: '',
+    image: '',
+    description: '',
+    swms: [],
+    validSwms: [],
+    claimedSwms: [],
+    swmCompliant: false,
+    tasks: [],
+    clockOn: '',
+    clockedOn: false,
+    clockOnAddress: '',
+    clockOff: '',
+    clockOffAddress: '',
+    clockedOff: false,
+    startedWork: false,
+    finishedWork: false,
+    date: new Date(),
+    ackSwms: false,
+    ackIssues: false,
+    siteSelected: 0,
+    inLocation: false,
+    siteVisits: [],
+    sitesAllowed: [],
+    supervisor: false
+};
+var EMPTY_USER = {
+    image: '',
+    location: '',
+    about: '',
+    email: '',
+    phone: '',
+    name: '',
+};
+var AuthService = (function () {
+    function AuthService(http) {
+        this.http = http;
+        this._loggedIn = false;
+        this._apiKey = null;
+        this._role = null;
+        this._hashedPassword = null;
+        this._siteVisits = null;
+        this._name = null;
+        this._image = null;
+        this._user = Object.assign({}, EMPTY_USER);
+        this._worker = Object.assign({}, EMPTY_WORKER);
+    }
+    Object.defineProperty(AuthService.prototype, "loggedIn", {
+        get: function () {
+            return this._loggedIn;
+        },
+        enumerable: true,
+        configurable: true
+    });
+    Object.defineProperty(AuthService.prototype, "apiKey", {
+        get: function () {
+            return this._apiKey;
+        },
+        enumerable: true,
+        configurable: true
+    });
+    Object.defineProperty(AuthService.prototype, "role", {
+        get: function () {
+            return this._role;
+        },
+        enumerable: true,
+        configurable: true
+    });
+    Object.defineProperty(AuthService.prototype, "isSupervisor", {
+        get: function () {
+            return this._role === UserRole.Supervisor;
+        },
+        enumerable: true,
+        configurable: true
+    });
+    Object.defineProperty(AuthService.prototype, "siteVisits", {
+        get: function () {
+            return this._siteVisits;
+        },
+        enumerable: true,
+        configurable: true
+    });
+    Object.defineProperty(AuthService.prototype, "name", {
+        get: function () {
+            return this._name;
+        },
+        enumerable: true,
+        configurable: true
+    });
+    Object.defineProperty(AuthService.prototype, "image", {
+        get: function () {
+            return this._image;
+        },
+        enumerable: true,
+        configurable: true
+    });
+    Object.defineProperty(AuthService.prototype, "user", {
+        get: function () {
+            return this._user;
+        },
+        enumerable: true,
+        configurable: true
+    });
+    Object.defineProperty(AuthService.prototype, "worker", {
+        get: function () {
+            return this._worker;
+        },
+        enumerable: true,
+        configurable: true
+    });
+    AuthService.prototype.reset = function () {
+        this._loggedIn = false;
+        this._apiKey = null;
+        this._role = null;
+        this._hashedPassword = null;
+        this._siteVisits = null;
+        this._name = null;
+        this._image = null;
+        this._user = Object.assign({}, EMPTY_USER);
+        this._worker = Object.assign({}, EMPTY_WORKER);
+    };
+    AuthService.prototype.login = function (username, password) {
+        var _this = this;
+        var headers = {
+            headers: new __WEBPACK_IMPORTED_MODULE_1__angular_http__["a" /* Headers */]({ 'Content-type': 'application/json' })
+        };
+        return this.http.post(__WEBPACK_IMPORTED_MODULE_2__environment_env__["a" /* API_URL */] + '/login', JSON.stringify({ email: username, password: password }), headers)
+            .map(function (response) {
+            var res = response.json().data;
+            _this._loggedIn = true;
+            _this._apiKey = res['API Key'];
+            _this._role = res.profile.role === 'supervisor' ? UserRole.Supervisor : UserRole.Staff;
+            _this._hashedPassword = res.profile.password_hash;
+            _this._siteVisits = res.profile.sites;
+            _this._name = res.profile.name;
+            _this._image = res.profile.image;
+            // Fill user model
+            _this._user.name = _this._name;
+            _this._user.image = _this._image;
+            // Fill worker model
+            _this._worker.name = _this._name;
+            _this._worker.image = _this._image;
+            _this._worker.supervisor = _this._role === UserRole.Supervisor;
+            _this._worker.siteVisits = (_this._siteVisits || [])
+                .map(function (_a) {
+                var id = _a.id, checkInDate = _a.checkInDate, checkOutDate = _a.checkOutDate;
+                return ({
+                    id: id,
+                    checkInDate: checkInDate ? new Date(checkInDate) : null,
+                    checkOutDate: checkOutDate ? new Date(checkOutDate) : null,
+                });
+            });
+            return true;
+        })
+            .catch(function (error) {
+            console.error(error);
+            _this._loggedIn = false;
+            _this._apiKey = null;
+            _this._role = null;
+            _this._siteVisits = [];
+            return __WEBPACK_IMPORTED_MODULE_4_rxjs_Observable__["Observable"].of(false);
+        });
+    };
+    AuthService.prototype.checkPassword = function (password) {
+        if (!this._hashedPassword) {
+            return false;
+        }
+        return __WEBPACK_IMPORTED_MODULE_0_bcryptjs__["compareSync"](password, this._hashedPassword);
+    };
+    AuthService = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_3__angular_core__["B" /* Injectable */])(),
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1__angular_http__["b" /* Http */]])
+    ], AuthService);
+    return AuthService;
+}());
+
+//# sourceMappingURL=auth.js.map
+
+/***/ }),
+
 /***/ 443:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ClockOffPage; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_rxjs_Rx__ = __webpack_require__(41);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_rxjs_Rx__ = __webpack_require__(43);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_rxjs_Rx___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_rxjs_Rx__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(7);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__providers_worker__ = __webpack_require__(62);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__providers_check_in__ = __webpack_require__(82);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__ionic_native_geolocation__ = __webpack_require__(60);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__providers_shared__ = __webpack_require__(47);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__providers_shared__ = __webpack_require__(31);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__classes_worker_model__ = __webpack_require__(89);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -2784,7 +3093,7 @@ var ClockOffPage = (function () {
     };
     ClockOffPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_4__angular_core__["n" /* Component */])({
-            selector: 'page-clock-off',template:/*ion-inline-start:"/home/duane/dev/willow/knddec/src/pages/clock-off/clock-off.html"*/`<ion-header>\n  <ion-navbar>\n    <ion-title>Daily Attendance Record (Clock off)</ion-title>\n  </ion-navbar>\n</ion-header>\n\n<ion-content class="notifications-content">\n  <h2 *ngIf="!hasDayStarted">Day hasn\'t started Yet</h2>\n  <ion-item-group *ngIf="hasDayStarted">\n    <ion-item-divider class="notifications-divider">Still Working</ion-item-divider>\n    <ion-item class="notification-item"\n      *ngFor="let worker of workersWorking.items"\n      (click)="startSignOff(worker)">\n      <ion-avatar item-left>\n        <preload-image class="user-image"\n          [ratio]="{w:1, h:1}"\n          [src]="worker.image || defaultPersonImage"></preload-image>\n      </ion-avatar>\n      <h2 class="item-title">{{worker.name}}</h2>\n      <p class="item-description">{{worker.message}}</p>\n      <ion-note class="item-time"\n        item-right>{{worker.clockOn}}</ion-note>\n    </ion-item>\n    <ion-item-divider class="notifications-divider">Slater ...!</ion-item-divider>\n    <ion-item class="notification-item"\n      *ngFor="let worker of workersFinished.items">\n      <ion-avatar item-left>\n        <preload-image class="user-image"\n          [ratio]="{w:1, h:1}"\n          [src]="worker.image || defaultPersonImage"></preload-image>\n      </ion-avatar>\n      <h2 class="item-title">{{worker.name}}</h2>\n      <p class="item-description">{{worker.message}}</p>\n      <ion-note class="item-time"\n        item-right>{{worker.clockOff}}</ion-note>\n    </ion-item>\n  </ion-item-group>\n</ion-content>\n`/*ion-inline-end:"/home/duane/dev/willow/knddec/src/pages/clock-off/clock-off.html"*/
+            selector: 'page-clock-off',template:/*ion-inline-start:"/home/duane/dev/willow/knddec/src/pages/clock-off/clock-off.html"*/`<ion-header>\n  <ion-navbar>\n    <button ion-button\n      menuToggle>\n      <ion-icon name="menu"></ion-icon>\n    </button>\n    <ion-title>Daily Attendance Record (Clock off)</ion-title>\n  </ion-navbar>\n</ion-header>\n\n<ion-content class="notifications-content">\n  <h2 *ngIf="!hasDayStarted">Day hasn\'t started Yet</h2>\n  <ion-item-group *ngIf="hasDayStarted">\n    <ion-item-divider class="notifications-divider">Still Working</ion-item-divider>\n    <ion-item class="notification-item"\n      *ngFor="let worker of workersWorking.items"\n      (click)="startSignOff(worker)">\n      <ion-avatar item-left>\n        <preload-image class="user-image"\n          [ratio]="{w:1, h:1}"\n          [src]="worker.image || defaultPersonImage"></preload-image>\n      </ion-avatar>\n      <h2 class="item-title">{{worker.name}}</h2>\n      <p class="item-description">{{worker.message}}</p>\n      <ion-note class="item-time"\n        item-right>{{worker.clockOn}}</ion-note>\n    </ion-item>\n    <ion-item-divider class="notifications-divider">Slater ...!</ion-item-divider>\n    <ion-item class="notification-item"\n      *ngFor="let worker of workersFinished.items">\n      <ion-avatar item-left>\n        <preload-image class="user-image"\n          [ratio]="{w:1, h:1}"\n          [src]="worker.image || defaultPersonImage"></preload-image>\n      </ion-avatar>\n      <h2 class="item-title">{{worker.name}}</h2>\n      <p class="item-description">{{worker.message}}</p>\n      <ion-note class="item-time"\n        item-right>{{worker.clockOff}}</ion-note>\n    </ion-item>\n  </ion-item-group>\n</ion-content>\n`/*ion-inline-end:"/home/duane/dev/willow/knddec/src/pages/clock-off/clock-off.html"*/
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* NavController */],
             __WEBPACK_IMPORTED_MODULE_2__providers_worker__["b" /* WorkerService */],
@@ -2801,276 +3110,6 @@ var ClockOffPage = (function () {
 
 /***/ }),
 
-/***/ 45:
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "b", function() { return UserRole; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AuthService; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_bcryptjs__ = __webpack_require__(642);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_bcryptjs___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_bcryptjs__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_http__ = __webpack_require__(38);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__environment_env__ = __webpack_require__(319);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_rxjs_Observable__ = __webpack_require__(1);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_rxjs_Observable___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_4_rxjs_Observable__);
-var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
-    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-    return c > 3 && r && Object.defineProperty(target, key, r), r;
-};
-var __metadata = (this && this.__metadata) || function (k, v) {
-    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
-};
-
-
-
-
-
-var UserRole;
-(function (UserRole) {
-    UserRole[UserRole["Supervisor"] = 0] = "Supervisor";
-    UserRole[UserRole["Staff"] = 1] = "Staff";
-})(UserRole || (UserRole = {}));
-var AuthService = (function () {
-    function AuthService(http) {
-        this.http = http;
-        this._loggedIn = false;
-        this._apiKey = null;
-        this._role = null;
-        this._hashedPassword = null;
-        this._siteVisits = null;
-        this._name = null;
-        this._image = null;
-        this._user = {
-            image: '',
-            location: '',
-            about: '',
-            email: '',
-            phone: '',
-            name: '',
-        };
-        this._worker = {
-            id: 0,
-            name: '',
-            passcode: '',
-            image: '',
-            description: '',
-            swms: [],
-            validSwms: [],
-            claimedSwms: [],
-            swmCompliant: false,
-            tasks: [],
-            clockOn: '',
-            clockedOn: false,
-            clockOnAddress: '',
-            clockOff: '',
-            clockOffAddress: '',
-            clockedOff: false,
-            startedWork: false,
-            finishedWork: false,
-            date: new Date(),
-            ackSwms: false,
-            ackIssues: false,
-            siteSelected: 0,
-            inLocation: false,
-            siteVisits: [],
-            sitesAllowed: [],
-            supervisor: false
-        };
-    }
-    Object.defineProperty(AuthService.prototype, "loggedIn", {
-        get: function () {
-            return this._loggedIn;
-        },
-        enumerable: true,
-        configurable: true
-    });
-    Object.defineProperty(AuthService.prototype, "apiKey", {
-        get: function () {
-            return this._apiKey;
-        },
-        enumerable: true,
-        configurable: true
-    });
-    Object.defineProperty(AuthService.prototype, "role", {
-        get: function () {
-            return this._role;
-        },
-        enumerable: true,
-        configurable: true
-    });
-    Object.defineProperty(AuthService.prototype, "isSupervisor", {
-        get: function () {
-            return this._role === UserRole.Supervisor;
-        },
-        enumerable: true,
-        configurable: true
-    });
-    Object.defineProperty(AuthService.prototype, "siteVisits", {
-        get: function () {
-            return this._siteVisits;
-        },
-        enumerable: true,
-        configurable: true
-    });
-    Object.defineProperty(AuthService.prototype, "name", {
-        get: function () {
-            return this._name;
-        },
-        enumerable: true,
-        configurable: true
-    });
-    Object.defineProperty(AuthService.prototype, "image", {
-        get: function () {
-            return this._image;
-        },
-        enumerable: true,
-        configurable: true
-    });
-    Object.defineProperty(AuthService.prototype, "user", {
-        get: function () {
-            return this._user;
-        },
-        enumerable: true,
-        configurable: true
-    });
-    Object.defineProperty(AuthService.prototype, "worker", {
-        get: function () {
-            return this._worker;
-        },
-        enumerable: true,
-        configurable: true
-    });
-    AuthService.prototype.login = function (username, password) {
-        var _this = this;
-        var headers = {
-            headers: new __WEBPACK_IMPORTED_MODULE_1__angular_http__["a" /* Headers */]({ 'Content-type': 'application/json' })
-        };
-        return this.http.post(__WEBPACK_IMPORTED_MODULE_2__environment_env__["a" /* API_URL */] + '/login', JSON.stringify({ email: username, password: password }), headers)
-            .map(function (response) {
-            var res = response.json().data;
-            _this._loggedIn = true;
-            _this._apiKey = res['API Key'];
-            _this._role = res.profile.role === 'supervisor' ? UserRole.Supervisor : UserRole.Staff;
-            _this._hashedPassword = res.profile.password_hash;
-            _this._siteVisits = res.profile.sites;
-            _this._name = res.profile.name;
-            _this._image = res.profile.image;
-            // Fill user model
-            _this._user.name = _this._name;
-            _this._user.image = _this._image;
-            // Fill worker model
-            _this._worker.name = _this._name;
-            _this._worker.image = _this._image;
-            _this._worker.supervisor = _this._role === UserRole.Supervisor;
-            _this._worker.siteVisits = (_this._siteVisits || [])
-                .map(function (_a) {
-                var id = _a.id, checkInDate = _a.checkInDate, checkOutDate = _a.checkOutDate;
-                return ({
-                    id: id,
-                    checkInDate: checkInDate ? new Date(checkInDate) : null,
-                    checkOutDate: checkOutDate ? new Date(checkOutDate) : null,
-                });
-            });
-            return true;
-        })
-            .catch(function (error) {
-            console.error(error);
-            _this._loggedIn = false;
-            _this._apiKey = null;
-            _this._role = null;
-            _this._siteVisits = [];
-            return __WEBPACK_IMPORTED_MODULE_4_rxjs_Observable__["Observable"].of(false);
-        });
-    };
-    AuthService.prototype.checkPassword = function (password) {
-        if (!this._hashedPassword) {
-            return false;
-        }
-        return __WEBPACK_IMPORTED_MODULE_0_bcryptjs__["compareSync"](password, this._hashedPassword);
-    };
-    AuthService = __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_3__angular_core__["B" /* Injectable */])(),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1__angular_http__["b" /* Http */]])
-    ], AuthService);
-    return AuthService;
-}());
-
-//# sourceMappingURL=auth.js.map
-
-/***/ }),
-
-/***/ 47:
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return SharedService; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_rxjs_add_operator_map__ = __webpack_require__(121);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_rxjs_add_operator_map___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_rxjs_add_operator_map__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__auth__ = __webpack_require__(45);
-var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
-    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-    return c > 3 && r && Object.defineProperty(target, key, r), r;
-};
-
-
-
-/*
-  Generated class for the Tudomundo provider.
-
-  See https://angular.io/docs/ts/latest/guide/dependency-injection.html
-  for more info on providers and Angular 2 DI.
-*/
-var SharedService = (function () {
-    function SharedService() {
-        this.siteId = null;
-        // For prestart
-        this.siteOpened = false;
-        this.supervisorRole = false;
-        this.dvtGlobals = {
-            supervisor: false,
-            role: __WEBPACK_IMPORTED_MODULE_2__auth__["b" /* UserRole */].Staff,
-            lvtDebug: "lenny1",
-            username: "freddy"
-        };
-        this._singlePass = false;
-    }
-    SharedService.prototype.setUserRole = function (isSupervisor) {
-        this.supervisorRole = isSupervisor;
-    };
-    SharedService.prototype.getLenny = function () {
-        return this.dvtGlobals;
-    };
-    SharedService.prototype.setLenny = function (isSupervisor, role, dbgStr) {
-        this.dvtGlobals.role = role;
-        this.dvtGlobals.supervisor = isSupervisor;
-        this.dvtGlobals.lvtDebug = dbgStr;
-    };
-    // Single pass semaphore
-    // You can trigger it to allow user a single pass to prestart page after succesful login
-    SharedService.prototype.getSinglePass = function () {
-        var ret = this._singlePass;
-        this._singlePass = false;
-        return ret;
-    };
-    SharedService.prototype.triggerSinglePass = function () {
-        this._singlePass = true;
-    };
-    SharedService = __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_1__angular_core__["B" /* Injectable */])()
-    ], SharedService);
-    return SharedService;
-}());
-
-//# sourceMappingURL=shared.js.map
-
-/***/ }),
-
 /***/ 562:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -3081,7 +3120,7 @@ var SharedService = (function () {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__ionic_native_geolocation__ = __webpack_require__(60);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__providers_prestart_configuration__ = __webpack_require__(90);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__providers_shared__ = __webpack_require__(47);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__providers_shared__ = __webpack_require__(31);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__swm_swm__ = __webpack_require__(205);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__providers_swm__ = __webpack_require__(66);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__classes_worker_model__ = __webpack_require__(89);
@@ -3223,7 +3262,7 @@ var ClockOnPage = (function () {
     };
     ClockOnPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_2__angular_core__["n" /* Component */])({
-            selector: 'page-clock-on',template:/*ion-inline-start:"/home/duane/dev/willow/knddec/src/pages/clock-on/clock-on.html"*/`<ion-header>\n  <ion-navbar>\n    <ion-title>Daily Attendance Record (Clock on)</ion-title>\n  </ion-navbar>\n</ion-header>\n\n\n<ion-content class="notifications-content">\n  <ion-item-group>\n    <ion-item-divider class="notifications-divider">Yet to arrive (assigned for this site)</ion-item-divider>\n    <ion-item class="notification-item"\n      *ngFor="let worker of workersNotStartedThisSite.items"\n      (click)="startSignIn(worker)"\n      [ngClass]="{\'non-compliant\': !worker.swmCompliant}">\n      <ion-avatar item-left>\n        <preload-image class="user-image"\n          [ratio]="{w:1, h:1}"\n          [src]="worker.image || defaultPersonImage"></preload-image>\n      </ion-avatar>\n      <h2 class="item-title">{{worker.name}}</h2>\n      <p class="item-description">{{worker.message}}</p>\n      <!--<ion-note class="item-time" item-right>{{worker.date}}</ion-note>-->\n    </ion-item>\n    <ion-item-divider class="notifications-divider">Yet to arrive (other sites)</ion-item-divider>\n    <ion-item class="notification-item"\n      *ngFor="let worker of workersNotStartedOtherSites.items"\n      (click)="startSignIn(worker)"\n      [ngClass]="{\'non-compliant\': !worker.swmCompliant}">\n      <ion-avatar item-left>\n        <preload-image class="user-image"\n          [ratio]="{w:1, h:1}"\n          [src]="worker.image || defaultPersonImage"></preload-image>\n      </ion-avatar>\n      <h2 class="item-title">{{worker.name}}</h2>\n      <p class="item-description">{{worker.message}}</p>\n      <!--<ion-note class="item-time" item-right>{{worker.date}}</ion-note>-->\n    </ion-item>\n    <ion-item-divider class="notifications-divider">Signed In</ion-item-divider>\n    <ion-item class="notification-item"\n      *ngFor="let worker of workersStarted.items"\n      [ngClass]="{\'non-compliant\': !worker.swmCompliant}">\n      <ion-avatar item-left>\n        <preload-image class="user-image"\n          [ratio]="{w:1, h:1}"\n          [src]="worker.image || defaultPersonImage"></preload-image>\n      </ion-avatar>\n      <h2 class="item-title">{{worker.name}}</h2>\n      <p class="item-description">{{worker.message}}</p>\n      <ion-note class="item-time"\n        item-right>{{worker.clockOn}}</ion-note>\n    </ion-item>\n  </ion-item-group>\n</ion-content>\n`/*ion-inline-end:"/home/duane/dev/willow/knddec/src/pages/clock-on/clock-on.html"*/
+            selector: 'page-clock-on',template:/*ion-inline-start:"/home/duane/dev/willow/knddec/src/pages/clock-on/clock-on.html"*/`<ion-header>\n  <ion-navbar>\n    <button ion-button\n      menuToggle>\n      <ion-icon name="menu"></ion-icon>\n    </button>\n    <ion-title>Daily Attendance Record (Clock on)</ion-title>\n  </ion-navbar>\n</ion-header>\n\n<ion-content class="notifications-content">\n  <ion-item-group>\n    <ion-item-divider class="notifications-divider">Yet to arrive (assigned for this site)</ion-item-divider>\n    <ion-item class="notification-item"\n      *ngFor="let worker of workersNotStartedThisSite.items"\n      (click)="startSignIn(worker)"\n      [ngClass]="{\'non-compliant\': !worker.swmCompliant}">\n      <ion-avatar item-left>\n        <preload-image class="user-image"\n          [ratio]="{w:1, h:1}"\n          [src]="worker.image || defaultPersonImage"></preload-image>\n      </ion-avatar>\n      <h2 class="item-title">{{worker.name}}</h2>\n      <p class="item-description">{{worker.message}}</p>\n      <!--<ion-note class="item-time" item-right>{{worker.date}}</ion-note>-->\n    </ion-item>\n    <ion-item-divider class="notifications-divider">Yet to arrive (other sites)</ion-item-divider>\n    <ion-item class="notification-item"\n      *ngFor="let worker of workersNotStartedOtherSites.items"\n      (click)="startSignIn(worker)"\n      [ngClass]="{\'non-compliant\': !worker.swmCompliant}">\n      <ion-avatar item-left>\n        <preload-image class="user-image"\n          [ratio]="{w:1, h:1}"\n          [src]="worker.image || defaultPersonImage"></preload-image>\n      </ion-avatar>\n      <h2 class="item-title">{{worker.name}}</h2>\n      <p class="item-description">{{worker.message}}</p>\n      <!--<ion-note class="item-time" item-right>{{worker.date}}</ion-note>-->\n    </ion-item>\n    <ion-item-divider class="notifications-divider">Signed In</ion-item-divider>\n    <ion-item class="notification-item"\n      *ngFor="let worker of workersStarted.items"\n      [ngClass]="{\'non-compliant\': !worker.swmCompliant}">\n      <ion-avatar item-left>\n        <preload-image class="user-image"\n          [ratio]="{w:1, h:1}"\n          [src]="worker.image || defaultPersonImage"></preload-image>\n      </ion-avatar>\n      <h2 class="item-title">{{worker.name}}</h2>\n      <p class="item-description">{{worker.message}}</p>\n      <ion-note class="item-time"\n        item-right>{{worker.clockOn}}</ion-note>\n    </ion-item>\n  </ion-item-group>\n</ion-content>\n`/*ion-inline-end:"/home/duane/dev/willow/knddec/src/pages/clock-on/clock-on.html"*/
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* NavController */],
             __WEBPACK_IMPORTED_MODULE_0__providers_worker__["b" /* WorkerService */],
@@ -3275,6 +3314,7 @@ var PrestartConfiguration = (function () {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__safety_reminder_detail_safety_reminder_detail__ = __webpack_require__(207);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__providers_safety_reminder__ = __webpack_require__(209);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__classes_safety_reminder_model__ = __webpack_require__(208);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__providers_shared__ = __webpack_require__(31);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -3290,15 +3330,17 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 
+
 /*
   Safety focus is also known as safety reminder
 */
 var SafetyReminderPage = (function () {
-    function SafetyReminderPage(navCtrl, navParams, safetyReminderService, loadingCtrl) {
+    function SafetyReminderPage(navCtrl, navParams, safetyReminderService, loadingCtrl, sharedService) {
         this.navCtrl = navCtrl;
         this.navParams = navParams;
         this.safetyReminderService = safetyReminderService;
         this.loadingCtrl = loadingCtrl;
+        this.sharedService = sharedService;
         this.safetyReminders = new __WEBPACK_IMPORTED_MODULE_5__classes_safety_reminder_model__["b" /* SafetyRemindersModel */]();
         this.allChecked = false;
         this.worker = this.navParams.get('worker');
@@ -3313,6 +3355,7 @@ var SafetyReminderPage = (function () {
         console.log('ionViewDidLoad SafetyReminderPage');
         var loading = this.loadingCtrl.create();
         loading.present();
+        this.userHelperMode = this.sharedService.userHelperMode;
         var done = function () { return loading.dismiss(); };
         this.safetyReminderService
             .getData(this.worker.id)
@@ -3341,11 +3384,12 @@ var SafetyReminderPage = (function () {
     };
     SafetyReminderPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_1__angular_core__["n" /* Component */])({
-            selector: 'page-safety-reminder',template:/*ion-inline-start:"/home/duane/dev/willow/knddec/src/pages/safety-reminder/safety-reminder.html"*/`<ion-header>\n  <ion-navbar>\n    <ion-title>Safety Reminders</ion-title>\n  </ion-navbar>\n</ion-header>\n\n<ion-content class="list-big-content">\n  <!--<pre>{{worker | json}}</pre>-->\n  <div class="list-big">\n    <ion-list>\n      <ion-item class="list-item"\n        (click)="onSelectItem(item)"\n        *ngFor="let item of safetyReminders.items">\n        <ion-row no-padding\n          class="content-row">\n          <ion-col no-padding\n            col-1\n            class="item-icon item-icon--center">\n            <ion-icon name="checkmark"\n              [hidden]="!item.selected"></ion-icon>\n          </ion-col>\n          <ion-col no-padding\n            col-3\n            class="item-avatar">\n            <preload-image class="avatar-image"\n              [ratio]="{w:1, h:1}"\n              [src]="item.image"></preload-image>\n          </ion-col>\n          <ion-col no-padding\n            col-7\n            class="item-content">\n            <h3 class="item-title">{{item.name}}</h3>\n            <p class="item-description"\n              rows="3">{{item.description}}</p>\n            <!-- You can change the rows quantity by using rows="X", where X can be any number for example: rows="4" -->\n          </ion-col>\n          <ion-col no-padding\n            col-1\n            class="item-icon"\n            (click)="gotoSafetyReminderDetail(item); $event.stopPropagation()">\n            <ion-icon name="arrow-forward"></ion-icon>\n          </ion-col>\n        </ion-row>\n      </ion-item>\n    </ion-list>\n  </div>\n  <section class="form-section">\n    <button ion-button\n      block\n      class="form-action-button create-post-button"\n      [disabled]="!allChecked"\n      (click)="gotoSafetyIssues()">Next -> Issues</button>\n  </section>\n</ion-content>\n`/*ion-inline-end:"/home/duane/dev/willow/knddec/src/pages/safety-reminder/safety-reminder.html"*/
+            selector: 'page-safety-reminder',template:/*ion-inline-start:"/home/duane/dev/willow/knddec/src/pages/safety-reminder/safety-reminder.html"*/`<ion-header>\n  <ion-navbar>\n    <ion-title>Safety Reminders</ion-title>\n  </ion-navbar>\n</ion-header>\n\n<ion-content class="list-big-content">\n  <!--<pre>{{worker | json}}</pre>-->\n  <ion-card *ngIf="userHelperMode"> <!-- add boolean for help service on -->\n    <ion-card-content>\n      <ion-card-title class="item-title">\n        All Safety Reminders to be checked\n      </ion-card-title>\n      <p>All safety reminders must be read and ticked before continuing.</p>\n      <p class="item-text">\n        Click the image to mark as read.\n      </p>\n    </ion-card-content>\n  </ion-card>\n  <div class="list-big">\n    <ion-list>\n      <ion-item class="list-item"\n        (click)="onSelectItem(item)"\n        *ngFor="let item of safetyReminders.items">\n        <ion-row no-padding\n          class="content-row">\n          <ion-col no-padding\n            col-1\n            class="item-icon item-icon--center">\n            <ion-icon name="checkmark"\n              [hidden]="!item.selected"></ion-icon>\n          </ion-col>\n          <ion-col no-padding\n            col-3\n            class="item-avatar">\n            <preload-image class="avatar-image"\n              [ratio]="{w:1, h:1}"\n              [src]="item.image"></preload-image>\n          </ion-col>\n          <ion-col no-padding\n            col-7\n            class="item-content">\n            <h3 class="item-title">{{item.name}}</h3>\n            <p class="item-description"\n              rows="3">{{item.description}}</p>\n            <!-- You can change the rows quantity by using rows="X", where X can be any number for example: rows="4" -->\n          </ion-col>\n          <ion-col no-padding\n            col-1\n            class="item-icon"\n            (click)="gotoSafetyReminderDetail(item); $event.stopPropagation()">\n            <ion-icon name="arrow-forward"></ion-icon>\n          </ion-col>\n        </ion-row>\n      </ion-item>\n    </ion-list>\n  </div>\n  <section class="form-section">\n    <button ion-button\n      block\n      class="form-action-button create-post-button"\n      [disabled]="!allChecked"\n      (click)="gotoSafetyIssues()">Next -> Issues</button>\n  </section>\n</ion-content>\n`/*ion-inline-end:"/home/duane/dev/willow/knddec/src/pages/safety-reminder/safety-reminder.html"*/
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_0_ionic_angular__["i" /* NavController */], __WEBPACK_IMPORTED_MODULE_0_ionic_angular__["j" /* NavParams */],
             __WEBPACK_IMPORTED_MODULE_4__providers_safety_reminder__["a" /* SafetyReminderService */],
-            __WEBPACK_IMPORTED_MODULE_0_ionic_angular__["e" /* LoadingController */]])
+            __WEBPACK_IMPORTED_MODULE_0_ionic_angular__["e" /* LoadingController */],
+            __WEBPACK_IMPORTED_MODULE_6__providers_shared__["a" /* SharedService */]])
     ], SafetyReminderPage);
     return SafetyReminderPage;
 }());
@@ -3364,7 +3408,7 @@ var SafetyReminderPage = (function () {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__providers_check_in__ = __webpack_require__(82);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__ionic_native_geolocation__ = __webpack_require__(60);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__angular_http__ = __webpack_require__(38);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__angular_http__ = __webpack_require__(39);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__providers_issue__ = __webpack_require__(206);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__classes_issue_model__ = __webpack_require__(566);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
@@ -3437,7 +3481,7 @@ var SafetyIssuesPage = (function () {
         }
         this.getGeoLocation();
         if (this.worker.passcode) {
-            var alert = this.alertCtrl.create({
+            var alert_1 = this.alertCtrl.create({
                 title: this.worker.name,
                 inputs: [
                     {
@@ -3467,7 +3511,7 @@ var SafetyIssuesPage = (function () {
                     }
                 ]
             });
-            alert.present();
+            alert_1.present();
         }
         else {
             // Logged in as a worker or doesnt have a passcode
@@ -3557,10 +3601,17 @@ var SafetyIssuesPage = (function () {
         Object(__WEBPACK_IMPORTED_MODULE_3__angular_core__["n" /* Component */])({
             selector: 'page-safety-issues',template:/*ion-inline-start:"/home/duane/dev/willow/knddec/src/pages/safety-issues/safety-issues.html"*/`<ion-header>\n  <ion-navbar>\n    <ion-title>Safety Issues</ion-title>\n  </ion-navbar>\n</ion-header>\n\n<ion-content class="list-mini-content">\n  <div class="list-mini">\n    <ion-item-divider>Read and check off issues</ion-item-divider>\n    <ion-list>\n      <ion-item class="list-item" tappable *ngFor="let item of safetyIssues.items" (click)="onSelectItem(item)">\n        <ion-row no-padding class="content-row">\n          <!-- You can limit the rows of the description by using the class one-line. If you remove it, all the content from the row will be shown -->\n          <!--<ion-col no-padding width-18 class="item-avatar">\n            <preload-image class="avatar-image" [ratio]="{w:1, h:1}" [src]="item.image"></preload-image>\n          </ion-col>-->\n          <ion-col no-padding col-10 col-sm-11 class="item-content">\n            <h3 class="item-title">{{item.name}}</h3>\n            <p class="item-description">{{item.description}}</p>\n          </ion-col>\n          <ion-col no-padding col-2 col-sm-1 class="item-icon">\n            <ion-icon name="checkmark" [hidden]="!item.selected"></ion-icon>\n          </ion-col>\n        </ion-row>\n      </ion-item>\n    </ion-list>\n  </div>\n\n  <section class="form-section">\n    <button ion-button block class="form-action-button create-post-button" (click)="clockOn()" [disabled]="!allChecked">Clock On</button>\n  </section>\n\n</ion-content>\n`/*ion-inline-end:"/home/duane/dev/willow/knddec/src/pages/safety-issues/safety-issues.html"*/
         }),
-        __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_0_ionic_angular__["i" /* NavController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_0_ionic_angular__["i" /* NavController */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_0_ionic_angular__["j" /* NavParams */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_0_ionic_angular__["j" /* NavParams */]) === "function" && _b || Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_0_ionic_angular__["e" /* LoadingController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_0_ionic_angular__["e" /* LoadingController */]) === "function" && _c || Object, typeof (_d = typeof __WEBPACK_IMPORTED_MODULE_6__providers_issue__["a" /* IssueService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_6__providers_issue__["a" /* IssueService */]) === "function" && _d || Object, typeof (_e = typeof __WEBPACK_IMPORTED_MODULE_0_ionic_angular__["a" /* AlertController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_0_ionic_angular__["a" /* AlertController */]) === "function" && _e || Object, typeof (_f = typeof __WEBPACK_IMPORTED_MODULE_4__ionic_native_geolocation__["a" /* Geolocation */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_4__ionic_native_geolocation__["a" /* Geolocation */]) === "function" && _f || Object, typeof (_g = typeof __WEBPACK_IMPORTED_MODULE_5__angular_http__["b" /* Http */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_5__angular_http__["b" /* Http */]) === "function" && _g || Object, typeof (_h = typeof __WEBPACK_IMPORTED_MODULE_2__providers_check_in__["a" /* CheckInOutService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__providers_check_in__["a" /* CheckInOutService */]) === "function" && _h || Object, typeof (_j = typeof __WEBPACK_IMPORTED_MODULE_0_ionic_angular__["m" /* ToastController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_0_ionic_angular__["m" /* ToastController */]) === "function" && _j || Object])
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_0_ionic_angular__["i" /* NavController */],
+            __WEBPACK_IMPORTED_MODULE_0_ionic_angular__["j" /* NavParams */],
+            __WEBPACK_IMPORTED_MODULE_0_ionic_angular__["e" /* LoadingController */],
+            __WEBPACK_IMPORTED_MODULE_6__providers_issue__["a" /* IssueService */],
+            __WEBPACK_IMPORTED_MODULE_0_ionic_angular__["a" /* AlertController */],
+            __WEBPACK_IMPORTED_MODULE_4__ionic_native_geolocation__["a" /* Geolocation */],
+            __WEBPACK_IMPORTED_MODULE_5__angular_http__["b" /* Http */],
+            __WEBPACK_IMPORTED_MODULE_2__providers_check_in__["a" /* CheckInOutService */],
+            __WEBPACK_IMPORTED_MODULE_0_ionic_angular__["m" /* ToastController */]])
     ], SafetyIssuesPage);
     return SafetyIssuesPage;
-    var _a, _b, _c, _d, _e, _f, _g, _h, _j;
 }());
 
 //# sourceMappingURL=safety-issues.js.map
@@ -3700,7 +3751,7 @@ var EquipmentPrestartPage = (function () {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(7);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__profile_profile__ = __webpack_require__(570);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_rxjs_Rx__ = __webpack_require__(41);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_rxjs_Rx__ = __webpack_require__(43);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_rxjs_Rx___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3_rxjs_Rx__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__feed_model__ = __webpack_require__(1010);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__feed_service__ = __webpack_require__(578);
@@ -3768,10 +3819,10 @@ var FeedPage = (function () {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ProfilePage; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_rxjs_Rx__ = __webpack_require__(41);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_rxjs_Rx__ = __webpack_require__(43);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_rxjs_Rx___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_rxjs_Rx__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(7);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__providers_auth__ = __webpack_require__(45);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__providers_auth__ = __webpack_require__(41);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__followers_followers__ = __webpack_require__(212);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__profile_model__ = __webpack_require__(571);
@@ -3939,10 +3990,10 @@ var ForgotPasswordPage = (function () {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return PrestartPage; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_rxjs_Rx__ = __webpack_require__(41);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_rxjs_Rx__ = __webpack_require__(43);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_rxjs_Rx___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_rxjs_Rx__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(7);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__providers_auth__ = __webpack_require__(45);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__providers_auth__ = __webpack_require__(41);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__providers_issue__ = __webpack_require__(206);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__classes_issue_model__ = __webpack_require__(566);
@@ -3951,7 +4002,7 @@ var ForgotPasswordPage = (function () {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__safety_reminder_detail_safety_reminder_detail__ = __webpack_require__(207);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__providers_safety_reminder__ = __webpack_require__(209);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__classes_safety_reminder_model__ = __webpack_require__(208);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__providers_shared__ = __webpack_require__(47);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__providers_shared__ = __webpack_require__(31);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__providers_sites__ = __webpack_require__(124);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__swm_detail_swm_detail__ = __webpack_require__(210);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_14__swm_list_edit_swm_list_edit__ = __webpack_require__(574);
@@ -4445,13 +4496,13 @@ var SignupPage = (function () {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return WorkerClockonPage; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_rxjs_Rx__ = __webpack_require__(41);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_rxjs_Rx__ = __webpack_require__(43);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_rxjs_Rx___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_rxjs_Rx__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_moment__ = __webpack_require__(2);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_moment___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_moment__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_ionic_angular__ = __webpack_require__(7);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__classes_worker_model__ = __webpack_require__(89);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__providers_auth__ = __webpack_require__(45);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__providers_auth__ = __webpack_require__(41);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__providers_check_in__ = __webpack_require__(82);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__providers_worker__ = __webpack_require__(62);
@@ -4638,7 +4689,7 @@ var WorkerClockonPage = (function () {
     };
     WorkerClockonPage.prototype.getSiteName = function () {
         if (!this.siteId) {
-            return '<NOT SELECTED>';
+            return '<Please select a site>';
         }
         else {
             return (this.siteService.byId(this.siteId) || { label: 'Unknown' }).label;
@@ -4707,13 +4758,14 @@ var WorkerClockonPage = (function () {
                 {
                     text: 'Sign Off',
                     handler: function (data) {
-                        if (!_this.location) {
-                            _this.location = { lat: null, lon: null };
-                        }
                         console.log("clock off with " + _this.worker.name + " " + data.password);
                         console.log(_this.worker.name);
                         console.log(typeof data.password);
                         if (data.password.localeCompare(_this.worker.passcode) === 0 || _this.auth.checkPassword(data.password)) {
+                            _this.getGeoLocation(); // get fresh location
+                            if (!_this.location) {
+                                _this.location = { lat: null, lon: null };
+                            }
                             _this.updateWorkerClockOff();
                             _this.checkOutService.checkOut(_this.siteId, _this.lunch, _this.location.lat, _this.location.lon, _this.worker.id).subscribe(function (response) {
                                 if (!response.success) {
@@ -4834,7 +4886,7 @@ var WorkerClockonPage = (function () {
     };
     WorkerClockonPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_6__angular_core__["n" /* Component */])({
-            selector: 'worker-clockon-page',template:/*ion-inline-start:"/home/duane/dev/willow/knddec/src/pages/worker-clockon/worker-clockon.html"*/`<ion-header>\n  <ion-navbar>\n    <button ion-button\n      menuToggle>\n      <ion-icon name="menu"></ion-icon>\n    </button>\n    <ion-title>Clock On</ion-title>\n  </ion-navbar>\n</ion-header>\n\n<ion-content class="profile-content">\n  <div class="user-details">\n    <ion-row class="user-main-data-row">\n      <ion-col no-padding\n        width-33>\n        <preload-image class="user-image"\n          [ratio]="{w:1, h:1}"\n          [src]="profile.user.image || defaultPersonImage"\n          [alt]="profile.user.name"\n          [title]="profile.user.name"></preload-image>\n      </ion-col>\n      <ion-col no-padding>\n        <ion-row class="social-presence-row">\n          <ion-col width-50\n            class="social-presence-item">\n            <a (click)="goToFollowersList()">\n              <h2 class="social-presence-value">{{profile.followers.length}}</h2>\n              <h4 class="social-presence-title">Followers</h4>\n            </a>\n          </ion-col>\n          <ion-col width-50\n            class="social-presence-item">\n            <a (click)="goToFollowingList()">\n              <h2 class="social-presence-value">{{profile.following.length}}</h2>\n              <h4 class="social-presence-title">Following</h4>\n            </a>\n          </ion-col>\n        </ion-row>\n        <ion-row class="profile-action-row">\n          <ion-col no-padding>\n            <button ion-button\n              block\n              small\n              (click)="goToSettings()">\n              Edit profile\n            </button>\n          </ion-col>\n        </ion-row>\n      </ion-col>\n    </ion-row>\n    <ion-row wrap\n      class="user-bio-row">\n      <ion-col no-padding\n        width-50>\n        <h2 class="user-name">{{profile.user.name}}</h2>\n      </ion-col>\n      <ion-col no-padding\n        width-50>\n        <span class="user-location">{{profile.user.location}}</span>\n      </ion-col>\n      <ion-col no-padding\n        width-100>\n        <p class="user-description">\n          {{profile.user.about}}\n        </p>\n      </ion-col>\n    </ion-row>\n    <section class="form-section choose-category-section"\n      align-items-center>\n      <ion-row>\n        <ion-col>\n          <button ion-button\n            block\n            icon-right\n            class="choose-category-button"\n            (click)="chooseCategory()"\n            *ngIf="this.siteService.sites.length">\n            {{ getSiteName() }}\n            <ion-icon name="arrow-dropdown"></ion-icon>\n          </button>\n          <h4 padding\n            *ngIf="!this.siteService.sites.length && !loading">\n            No sites assigned for you. Please refer to your site\'s admin\n          </h4>\n        </ion-col>\n        <ion-col col-auto>\n          <button ion-button\n            icon-only\n            [disabled]="loading"\n            (click)="refreshSites()">\n            <ion-icon name="refresh"></ion-icon>\n          </button>\n        </ion-col>\n      </ion-row>\n    </section>\n    <section *ngIf="getSite() && getSite().open && !!prestartConfiguration">\n      <ion-item-divider>Tasks</ion-item-divider>\n      <div class="sample-form">\n        <ion-list class="sample-form checkbox-tags">\n          <ion-item class="checkbox-tag"\n            *ngFor="let task of siteTaskList.items">\n            <ion-label>{{task.name}}</ion-label>\n          </ion-item>\n        </ion-list>\n        <section class="form-section"\n          *ngIf="!worker.clockedOn && !worker.clockedOff">\n          <button ion-button\n            block\n            class="form-action-button create-post-button"\n            [disabled]="!siteId"\n            (click)="startSignIn()">Clock On</button>\n        </section>\n        <section class="form-section"\n          *ngIf="worker.clockedOn && !worker.clockedOff">\n          <ion-item>\n            <span item-left>Clocked On</span>\n            <span item-right>{{worker.clockOn}}</span>\n          </ion-item>\n          <ion-item>\n            <ion-label>Lunch</ion-label>\n            <ion-checkbox [(ngModel)]="lunch"></ion-checkbox>\n          </ion-item>\n          <button ion-button\n            block\n            class="form-action-button create-post-button"\n            (click)="startSignOff()">Clock Off</button>\n        </section>\n        <section class="form-section"\n          *ngIf="worker.clockedOn && worker.clockedOff">\n          <ion-item>\n            <span item-left>Clocked On</span>\n            <span item-right>{{worker.clockOn}}</span>\n          </ion-item>\n          <ion-item>\n            <span item-left>Clocked Off</span>\n            <span item-right>{{worker.clockOff}}</span>\n          </ion-item>\n          <h3>You have clocked off for the day</h3>\n          <button ion-button\n            block\n            class="form-action-button create-post-button">Request Change</button>\n        </section>\n      </div>\n\n    </section>\n    <section *ngIf="getSite() && !getSite().open"\n      padding>\n      <h4>The prestart has not been completed yet</h4>\n      <p>Contact your site\'s supervisor, and press "refresh" button</p>\n    </section>\n  </div>\n</ion-content>\n`/*ion-inline-end:"/home/duane/dev/willow/knddec/src/pages/worker-clockon/worker-clockon.html"*/
+            selector: 'worker-clockon-page',template:/*ion-inline-start:"/home/duane/dev/willow/knddec/src/pages/worker-clockon/worker-clockon.html"*/`<ion-header>\n  <ion-navbar>\n    <button ion-button\n      menuToggle>\n      <ion-icon name="menu"></ion-icon>\n    </button>\n    <ion-title>Clock On</ion-title>\n  </ion-navbar>\n</ion-header>\n\n<ion-content class="profile-content">\n  <div class="user-details">\n    <ion-row class="user-main-data-row">\n      <ion-col no-padding\n        width-33>\n        <preload-image class="user-image"\n          [ratio]="{w:1, h:1}"\n          [src]="profile.user.image || defaultPersonImage"\n          [alt]="profile.user.name"\n          [title]="profile.user.name"></preload-image>\n      </ion-col>\n      <ion-col no-padding>\n        <ion-row class="social-presence-row">\n          <ion-col width-50\n            class="social-presence-item">\n            <a (click)="goToFollowersList()">\n              <h2 class="social-presence-value">{{profile.followers.length}}</h2>\n              <h4 class="social-presence-title">Followers</h4>\n            </a>\n          </ion-col>\n          <ion-col width-50\n            class="social-presence-item">\n            <a (click)="goToFollowingList()">\n              <h2 class="social-presence-value">{{profile.following.length}}</h2>\n              <h4 class="social-presence-title">Following</h4>\n            </a>\n          </ion-col>\n        </ion-row>\n        <ion-row class="profile-action-row">\n          <ion-col no-padding>\n            <button ion-button\n              block\n              small\n              (click)="goToSettings()">\n              Edit profile\n            </button>\n          </ion-col>\n        </ion-row>\n      </ion-col>\n    </ion-row>\n    <ion-row wrap\n      class="user-bio-row">\n      <ion-col no-padding\n        width-50>\n        <h2 class="user-name">{{profile.user.name}}</h2>\n      </ion-col>\n      <ion-col no-padding\n        width-50>\n        <span class="user-location">{{profile.user.location}}</span>\n      </ion-col>\n      <ion-col no-padding\n        width-100>\n        <p class="user-description">\n          {{profile.user.about}}\n        </p>\n      </ion-col>\n    </ion-row>\n    <section class="form-section choose-category-section"\n      align-items-center>\n      <ion-row>\n        <ion-col>\n          <button ion-button\n            block\n            icon-right\n            class="choose-category-button"\n            (click)="chooseCategory()"\n            *ngIf="this.siteService.sites.length">\n            {{ getSiteName() }}\n            <ion-icon name="arrow-dropdown"></ion-icon>\n          </button>\n          <h4 padding\n            *ngIf="!this.siteService.sites.length && !loading">\n            No sites assigned for you. Please refer to your site\'s admin\n          </h4>\n        </ion-col>\n        <ion-col col-auto>\n          <button ion-button\n            icon-only\n            [disabled]="loading"\n            (click)="refreshSites()">\n            <ion-icon name="refresh"></ion-icon>\n          </button>\n        </ion-col>\n      </ion-row>\n    </section>\n    <section *ngIf="getSite() && getSite().open && !!prestartConfiguration">\n      <ion-item-divider>Tasks</ion-item-divider>\n      <div class="sample-form">\n        <ion-list class="sample-form checkbox-tags">\n          <ion-item class="checkbox-tag"\n            *ngFor="let task of siteTaskList.items">\n            <ion-label>{{task.name}}</ion-label>\n          </ion-item>\n        </ion-list>\n        <section class="form-section"\n          *ngIf="!worker.clockedOn && !worker.clockedOff">\n          <button ion-button\n            block\n            class="form-action-button create-post-button"\n            [disabled]="!siteId"\n            (click)="startSignIn()">Clock On</button>\n        </section>\n        <section class="form-section"\n          *ngIf="worker.clockedOn && !worker.clockedOff">\n          <ion-item>\n            <span item-left>Clocked On</span>\n            <span item-right>{{worker.clockOn}}</span>\n          </ion-item>\n          <ion-item>\n            <ion-label>Lunch</ion-label>\n            <ion-checkbox [(ngModel)]="lunch"></ion-checkbox>\n          </ion-item>\n          <button ion-button\n            block\n            class="form-action-button create-post-button"\n            (click)="startSignOff()">Clock Off</button>\n        </section>\n        <section class="form-section"\n          *ngIf="worker.clockedOn && worker.clockedOff">\n          <ion-item>\n            <span item-left>Clocked On</span>\n            <span item-right>{{worker.clockOn}}</span>\n          </ion-item>\n          <ion-item>\n            <span item-left>Clocked Off</span>\n            <span item-right>{{worker.clockOff}}</span>\n          </ion-item>\n          <h3>You have clocked off for the day</h3>\n          <!--<button ion-button\n            block\n            class="form-action-button create-post-button">Request Change</button>-->\n        </section>\n      </div>\n\n    </section>\n    <section *ngIf="getSite() && !getSite().open"\n      padding>\n      <h4>The prestart has not been completed yet</h4>\n      <p>Contact your site\'s supervisor, and press "refresh" button</p>\n    </section>\n  </div>\n</ion-content>\n`/*ion-inline-end:"/home/duane/dev/willow/knddec/src/pages/worker-clockon/worker-clockon.html"*/
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_2_ionic_angular__["f" /* MenuController */],
             __WEBPACK_IMPORTED_MODULE_2_ionic_angular__["b" /* App */],
@@ -4864,8 +4916,8 @@ var WorkerClockonPage = (function () {
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return FeedService; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_http__ = __webpack_require__(38);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs_add_operator_toPromise__ = __webpack_require__(42);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_http__ = __webpack_require__(39);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs_add_operator_toPromise__ = __webpack_require__(44);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs_add_operator_toPromise___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_rxjs_add_operator_toPromise__);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -4910,8 +4962,8 @@ var FeedService = (function () {
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ListingService; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_http__ = __webpack_require__(38);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs_add_operator_toPromise__ = __webpack_require__(42);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_http__ = __webpack_require__(39);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs_add_operator_toPromise__ = __webpack_require__(44);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs_add_operator_toPromise___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_rxjs_add_operator_toPromise__);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -4957,7 +5009,7 @@ var ListingService = (function () {
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return TimesheetsPage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(7);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__providers_shared__ = __webpack_require__(47);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__providers_shared__ = __webpack_require__(31);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__timesheet_history_timesheet_history__ = __webpack_require__(583);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__timesheet_verify_timesheet_verify__ = __webpack_require__(584);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
@@ -5022,7 +5074,7 @@ var TimesheetsPage = (function () {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(7);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__classes_timesheet_model__ = __webpack_require__(217);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__providers_shared__ = __webpack_require__(47);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__providers_shared__ = __webpack_require__(31);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__providers_times__ = __webpack_require__(218);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -5624,8 +5676,8 @@ var WorkersPage = (function () {
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return NotificationsService; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_http__ = __webpack_require__(38);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs_add_operator_toPromise__ = __webpack_require__(42);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_http__ = __webpack_require__(39);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs_add_operator_toPromise__ = __webpack_require__(44);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs_add_operator_toPromise___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_rxjs_add_operator_toPromise__);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -5670,8 +5722,8 @@ var NotificationsService = (function () {
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ScheduleService; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_http__ = __webpack_require__(38);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs_add_operator_toPromise__ = __webpack_require__(42);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_http__ = __webpack_require__(39);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs_add_operator_toPromise__ = __webpack_require__(44);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs_add_operator_toPromise___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_rxjs_add_operator_toPromise__);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -5774,8 +5826,8 @@ Object(__WEBPACK_IMPORTED_MODULE_0__angular_platform_browser_dynamic__["a" /* pl
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(7);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__components_ma_weather__ = __webpack_require__(631);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__providers_api__ = __webpack_require__(39);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__providers_auth__ = __webpack_require__(45);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__providers_api__ = __webpack_require__(40);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__providers_auth__ = __webpack_require__(41);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__components_background_image_background_image__ = __webpack_require__(729);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__angular_platform_browser__ = __webpack_require__(57);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__providers_check_in__ = __webpack_require__(82);
@@ -5793,7 +5845,7 @@ Object(__WEBPACK_IMPORTED_MODULE_0__angular_platform_browser_dynamic__["a" /* pl
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_19__pages_form_layout_form_layout__ = __webpack_require__(1012);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_20__ionic_native_geolocation__ = __webpack_require__(60);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_21__pages_grid_grid__ = __webpack_require__(1013);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_22__angular_http__ = __webpack_require__(38);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_22__angular_http__ = __webpack_require__(39);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_23__providers_issue__ = __webpack_require__(206);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_24__pages_listing_listing__ = __webpack_require__(1014);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_25__pages_listing_listing_service__ = __webpack_require__(579);
@@ -5814,7 +5866,7 @@ Object(__WEBPACK_IMPORTED_MODULE_0__angular_platform_browser_dynamic__["a" /* pl
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_40__pages_schedule_schedule__ = __webpack_require__(1021);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_41__pages_schedule_schedule_service__ = __webpack_require__(587);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_42__pages_settings_settings__ = __webpack_require__(123);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_43__providers_shared__ = __webpack_require__(47);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_43__providers_shared__ = __webpack_require__(31);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_44__components_show_hide_password_show_hide_container__ = __webpack_require__(1023);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_45__components_show_hide_password_show_hide_input__ = __webpack_require__(588);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_46__pages_signup_signup__ = __webpack_require__(576);
@@ -6028,7 +6080,7 @@ var AppModule = (function () {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_rxjs_add_operator_map___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_rxjs_add_operator_map__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_moment__ = __webpack_require__(2);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_moment___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_moment__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__api__ = __webpack_require__(39);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__api__ = __webpack_require__(40);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__classes_exceptions_not_authenticated_error__ = __webpack_require__(1007);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__angular_core__ = __webpack_require__(0);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
@@ -6168,7 +6220,7 @@ var WorkerService = (function () {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(7);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__ionic_native_geolocation__ = __webpack_require__(60);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__angular_http__ = __webpack_require__(38);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__angular_http__ = __webpack_require__(39);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__ma_weather_config__ = __webpack_require__(639);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__ma_weather_details__ = __webpack_require__(318);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
@@ -6553,9 +6605,9 @@ var MaWeatherContentController = (function () {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return SwmService; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_rxjs_add_operator_toPromise__ = __webpack_require__(42);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_rxjs_add_operator_toPromise__ = __webpack_require__(44);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_rxjs_add_operator_toPromise___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_rxjs_add_operator_toPromise__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__api__ = __webpack_require__(39);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__api__ = __webpack_require__(40);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__classes_swm_model__ = __webpack_require__(91);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
@@ -6726,9 +6778,9 @@ var BackgroundImage = (function () {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return CheckInOutService; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__api__ = __webpack_require__(39);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__api__ = __webpack_require__(40);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs__ = __webpack_require__(41);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs__ = __webpack_require__(43);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_rxjs__);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -6834,9 +6886,9 @@ var SiteVisit = (function () {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return PrestartConfigurationService; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_rxjs_add_operator_toPromise__ = __webpack_require__(42);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_rxjs_add_operator_toPromise__ = __webpack_require__(44);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_rxjs_add_operator_toPromise___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_rxjs_add_operator_toPromise__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__api__ = __webpack_require__(39);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__api__ = __webpack_require__(40);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__classes_prestart_configuration_model__ = __webpack_require__(563);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
@@ -6943,11 +6995,11 @@ var SwmsModel = (function () {
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return TabsNavigationPage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_ionic_angular__ = __webpack_require__(7);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__providers_auth__ = __webpack_require__(45);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__providers_auth__ = __webpack_require__(41);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__clock_off_clock_off__ = __webpack_require__(443);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__clock_on_clock_on__ = __webpack_require__(562);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__prestart_prestart__ = __webpack_require__(573);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__providers_shared__ = __webpack_require__(47);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__providers_shared__ = __webpack_require__(31);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
