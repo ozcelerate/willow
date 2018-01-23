@@ -1466,9 +1466,9 @@ var SiteService = (function () {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__safety_reminder_safety_reminder__ = __webpack_require__(564);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__swm_detail_swm_detail__ = __webpack_require__(210);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__providers_swm__ = __webpack_require__(66);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__providers_swm__ = __webpack_require__(67);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__classes_swm_model__ = __webpack_require__(91);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__providers_worker__ = __webpack_require__(62);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__providers_worker__ = __webpack_require__(63);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__providers_shared__ = __webpack_require__(31);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -1502,7 +1502,12 @@ var SwmPage = (function () {
     }
     SwmPage.prototype.ionViewDidLoad = function () {
         console.log('ionViewDidLoad SwmPage');
+        // this.worker = new WorkerModel();
+        // console.log("checkout out worker modle")
+        // console.log(this.worker)
         this.worker = this.navParams.get('worker');
+        // console.log("now check it again the worker")
+        // console.log(this.worker)
         this.prestartConfiguration = this.navParams.get('prestart');
         this.siteId = +this.navParams.get('siteId');
         console.log('Worker', this.worker);
@@ -1534,12 +1539,12 @@ var SwmPage = (function () {
                         _this.workerService
                             .approveSwm(swm.id, _this.worker.id)
                             .then(function () {
-                            _this.worker.claimedSwms.push(swm.id);
+                            _this.worker.claimedSwms.push({ swm: swm.id, site: _this.siteId });
                             _this.updateActiveSwms();
                         }, function () {
                             _this.notify('Server error. Please try again later');
                             // TODO: Remove mock below after backend completion
-                            _this.worker.claimedSwms.push(swm.id);
+                            _this.worker.claimedSwms.push({ swm: swm.id, site: _this.siteId });
                             _this.updateActiveSwms();
                         });
                     }
@@ -1571,11 +1576,12 @@ var SwmPage = (function () {
     };
     SwmPage.prototype.updateActiveSwms = function () {
         var _this = this;
+        console.log(this.worker);
         this.activeSWMs.items = this.swmService
             .getSwmList().items.filter(function (swm) {
             // firstly, set the traffic light based on if worker has done swm courses
-            if (_this.worker.validSwms.indexOf(swm.id) < 0) {
-                if ((_this.worker.claimedSwms || []).indexOf(swm.id) >= 0) {
+            if (!_this.worker.hasValidSwm(_this.siteId, swm.id)) {
+                if (_this.worker.hasClaimedSwm(_this.siteId, swm.id)) {
                     // Claimed for offline certification
                     swm.red = false;
                     swm.yellow = true;
@@ -1599,24 +1605,18 @@ var SwmPage = (function () {
         });
         this.worker.swmCompliant =
             this.prestartConfiguration.swms.every(function (swmId) {
-                return _this.worker.validSwms.indexOf(swmId) >= 0 ||
-                    (_this.worker.claimedSwms || []).indexOf(swmId) >= 0;
+                return _this.worker.hasValidSwm(_this.siteId, swmId) ||
+                    _this.worker.hasClaimedSwm(_this.siteId, swmId);
             });
     };
     SwmPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_1__angular_core__["n" /* Component */])({
             selector: 'page-swm',template:/*ion-inline-start:"/home/duane/dev/willow/knddec/src/pages/swm/swm.html"*/`<ion-header>\n  <ion-navbar>\n    <ion-title>SWMs</ion-title>\n  </ion-navbar>\n</ion-header>\n\n\n<ion-content class="schedule-content">\n  <ion-list class="schedule-list">\n    <ion-item class="schedule-item"\n      *ngFor="let item of activeSWMs.items">\n      <ion-row>\n        <ion-col col-2\n          class="schedule-date"\n          (click)="smwOverride(item)">\n          <!--<h2 class="schedule-day">{{item.id}}</h2>\n            <h3 class="schedule-month">{{item.inuse}}</h3>\n            <h4 class="schedule-time">{{item.name}}</h4>-->\n          <!-- inspiredby http://fiddle.jshell.net/chrisupjohn/u9yD4/ -->\n          <div id="light">\n            <span [class.active]="item.red"\n              id="red"></span>\n            <span [class.active]="item.yellow"\n              id="orange"></span>\n            <span [class.active]="item.green"\n              id="green"></span>\n          </div>\n        </ion-col>\n        <ion-col col-10\n          class="schedule-data">\n          <div class="data-item"\n            (click)="swmdetails(item.id, item)">\n            <div class="item-content">\n              <h2 class="item-title one-line">{{item.name}}</h2>\n              <!--\n              <div class="item-description">\n                <ion-icon class="description-icon"\n                  name="clock"></ion-icon>\n                <p class="description-text">{{item.inuse ? \'In use\' : \'Not in use\'}}</p>\n              </div>\n              -->\n              <div class="item-description">\n                <ion-icon class="description-icon"\n                  name="navigate"></ion-icon>\n                <p class="description-text one-line">{{item.abstract}}</p>\n              </div>\n            </div>\n            <ion-icon class="item-icon"\n              name="arrow-forward"></ion-icon>\n          </div>\n        </ion-col>\n      </ion-row>\n    </ion-item>\n  </ion-list>\n  <ion-card *ngIf="worker?.swmCompliant === false && userHelperMode">\n    <ion-card-content>\n      <ion-card-title class="item-title">\n        SWMs Incomplete - {{ worker?.swmCompliant }}\n      </ion-card-title>\n      <p>All SWMs must be <span style=\'color: aquamarine\'>complete</span> or <span style=\'color: orange\'>user overridden</span> to continue</p>\n      <p class="item-text">\n        System records show that you haven\'t completed all the neccessary SWMs.\n      </p>\n      <p class="item-text">\n        If you have completed the SWM then click on the traffic light and a yellow\n        indication will allow you to proceed and notify the supervisor to verify the SWM.\n      </p>\n      <p>Please contact the supervisor if you haven\'t completed the SWM</p>\n    </ion-card-content>\n  </ion-card>\n  <section class="form-section">\n    <button ion-button\n      block\n      class="form-action-button create-post-button"\n      [disabled]="!worker?.swmCompliant"\n      (click)="gotoReminders()">Next -> Safety Reminders</button>\n  </section>\n\n</ion-content>\n`/*ion-inline-end:"/home/duane/dev/willow/knddec/src/pages/swm/swm.html"*/
         }),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_0_ionic_angular__["i" /* NavController */],
-            __WEBPACK_IMPORTED_MODULE_0_ionic_angular__["j" /* NavParams */],
-            __WEBPACK_IMPORTED_MODULE_4__providers_swm__["a" /* SwmService */],
-            __WEBPACK_IMPORTED_MODULE_0_ionic_angular__["e" /* LoadingController */],
-            __WEBPACK_IMPORTED_MODULE_6__providers_worker__["b" /* WorkerService */],
-            __WEBPACK_IMPORTED_MODULE_0_ionic_angular__["a" /* AlertController */],
-            __WEBPACK_IMPORTED_MODULE_0_ionic_angular__["m" /* ToastController */],
-            __WEBPACK_IMPORTED_MODULE_7__providers_shared__["a" /* SharedService */]])
+        __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_0_ionic_angular__["i" /* NavController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_0_ionic_angular__["i" /* NavController */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_0_ionic_angular__["j" /* NavParams */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_0_ionic_angular__["j" /* NavParams */]) === "function" && _b || Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_4__providers_swm__["a" /* SwmService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_4__providers_swm__["a" /* SwmService */]) === "function" && _c || Object, typeof (_d = typeof __WEBPACK_IMPORTED_MODULE_0_ionic_angular__["e" /* LoadingController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_0_ionic_angular__["e" /* LoadingController */]) === "function" && _d || Object, typeof (_e = typeof __WEBPACK_IMPORTED_MODULE_6__providers_worker__["b" /* WorkerService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_6__providers_worker__["b" /* WorkerService */]) === "function" && _e || Object, typeof (_f = typeof __WEBPACK_IMPORTED_MODULE_0_ionic_angular__["a" /* AlertController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_0_ionic_angular__["a" /* AlertController */]) === "function" && _f || Object, typeof (_g = typeof __WEBPACK_IMPORTED_MODULE_0_ionic_angular__["m" /* ToastController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_0_ionic_angular__["m" /* ToastController */]) === "function" && _g || Object, typeof (_h = typeof __WEBPACK_IMPORTED_MODULE_7__providers_shared__["a" /* SharedService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_7__providers_shared__["a" /* SharedService */]) === "function" && _h || Object])
     ], SwmPage);
     return SwmPage;
+    var _a, _b, _c, _d, _e, _f, _g, _h;
 }());
 
 //# sourceMappingURL=swm.js.map
@@ -2048,7 +2048,7 @@ var FollowersPage = (function () {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__providers_auth__ = __webpack_require__(41);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_forms__ = __webpack_require__(22);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_ionic_angular__ = __webpack_require__(7);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__classes_worker_model__ = __webpack_require__(89);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__classes_worker_model__ = __webpack_require__(62);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__providers_api__ = __webpack_require__(40);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__forgot_password_forgot_password__ = __webpack_require__(572);
@@ -2056,7 +2056,7 @@ var FollowersPage = (function () {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__signup_signup__ = __webpack_require__(576);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__tabs_navigation_tabs_navigation__ = __webpack_require__(92);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__worker_clockon_worker_clockon__ = __webpack_require__(577);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__providers_worker__ = __webpack_require__(62);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__providers_worker__ = __webpack_require__(63);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -2087,7 +2087,7 @@ var LoginPage = (function () {
         this.auth = auth;
         this.api = api;
         this.toastCtrl = toastCtrl;
-        this.workerlist = new __WEBPACK_IMPORTED_MODULE_3__classes_worker_model__["b" /* WorkersModel */]();
+        this.workerlist = new __WEBPACK_IMPORTED_MODULE_3__classes_worker_model__["c" /* WorkersModel */]();
         this.main_page = { component: __WEBPACK_IMPORTED_MODULE_9__tabs_navigation_tabs_navigation__["a" /* TabsNavigationPage */] };
         this.worker_login = { component: __WEBPACK_IMPORTED_MODULE_10__worker_clockon_worker_clockon__["a" /* WorkerClockonPage */] };
         this.login = new __WEBPACK_IMPORTED_MODULE_1__angular_forms__["b" /* FormGroup */]({
@@ -2725,6 +2725,7 @@ var ApiService = (function () {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_rxjs_Observable__ = __webpack_require__(1);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_rxjs_Observable___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_4_rxjs_Observable__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__classes_worker_model__ = __webpack_require__(62);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -2739,12 +2740,13 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 
+
 var UserRole;
 (function (UserRole) {
     UserRole[UserRole["Supervisor"] = 0] = "Supervisor";
     UserRole[UserRole["Staff"] = 1] = "Staff";
 })(UserRole || (UserRole = {}));
-var EMPTY_WORKER = {
+var EMPTY_WORKER = new __WEBPACK_IMPORTED_MODULE_5__classes_worker_model__["b" /* WorkerModel */]({
     id: 0,
     name: '',
     passcode: '',
@@ -2771,7 +2773,7 @@ var EMPTY_WORKER = {
     siteVisits: [],
     sitesAllowed: [],
     supervisor: false
-};
+});
 var EMPTY_USER = {
     image: '',
     location: '',
@@ -2791,7 +2793,11 @@ var AuthService = (function () {
         this._name = null;
         this._image = null;
         this._user = Object.assign({}, EMPTY_USER);
-        this._worker = Object.assign({}, EMPTY_WORKER);
+        // console.log("auth service constructor - this.worker ready?")
+        var newWorker = new __WEBPACK_IMPORTED_MODULE_5__classes_worker_model__["b" /* WorkerModel */]();
+        // console.log(this._worker)
+        this._worker = Object.assign(newWorker, EMPTY_WORKER);
+        // console.log(this._worker)
     }
     Object.defineProperty(AuthService.prototype, "loggedIn", {
         get: function () {
@@ -2865,7 +2871,9 @@ var AuthService = (function () {
         this._name = null;
         this._image = null;
         this._user = Object.assign({}, EMPTY_USER);
-        this._worker = Object.assign({}, EMPTY_WORKER);
+        var newWorker = new __WEBPACK_IMPORTED_MODULE_5__classes_worker_model__["b" /* WorkerModel */]();
+        this._worker = Object.assign(newWorker, EMPTY_WORKER);
+        // this._worker = Object.assign({}, EMPTY_WORKER);
     };
     AuthService.prototype.login = function (username, password) {
         var _this = this;
@@ -2917,9 +2925,10 @@ var AuthService = (function () {
     };
     AuthService = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_3__angular_core__["B" /* Injectable */])(),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1__angular_http__["b" /* Http */]])
+        __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__angular_http__["b" /* Http */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__angular_http__["b" /* Http */]) === "function" && _a || Object])
     ], AuthService);
     return AuthService;
+    var _a;
 }());
 
 //# sourceMappingURL=auth.js.map
@@ -2934,12 +2943,12 @@ var AuthService = (function () {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_rxjs_Rx__ = __webpack_require__(43);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_rxjs_Rx___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_rxjs_Rx__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(7);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__providers_worker__ = __webpack_require__(62);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__providers_check_in__ = __webpack_require__(82);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__providers_worker__ = __webpack_require__(63);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__providers_check_in__ = __webpack_require__(83);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__ionic_native_geolocation__ = __webpack_require__(60);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__providers_shared__ = __webpack_require__(31);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__classes_worker_model__ = __webpack_require__(89);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__classes_worker_model__ = __webpack_require__(62);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -2967,9 +2976,9 @@ var ClockOffPage = (function () {
         this.toast = toast;
         this.checkOutService = checkOutService;
         this.defaultPersonImage = __WEBPACK_IMPORTED_MODULE_2__providers_worker__["a" /* DEFAULT_PERSON */];
-        this.workers = new __WEBPACK_IMPORTED_MODULE_7__classes_worker_model__["b" /* WorkersModel */]();
-        this.workersWorking = new __WEBPACK_IMPORTED_MODULE_7__classes_worker_model__["b" /* WorkersModel */]();
-        this.workersFinished = new __WEBPACK_IMPORTED_MODULE_7__classes_worker_model__["b" /* WorkersModel */]();
+        this.workers = new __WEBPACK_IMPORTED_MODULE_7__classes_worker_model__["c" /* WorkersModel */]();
+        this.workersWorking = new __WEBPACK_IMPORTED_MODULE_7__classes_worker_model__["c" /* WorkersModel */]();
+        this.workersFinished = new __WEBPACK_IMPORTED_MODULE_7__classes_worker_model__["c" /* WorkersModel */]();
         this.location = {
             lat: null,
             lon: null
@@ -3115,15 +3124,15 @@ var ClockOffPage = (function () {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ClockOnPage; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__providers_worker__ = __webpack_require__(62);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__providers_worker__ = __webpack_require__(63);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(7);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__ionic_native_geolocation__ = __webpack_require__(60);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__providers_prestart_configuration__ = __webpack_require__(90);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__providers_shared__ = __webpack_require__(31);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__swm_swm__ = __webpack_require__(205);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__providers_swm__ = __webpack_require__(66);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__classes_worker_model__ = __webpack_require__(89);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__providers_swm__ = __webpack_require__(67);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__classes_worker_model__ = __webpack_require__(62);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -3159,10 +3168,10 @@ var ClockOnPage = (function () {
         this.prestartConfigurationService = prestartConfigurationService;
         this.defaultPersonImage = __WEBPACK_IMPORTED_MODULE_0__providers_worker__["a" /* DEFAULT_PERSON */];
         this.prestart = null;
-        this.workerlist = new __WEBPACK_IMPORTED_MODULE_8__classes_worker_model__["b" /* WorkersModel */]();
-        this.workersNotStartedThisSite = new __WEBPACK_IMPORTED_MODULE_8__classes_worker_model__["b" /* WorkersModel */]();
-        this.workersNotStartedOtherSites = new __WEBPACK_IMPORTED_MODULE_8__classes_worker_model__["b" /* WorkersModel */]();
-        this.workersStarted = new __WEBPACK_IMPORTED_MODULE_8__classes_worker_model__["b" /* WorkersModel */]();
+        this.workerlist = new __WEBPACK_IMPORTED_MODULE_8__classes_worker_model__["c" /* WorkersModel */]();
+        this.workersNotStartedThisSite = new __WEBPACK_IMPORTED_MODULE_8__classes_worker_model__["c" /* WorkersModel */]();
+        this.workersNotStartedOtherSites = new __WEBPACK_IMPORTED_MODULE_8__classes_worker_model__["c" /* WorkersModel */]();
+        this.workersStarted = new __WEBPACK_IMPORTED_MODULE_8__classes_worker_model__["c" /* WorkersModel */]();
         this.location = {
             lat: null,
             lon: null
@@ -3196,7 +3205,10 @@ var ClockOnPage = (function () {
             // do swm compliance
             console.log("print out worker");
             console.log(worker);
-            worker.swmCompliant = rqswms.every(function (rs) { return worker.validSwms.indexOf(rs) >= 0 || worker.claimedSwms.indexOf(rs) >= 0; });
+            worker.swmCompliant = rqswms.every(function (rs) {
+                return worker.hasValidSwm(_this.sharedService.siteId, rs) ||
+                    worker.hasClaimedSwm(_this.sharedService.siteId, rs);
+            });
             // split workers into started and not started arrays - exclude
             // workers that are finished for the day
             if (worker.clockedOn) {
@@ -3404,8 +3416,8 @@ var SafetyReminderPage = (function () {
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return SafetyIssuesPage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_ionic_angular__ = __webpack_require__(7);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__classes_worker_model__ = __webpack_require__(89);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__providers_check_in__ = __webpack_require__(82);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__classes_worker_model__ = __webpack_require__(62);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__providers_check_in__ = __webpack_require__(83);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__ionic_native_geolocation__ = __webpack_require__(60);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__angular_http__ = __webpack_require__(39);
@@ -4006,7 +4018,7 @@ var ForgotPasswordPage = (function () {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__providers_sites__ = __webpack_require__(124);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__swm_detail_swm_detail__ = __webpack_require__(210);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_14__swm_list_edit_swm_list_edit__ = __webpack_require__(574);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_15__providers_swm__ = __webpack_require__(66);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_15__providers_swm__ = __webpack_require__(67);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_16__classes_swm_model__ = __webpack_require__(91);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_17__providers_task__ = __webpack_require__(214);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_18__classes_task_model__ = __webpack_require__(575);
@@ -4325,7 +4337,7 @@ var PrestartPage = (function () {
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return SwmListEditPage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_ionic_angular__ = __webpack_require__(7);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__providers_swm__ = __webpack_require__(66);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__providers_swm__ = __webpack_require__(67);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__classes_swm_model__ = __webpack_require__(91);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -4501,11 +4513,11 @@ var SignupPage = (function () {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_moment__ = __webpack_require__(2);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_moment___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_moment__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_ionic_angular__ = __webpack_require__(7);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__classes_worker_model__ = __webpack_require__(89);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__classes_worker_model__ = __webpack_require__(62);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__providers_auth__ = __webpack_require__(41);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__providers_check_in__ = __webpack_require__(82);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__providers_check_in__ = __webpack_require__(83);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__providers_worker__ = __webpack_require__(62);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__providers_worker__ = __webpack_require__(63);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__followers_followers__ = __webpack_require__(212);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__ionic_native_geolocation__ = __webpack_require__(60);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__providers_prestart_configuration__ = __webpack_require__(90);
@@ -4513,7 +4525,7 @@ var SignupPage = (function () {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__settings_settings__ = __webpack_require__(123);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__providers_sites__ = __webpack_require__(124);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_14__swm_swm__ = __webpack_require__(205);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_15__providers_swm__ = __webpack_require__(66);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_15__providers_swm__ = __webpack_require__(67);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_16__classes_swm_model__ = __webpack_require__(91);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_17__providers_task__ = __webpack_require__(214);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_18__classes_task_model__ = __webpack_require__(575);
@@ -5416,12 +5428,12 @@ var TimesheetVerifyPage = (function () {
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return WorkersPage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_ionic_angular__ = __webpack_require__(7);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__providers_check_in__ = __webpack_require__(82);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__providers_check_in__ = __webpack_require__(83);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__ionic_native_geolocation__ = __webpack_require__(60);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__providers_prestart_configuration__ = __webpack_require__(90);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__providers_sites__ = __webpack_require__(124);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__providers_worker__ = __webpack_require__(62);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__providers_worker__ = __webpack_require__(63);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -5830,7 +5842,7 @@ Object(__WEBPACK_IMPORTED_MODULE_0__angular_platform_browser_dynamic__["a" /* pl
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__providers_auth__ = __webpack_require__(41);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__components_background_image_background_image__ = __webpack_require__(729);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__angular_platform_browser__ = __webpack_require__(57);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__providers_check_in__ = __webpack_require__(82);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__providers_check_in__ = __webpack_require__(83);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__pages_clock_off_clock_off__ = __webpack_require__(443);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__pages_clock_on_clock_on__ = __webpack_require__(562);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__components_color_radio_color_radio__ = __webpack_require__(1008);
@@ -5876,7 +5888,7 @@ Object(__WEBPACK_IMPORTED_MODULE_0__angular_platform_browser_dynamic__["a" /* pl
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_50__pages_swm_detail_swm_detail__ = __webpack_require__(210);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_51__pages_swm_list_edit_swm_list_edit__ = __webpack_require__(574);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_52__pages_swm_swm__ = __webpack_require__(205);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_53__providers_swm__ = __webpack_require__(66);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_53__providers_swm__ = __webpack_require__(67);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_54__pages_tabs_navigation_tabs_navigation__ = __webpack_require__(92);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_55__providers_task__ = __webpack_require__(214);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_56__pages_terms_of_service_terms_of_service__ = __webpack_require__(215);
@@ -5885,7 +5897,7 @@ Object(__WEBPACK_IMPORTED_MODULE_0__angular_platform_browser_dynamic__["a" /* pl
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_59__pages_timesheet_verify_timesheet_verify__ = __webpack_require__(584);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_60__pages_timesheets_timesheets__ = __webpack_require__(582);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_61__pages_worker_clockon_worker_clockon__ = __webpack_require__(577);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_62__providers_worker__ = __webpack_require__(62);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_62__providers_worker__ = __webpack_require__(63);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_63__pages_workers_workers__ = __webpack_require__(585);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -6074,6 +6086,50 @@ var AppModule = (function () {
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "b", function() { return WorkerModel; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "c", function() { return WorkersModel; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return SiteVisit; });
+var WorkerModel = (function () {
+    function WorkerModel(data) {
+        this.validSwms = []; // passed certification
+        this.claimedSwms = []; // claimed for certification
+        if (data) {
+            Object.assign(this, data);
+        }
+    }
+    WorkerModel.prototype.hasValidSwm = function (site, swm) {
+        return !!this.validSwms.find(function (i) { return i.site === site && i.swm === swm; });
+    };
+    WorkerModel.prototype.hasClaimedSwm = function (site, swm) {
+        return !!this.claimedSwms.find(function (i) { return i.site === site && i.swm === swm; });
+    };
+    return WorkerModel;
+}());
+
+var WorkersModel = (function () {
+    function WorkersModel() {
+        this.items = [];
+    }
+    return WorkersModel;
+}());
+
+var SiteVisit = (function () {
+    function SiteVisit(id, checkInDate, checkOutDate) {
+        this.id = id;
+        this.checkInDate = checkInDate;
+        this.checkOutDate = checkOutDate;
+    }
+    return SiteVisit;
+}());
+
+//# sourceMappingURL=worker.model.js.map
+
+/***/ }),
+
+/***/ 63:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return DEFAULT_PERSON; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "b", function() { return WorkerService; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_rxjs_add_operator_map__ = __webpack_require__(121);
@@ -6083,6 +6139,7 @@ var AppModule = (function () {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__api__ = __webpack_require__(40);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__classes_exceptions_not_authenticated_error__ = __webpack_require__(1007);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__angular_core__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__classes_worker_model__ = __webpack_require__(62);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -6092,6 +6149,7 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
+
 
 
 
@@ -6122,7 +6180,7 @@ var WorkerService = (function () {
             var staff = _a.staff;
             return (staff.map(function (_a) {
                 var id = _a.id, name = _a.name, image = _a.image, message = _a.message, validSwms = _a.validSwms, passcode = _a.passcode, siteSelected = _a.siteSelected, clockedOn = _a.clockedOn, clockedOff = _a.clockedOff, supervisor = _a.supervisor, allowedSites = _a.allowedSites, siteVisits = _a.siteVisits, created_at = _a.created_at, updated_at = _a.updated_at;
-                return ({
+                return new __WEBPACK_IMPORTED_MODULE_5__classes_worker_model__["b" /* WorkerModel */]({
                     id: id,
                     name: name,
                     image: image,
@@ -6600,7 +6658,7 @@ var MaWeatherContentController = (function () {
 
 /***/ }),
 
-/***/ 66:
+/***/ 67:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -6773,7 +6831,7 @@ var BackgroundImage = (function () {
 
 /***/ }),
 
-/***/ 82:
+/***/ 83:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -6843,41 +6901,6 @@ var CheckInOutService = (function () {
 }());
 
 //# sourceMappingURL=check-in.js.map
-
-/***/ }),
-
-/***/ 89:
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* unused harmony export WorkerModel */
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "b", function() { return WorkersModel; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return SiteVisit; });
-var WorkerModel = (function () {
-    function WorkerModel() {
-        this.validSwms = []; // passed certification
-        this.claimedSwms = []; // claimed for certification
-    }
-    return WorkerModel;
-}());
-
-var WorkersModel = (function () {
-    function WorkersModel() {
-        this.items = [];
-    }
-    return WorkersModel;
-}());
-
-var SiteVisit = (function () {
-    function SiteVisit(id, checkInDate, checkOutDate) {
-        this.id = id;
-        this.checkInDate = checkInDate;
-        this.checkOutDate = checkOutDate;
-    }
-    return SiteVisit;
-}());
-
-//# sourceMappingURL=worker.model.js.map
 
 /***/ }),
 
