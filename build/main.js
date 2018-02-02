@@ -3105,6 +3105,7 @@ var AuthService = (function () {
                 });
             });
             _this._worker.validSwms = res.profile.validSwms;
+            _this._worker.sitesAllowed = res.profile.allowedSites || [];
             return true;
         })
             .catch(function (error) {
@@ -3347,9 +3348,11 @@ var ClockOffPage = (function () {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__ionic_native_geolocation__ = __webpack_require__(63);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__providers_prestart_configuration__ = __webpack_require__(89);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__providers_shared__ = __webpack_require__(31);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__swm_swm__ = __webpack_require__(205);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__providers_swm__ = __webpack_require__(67);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__classes_worker_model__ = __webpack_require__(66);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__providers_sites__ = __webpack_require__(124);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__swm_swm__ = __webpack_require__(205);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__providers_swm__ = __webpack_require__(67);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__providers_auth__ = __webpack_require__(40);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__classes_worker_model__ = __webpack_require__(66);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -3368,6 +3371,8 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 
+
+
 var TAB_UPDATE_INTERVAL = 60 * 1000;
 /*
   Generated class for the ClockOn page.
@@ -3376,24 +3381,27 @@ var TAB_UPDATE_INTERVAL = 60 * 1000;
   Ionic pages and navigation.
 */
 var ClockOnPage = (function () {
-    function ClockOnPage(nav, workerService, swmService, loadingCtrl, sharedService, geolocation, prestartConfigurationService) {
+    function ClockOnPage(nav, workerService, auth, swmService, loadingCtrl, sharedService, sitesService, geolocation, prestartConfigurationService) {
         this.nav = nav;
         this.workerService = workerService;
+        this.auth = auth;
         this.swmService = swmService;
         this.loadingCtrl = loadingCtrl;
         this.sharedService = sharedService;
+        this.sitesService = sitesService;
         this.geolocation = geolocation;
         this.prestartConfigurationService = prestartConfigurationService;
         this.defaultPersonImage = __WEBPACK_IMPORTED_MODULE_0__providers_worker__["a" /* DEFAULT_PERSON */];
         this.prestart = null;
-        this.workerlist = new __WEBPACK_IMPORTED_MODULE_8__classes_worker_model__["c" /* WorkersModel */]();
-        this.workersNotStartedThisSite = new __WEBPACK_IMPORTED_MODULE_8__classes_worker_model__["c" /* WorkersModel */]();
-        this.workersStarted = new __WEBPACK_IMPORTED_MODULE_8__classes_worker_model__["c" /* WorkersModel */]();
+        this.workerlist = new __WEBPACK_IMPORTED_MODULE_10__classes_worker_model__["c" /* WorkersModel */]();
+        this.workersNotStartedThisSite = new __WEBPACK_IMPORTED_MODULE_10__classes_worker_model__["c" /* WorkersModel */]();
+        this.workersStarted = new __WEBPACK_IMPORTED_MODULE_10__classes_worker_model__["c" /* WorkersModel */]();
         this.location = {
             lat: null,
             lon: null
         };
         this.inHandler = false;
+        this.siteName = "";
         console.log("ClockOnPage constructor");
     }
     //ionViewDidLoad() {
@@ -3411,10 +3419,20 @@ var ClockOnPage = (function () {
                 .then(function () { return _this.inHandler = false; }, function () { return _this.inHandler = false; });
         }, TAB_UPDATE_INTERVAL);
         this.updateData();
+        // Get the site name to display
+        this.siteName = this.getSiteName();
     };
     ClockOnPage.prototype.ionViewWillLeave = function () {
         clearInterval(this.updateIntervalHandler);
         console.log('Clearing ticker');
+    };
+    ClockOnPage.prototype.getSiteName = function () {
+        if (!this.sharedService.siteId) {
+            return '<NOT SELECTED>';
+        }
+        else {
+            return (this.sitesService.byId(this.sharedService.siteId) || { label: 'Unknown' }).label;
+        }
     };
     ClockOnPage.prototype.updateData = function () {
         var loading = this.loadingCtrl.create();
@@ -3472,7 +3490,7 @@ var ClockOnPage = (function () {
     ClockOnPage.prototype.startSignIn = function (worker) {
         this.getGeoLocation();
         console.log("start the signin process");
-        this.nav.push(__WEBPACK_IMPORTED_MODULE_6__swm_swm__["a" /* SwmPage */], {
+        this.nav.push(__WEBPACK_IMPORTED_MODULE_7__swm_swm__["a" /* SwmPage */], {
             'worker': worker,
             'siteId': this.sharedService.siteId,
             'prestart': this.prestart
@@ -3509,17 +3527,12 @@ var ClockOnPage = (function () {
     };
     ClockOnPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_2__angular_core__["n" /* Component */])({
-            selector: 'page-clock-on',template:/*ion-inline-start:"/home/duane/dev/willow/kndjan/src/pages/clock-on/clock-on.html"*/`<ion-header>\n  <ion-navbar>\n    <button ion-button\n      menuToggle>\n      <ion-icon name="menu"></ion-icon>\n    </button>\n    <ion-title>Daily Attendance Record (Clock on)</ion-title>\n  </ion-navbar>\n</ion-header>\n\n<ion-content class="notifications-content">\n  <ion-item-group>\n    <ion-item-divider class="notifications-divider">Yet to arrive (assigned for this site)</ion-item-divider>\n    <ion-item class="notification-item"\n      *ngFor="let worker of workersNotStartedThisSite.items"\n      (click)="startSignIn(worker)"\n      [ngClass]="{\'non-compliant\': !worker.swmCompliant}">\n      <ion-avatar item-left>\n        <preload-image class="user-image"\n          [ratio]="{w:1, h:1}"\n          [src]="worker.image || defaultPersonImage"></preload-image>\n      </ion-avatar>\n      <h2 class="item-title">{{worker.name}}</h2>\n      <p class="item-description">{{worker.message}}</p>\n      <!--<ion-note class="item-time" item-right>{{worker.date}}</ion-note>-->\n    </ion-item>\n    <ion-item-divider class="notifications-divider">Signed In</ion-item-divider>\n    <ion-item class="notification-item"\n      *ngFor="let worker of workersStarted.items"\n      [ngClass]="{\'non-compliant\': !worker.swmCompliant}">\n      <ion-avatar item-left>\n        <preload-image class="user-image"\n          [ratio]="{w:1, h:1}"\n          [src]="worker.image || defaultPersonImage"></preload-image>\n      </ion-avatar>\n      <h2 class="item-title">{{worker.name}}</h2>\n      <p class="item-description">{{worker.message}}</p>\n      <ion-note class="item-time"\n        item-right>{{worker.clockOn}}</ion-note>\n    </ion-item>\n  </ion-item-group>\n</ion-content>\n`/*ion-inline-end:"/home/duane/dev/willow/kndjan/src/pages/clock-on/clock-on.html"*/
+            selector: 'page-clock-on',template:/*ion-inline-start:"/home/duane/dev/willow/kndjan/src/pages/clock-on/clock-on.html"*/`<ion-header>\n  <ion-navbar>\n    <button ion-button\n      menuToggle>\n      <ion-icon name="menu"></ion-icon>\n    </button>\n    <ion-title>Daily Attendance Record (Clock on)</ion-title>\n  </ion-navbar>\n</ion-header>\n\n<ion-content class="notifications-content">\n  <ion-item-group>\n    <ion-item-divider class="notifications-divider">Yet to arrive (Site is {{ siteName }} - Supervisor is {{ auth.name }})</ion-item-divider>\n    <ion-item class="notification-item"\n      *ngFor="let worker of workersNotStartedThisSite.items"\n      (click)="startSignIn(worker)"\n      [ngClass]="{\'non-compliant\': !worker.swmCompliant}">\n      <ion-avatar item-left>\n        <preload-image class="user-image"\n          [ratio]="{w:1, h:1}"\n          [src]="worker.image || defaultPersonImage"></preload-image>\n      </ion-avatar>\n      <h2 class="item-title">{{worker.name}}</h2>\n      <p class="item-description">{{worker.message}}</p>\n      <!--<ion-note class="item-time" item-right>{{worker.date}}</ion-note>-->\n    </ion-item>\n    <ion-item-divider class="notifications-divider">Signed In</ion-item-divider>\n    <ion-item class="notification-item"\n      *ngFor="let worker of workersStarted.items"\n      [ngClass]="{\'non-compliant\': !worker.swmCompliant}">\n      <ion-avatar item-left>\n        <preload-image class="user-image"\n          [ratio]="{w:1, h:1}"\n          [src]="worker.image || defaultPersonImage"></preload-image>\n      </ion-avatar>\n      <h2 class="item-title">{{worker.name}}</h2>\n      <p class="item-description">{{worker.message}}</p>\n      <ion-note class="item-time"\n        item-right>{{worker.clockOn}}</ion-note>\n    </ion-item>\n  </ion-item-group>\n</ion-content>\n`/*ion-inline-end:"/home/duane/dev/willow/kndjan/src/pages/clock-on/clock-on.html"*/
         }),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* NavController */],
-            __WEBPACK_IMPORTED_MODULE_0__providers_worker__["b" /* WorkerService */],
-            __WEBPACK_IMPORTED_MODULE_7__providers_swm__["a" /* SwmService */],
-            __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* LoadingController */],
-            __WEBPACK_IMPORTED_MODULE_5__providers_shared__["a" /* SharedService */],
-            __WEBPACK_IMPORTED_MODULE_3__ionic_native_geolocation__["a" /* Geolocation */],
-            __WEBPACK_IMPORTED_MODULE_4__providers_prestart_configuration__["a" /* PrestartConfigurationService */]])
+        __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* NavController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* NavController */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_0__providers_worker__["b" /* WorkerService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_0__providers_worker__["b" /* WorkerService */]) === "function" && _b || Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_9__providers_auth__["a" /* AuthService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_9__providers_auth__["a" /* AuthService */]) === "function" && _c || Object, typeof (_d = typeof __WEBPACK_IMPORTED_MODULE_8__providers_swm__["a" /* SwmService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_8__providers_swm__["a" /* SwmService */]) === "function" && _d || Object, typeof (_e = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* LoadingController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* LoadingController */]) === "function" && _e || Object, typeof (_f = typeof __WEBPACK_IMPORTED_MODULE_5__providers_shared__["a" /* SharedService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_5__providers_shared__["a" /* SharedService */]) === "function" && _f || Object, typeof (_g = typeof __WEBPACK_IMPORTED_MODULE_6__providers_sites__["a" /* SiteService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_6__providers_sites__["a" /* SiteService */]) === "function" && _g || Object, typeof (_h = typeof __WEBPACK_IMPORTED_MODULE_3__ionic_native_geolocation__["a" /* Geolocation */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_3__ionic_native_geolocation__["a" /* Geolocation */]) === "function" && _h || Object, typeof (_j = typeof __WEBPACK_IMPORTED_MODULE_4__providers_prestart_configuration__["a" /* PrestartConfigurationService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_4__providers_prestart_configuration__["a" /* PrestartConfigurationService */]) === "function" && _j || Object])
     ], ClockOnPage);
     return ClockOnPage;
+    var _a, _b, _c, _d, _e, _f, _g, _h, _j;
 }());
 
 //# sourceMappingURL=clock-on.js.map
@@ -4409,7 +4422,9 @@ var PrestartPage = (function () {
             cssClass: 'category-prompt'
         });
         alert.setTitle('Site');
-        this.sitesService.sites.forEach(function (_a, index) {
+        this.sitesService.sites
+            .filter(function (site) { return _this.auth.worker.sitesAllowed.indexOf(site.id) >= 0; })
+            .forEach(function (_a, index) {
             var id = _a.id, label = _a.label;
             alert.addInput({
                 type: 'radio',
@@ -4904,7 +4919,9 @@ var WorkerClockonPage = (function () {
             cssClass: 'category-prompt'
         });
         alert.setTitle('Site');
-        this.siteService.sites.forEach(function (_a, index) {
+        this.siteService.sites
+            .filter(function (site) { return _this.worker.sitesAllowed.indexOf(site.id) >= 0; })
+            .forEach(function (_a, index) {
             var label = _a.label, id = _a.id, open = _a.open;
             alert.addInput({
                 type: 'radio',
@@ -5117,7 +5134,7 @@ var WorkerClockonPage = (function () {
     };
     WorkerClockonPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_5__angular_core__["n" /* Component */])({
-            selector: 'worker-clockon-page',template:/*ion-inline-start:"/home/duane/dev/willow/kndjan/src/pages/worker-clockon/worker-clockon.html"*/`<ion-header>\n  <ion-navbar>\n    <button ion-button\n      menuToggle>\n      <ion-icon name="menu"></ion-icon>\n    </button>\n    <ion-title>Clock On</ion-title>\n  </ion-navbar>\n</ion-header>\n\n<ion-content class="profile-content">\n  <div class="user-details">\n    <ion-row class="user-main-data-row">\n      <ion-col no-padding\n        width-33>\n        <preload-image class="user-image"\n          [ratio]="{w:1, h:1}"\n          [src]="profile.user.image || defaultPersonImage"\n          [alt]="profile.user.name"\n          [title]="profile.user.name"></preload-image>\n      </ion-col>\n      <ion-col no-padding>\n        <ion-row class="social-presence-row">\n          <ion-col width-50\n            class="social-presence-item">\n            <a (click)="goToFollowersList()">\n              <h2 class="social-presence-value">{{profile.followers.length}}</h2>\n              <h4 class="social-presence-title">Followers</h4>\n            </a>\n          </ion-col>\n          <ion-col width-50\n            class="social-presence-item">\n            <a (click)="goToFollowingList()">\n              <h2 class="social-presence-value">{{profile.following.length}}</h2>\n              <h4 class="social-presence-title">Following</h4>\n            </a>\n          </ion-col>\n        </ion-row>\n        <ion-row class="profile-action-row">\n          <ion-col no-padding>\n            <button ion-button\n              block\n              small\n              (click)="goToSettings()">\n              Edit profile\n            </button>\n          </ion-col>\n        </ion-row>\n      </ion-col>\n    </ion-row>\n    <ion-row wrap\n      class="user-bio-row">\n      <ion-col no-padding\n        width-50>\n        <h2 class="user-name">{{profile.user.name}}</h2>\n      </ion-col>\n      <ion-col no-padding\n        width-50>\n        <span class="user-location">{{profile.user.location}}</span>\n      </ion-col>\n      <ion-col no-padding\n        width-100>\n        <p class="user-description">\n          {{profile.user.about}}\n        </p>\n      </ion-col>\n    </ion-row>\n    <section class="form-section choose-category-section"\n      align-items-center>\n      <ion-row>\n        <ion-col>\n          <button ion-button\n            block\n            icon-right\n            class="choose-category-button"\n            (click)="chooseCategory()"\n            [disabled]="getAllowedSites().length === 1"\n            *ngIf="this.siteService.sites.length">\n            {{ getSiteName() }}\n            <ion-icon name="arrow-dropdown"></ion-icon>\n          </button>\n          <h4 padding\n            *ngIf="!this.siteService.sites.length && !loading">\n            No sites assigned for you. Please refer to your site\'s admin\n          </h4>\n        </ion-col>\n        <ion-col col-auto>\n          <button ion-button\n            icon-only\n            [disabled]="loading"\n            (click)="refreshSites()">\n            <ion-icon name="refresh"></ion-icon>\n          </button>\n        </ion-col>\n      </ion-row>\n    </section>\n    <section *ngIf="getSite() && getSite().open && !!prestartConfiguration">\n      <ion-item-divider>Tasks</ion-item-divider>\n      <div class="sample-form">\n        <ion-list class="sample-form checkbox-tags">\n          <ion-item class="checkbox-tag"\n            *ngFor="let task of siteTaskList.items">\n            <ion-label>{{task.name}}</ion-label>\n          </ion-item>\n        </ion-list>\n        <section class="form-section"\n          *ngIf="!worker.clockedOn && !worker.clockedOff">\n          <button ion-button\n            block\n            class="form-action-button create-post-button"\n            [disabled]="!siteId"\n            (click)="startSignIn()">Clock On</button>\n        </section>\n        <section class="form-section"\n          *ngIf="worker.clockedOn && !worker.clockedOff">\n          <ion-item>\n            <span item-left>Clocked On</span>\n            <span item-right>{{worker.clockOn}}</span>\n          </ion-item>\n          <ion-item>\n            <ion-label>Lunch</ion-label>\n            <ion-checkbox [(ngModel)]="lunch"></ion-checkbox>\n          </ion-item>\n          <button ion-button\n            block\n            class="form-action-button create-post-button"\n            [disabled]="signingOff"\n            (click)="startSignOff()">Clock Off</button>\n        </section>\n        <section class="form-section"\n          *ngIf="worker.clockedOn && worker.clockedOff">\n          <ion-item>\n            <span item-left>Clocked On</span>\n            <span item-right>{{worker.clockOn}}</span>\n          </ion-item>\n          <ion-item>\n            <span item-left>Clocked Off</span>\n            <span item-right>{{worker.clockOff}}</span>\n          </ion-item>\n          <h3>You have clocked off for the day</h3>\n          <button ion-button\n            block\n            class="form-action-button create-post-button"\n            [disabled]="!siteId"\n            (click)="startSignIn()">Clock On</button>\n        </section>\n      </div>\n\n    </section>\n    <section *ngIf="getSite() && !getSite().open"\n      padding>\n      <h4>The prestart has not been completed yet</h4>\n      <p>Contact your site\'s supervisor, and press "refresh" button</p>\n    </section>\n  </div>\n</ion-content>\n`/*ion-inline-end:"/home/duane/dev/willow/kndjan/src/pages/worker-clockon/worker-clockon.html"*/
+            selector: 'worker-clockon-page',template:/*ion-inline-start:"/home/duane/dev/willow/kndjan/src/pages/worker-clockon/worker-clockon.html"*/`<ion-header>\n  <ion-navbar>\n    <button ion-button\n      menuToggle>\n      <ion-icon name="menu"></ion-icon>\n    </button>\n    <ion-title>Clock On</ion-title>\n  </ion-navbar>\n</ion-header>\n\n<ion-content class="profile-content">\n  <div class="user-details">\n    <ion-row class="user-main-data-row">\n      <ion-col no-padding\n        width-33>\n        <preload-image class="user-image"\n          [ratio]="{w:1, h:1}"\n          [src]="profile.user.image || defaultPersonImage"\n          [alt]="profile.user.name"\n          [title]="profile.user.name"></preload-image>\n      </ion-col>\n      <ion-col no-padding>\n        <ion-row class="social-presence-row">\n          <ion-col width-50\n            class="social-presence-item">\n            <a (click)="goToFollowersList()">\n              <h2 class="social-presence-value">{{profile.followers.length}}</h2>\n              <h4 class="social-presence-title">Followers</h4>\n            </a>\n          </ion-col>\n          <ion-col width-50\n            class="social-presence-item">\n            <a (click)="goToFollowingList()">\n              <h2 class="social-presence-value">{{profile.following.length}}</h2>\n              <h4 class="social-presence-title">Following</h4>\n            </a>\n          </ion-col>\n        </ion-row>\n        <ion-row class="profile-action-row">\n          <ion-col no-padding>\n            <button ion-button\n              block\n              small\n              (click)="goToSettings()">\n              Edit profile\n            </button>\n          </ion-col>\n        </ion-row>\n      </ion-col>\n    </ion-row>\n    <ion-row wrap\n      class="user-bio-row">\n      <ion-col no-padding\n        width-50>\n        <h2 class="user-name">{{profile.user.name}}</h2>\n      </ion-col>\n      <ion-col no-padding\n        width-50>\n        <span class="user-location">{{profile.user.location}}</span>\n      </ion-col>\n      <ion-col no-padding\n        width-100>\n        <p class="user-description">\n          {{profile.user.about}}\n        </p>\n      </ion-col>\n    </ion-row>\n    <section class="form-section choose-category-section"\n      align-items-center>\n      <ion-row>\n        <ion-col>\n          <button ion-button\n            block\n            icon-right\n            class="choose-category-button"\n            (click)="chooseCategory()"\n            [disabled]="getAllowedSites().length === 1"\n            *ngIf="siteService.sites.length">\n            {{ getSiteName() }}\n            <ion-icon name="arrow-dropdown"></ion-icon>\n          </button>\n          <h4 padding\n            *ngIf="!siteService.sites.length && !loading">\n            No sites assigned for you. Please refer to your site\'s admin\n          </h4>\n        </ion-col>\n        <ion-col col-auto>\n          <button ion-button\n            icon-only\n            [disabled]="loading"\n            (click)="refreshSites()">\n            <ion-icon name="refresh"></ion-icon>\n          </button>\n        </ion-col>\n      </ion-row>\n    </section>\n    <section *ngIf="getSite() && getSite().open && !!prestartConfiguration">\n      <ion-item-divider>Tasks</ion-item-divider>\n      <div class="sample-form">\n        <ion-list class="sample-form checkbox-tags">\n          <ion-item class="checkbox-tag"\n            *ngFor="let task of siteTaskList.items">\n            <ion-label>{{task.name}}</ion-label>\n          </ion-item>\n        </ion-list>\n        <section class="form-section"\n          *ngIf="!worker.clockedOn && !worker.clockedOff">\n          <button ion-button\n            block\n            class="form-action-button create-post-button"\n            [disabled]="!siteId"\n            (click)="startSignIn()">Clock On</button>\n        </section>\n        <section class="form-section"\n          *ngIf="worker.clockedOn && !worker.clockedOff">\n          <ion-item>\n            <span item-left>Clocked On</span>\n            <span item-right>{{worker.clockOn}}</span>\n          </ion-item>\n          <ion-item>\n            <ion-label>Lunch</ion-label>\n            <ion-checkbox [(ngModel)]="lunch"></ion-checkbox>\n          </ion-item>\n          <button ion-button\n            block\n            class="form-action-button create-post-button"\n            [disabled]="signingOff"\n            (click)="startSignOff()">Clock Off</button>\n        </section>\n        <section class="form-section"\n          *ngIf="worker.clockedOn && worker.clockedOff">\n          <ion-item>\n            <span item-left>Clocked On</span>\n            <span item-right>{{worker.clockOn}}</span>\n          </ion-item>\n          <ion-item>\n            <span item-left>Clocked Off</span>\n            <span item-right>{{worker.clockOff}}</span>\n          </ion-item>\n          <h3>You have clocked off for the day</h3>\n          <button ion-button\n            block\n            class="form-action-button create-post-button"\n            [disabled]="!siteId"\n            (click)="startSignIn()">Clock On</button>\n        </section>\n      </div>\n\n    </section>\n    <section *ngIf="getSite() && !getSite().open"\n      padding>\n      <h4>The prestart has not been completed yet</h4>\n      <p>Contact your site\'s supervisor, and press "refresh" button</p>\n    </section>\n  </div>\n</ion-content>\n`/*ion-inline-end:"/home/duane/dev/willow/kndjan/src/pages/worker-clockon/worker-clockon.html"*/
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_2_ionic_angular__["f" /* MenuController */],
             __WEBPACK_IMPORTED_MODULE_2_ionic_angular__["b" /* App */],
