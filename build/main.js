@@ -3274,7 +3274,7 @@ var ClockOffPage = (function () {
                 return;
             }
             if (data.passcode.localeCompare(worker.passcode) === 0) {
-                _this.clockOff(worker, data.lunch === 'yes', _this.location);
+                _this.clockOff(worker, data.lunch, _this.location);
             }
             else {
                 _this.notify('Invalid passcode');
@@ -3367,7 +3367,7 @@ var LogoutModal = (function () {
     LogoutModal = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_1__angular_core__["n" /* Component */])({
             selector: 'logout-modal',
-            template: "\n  <ion-header>\n    <ion-navbar>\n      <ion-title>Logout</ion-title>\n    </ion-navbar>\n  </ion-header>\n  <ion-content>\n    <div class=\"wrapper\">\n      <ion-item><ion-label>{{ workerName }}</ion-label></ion-item>\n      <ion-item>\n        <ion-label>Passcode</ion-label>\n        <ion-input type=\"password\" [(ngModel)]=\"passcode\" autofocus></ion-input>\n      </ion-item>\n      <ion-item>\n        <ion-label>Lunch</ion-label>\n        <ion-checkbox [(ngModel)]=\"lunch\"></ion-checkbox>\n      </ion-item>\n    </div>\n  </ion-content>\n  <ion-footer>\n    <ion-item class=\"buttons\">\n      <button ion-button clear outline (click)=\"onCancel()\">Cancel</button>\n      <button ion-button float-right default (click)=\"onSignOff()\">Sign off</button>\n    </ion-item>\n  </ion-footer>\n"
+            template: "\n  <ion-header>\n    <ion-navbar>\n      <ion-title>Logout</ion-title>\n    </ion-navbar>\n  </ion-header>\n  <ion-content>\n    <div class=\"wrapper\">\n      <ion-item><ion-label>{{ workerName }}</ion-label></ion-item>\n      <ion-item>\n        <ion-label>Passcode</ion-label>\n        <ion-input type=\"password\" [(ngModel)]=\"passcode\" autofocus></ion-input>\n      </ion-item>\n      <ion-item>\n        <ion-label>Lunch</ion-label>\n        <ion-checkbox [(ngModel)]=\"lunch\"></ion-checkbox>\n      </ion-item>\n    </div>\n  </ion-content>\n  <ion-footer>\n    <ion-item class=\"buttons\">\n      <button ion-button clear outline (click)=\"onCancel()\">Cancel</button>\n      <button ion-button float-right default [disabled]=\"!passcode\" (click)=\"onSignOff()\">Sign off</button>\n    </ion-item>\n  </ion-footer>\n"
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_0_ionic_angular__["j" /* NavParams */], __WEBPACK_IMPORTED_MODULE_0_ionic_angular__["n" /* ViewController */]])
     ], LogoutModal);
@@ -3659,6 +3659,10 @@ var SafetyReminderPage = (function () {
             .then(function (sfd) {
             console.log("got the safety reminders data");
             _this.safetyReminders.items = sfd.items;
+            if (_this.prestart) {
+                _this.safetyReminders.items = _this.safetyReminders.items
+                    .filter(function (reminder) { return _this.prestart.reminders.indexOf(reminder.id) >= 0; });
+            }
             console.log(_this.safetyReminders);
             if (_this.safetyReminders.items.length === 0) {
                 _this.allChecked = true;
