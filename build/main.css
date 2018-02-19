@@ -71309,6 +71309,153 @@ rating [ion-button].rating-icon ion-icon {
   font-size: 1.2rem;
 }
 
+.site-select-slides {
+  display: block;
+  height: 64px;
+  background: white;
+}
+
+.no-sites {
+  color: #06776d;
+  font-size: 2rem;
+}
+
+.site-select-slide {
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  color: #777;
+  font-size: 1.2rem;
+}
+
+.site-select-slide--selected {
+  color: #06776d;
+  font-size: 2rem;
+}
+
+.day {
+  border-bottom: 1px solid #333;
+}
+
+.day__title {
+  text-align: center;
+  padding: 16px 8px;
+  color: #5e5874;
+}
+
+.timesheet {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  padding: 16px 8px;
+  border-top: 1px dashed #777;
+}
+
+.timesheet__checkmark {
+  -webkit-box-flex: 0;
+  -webkit-flex: 0 0 40px;
+  -ms-flex: 0 0 40px;
+  flex: 0 0 40px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  min-height: 40px;
+  margin: 8px 16px 8px 0;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  font-size: 2em;
+}
+
+.timesheet__checkmark--approvable {
+  border: 1px solid #777;
+}
+
+.timesheet__details {
+  -webkit-box-flex: 1;
+  -webkit-flex: 1 1 auto;
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
+  min-width: 0;
+}
+
+.timesheet__top-line, .timesheet__bottom-line {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.timesheet__top-line {
+  margin-bottom: 8px;
+}
+
+.timesheet__user {
+  -webkit-box-flex: 1;
+  -webkit-flex: 1 1 auto;
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
+  min-width: 0;
+  font-size: 2.2rem;
+  color: #06776d;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
+.timesheet__timing {
+  -webkit-box-flex: 0;
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+}
+
+.timesheet__start-date {
+  -webkit-box-flex: 1;
+  -webkit-flex: 1 1 40%;
+  -ms-flex: 1 1 40%;
+  flex: 1 1 40%;
+  min-width: 0;
+  color: #777;
+}
+
+.timesheet__end-date {
+  -webkit-box-flex: 1;
+  -webkit-flex: 1 1 40%;
+  -ms-flex: 1 1 40%;
+  flex: 1 1 40%;
+  min-width: 0;
+  color: #777;
+}
+
+.timesheet__lunch {
+  -webkit-box-flex: 0;
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+  margin: 0 8px;
+  color: #5e5874;
+}
+
 page-clock-off .notifications-content .notifications-divider {
   font-size: 1.2rem;
   font-weight: 500;
@@ -76395,111 +76542,189 @@ ion-app.wp tabs-navigation .tabbar .tab-button[aria-selected=true] {
   border-bottom-color: #06776d;
 }
 
-page-timesheet-history button.time-button {
-  color: #06776d;
-  border-color: #06776d;
+.timesheet-site-select {
+  height: 64px;
 }
 
-page-timesheet-history .form-section {
-  padding: 0px 14px;
+.timesheet-history-content {
+  display: block;
 }
 
-page-timesheet-history .form-section .item:first-child {
-  margin-top: 20px;
+.timesheet-history-filter {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
 }
 
-page-timesheet-history .form-section .form-action-button {
-  margin: 0px;
-  margin-top: 20px;
-  border-radius: 6px;
-  color: #FFFFFF;
-  background-color: #06776d;
-  font-size: 1.6rem;
-  font-weight: 500;
+.timesheet-history-filter site-select {
+  -webkit-box-flex: 1;
+  -webkit-flex: 1 1 auto;
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
+  min-width: 0;
 }
 
-page-timesheet-verify .willow-toolbar .toolbar-background {
-  background-color: #FFFFFF;
+.timesheet-history-filter__date {
+  -webkit-box-flex: 0;
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  position: relative;
 }
 
-page-timesheet-verify .willow-toolbar button.toolbar-button {
-  color: orange;
-  background-color: black;
+.timesheet-history-filter__date-hint {
+  color: #777;
+  font-size: 1rem;
 }
 
-page-timesheet-verify .willow-toolbar button {
-  color: #06776d;
-  border-color: #06776d;
+.timesheet-site-select {
+  height: 64px;
 }
 
-page-timesheet-verify button.time-button {
-  color: #06776d;
-  border-color: #06776d;
+.timesheet-history-content {
+  display: block;
 }
 
-page-timesheet-verify button.item-button {
-  color: #06776d;
+.timesheet-history-filter {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
 }
 
-page-timesheet-verify .multi-input-row {
-  -webkit-box-align: end;
-  box-align: end;
-  -webkit-align-items: flex-end;
-  -moz-align-items: flex-end;
-  -ms-align-items: flex-end;
-  -o-align-items: flex-end;
-  align-items: flex-end;
-  -ms-flex-align: end;
+.timesheet-history-filter site-select {
+  -webkit-box-flex: 1;
+  -webkit-flex: 1 1 auto;
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
+  min-width: 0;
 }
 
-page-timesheet-verify .multi-input-row ion-col {
-  padding: 0px 7px;
+.timesheet-history-filter__date {
+  -webkit-box-flex: 0;
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
 }
 
-page-timesheet-verify .multi-input-row ion-col:first-child {
-  padding-left: 0px;
+.timesheet-history-filter__date-hint {
+  color: #777;
+  font-size: 1rem;
 }
 
-page-timesheet-verify .multi-input-row ion-col:last-child {
-  padding-right: 0px;
+.timesheet-site-select {
+  height: 64px;
 }
 
-page-timesheet-verify .multi-input-row .multi-input {
-  margin: 0px;
+.timesheet-verify-content {
+  display: block;
 }
 
-page-timesheet-verify .multi-input-row .multi-input.item-datetime.item-label-floating ion-label {
-  margin-top: 7px;
+.timesheet-verify-filter {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
 }
 
-page-timesheet-verify .multi-input-row .multi-input.item-datetime.item-label-floating ion-datetime {
-  padding-top: 0px;
+.timesheet-verify-filter site-select {
+  -webkit-box-flex: 1;
+  -webkit-flex: 1 1 auto;
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
+  min-width: 0;
 }
 
-page-timesheet-verify .multi-input-row .multi-input ion-datetime {
-  padding-left: 0px;
+.timesheet-verify-filter__date {
+  -webkit-box-flex: 0;
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  position: relative;
 }
 
-page-timesheet-verify .multi-input-row .multi-input ion-datetime .datetime-text {
-  color: #5e5874;
-}
-
-page-timesheet-verify .form-section {
-  padding: 0px 14px;
-}
-
-page-timesheet-verify .form-section .item:first-child {
-  margin-top: 20px;
-}
-
-page-timesheet-verify .form-section .form-action-button {
-  margin: 0px;
-  margin-top: 20px;
-  border-radius: 6px;
-  color: #FFFFFF;
-  background-color: #06776d;
-  font-size: 1.6rem;
-  font-weight: 500;
+.timesheet-verify-filter__date-hint {
+  color: #777;
+  font-size: 1rem;
 }
 
 timesheet-page .timesheet-content {
