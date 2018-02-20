@@ -71342,6 +71342,10 @@ rating [ion-button].rating-icon ion-icon {
   color: #5e5874;
 }
 
+.day.item .item-inner {
+  padding-right: 0;
+}
+
 .timesheet {
   display: -webkit-box;
   display: -webkit-flex;
@@ -71352,11 +71356,11 @@ rating [ion-button].rating-icon ion-icon {
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
-  padding: 16px 8px;
+  padding: 16px 0;
   border-top: 1px dashed #777;
 }
 
-.timesheet__checkmark {
+.timesheet__checkmark, .timesheet__extended-hours {
   -webkit-box-flex: 0;
   -webkit-flex: 0 0 40px;
   -ms-flex: 0 0 40px;
@@ -71365,7 +71369,7 @@ rating [ion-button].rating-icon ion-icon {
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  min-height: 40px;
+  height: 40px;
   margin: 8px 16px 8px 0;
   -webkit-box-pack: center;
   -webkit-justify-content: center;
@@ -71378,7 +71382,12 @@ rating [ion-button].rating-icon ion-icon {
   font-size: 2em;
 }
 
-.timesheet__checkmark--approvable {
+.timesheet__checkmark--approvable, .timesheet__extended-hours--approvable {
+  border: 1px solid #777;
+}
+
+.timesheet__extended-hours {
+  margin: 8px 0 8px 16px;
   border: 1px solid #777;
 }
 
@@ -71406,6 +71415,12 @@ rating [ion-button].rating-icon ion-icon {
   align-items: center;
 }
 
+.timesheet__bottom-line {
+  -webkit-justify-content: space-around;
+  -ms-flex-pack: distribute;
+  justify-content: space-around;
+}
+
 .timesheet__top-line {
   margin-bottom: 8px;
 }
@@ -71429,22 +71444,14 @@ rating [ion-button].rating-icon ion-icon {
   flex: 0 0 auto;
 }
 
-.timesheet__start-date {
-  -webkit-box-flex: 1;
-  -webkit-flex: 1 1 40%;
-  -ms-flex: 1 1 40%;
-  flex: 1 1 40%;
+.timesheet__start-date, .timesheet__end-date {
+  -webkit-box-flex: 0;
+  -webkit-flex: 0 0 30%;
+  -ms-flex: 0 0 30%;
+  flex: 0 0 30%;
   min-width: 0;
   color: #777;
-}
-
-.timesheet__end-date {
-  -webkit-box-flex: 1;
-  -webkit-flex: 1 1 40%;
-  -ms-flex: 1 1 40%;
-  flex: 1 1 40%;
-  min-width: 0;
-  color: #777;
+  text-align: center;
 }
 
 .timesheet__lunch {
@@ -71454,6 +71461,11 @@ rating [ion-button].rating-icon ion-icon {
   flex: 0 0 auto;
   margin: 0 8px;
   color: #5e5874;
+}
+
+.timesheet__extended-hours-hint {
+  font-size: 10px;
+  color: #eee;
 }
 
 page-clock-off .notifications-content .notifications-divider {
