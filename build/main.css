@@ -71459,13 +71459,27 @@ rating [ion-button].rating-icon ion-icon {
   -webkit-flex: 0 0 auto;
   -ms-flex: 0 0 auto;
   flex: 0 0 auto;
-  margin: 0 8px;
+  padding: 8px 8px;
   color: #5e5874;
+  width: 32px;
+  height: 32px;
+}
+
+.timesheet__lunch--approvable {
+  border: 1px solid #777;
 }
 
 .timesheet__extended-hours-hint {
   font-size: 10px;
   color: #eee;
+}
+
+.timesheet .datetime {
+  padding: 8px 0 16px 0;
+}
+
+.timesheet .item-datetime {
+  padding-left: 0;
 }
 
 page-clock-off .notifications-content .notifications-divider {
