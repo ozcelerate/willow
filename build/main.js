@@ -3363,8 +3363,8 @@ var DetailsItem = (function () {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return API_URL; });
-// export const API_URL = 'https://api.willow.kndtesting.com.au';
-var API_URL = 'http://api.willowsite.dev';
+var API_URL = 'https://api.willow.kndtesting.com.au';
+// export const API_URL = 'http://api.willowsite.dev';
 //# sourceMappingURL=env.js.map
 
 /***/ }),
