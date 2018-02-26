@@ -71399,6 +71399,10 @@ rating [ion-button].rating-icon ion-icon {
   min-width: 0;
 }
 
+.timesheet__details--deleted {
+  text-decoration: line-through;
+}
+
 .timesheet__top-line, .timesheet__bottom-line {
   display: -webkit-box;
   display: -webkit-flex;
@@ -76568,6 +76572,25 @@ ion-app.wp tabs-navigation .tabbar .tab-button[aria-selected=true] {
   border-bottom-color: #06776d;
 }
 
+.timesheet-details__title {
+  font-size: 20px;
+  color: #5e5874;
+  text-align: center;
+}
+
+.timesheet-details__group {
+  margin: 8px;
+  border: 1px solid #aaa;
+  padding: 8px;
+}
+
+.timesheet-details__group-title {
+  text-align: center;
+  color: #06776d;
+  font-size: 16px;
+  padding: 8px 16px 16px 16px;
+}
+
 .timesheet-site-select {
   height: 64px;
 }
@@ -76623,67 +76646,6 @@ ion-app.wp tabs-navigation .tabbar .tab-button[aria-selected=true] {
   -ms-flex-align: center;
   align-items: center;
   position: relative;
-}
-
-.timesheet-history-filter__date-hint {
-  color: #777;
-  font-size: 1rem;
-}
-
-.timesheet-site-select {
-  height: 64px;
-}
-
-.timesheet-history-content {
-  display: block;
-}
-
-.timesheet-history-filter {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  -webkit-box-align: center;
-  -webkit-align-items: center;
-  -ms-flex-align: center;
-  align-items: center;
-}
-
-.timesheet-history-filter site-select {
-  -webkit-box-flex: 1;
-  -webkit-flex: 1 1 auto;
-  -ms-flex: 1 1 auto;
-  flex: 1 1 auto;
-  min-width: 0;
-}
-
-.timesheet-history-filter__date {
-  -webkit-box-flex: 0;
-  -webkit-flex: 0 0 auto;
-  -ms-flex: 0 0 auto;
-  flex: 0 0 auto;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  -webkit-box-align: center;
-  -webkit-align-items: center;
-  -ms-flex-align: center;
-  align-items: center;
 }
 
 .timesheet-history-filter__date-hint {
@@ -76751,6 +76713,22 @@ ion-app.wp tabs-navigation .tabbar .tab-button[aria-selected=true] {
 .timesheet-verify-filter__date-hint {
   color: #777;
   font-size: 1rem;
+}
+
+.timesheet-verify-toolbar {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
 }
 
 timesheet-page .timesheet-content {
