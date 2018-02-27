@@ -71450,12 +71450,13 @@ rating [ion-button].rating-icon ion-icon {
 
 .timesheet__start-date, .timesheet__end-date {
   -webkit-box-flex: 0;
-  -webkit-flex: 0 0 30%;
-  -ms-flex: 0 0 30%;
-  flex: 0 0 30%;
+  -webkit-flex: 0 1 80px;
+  -ms-flex: 0 1 80px;
+  flex: 0 1 80px;
   min-width: 0;
   color: #777;
   text-align: center;
+  margin: 0 4px;
 }
 
 .timesheet__lunch {
@@ -76665,6 +76666,7 @@ ion-app.wp tabs-navigation .tabbar .tab-button[aria-selected=true] {
   flex-direction: row;
   width: 100%;
   height: 100%;
+  background: white;
 }
 
 .timesheet-tablet__selector, .timesheet-tablet__verify, .timesheet-tablet__details {
